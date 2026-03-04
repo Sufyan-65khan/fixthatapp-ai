@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth:*)",
+      "Bash(git:*)",
+      "Bash(python:*)",
+      "WebFetch(domain:sufyan-65khan.github.io)",
+      "Bash(nslookup:*)",
+      "WebFetch(domain:www.whois.com)",
+      "WebFetch(domain:who.is)",
+      "WebFetch(domain:www.fixthatapp.com)",
+      "Bash(do sed:*)",
+      "Bash(cmd.exe:*)",
+      "Bash(/c/Users/sufya/AppData/Local/Programs/Python/Python*/python.exe:*)"
+    ]
+  }
+}

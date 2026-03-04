@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting Guide: Minecraft Not Launching - FixThatApp</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
+     crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem 1rem;
+        }
+        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
+        .back:hover { text-decoration: underline; }
+        .article {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article p { margin-bottom: 1rem; color: #444; }
+        .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
+        .article li { margin-bottom: 0.5rem; }
+        .article strong { color: #333; }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.25rem; }
+        .faq .q { font-weight: 600; color: #333; }
+        .faq .a { color: #555; }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        footer a { color: #667eea; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header><a href="../index.html">FixThatApp</a></header>
+    <div class="container">
+        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <div class="article">
+            <h1>Troubleshooting Guide: Minecraft Not Launching</h1>
+            <h2>Problem Description</h2>
+            <p>Minecraft may fail to launch, crashing on startup, showing a black screen, freezing on the loading screen, or displaying Java errors. This affects both Minecraft Java Edition and Bedrock Edition.</p>
+            <h2>Possible Causes</h2>
+            <p><strong>Outdated Java</strong>: Minecraft Java Edition requires an up-to-date Java installation.</p>
+            <p><strong>Graphics driver issues</strong>: Outdated or incompatible GPU drivers can prevent launching.</p>
+            <p><strong>Corrupted game files</strong>: Damaged installation or mod files can cause crashes.</p>
+            <p><strong>Insufficient system resources</strong>: Low RAM or disk space can prevent Minecraft from loading.</p>
+            <p><strong>Conflicting mods</strong>: Incompatible mods or mod loaders can crash the game.</p>
+            <p><strong>Antivirus interference</strong>: Security software may block Minecraft files.</p>
+            <h2>Step-by-Step Fixes</h2>
+            <p>### Fix 1: Update Java (Java Edition)</p>
+            <p>&bull; Visit java.com and download the latest version.</p>
+            <p>&bull; Install it and restart your computer.</p>
+            <p>&bull; Minecraft Launcher usually includes its own Java, but system Java should be updated too.</p>
+            <p>### Fix 2: Update Graphics Drivers</p>
+            <p>&bull; Visit your GPU manufacturer's website (NVIDIA, AMD, or Intel).</p>
+            <p>&bull; Download and install the latest drivers for your graphics card.</p>
+            <p>&bull; Restart your computer after updating.</p>
+            <p>### Fix 3: Allocate More RAM</p>
+            <p>&bull; Open Minecraft Launcher > Installations > Edit your profile.</p>
+            <p>&bull; Click "More Options" and find the JVM Arguments field.</p>
+            <p>&bull; Change `-Xmx2G` to `-Xmx4G` to allocate 4 GB of RAM.</p>
+            <p>&bull; Save and try launching again.</p>
+            <p>### Fix 4: Remove Mods</p>
+            <p>&bull; Navigate to your Minecraft folder: Press Win+R, type `%appdata%\.minecraft`.</p>
+            <p>&bull; Move the "mods" folder to your desktop as a backup.</p>
+            <p>&bull; Try launching vanilla Minecraft without mods.</p>
+            <p>&bull; If it works, add mods back one at a time to find the problematic one.</p>
+            <p>### Fix 5: Delete and Reinstall</p>
+            <p>&bull; Uninstall Minecraft from your system.</p>
+            <p>&bull; Delete the .minecraft folder (back up your saves first from %appdata%\.minecraft\saves).</p>
+            <p>&bull; Reinstall from minecraft.net.</p>
+            <p>&bull; Restore your saves folder after reinstalling.</p>
+            <p>### Fix 6: Run as Administrator</p>
+            <p>&bull; Right-click the Minecraft Launcher.</p>
+            <p>&bull; Select "Run as Administrator".</p>
+            <p>&bull; This gives Minecraft the permissions it needs to access files and hardware.</p>
+            <h2>When to Contact Support</h2>
+            <p>If Minecraft still won't launch, visit help.minecraft.net for support. Include your system specifications, error messages, and crash logs from the .minecraft/crash-reports folder.</p>
+            <h2>FAQ</h2>
+            <div class="faq"><p class="q">Q: Why does Minecraft show a black screen on launch?</p>
+            <p class="a">A: This is usually a graphics driver issue. Update your GPU drivers and try launching again. You can also try running in windowed mode.</p>
+            </div>
+            <div class="faq"><p class="q">Q: Can I play Minecraft with integrated graphics?</p>
+            <p class="a">A: Yes, but you may need to lower graphics settings significantly. Allocate more RAM and reduce render distance to improve performance.</p>
+            </div>
+            <div class="faq"><p class="q">Q: Why does Minecraft crash only with mods?</p>
+            <p class="a">A: Mods may be incompatible with your Minecraft version or with each other. Check that all mods are for the correct version and remove recently added mods.</p>
+            </div>
+            <div class="faq"><p class="q">Q: How do I find my Minecraft crash logs?</p>
+            <p class="a">A: Go to %appdata%\.minecraft\crash-reports. The latest crash report will contain information about what caused the crash.</p>
+            </div>
+        </div>
+    </div>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+</body>
+</html>
