@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting Guide: Discord Mic Not Working - FixThatApp</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
+     crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem 1rem;
+        }
+        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
+        .back:hover { text-decoration: underline; }
+        .article {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article p { margin-bottom: 1rem; color: #444; }
+        .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
+        .article li { margin-bottom: 0.5rem; }
+        .article strong { color: #333; }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.25rem; }
+        .faq .q { font-weight: 600; color: #333; }
+        .faq .a { color: #555; }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        footer a { color: #667eea; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header><a href="../index.html">FixThatApp</a></header>
+    <div class="container">
+        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <div class="article">
+            <h1>Troubleshooting Guide: Discord Mic Not Working</h1>
+            <h2>Problem Description</h2>
+            <p>Your microphone may not work in Discord voice channels or calls. Other users can't hear you, even though your mic works fine in other applications. The mic icon may show you as muted or the green ring around your avatar may not appear when you speak.</p>
+            <h2>Possible Causes</h2>
+            <p><strong>Wrong input device selected</strong>: Discord may be using a different microphone than the one you want.</p>
+            <p><strong>Microphone permissions</strong>: Discord may not have permission to access your microphone.</p>
+            <p><strong>Voice settings misconfigured</strong>: Input sensitivity or voice activity settings may be wrong.</p>
+            <p><strong>Audio driver issues</strong>: Outdated or corrupted audio drivers can cause mic problems.</p>
+            <p><strong>Discord audio subsystem</strong>: The audio subsystem may not be compatible with your setup.</p>
+            <h2>Step-by-Step Fixes</h2>
+            <p>### Fix 1: Check Microphone Permissions</p>
+            <p>&bull; On Windows: Settings > Privacy > Microphone > Make sure "Allow apps to access your microphone" is On and Discord is enabled.</p>
+            <p>&bull; On Mac: System Preferences > Security & Privacy > Privacy > Microphone > Check Discord.</p>
+            <p>&bull; On mobile: Settings > Apps > Discord > Permissions > Enable Microphone.</p>
+            <p>### Fix 2: Select the Correct Input Device</p>
+            <p>&bull; Open Discord > User Settings (gear icon) > Voice & Video.</p>
+            <p>&bull; Under "Input Device", select your microphone from the dropdown.</p>
+            <p>&bull; Don't use "Default" — choose the specific device instead.</p>
+            <p>&bull; Click "Let's Check" to test your microphone.</p>
+            <p>### Fix 3: Reset Voice Settings</p>
+            <p>&bull; Go to Discord > User Settings > Voice & Video.</p>
+            <p>&bull; Scroll to the bottom and click "Reset Voice Settings".</p>
+            <p>&bull; Confirm the reset and test your mic again.</p>
+            <p>### Fix 4: Adjust Input Sensitivity</p>
+            <p>&bull; Go to User Settings > Voice & Video.</p>
+            <p>&bull; Turn off "Automatically determine input sensitivity".</p>
+            <p>&bull; Manually drag the sensitivity slider to the left so it picks up your voice.</p>
+            <p>&bull; Speak into your mic and watch the indicator to make sure it detects sound.</p>
+            <p>### Fix 5: Change Audio Subsystem</p>
+            <p>&bull; Go to User Settings > Voice & Video.</p>
+            <p>&bull; Scroll down to "Audio Subsystem".</p>
+            <p>&bull; Switch from "Standard" to "Legacy" (or vice versa).</p>
+            <p>&bull; Discord will restart — test your mic after it reopens.</p>
+            <p>### Fix 6: Update Audio Drivers</p>
+            <p>&bull; On Windows: Open Device Manager > Audio inputs and outputs > Right-click your mic > Update driver.</p>
+            <p>&bull; You can also visit your computer manufacturer's website to download the latest audio drivers.</p>
+            <p>&bull; Restart your computer after updating.</p>
+            <h2>When to Contact Support</h2>
+            <p>If your mic still doesn't work after trying all steps, contact Discord support at support.discord.com. Include your system info by going to User Settings > Voice & Video and noting the "Debug Logging" information.</p>
+            <h2>FAQ</h2>
+            <div class="faq"><p class="q">Q: Why can people hear me in other apps but not Discord?</p>
+            <p class="a">A: Discord may be using a different input device. Go to Voice & Video settings and manually select the correct microphone.</p>
+            </div>
+            <div class="faq"><p class="q">Q: How do I know if my mic is being detected by Discord?</p>
+            <p class="a">A: Go to User Settings > Voice & Video and use the "Let's Check" feature. Speak into your mic — if the bar moves, Discord is detecting your voice.</p>
+            </div>
+            <div class="faq"><p class="q">Q: Why does my mic work in DMs but not in servers?</p>
+            <p class="a">A: Check if you're server-muted by a moderator. Also, some servers have voice channel permissions that may restrict your microphone usage.</p>
+            </div>
+            <div class="faq"><p class="q">Q: Can I use my phone as a mic for Discord on PC?</p>
+            <p class="a">A: Yes, there are apps like WO Mic that let you use your phone's microphone on your PC. Set it up and select it as the input device in Discord settings.</p>
+            </div>
+        </div>
+    </div>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+</body>
+</html>
