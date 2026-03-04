@@ -54,6 +54,8 @@ TEMPLATE = """<!DOCTYPE html>
             color: #999;
             font-size: 0.85rem;
         }}
+        footer a {{ color: #667eea; text-decoration: none; }}
+        footer a:hover {{ text-decoration: underline; }}
     </style>
 </head>
 <body>
@@ -64,7 +66,7 @@ TEMPLATE = """<!DOCTYPE html>
             {content}
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved.</footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
 </body>
 </html>
 """
