@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting Guide: Cloudflare Outage Affecting Websites - FixThatApp</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
+     crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem 1rem;
+        }
+        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
+        .back:hover { text-decoration: underline; }
+        .article {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article p { margin-bottom: 1rem; color: #444; }
+        .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
+        .article li { margin-bottom: 0.5rem; }
+        .article strong { color: #333; }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.25rem; }
+        .faq .q { font-weight: 600; color: #333; }
+        .faq .a { color: #555; }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        footer a { color: #667eea; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header><a href="../index.html">FixThatApp</a></header>
+    <div class="container">
+        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <div class="article">
+            <h1>Troubleshooting Guide: Cloudflare Outage Affecting Websites</h1>
+            <h2>Problem Description</h2>
+            <p>When Cloudflare experiences an outage, many popular websites and apps may become inaccessible simultaneously. You might see "Error 502", "Error 522", "Error 524", or Cloudflare error pages when trying to visit websites that use their services.</p>
+            <h2>Possible Causes</h2>
+            <p><strong>Cloudflare infrastructure issue</strong>: Problems with Cloudflare's global network.</p>
+            <p><strong>Regional Cloudflare outage</strong>: Some data centers may be affected while others work fine.</p>
+            <p><strong>DNS propagation</strong>: Cloudflare's DNS service may be experiencing delays.</p>
+            <p><strong>Origin server issues</strong>: The website's actual server may be down (not Cloudflare's fault).</p>
+            <p><strong>DDoS attack</strong>: Large-scale attacks can overwhelm Cloudflare's protection.</p>
+            <h2>Step-by-Step Fixes</h2>
+            <p>### Fix 1: Verify It's a Cloudflare Issue</p>
+            <p>&bull; Visit cloudflarestatus.com to check current status.</p>
+            <p>&bull; Check downdetector.com/status/cloudflare for user reports.</p>
+            <p>&bull; If multiple unrelated websites are down, it's likely a Cloudflare issue.</p>
+            <p>### Fix 2: Wait for Resolution</p>
+            <p>&bull; Cloudflare outages are usually resolved quickly (within 30-60 minutes).</p>
+            <p>&bull; Their engineering team monitors 24/7 and responds rapidly.</p>
+            <p>&bull; Check their status page for real-time updates.</p>
+            <p>### Fix 3: Try Direct Access</p>
+            <p>&bull; Some websites have backup servers or IP addresses.</p>
+            <p>&bull; Try the website's IP address directly (if you know it).</p>
+            <p>&bull; Use Google's cached version: search for the page and click "Cached".</p>
+            <p>### Fix 4: Change DNS Servers</p>
+            <p>&bull; If Cloudflare's DNS (1.1.1.1) is affected, switch to Google DNS (8.8.8.8) or OpenDNS.</p>
+            <p>&bull; Change DNS in your device or router settings.</p>
+            <p>### Fix 5: Use a VPN</p>
+            <p>&bull; A VPN may route your traffic through a different Cloudflare data center that's working.</p>
+            <p>&bull; This is a temporary workaround during regional outages.</p>
+            <p>### Fix 6: Use Mobile Data</p>
+            <p>&bull; If websites don't load on Wi-Fi, try mobile data.</p>
+            <p>&bull; Different networks may route through different Cloudflare locations.</p>
+            <h2>When to Contact Support</h2>
+            <p>If you're a website owner using Cloudflare, check your dashboard at dash.cloudflare.com and contact Cloudflare support. If you're a visitor, contact the website owner directly.</p>
+            <h2>FAQ</h2>
+            <div class="faq"><p class="q">Q: What is Cloudflare?</p>
+            <p class="a">A: Cloudflare is a web infrastructure company that provides CDN, DDoS protection, and DNS services. Many popular websites rely on Cloudflare, so their outages can affect many sites simultaneously.</p>
+            </div>
+            <div class="faq"><p class="q">Q: Which websites use Cloudflare?</p>
+            <p class="a">A: Millions of websites use Cloudflare, including major services like Discord, Canva, Shopify stores, and many others.</p>
+            </div>
+            <div class="faq"><p class="q">Q: How often does Cloudflare go down?</p>
+            <p class="a">A: Major outages are rare (a few times per year). Most are resolved within 30-60 minutes. Minor regional issues are more common.</p>
+            </div>
+            <div class="faq"><p class="q">Q: What do Cloudflare error codes mean?</p>
+            <p class="a">A: Error 502 means the origin server is down. Error 522 means connection timed out. Error 524 means a timeout occurred. Error 520 means the origin returned an unexpected response.</p>
+            </div>
+        </div>
+    </div>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+</body>
+</html>

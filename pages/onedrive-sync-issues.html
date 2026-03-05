@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting Guide: OneDrive Sync Issues - FixThatApp</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
+     crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem 1rem;
+        }
+        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
+        .back:hover { text-decoration: underline; }
+        .article {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article p { margin-bottom: 1rem; color: #444; }
+        .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
+        .article li { margin-bottom: 0.5rem; }
+        .article strong { color: #333; }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.25rem; }
+        .faq .q { font-weight: 600; color: #333; }
+        .faq .a { color: #555; }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        footer a { color: #667eea; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header><a href="../index.html">FixThatApp</a></header>
+    <div class="container">
+        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <div class="article">
+            <h1>Troubleshooting Guide: OneDrive Sync Issues</h1>
+            <h2>Problem Description</h2>
+            <p>Microsoft OneDrive may stop syncing files, showing sync errors, pending uploads, or files not appearing across devices. The OneDrive icon may show a red X or exclamation mark indicating sync problems.</p>
+            <h2>Possible Causes</h2>
+            <p><strong>Storage quota full</strong>: Your OneDrive storage may be full.</p>
+            <p><strong>File name or path issues</strong>: Special characters or long paths can prevent syncing.</p>
+            <p><strong>Conflicting files</strong>: Files edited simultaneously on different devices.</p>
+            <p><strong>OneDrive paused</strong>: Syncing may be manually paused.</p>
+            <p><strong>Outdated OneDrive</strong>: Old versions may have sync bugs.</p>
+            <h2>Step-by-Step Fixes</h2>
+            <p>### Fix 1: Check Sync Status</p>
+            <p>&bull; Click the OneDrive icon in the system tray.</p>
+            <p>&bull; If paused, click "Resume syncing".</p>
+            <p>&bull; Look for error messages and affected files.</p>
+            <p>### Fix 2: Check Storage</p>
+            <p>&bull; Click OneDrive icon > Settings > Account.</p>
+            <p>&bull; Check your storage usage.</p>
+            <p>&bull; Free accounts get 5 GB. Delete files or upgrade to Microsoft 365 for 1 TB.</p>
+            <p>### Fix 3: Fix File Issues</p>
+            <p>&bull; Shorten file names and paths (max 400 characters total).</p>
+            <p>&bull; Remove special characters: # % & { } \ < > * ? / ! ' " : @ + ` | =</p>
+            <p>&bull; Reduce file sizes — OneDrive has a 250 GB per-file limit.</p>
+            <p>### Fix 4: Reset OneDrive</p>
+            <p>&bull; Press Win+R and type: `%localappdata%\Microsoft\OneDrive\onedrive.exe /reset`</p>
+            <p>&bull; Wait 2 minutes, then OneDrive should restart automatically.</p>
+            <p>&bull; If it doesn't restart, launch OneDrive from the Start menu.</p>
+            <p>### Fix 5: Unlink and Relink Account</p>
+            <p>&bull; Click OneDrive icon > Settings > Account > Unlink this PC.</p>
+            <p>&bull; Restart OneDrive and sign in again.</p>
+            <p>&bull; Your files will re-sync from the cloud.</p>
+            <p>### Fix 6: Reinstall OneDrive</p>
+            <p>&bull; Uninstall OneDrive from Settings > Apps.</p>
+            <p>&bull; Download the latest version from onedrive.com.</p>
+            <p>&bull; Install, sign in, and let files re-sync.</p>
+            <h2>When to Contact Support</h2>
+            <p>If sync issues persist, visit support.microsoft.com/onedrive for help. Microsoft 365 subscribers get included support.</p>
+            <h2>FAQ</h2>
+            <div class="faq"><p class="q">Q: Will resetting OneDrive delete my files?</p>
+            <p class="a">A: No, files in the cloud are safe. Resetting only resets the local sync engine. Files may need to re-download.</p>
+            </div>
+            <div class="faq"><p class="q">Q: Why does OneDrive show "Processing changes"?</p>
+            <p class="a">A: OneDrive is scanning for changes. This happens after reset or reconnection. Wait for it to complete — it can take hours for large libraries.</p>
+            </div>
+            <div class="faq"><p class="q">Q: Can OneDrive sync external drives?</p>
+            <p class="a">A: No, OneDrive can only sync folders within the OneDrive folder on your main drive. Move files there or use symbolic links.</p>
+            </div>
+            <div class="faq"><p class="q">Q: Why is OneDrive using so much CPU?</p>
+            <p class="a">A: This usually happens during initial sync or after reset. It should calm down after syncing is complete. If persistent, try pausing and resuming sync.</p>
+            </div>
+        </div>
+    </div>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+</body>
+</html>
