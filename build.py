@@ -11,8 +11,39 @@ TEMPLATE = """<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} - FixThatApp</title>
+    <meta name="description" content="{meta_description}">
+    <meta name="keywords" content="{meta_keywords}">
+    <link rel="canonical" href="https://www.fixthatapp.com/pages/{slug}.html">
+    <meta property="og:title" content="{title} - FixThatApp">
+    <meta property="og:description" content="{meta_description}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/pages/{slug}.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{title} - FixThatApp">
+    <meta name="twitter:description" content="{meta_description}">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "{title}",
+      "description": "{meta_description}",
+      "author": {{
+        "@type": "Organization",
+        "name": "FixThatApp"
+      }},
+      "publisher": {{
+        "@type": "Organization",
+        "name": "FixThatApp"
+      }},
+      "mainEntityOfPage": {{
+        "@type": "WebPage",
+        "@id": "https://www.fixthatapp.com/pages/{slug}.html"
+      }}
+    }}
+    </script>
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{
@@ -197,7 +228,32 @@ for filename in os.listdir(ARTICLES_DIR):
         content = f.read()
 
     title, html_content = md_to_html(content)
-    page_html = TEMPLATE.format(title=title, content=html_content)
+
+    # Generate SEO meta data
+    slug = filename.replace('.md', '')
+    # Extract first paragraph for meta description
+    lines = content.strip().split('\n')
+    desc_line = ""
+    for l in lines:
+        l = l.strip()
+        if l and not l.startswith('#') and not l.startswith('Title') and not l.lower().startswith('problem') and not l.lower().startswith('possible') and len(l) > 40:
+            desc_line = l.replace('**', '').replace('*', '')[:160]
+            break
+    if not desc_line:
+        desc_line = f"Troubleshooting guide for {title}. Step-by-step fixes, common causes, and FAQ."
+    meta_description = desc_line
+
+    # Generate keywords from title
+    keywords = title.lower().replace('troubleshooting guide:', '').replace('troubleshooting', '').strip()
+    meta_keywords = f"{keywords}, fix, troubleshooting, how to fix, not working, error, solution"
+
+    page_html = TEMPLATE.format(
+        title=title,
+        content=html_content,
+        meta_description=meta_description,
+        meta_keywords=meta_keywords,
+        slug=slug
+    )
 
     out_filename = filename.replace('.md', '.html')
     out_path = os.path.join(PAGES_DIR, out_filename)
