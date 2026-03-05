@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Tester - Free Online Regular Expression Tool | FixThatApp</title>
+    <meta name="description" content="Test and debug regular expressions in real-time. See matches highlighted, get explanations, and test against sample text. Free online regex tester.">
+    <meta name="keywords" content="regex tester, regular expression tester, regex debugger, regex online, test regex pattern">
+    <link rel="canonical" href="https://www.fixthatapp.com/tools/regex-tester/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--muted:#777;--accent:#667eea;--border:#e0e0e0;--input-bg:#f8f9ff;--code-bg:#1e1e2e;--code-text:#cdd6f4;--match-bg:#667eea33;--match-border:#667eea;--error:#e74c3c;--success:#27ae60}
+        [data-theme=dark]{--bg:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#999;--border:#2a2a4a;--input-bg:#1a1a3e;--match-bg:#667eea44}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+        header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:700}
+        .theme-toggle{background:rgba(255,255,255,.2);border:none;color:#fff;padding:.4rem .8rem;border-radius:50px;cursor:pointer;font-size:.85rem}
+        .container{max-width:900px;margin:0 auto;padding:2rem 1rem;flex:1;width:100%}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1.5rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        h1{font-size:1.8rem;margin-bottom:.5rem}
+        .subtitle{color:var(--muted);margin-bottom:2rem}
+        .tool-card{background:var(--card);border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:1.5rem}
+        .pattern-row{display:flex;gap:.5rem;margin-bottom:1rem;align-items:center}
+        .pattern-row span{color:var(--muted);font-family:monospace;font-size:1.2rem}
+        .pattern-input{flex:1;padding:.6rem 1rem;border:2px solid var(--border);border-radius:8px;font-family:'Courier New',monospace;font-size:1rem;background:var(--input-bg);color:var(--text)}
+        .pattern-input:focus{outline:none;border-color:var(--accent)}
+        .flags{padding:.6rem .8rem;border:2px solid var(--border);border-radius:8px;font-family:monospace;font-size:1rem;background:var(--input-bg);color:var(--text);width:60px;text-align:center}
+        .flags:focus{outline:none;border-color:var(--accent)}
+        .flag-toggles{display:flex;gap:.8rem;margin-bottom:1rem;flex-wrap:wrap}
+        .flag-toggles label{display:flex;align-items:center;gap:.3rem;font-size:.85rem;cursor:pointer}
+        .flag-toggles input{accent-color:var(--accent)}
+        .test-area{width:100%;min-height:200px;padding:1rem;border:2px solid var(--border);border-radius:8px;font-family:'Courier New',monospace;font-size:.9rem;background:var(--input-bg);color:var(--text);resize:vertical;line-height:1.6}
+        .test-area:focus{outline:none;border-color:var(--accent)}
+        .match-output{min-height:200px;padding:1rem;background:var(--code-bg);color:var(--code-text);border-radius:8px;font-family:'Courier New',monospace;font-size:.9rem;white-space:pre-wrap;word-break:break-word;line-height:1.6;margin-top:1rem}
+        .match-output mark{background:var(--match-bg);border:1px solid var(--match-border);border-radius:2px;padding:0 2px;color:var(--accent)}
+        .status{font-size:.85rem;margin-top:.5rem;font-weight:600}
+        .status.error{color:var(--error)}
+        .status.success{color:var(--success)}
+        .match-list{margin-top:1rem;font-size:.85rem;color:var(--muted)}
+        .match-list strong{color:var(--text)}
+        .presets{margin-top:1rem}
+        .presets label{font-size:.85rem;font-weight:500;color:var(--muted)}
+        .presets select{padding:.4rem .6rem;border:2px solid var(--border);border-radius:6px;background:var(--input-bg);color:var(--text);font-size:.85rem;margin-top:.3rem}
+        .info-section{margin-top:2rem}
+        .info-section h2{font-size:1.2rem;margin-bottom:.75rem}
+        .info-section p{color:var(--muted);margin-bottom:.75rem;font-size:.9rem}
+        .info-section a{color:var(--accent)}
+        footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){h1{font-size:1.4rem}.tool-card{padding:1.5rem 1rem}.pattern-row{flex-wrap:wrap}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html">FixThatApp</a>
+        <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Tools</a> &rsaquo; Regex Tester</nav>
+        <h1>Regex Tester</h1>
+        <p class="subtitle">Test regular expressions with real-time match highlighting</p>
+        <div class="tool-card">
+            <div class="pattern-row">
+                <span>/</span>
+                <input class="pattern-input" id="pattern" placeholder="Enter regex pattern..." value="\b\w+@\w+\.\w+\b">
+                <span>/</span>
+                <input class="flags" id="flags" value="gm" maxlength="6">
+            </div>
+            <div class="flag-toggles">
+                <label><input type="checkbox" data-flag="g" checked onchange="toggleFlag(this)"> global (g)</label>
+                <label><input type="checkbox" data-flag="i" onchange="toggleFlag(this)"> case-insensitive (i)</label>
+                <label><input type="checkbox" data-flag="m" checked onchange="toggleFlag(this)"> multiline (m)</label>
+                <label><input type="checkbox" data-flag="s" onchange="toggleFlag(this)"> dotAll (s)</label>
+            </div>
+            <textarea class="test-area" id="testText" placeholder="Enter test text here...">Hello, my email is john@example.com
+You can also reach me at support@fixthatapp.com
+Or call 555-123-4567 for urgent issues.
+Visit https://www.fixthatapp.com for more info.</textarea>
+            <div class="match-output" id="matchOutput"></div>
+            <div class="status" id="status"></div>
+            <div class="match-list" id="matchList"></div>
+            <div class="presets">
+                <label>Quick patterns:</label><br>
+                <select onchange="loadPreset(this.value)">
+                    <option value="">Select a preset...</option>
+                    <option value="\\b\\w+@\\w+\\.\\w+\\b">Email</option>
+                    <option value="https?://[\\w\\-._~:/?#\\[\\]@!$&'()*+,;=%]+">URL</option>
+                    <option value="\\b\\d{3}[-.]?\\d{3}[-.]?\\d{4}\\b">Phone (US)</option>
+                    <option value="\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b">IP Address</option>
+                    <option value="#?[0-9a-fA-F]{6}\\b">Hex Color</option>
+                    <option value="\\b\\d{4}[-/]\\d{2}[-/]\\d{2}\\b">Date (YYYY-MM-DD)</option>
+                </select>
+            </div>
+        </div>
+        <div class="info-section">
+            <h2>Regex Quick Reference</h2>
+            <p><code>.</code> any character &bull; <code>\d</code> digit &bull; <code>\w</code> word char &bull; <code>\s</code> whitespace &bull; <code>+</code> one or more &bull; <code>*</code> zero or more &bull; <code>?</code> optional &bull; <code>^</code> start &bull; <code>$</code> end &bull; <code>[abc]</code> character class &bull; <code>(group)</code> capture group</p>
+            <p><a href="../index.html">Browse more tools</a> | <a href="../json-formatter/">JSON Formatter</a> | <a href="../text-case-converter/">Text Case Converter</a></p>
+        </div>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../index.html">Troubleshooting Guides</a> | <a href="../index.html">All Tools</a></footer>
+    <script>
+    function toggleTheme(){const d=document.documentElement;const t=d.getAttribute('data-theme')==='dark'?'':'dark';d.setAttribute('data-theme',t);document.querySelector('.theme-toggle').textContent=t?'Light Mode':'Dark Mode';localStorage.setItem('theme',t)}
+    if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');
+
+    const patternEl=document.getElementById('pattern');
+    const flagsEl=document.getElementById('flags');
+    const testEl=document.getElementById('testText');
+    const outEl=document.getElementById('matchOutput');
+    const statusEl=document.getElementById('status');
+    const listEl=document.getElementById('matchList');
+
+    function toggleFlag(cb){
+        const f=cb.dataset.flag;
+        let flags=flagsEl.value;
+        if(cb.checked){if(!flags.includes(f))flags+=f}else{flags=flags.replace(f,'')}
+        flagsEl.value=flags;
+        runTest();
+    }
+
+    function loadPreset(p){if(p){patternEl.value=p;runTest()}}
+
+    function runTest(){
+        const pat=patternEl.value;
+        const flags=flagsEl.value;
+        const text=testEl.value;
+        statusEl.className='status';statusEl.textContent='';
+        outEl.textContent='';listEl.innerHTML='';
+        if(!pat){outEl.textContent=text;return}
+        try{
+            const re=new RegExp(pat,flags);
+            const matches=[];
+            let result=text.replace(re,(match,...args)=>{
+                matches.push({match,index:typeof args[args.length-2]==='number'?args[args.length-2]:0});
+                return '\x00MARK_START\x00'+match+'\x00MARK_END\x00';
+            });
+            // HTML escape then add marks
+            result=result.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+            result=result.replace(/\x00MARK_START\x00/g,'<mark>').replace(/\x00MARK_END\x00/g,'</mark>');
+            outEl.innerHTML=result;
+            if(matches.length){
+                statusEl.className='status success';
+                statusEl.textContent=matches.length+' match'+(matches.length>1?'es':'')+' found';
+                listEl.innerHTML='<strong>Matches:</strong> '+matches.map((m,i)=>`<code>${m.match}</code>`).join(', ');
+            }else{
+                statusEl.className='status';statusEl.textContent='No matches found';
+                outEl.textContent=text;
+            }
+        }catch(e){
+            statusEl.className='status error';statusEl.textContent='Error: '+e.message;
+            outEl.textContent=text;
+        }
+    }
+
+    patternEl.addEventListener('input',runTest);
+    flagsEl.addEventListener('input',()=>{
+        // sync checkboxes
+        document.querySelectorAll('.flag-toggles input').forEach(cb=>{cb.checked=flagsEl.value.includes(cb.dataset.flag)});
+        runTest();
+    });
+    testEl.addEventListener('input',runTest);
+    runTest();
+    </script>
+</body>
+</html>

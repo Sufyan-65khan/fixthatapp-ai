@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions Made Simple: A Beginner's Guide | FixThatApp</title>
+    <meta name="description" content="Learn regular expressions from scratch. This beginner-friendly guide covers regex syntax, common patterns for email and URL validation, groups, quantifiers, and testing tips.">
+    <meta name="keywords" content="regex, regular expressions, regex tutorial, regex patterns, email regex, URL regex, phone regex, regex tester, regex guide">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/regex-guide.html">
+    <meta property="og:title" content="Regular Expressions Made Simple: A Beginner's Guide | FixThatApp">
+    <meta property="og:description" content="Learn regular expressions from scratch. Covers regex syntax, common patterns for email and URL validation, and testing tips.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/regex-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Regular Expressions Made Simple: A Beginner's Guide | FixThatApp">
+    <meta name="twitter:description" content="Learn regular expressions from scratch. Covers regex syntax, common patterns for email and URL validation, and testing tips.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Regular Expressions Made Simple: A Beginner's Guide",
+      "description": "Learn regular expressions from scratch. This beginner-friendly guide covers regex syntax, common patterns for email and URL validation, groups, quantifiers, and testing tips.",
+      "datePublished": "2026-03-05",
+      "dateModified": "2026-03-05",
+      "author": {
+        "@type": "Organization",
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.fixthatapp.com/blog/regex-guide.html"
+      }
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .nav-links a:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .breadcrumb a:hover{text-decoration:underline}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article pre code{background:none;padding:0}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        .cta-box a:hover{opacity:.9;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        td code{font-size:.85rem}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        footer a:hover{text-decoration:underline}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; Regular Expressions Guide</nav>
+        <article class="article">
+            <h1>Regular Expressions Made Simple: A Beginner's Guide</h1>
+            <div class="updated">Published March 5, 2026</div>
+
+            <p>Regular expressions -- commonly called "regex" -- are one of the most powerful tools in a developer's toolkit, and also one of the most intimidating. A pattern like <code>^[\w.-]+@[\w.-]+\.\w{2,}$</code> looks like random noise to a beginner, but once you understand the building blocks, regex becomes remarkably logical.</p>
+
+            <p>This guide will teach you regex from the ground up, covering the core syntax, the most useful real-world patterns, and practical tips for testing and debugging your expressions.</p>
+
+            <h2>What Are Regular Expressions?</h2>
+
+            <p>A regular expression is a sequence of characters that defines a search pattern. You can use regex to find text, validate input, extract data, or replace content within strings. Nearly every programming language supports regex, including JavaScript, Python, Java, PHP, and Go.</p>
+
+            <p>Common use cases include:</p>
+
+            <ul>
+                <li>Validating email addresses, phone numbers, and URLs</li>
+                <li>Searching log files for specific error patterns</li>
+                <li>Extracting data from unstructured text</li>
+                <li>Find-and-replace operations in code editors</li>
+                <li>Parsing configuration files and CSV data</li>
+            </ul>
+
+            <h2>Basic Regex Syntax</h2>
+
+            <p>Before writing complex patterns, you need to know the fundamental building blocks:</p>
+
+            <table>
+                <tr><th>Symbol</th><th>Meaning</th><th>Example</th></tr>
+                <tr><td><code>.</code></td><td>Any single character (except newline)</td><td><code>h.t</code> matches "hat", "hit", "hot"</td></tr>
+                <tr><td><code>^</code></td><td>Start of string</td><td><code>^Hello</code> matches "Hello world"</td></tr>
+                <tr><td><code>$</code></td><td>End of string</td><td><code>world$</code> matches "Hello world"</td></tr>
+                <tr><td><code>*</code></td><td>Zero or more of the previous</td><td><code>ab*c</code> matches "ac", "abc", "abbc"</td></tr>
+                <tr><td><code>+</code></td><td>One or more of the previous</td><td><code>ab+c</code> matches "abc", "abbc" but not "ac"</td></tr>
+                <tr><td><code>?</code></td><td>Zero or one of the previous</td><td><code>colou?r</code> matches "color" and "colour"</td></tr>
+                <tr><td><code>\d</code></td><td>Any digit (0-9)</td><td><code>\d{3}</code> matches "123"</td></tr>
+                <tr><td><code>\w</code></td><td>Any word character (letter, digit, underscore)</td><td><code>\w+</code> matches "hello_42"</td></tr>
+                <tr><td><code>\s</code></td><td>Any whitespace character</td><td><code>\s+</code> matches spaces and tabs</td></tr>
+                <tr><td><code>[abc]</code></td><td>Any character in the set</td><td><code>[aeiou]</code> matches any vowel</td></tr>
+                <tr><td><code>[^abc]</code></td><td>Any character NOT in the set</td><td><code>[^0-9]</code> matches non-digits</td></tr>
+                <tr><td><code>(abc)</code></td><td>Capturing group</td><td><code>(\d{3})-(\d{4})</code> captures groups</td></tr>
+            </table>
+
+            <h2>Quantifiers: Controlling Repetition</h2>
+
+            <p>Quantifiers let you specify how many times a pattern should repeat:</p>
+
+            <ul>
+                <li><code>{3}</code> -- Exactly 3 times</li>
+                <li><code>{2,5}</code> -- Between 2 and 5 times</li>
+                <li><code>{3,}</code> -- 3 or more times</li>
+                <li><code>*</code> -- 0 or more (shorthand for <code>{0,}</code>)</li>
+                <li><code>+</code> -- 1 or more (shorthand for <code>{1,}</code>)</li>
+                <li><code>?</code> -- 0 or 1 (shorthand for <code>{0,1}</code>)</li>
+            </ul>
+
+            <p>By default, quantifiers are <strong>greedy</strong> -- they match as much text as possible. Adding <code>?</code> after a quantifier makes it <strong>lazy</strong>, matching as little as possible. For example, <code>.+?</code> will match the shortest possible string.</p>
+
+            <div class="cta-box">
+                <h3>Test Your Regex Patterns Live</h3>
+                <p>Write a pattern and see matches highlighted in real time with our free regex tester.</p>
+                <a href="../tools/regex-tester/">Try the Regex Tester</a>
+            </div>
+
+            <h2>Common Real-World Patterns</h2>
+
+            <h3>Email Address</h3>
+            <pre><code>^[\w.-]+@[\w.-]+\.\w{2,}$</code></pre>
+            <p>Matches most standard email formats. Note that fully RFC-compliant email validation is extremely complex -- this pattern covers 99% of real-world addresses.</p>
+
+            <h3>URL</h3>
+            <pre><code>https?:\/\/[\w.-]+(?:\/[\w.\-/?=&#amp;%]*)?</code></pre>
+            <p>Matches HTTP and HTTPS URLs. The <code>s?</code> makes the "s" in "https" optional.</p>
+
+            <h3>US Phone Number</h3>
+            <pre><code>^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$</code></pre>
+            <p>Matches formats like (555) 123-4567, 555-123-4567, and 5551234567.</p>
+
+            <h3>IP Address (IPv4)</h3>
+            <pre><code>\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b</code></pre>
+            <p>Matches patterns like 192.168.1.1. Note this does not validate that each octet is 0-255.</p>
+
+            <h3>Date (YYYY-MM-DD)</h3>
+            <pre><code>\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])</code></pre>
+            <p>Matches ISO 8601 date format with basic month and day validation.</p>
+
+            <h2>Tips for Writing Better Regex</h2>
+
+            <ol>
+                <li><strong>Start simple and iterate.</strong> Build your pattern one piece at a time, testing each addition. Do not try to write the entire expression at once.</li>
+                <li><strong>Use a visual tester.</strong> Tools like our <a href="../tools/regex-tester/">Regex Tester</a> highlight matches in real time, making it much easier to spot issues than staring at raw code.</li>
+                <li><strong>Be specific.</strong> Use <code>\d</code> instead of <code>.</code> when you expect digits. The more specific your pattern, the fewer false matches you will get.</li>
+                <li><strong>Anchor your patterns.</strong> Use <code>^</code> and <code>$</code> when validating entire strings to prevent partial matches.</li>
+                <li><strong>Comment complex patterns.</strong> In languages that support it (like Python's <code>re.VERBOSE</code>), add comments to explain each part of a complex regex.</li>
+                <li><strong>Consider readability.</strong> If a regex becomes too complex, consider breaking the validation into multiple simpler checks or using a parsing library instead.</li>
+            </ol>
+
+            <div class="tip-box">
+                <strong>Pro tip: Combine regex with JSON validation.</strong>
+                <p>When building APIs, use regex to validate individual field formats and <a href="../tools/json-formatter/">JSON validation</a> to check the overall data structure. Together, they catch most data quality issues.</p>
+            </div>
+
+            <h2>Troubleshooting Regex Problems</h2>
+
+            <h3>My pattern matches too much</h3>
+            <p>You are likely using greedy quantifiers. Replace <code>.*</code> with <code>.*?</code> to switch to lazy matching, or be more specific about what characters you expect.</p>
+
+            <h3>My pattern works in one language but not another</h3>
+            <p>Regex flavors differ between languages. For example, <code>\b</code> (word boundary) behaves differently in JavaScript vs Python. Lookaheads and lookbehinds also vary in support. Always test in the target language's environment.</p>
+
+            <h3>Special characters are not matching</h3>
+            <p>Characters like <code>. * + ? ( ) [ ] { } ^ $ | \</code> have special meaning in regex. To match them literally, escape them with a backslash: <code>\.</code>, <code>\*</code>, <code>\(</code>, etc.</p>
+
+            <h3>The pattern is too slow</h3>
+            <p>Catastrophic backtracking occurs when a regex engine tries too many combinations. Avoid nested quantifiers like <code>(a+)+</code> and use atomic groups or possessive quantifiers where available.</p>
+
+            <p>Regular expressions are a skill that improves with practice. Start with simple patterns, test them interactively with our <a href="../tools/regex-tester/">free Regex Tester</a>, and gradually work your way up to more complex expressions. Before long, patterns that once looked like gibberish will be second nature.</p>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+</body>
+</html>

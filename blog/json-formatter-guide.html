@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatting: A Complete Guide for Developers | FixThatApp</title>
+    <meta name="description" content="Everything you need to know about JSON formatting. Learn the syntax rules, fix common JSON errors, follow best practices, and understand when to use JSON vs XML.">
+    <meta name="keywords" content="JSON formatter, JSON validator, JSON syntax, JSON errors, JSON vs XML, format JSON, pretty print JSON, minify JSON">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/json-formatter-guide.html">
+    <meta property="og:title" content="JSON Formatting: A Complete Guide for Developers | FixThatApp">
+    <meta property="og:description" content="Everything you need to know about JSON formatting. Learn the syntax rules, fix common JSON errors, and follow best practices.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/json-formatter-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JSON Formatting: A Complete Guide for Developers | FixThatApp">
+    <meta name="twitter:description" content="Everything you need to know about JSON formatting. Learn the syntax rules, fix common JSON errors, and follow best practices.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "JSON Formatting: A Complete Guide for Developers",
+      "description": "Everything you need to know about JSON formatting. Learn the syntax rules, fix common JSON errors, follow best practices, and understand when to use JSON vs XML.",
+      "datePublished": "2026-03-05",
+      "dateModified": "2026-03-05",
+      "author": {
+        "@type": "Organization",
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.fixthatapp.com/blog/json-formatter-guide.html"
+      }
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .nav-links a:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .breadcrumb a:hover{text-decoration:underline}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article pre code{background:none;padding:0}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        .cta-box a:hover{opacity:.9;text-decoration:none}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        footer a:hover{text-decoration:underline}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; JSON Formatting Guide</nav>
+        <article class="article">
+            <h1>JSON Formatting: A Complete Guide for Developers</h1>
+            <div class="updated">Published March 5, 2026</div>
+
+            <p>JSON (JavaScript Object Notation) has become the universal language of data exchange on the web. Whether you are building REST APIs, configuring applications, or passing data between a frontend and backend, you will encounter JSON every single day as a developer. Understanding how to read, write, and debug JSON is a fundamental skill.</p>
+
+            <p>This guide covers everything from basic syntax to common pitfalls, formatting best practices, and how JSON compares to alternatives like XML.</p>
+
+            <h2>What Is JSON?</h2>
+
+            <p>JSON is a lightweight, text-based data format that is easy for both humans and machines to read. It was derived from JavaScript but is language-independent -- virtually every programming language has built-in support for parsing and generating JSON.</p>
+
+            <p>A simple JSON object looks like this:</p>
+
+            <pre><code>{
+  "name": "Alice",
+  "age": 30,
+  "isActive": true,
+  "skills": ["JavaScript", "Python", "SQL"],
+  "address": {
+    "city": "Austin",
+    "state": "TX"
+  }
+}</code></pre>
+
+            <p>JSON supports six data types: <strong>strings</strong> (in double quotes), <strong>numbers</strong>, <strong>booleans</strong> (<code>true</code>/<code>false</code>), <strong>null</strong>, <strong>arrays</strong> (ordered lists), and <strong>objects</strong> (key-value pairs).</p>
+
+            <h2>Common JSON Errors and How to Fix Them</h2>
+
+            <p>Even experienced developers run into JSON syntax errors regularly. Here are the most frequent mistakes:</p>
+
+            <h3>Trailing Commas</h3>
+            <p>Unlike JavaScript objects, JSON does not allow a comma after the last item in an array or object. This is invalid:</p>
+            <pre><code>{ "name": "Alice", "age": 30, }  // Error: trailing comma</code></pre>
+
+            <h3>Single Quotes Instead of Double Quotes</h3>
+            <p>JSON requires double quotes for all strings and keys. Single quotes will cause a parse error:</p>
+            <pre><code>{ 'name': 'Alice' }  // Error: must use double quotes</code></pre>
+
+            <h3>Unquoted Keys</h3>
+            <p>Every key in a JSON object must be a string wrapped in double quotes:</p>
+            <pre><code>{ name: "Alice" }  // Error: key must be quoted</code></pre>
+
+            <h3>Comments</h3>
+            <p>JSON does not support comments of any kind. No <code>//</code>, no <code>/* */</code>. If you need comments in configuration files, consider using JSON5 or JSONC formats instead.</p>
+
+            <div class="tip-box">
+                <strong>Quick Fix: Paste your JSON into a validator.</strong>
+                <p>When you get a cryptic "Unexpected token" error, use our <a href="../tools/json-formatter/">JSON Formatter tool</a> to instantly highlight the exact line and character where the error occurs.</p>
+            </div>
+
+            <h2>JSON Formatting Best Practices</h2>
+
+            <h3>Pretty Print for Readability</h3>
+            <p>When debugging or reviewing JSON, always format it with proper indentation. Most editors and tools support this. Standard practice is 2-space or 4-space indentation. Our <a href="../tools/json-formatter/">JSON Formatter</a> handles this automatically.</p>
+
+            <h3>Minify for Production</h3>
+            <p>When transmitting JSON over a network, remove all unnecessary whitespace to reduce payload size. A large API response can shrink by 15-25% when minified.</p>
+
+            <h3>Use Consistent Naming Conventions</h3>
+            <p>Pick a key naming style and stick with it throughout your API. <code>camelCase</code> is the most common convention in JavaScript-based APIs, while <code>snake_case</code> is standard in Python and Ruby ecosystems. Never mix them in the same response.</p>
+
+            <h3>Keep Nesting Shallow</h3>
+            <p>Deeply nested JSON is hard to read and harder to query. If you find yourself nesting more than three or four levels deep, consider flattening your data structure.</p>
+
+            <h3>Validate Against a Schema</h3>
+            <p>For production APIs, use JSON Schema to define and validate the expected structure. This catches errors before they reach your application logic.</p>
+
+            <div class="cta-box">
+                <h3>Format and Validate JSON Instantly</h3>
+                <p>Paste your JSON and get it formatted, validated, and error-checked in real time -- completely free.</p>
+                <a href="../tools/json-formatter/">Try the JSON Formatter</a>
+            </div>
+
+            <h2>JSON vs XML: When to Use Each</h2>
+
+            <p>Before JSON dominated, XML was the standard data interchange format. Here is how they compare:</p>
+
+            <ul>
+                <li><strong>Readability:</strong> JSON is more concise and easier to scan. XML requires closing tags, which adds verbosity.</li>
+                <li><strong>File size:</strong> JSON payloads are typically 30-50% smaller than equivalent XML data.</li>
+                <li><strong>Parsing speed:</strong> JSON parsers are generally faster because the format is simpler.</li>
+                <li><strong>Schema support:</strong> XML has mature schema validation (XSD, DTD). JSON Schema exists but is less widely adopted.</li>
+                <li><strong>Attributes and metadata:</strong> XML supports attributes on elements. JSON has no equivalent -- everything is a key-value pair.</li>
+            </ul>
+
+            <p><strong>Use JSON</strong> for web APIs, configuration files, and any JavaScript-heavy application. <strong>Use XML</strong> when working with SOAP services, document markup (like XHTML or SVG), or enterprise systems that require it.</p>
+
+            <h2>Troubleshooting JSON Issues</h2>
+
+            <h3>My API returns JSON but it looks like one long line</h3>
+            <p>The server is returning minified JSON, which is normal for production. Paste it into our <a href="../tools/json-formatter/">JSON Formatter</a> or use your browser's developer tools (Network tab, then click the response and select "Pretty print").</p>
+
+            <h3>I am getting "Unexpected token" errors in JavaScript</h3>
+            <p>This usually means your JSON is malformed. Common causes: trailing commas, single quotes, or unquoted keys. You can also test patterns against your data using our <a href="../tools/regex-tester/">Regex Tester</a> to locate the problematic characters.</p>
+
+            <h3>JSON.parse() fails on valid-looking data</h3>
+            <p>Check for invisible characters like BOM (byte order mark) at the start of the file, or non-breaking spaces instead of regular spaces. Copy the data to a hex editor or run it through a formatter to expose hidden characters.</p>
+
+            <h3>Numbers lose precision</h3>
+            <p>JavaScript cannot safely represent integers larger than 2^53 - 1. If your JSON contains very large numbers (like database IDs), send them as strings instead.</p>
+
+            <p>JSON is straightforward once you know the rules. Keep this guide handy, bookmark our <a href="../tools/json-formatter/">JSON Formatter</a> for quick debugging, and you will spend less time fighting syntax errors and more time building features.</p>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+</body>
+</html>

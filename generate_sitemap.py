@@ -1,4 +1,4 @@
-"""Generate sitemap.xml from all HTML pages."""
+"""Generate sitemap.xml from all HTML pages, tools, and blog posts."""
 import os
 from datetime import date
 
@@ -21,6 +21,45 @@ urls.append(f"""  <url>
     <lastmod>{TODAY}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>""")
+
+# Tools index
+urls.append(f"""  <url>
+    <loc>{DOMAIN}/tools/</loc>
+    <lastmod>{TODAY}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>""")
+
+# Individual tools
+tools_dir = "tools"
+for tool_name in sorted(os.listdir(tools_dir)):
+    tool_path = os.path.join(tools_dir, tool_name)
+    if os.path.isdir(tool_path) and os.path.exists(os.path.join(tool_path, "index.html")):
+        urls.append(f"""  <url>
+    <loc>{DOMAIN}/tools/{tool_name}/</loc>
+    <lastmod>{TODAY}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>""")
+
+# Blog index
+urls.append(f"""  <url>
+    <loc>{DOMAIN}/blog/</loc>
+    <lastmod>{TODAY}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>""")
+
+# Blog posts
+blog_dir = "blog"
+for filename in sorted(os.listdir(blog_dir)):
+    if filename.endswith('.html') and filename != 'index.html':
+        urls.append(f"""  <url>
+    <loc>{DOMAIN}/blog/{filename}</loc>
+    <lastmod>{TODAY}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>""")
 
 # All article pages

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Username Generator - Free Online Tool | FixThatApp</title>
+    <meta name="description" content="Generate unique, creative usernames for social media, gaming, and online accounts. Customize style, length, and keywords. Free username generator.">
+    <meta name="keywords" content="username generator, random username, gaming username, social media username, unique username ideas">
+    <link rel="canonical" href="https://www.fixthatapp.com/tools/username-generator/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--muted:#777;--accent:#667eea;--border:#e0e0e0;--input-bg:#f8f9ff;--code-bg:#f0f0f5}
+        [data-theme=dark]{--bg:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#999;--border:#2a2a4a;--input-bg:#1a1a3e;--code-bg:#0f3460}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+        header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:700}
+        .theme-toggle{background:rgba(255,255,255,.2);border:none;color:#fff;padding:.4rem .8rem;border-radius:50px;cursor:pointer;font-size:.85rem}
+        .container{max-width:700px;margin:0 auto;padding:2rem 1rem;flex:1;width:100%}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1.5rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        h1{font-size:1.8rem;margin-bottom:.5rem}
+        .subtitle{color:var(--muted);margin-bottom:2rem}
+        .tool-card{background:var(--card);border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:1.5rem}
+        .options{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.5rem}
+        .options label{font-size:.9rem;font-weight:500}
+        .options select,.options input[type=text]{padding:.5rem .8rem;border:2px solid var(--border);border-radius:8px;background:var(--input-bg);color:var(--text);font-size:.9rem}
+        .options select:focus,.options input:focus{outline:none;border-color:var(--accent)}
+        .gen-btn{width:100%;padding:.8rem;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;margin-bottom:1.5rem}
+        .gen-btn:hover{background:#5a6fd6}
+        .results{display:grid;gap:.6rem}
+        .username-item{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;background:var(--input-bg);border:2px solid var(--border);border-radius:8px;transition:border-color .2s}
+        .username-item:hover{border-color:var(--accent)}
+        .username-text{font-family:'Courier New',monospace;font-size:1.05rem;font-weight:600}
+        .copy-one{background:none;border:none;color:var(--accent);cursor:pointer;font-size:.85rem;font-weight:600;padding:.3rem .6rem;border-radius:4px}
+        .copy-one:hover{background:var(--code-bg)}
+        .info-section{margin-top:2rem}
+        .info-section h2{font-size:1.2rem;margin-bottom:.75rem}
+        .info-section p{color:var(--muted);margin-bottom:.75rem;font-size:.9rem}
+        .info-section a{color:var(--accent)}
+        .copied{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--accent);color:#fff;padding:.8rem 2rem;border-radius:8px;font-weight:600;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+        .copied.show{opacity:1}
+        footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){h1{font-size:1.4rem}.tool-card{padding:1.5rem 1rem}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html">FixThatApp</a>
+        <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Tools</a> &rsaquo; Username Generator</nav>
+        <h1>Random Username Generator</h1>
+        <p class="subtitle">Generate unique usernames for any platform</p>
+        <div class="tool-card">
+            <div class="options">
+                <div>
+                    <label>Style</label><br>
+                    <select id="style">
+                        <option value="cool">Cool</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="professional">Professional</option>
+                        <option value="funny">Funny</option>
+                        <option value="aesthetic">Aesthetic</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Include keyword</label><br>
+                    <input type="text" id="keyword" placeholder="e.g. wolf, star" maxlength="15">
+                </div>
+                <div>
+                    <label>Add numbers</label><br>
+                    <select id="numbers">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            <button class="gen-btn" onclick="generateAll()">Generate 10 Usernames</button>
+            <div class="results" id="results"></div>
+        </div>
+        <div class="info-section">
+            <h2>Tips for Choosing a Username</h2>
+            <p>Keep it short and memorable. Avoid special characters that are hard to type. Check availability on your target platform before committing. Consider using the same username across platforms for consistent branding.</p>
+            <p>Having trouble logging into your accounts? Check our <a href="../../pages/instagram-login-error.html">Instagram login fix</a> or <a href="../../pages/tiktok-account-banned.html">TikTok account guide</a>.</p>
+            <p><a href="../index.html">Browse more tools</a> | <a href="../password-generator/">Password Generator</a></p>
+        </div>
+    </div>
+    <div class="copied" id="copiedToast">Copied!</div>
+    <footer>&copy; 2026 FixThatApp | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../index.html">Troubleshooting Guides</a> | <a href="../index.html">All Tools</a></footer>
+    <script>
+    function toggleTheme(){const d=document.documentElement;const t=d.getAttribute('data-theme')==='dark'?'':'dark';d.setAttribute('data-theme',t);document.querySelector('.theme-toggle').textContent=t?'Light Mode':'Dark Mode';localStorage.setItem('theme',t)}
+    if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');
+
+    const adj={cool:['Shadow','Cyber','Neon','Frost','Blaze','Storm','Echo','Nova','Phantom','Astral','Cosmic','Vortex','Apex','Zenith','Pulse'],gaming:['Dark','Epic','Pro','Elite','Toxic','Swift','Chaos','Fury','Savage','Hyper','Ultra','Mega','Turbo','Alpha','Omega'],professional:['The','Digital','Tech','Smart','Prime','Global','Core','Net','Cloud','Data','Logic','Pixel','Nexus','Blue','Key'],funny:['Captain','Sir','Lord','Professor','Doctor','Agent','Ninja','Pickle','Fluffy','Chunky','Sneaky','Spicy','Crispy','Wobbly','Dizzy'],aesthetic:['Moon','Cloud','Rain','Petal','Dusk','Dawn','Mist','Sage','Bloom','Ember','Pearl','Ivory','Velvet','Silk','Coral']};
+    const noun={cool:['Wolf','Phoenix','Hawk','Viper','Dragon','Knight','Raven','Titan','Ghost','Lion','Falcon','Serpent','Panther','Blade','Hunter'],gaming:['Sniper','Warrior','Legend','Gamer','Wizard','Slayer','Boss','Demon','Reaper','Ranger','Mystic','Ninja','Rebel','Warden','Ace'],professional:['Mind','Hub','Forge','Works','Studio','Lab','Edge','Point','Craft','Bridge','Path','Link','Zone','Stack','Base'],funny:['Pants','Burrito','Waffle','Noodle','Penguin','Llama','Taco','Potato','Banana','Donut','Muffin','Nugget','Pretzel','Biscuit','Cupcake'],aesthetic:['Rose','Sky','Luna','Star','Wave','Dream','Light','Snow','Leaf','Song','Breeze','Spirit','Grace','Echo','Flow']};
+
+    function pick(arr){return arr[Math.floor(Math.random()*arr.length)]}
+
+    function genOne(){
+        const style=document.getElementById('style').value;
+        const kw=document.getElementById('keyword').value.trim();
+        const addNum=document.getElementById('numbers').value==='yes';
+        const a=pick(adj[style]);
+        const n=kw||pick(noun[style]);
+        const sep=pick(['','_','','.','']).slice(0,Math.random()>.5?1:0);
+        let name=a+sep+n.charAt(0).toUpperCase()+n.slice(1);
+        if(addNum)name+=Math.floor(Math.random()*999);
+        return name.replace(/\s/g,'');
+    }
+
+    function generateAll(){
+        const res=document.getElementById('results');
+        const names=new Set();
+        while(names.size<10)names.add(genOne());
+        res.innerHTML=[...names].map(n=>`<div class="username-item"><span class="username-text">${n}</span><button class="copy-one" onclick="copyOne('${n}')">Copy</button></div>`).join('');
+    }
+
+    function copyOne(name){
+        navigator.clipboard.writeText(name);
+        const t=document.getElementById('copiedToast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1200);
+    }
+
+    generateAll();
+    </script>
+</body>
+</html>

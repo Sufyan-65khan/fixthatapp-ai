@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Previewer - Free Online Tool | FixThatApp</title>
+    <meta name="description" content="Write and preview Markdown in real-time. Side-by-side editor and preview. Supports headings, lists, code blocks, tables, and more. Free Markdown editor.">
+    <meta name="keywords" content="markdown previewer, markdown editor, markdown to html, live markdown preview, free markdown tool">
+    <link rel="canonical" href="https://www.fixthatapp.com/tools/markdown-previewer/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--muted:#777;--accent:#667eea;--border:#e0e0e0;--input-bg:#f8f9ff;--code-bg:#f0f0f5}
+        [data-theme=dark]{--bg:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#999;--border:#2a2a4a;--input-bg:#1a1a3e;--code-bg:#0f3460}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+        header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:700}
+        .theme-toggle{background:rgba(255,255,255,.2);border:none;color:#fff;padding:.4rem .8rem;border-radius:50px;cursor:pointer;font-size:.85rem}
+        .container{max-width:1200px;margin:0 auto;padding:1.5rem 1rem;flex:1;width:100%}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        h1{font-size:1.6rem;margin-bottom:.3rem}
+        .subtitle{color:var(--muted);margin-bottom:1rem;font-size:.9rem}
+        .editor-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1rem;min-height:500px}
+        .editor-pane,.preview-pane{background:var(--card);border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);overflow:hidden;display:flex;flex-direction:column}
+        .pane-header{padding:.5rem 1rem;background:var(--input-bg);border-bottom:1px solid var(--border);font-size:.8rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+        .editor-pane textarea{flex:1;padding:1rem;border:none;background:transparent;font-family:'Courier New',monospace;font-size:.9rem;color:var(--text);resize:none;line-height:1.6;outline:none}
+        .preview-pane .preview{flex:1;padding:1.5rem;overflow-y:auto;font-size:.95rem}
+        .preview h1{font-size:1.6rem;margin:1rem 0 .5rem;color:var(--text);border-bottom:2px solid var(--border);padding-bottom:.3rem}
+        .preview h2{font-size:1.3rem;margin:1rem 0 .5rem;color:var(--text)}
+        .preview h3{font-size:1.1rem;margin:.8rem 0 .4rem;color:var(--text)}
+        .preview p{margin:.5rem 0;color:var(--text)}
+        .preview code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.85em;font-family:'Courier New',monospace}
+        .preview pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0}
+        .preview pre code{background:transparent;padding:0}
+        .preview blockquote{border-left:4px solid var(--accent);padding:.5rem 1rem;margin:.75rem 0;color:var(--muted);background:var(--input-bg);border-radius:0 8px 8px 0}
+        .preview ul,.preview ol{margin:.5rem 0 .5rem 1.5rem}
+        .preview li{margin:.25rem 0}
+        .preview strong{color:var(--text);font-weight:700}
+        .preview em{font-style:italic}
+        .preview a{color:var(--accent)}
+        .preview hr{border:none;border-top:2px solid var(--border);margin:1rem 0}
+        .preview table{border-collapse:collapse;width:100%;margin:.75rem 0}
+        .preview th,.preview td{border:1px solid var(--border);padding:.5rem .75rem;text-align:left}
+        .preview th{background:var(--input-bg);font-weight:600}
+        .btn-row{display:flex;gap:.5rem;margin-top:1rem}
+        .btn{padding:.5rem 1rem;border:2px solid var(--border);border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;background:var(--card);color:var(--text);transition:all .2s}
+        .btn:hover{border-color:var(--accent);color:var(--accent)}
+        .copied{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--accent);color:#fff;padding:.8rem 2rem;border-radius:8px;font-weight:600;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+        .copied.show{opacity:1}
+        .info-section{margin-top:1.5rem}
+        .info-section p{color:var(--muted);font-size:.85rem}
+        .info-section a{color:var(--accent)}
+        footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:768px){.editor-wrap{grid-template-columns:1fr;min-height:auto}.editor-pane textarea{min-height:200px}.preview-pane .preview{min-height:200px}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html">FixThatApp</a>
+        <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Tools</a> &rsaquo; Markdown Previewer</nav>
+        <h1>Markdown Previewer</h1>
+        <p class="subtitle">Write Markdown on the left, see the preview on the right</p>
+        <div class="editor-wrap">
+            <div class="editor-pane">
+                <div class="pane-header">Markdown</div>
+                <textarea id="mdInput" placeholder="Type Markdown here...">## Welcome to the Markdown Previewer
+
+This is a **live preview** tool. Everything you type on the left appears formatted on the right.
+
+### Features
+
+- **Bold** and *italic* text
+- [Links](https://www.fixthatapp.com)
+- Lists (ordered and unordered)
+- Code blocks and `inline code`
+- Blockquotes
+- Tables
+
+### Code Example
+
+```
+function hello() {
+  console.log("Hello, World!");
+}
+```
+
+> This is a blockquote. Great for highlighting important information.
+
+### Table Example
+
+| Tool | Purpose |
+|------|---------|
+| JSON Formatter | Format and validate JSON |
+| Regex Tester | Test regular expressions |
+| Password Generator | Create secure passwords |
+
+---
+
+Made with FixThatApp tools. [Browse more tools](https://www.fixthatapp.com/tools/)
+</textarea>
+            </div>
+            <div class="preview-pane">
+                <div class="pane-header">Preview</div>
+                <div class="preview" id="preview"></div>
+            </div>
+        </div>
+        <div class="btn-row">
+            <button class="btn" onclick="copyMd()">Copy Markdown</button>
+            <button class="btn" onclick="copyHtml()">Copy HTML</button>
+            <button class="btn" onclick="clearAll()">Clear</button>
+        </div>
+        <div class="info-section">
+            <p><a href="../index.html">Browse more tools</a> | <a href="../json-formatter/">JSON Formatter</a> | <a href="../text-case-converter/">Text Case Converter</a></p>
+        </div>
+    </div>
+    <div class="copied" id="copiedToast">Copied!</div>
+    <footer>&copy; 2026 FixThatApp | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../index.html">Troubleshooting Guides</a> | <a href="../index.html">All Tools</a></footer>
+    <script>
+    function toggleTheme(){const d=document.documentElement;const t=d.getAttribute('data-theme')==='dark'?'':'dark';d.setAttribute('data-theme',t);document.querySelector('.theme-toggle').textContent=t?'Light Mode':'Dark Mode';localStorage.setItem('theme',t)}
+    if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');
+
+    function mdToHtml(md){
+        let h=md;
+        // Code blocks
+        h=h.replace(/```(\w*)\n([\s\S]*?)```/g,(m,lang,code)=>'<pre><code>'+code.replace(/</g,'&lt;').replace(/>/g,'&gt;').trim()+'</code></pre>');
+        // Tables
+        h=h.replace(/^\|(.+)\|\s*\n\|[\s\-:|]+\|\s*\n((?:\|.+\|\s*\n?)*)/gm,(m,header,body)=>{
+            const ths=header.split('|').map(c=>'<th>'+c.trim()+'</th>').join('');
+            const rows=body.trim().split('\n').map(r=>'<tr>'+r.split('|').filter(Boolean).map(c=>'<td>'+c.trim()+'</td>').join('')+'</tr>').join('');
+            return '<table><thead><tr>'+ths+'</tr></thead><tbody>'+rows+'</tbody></table>';
+        });
+        // Headers
+        h=h.replace(/^### (.+)$/gm,'<h3>$1</h3>');
+        h=h.replace(/^## (.+)$/gm,'<h2>$1</h2>');
+        h=h.replace(/^# (.+)$/gm,'<h1>$1</h1>');
+        // HR
+        h=h.replace(/^---+$/gm,'<hr>');
+        // Blockquote
+        h=h.replace(/^>\s*(.+)$/gm,'<blockquote><p>$1</p></blockquote>');
+        // Bold + italic
+        h=h.replace(/\*\*\*(.+?)\*\*\*/g,'<strong><em>$1</em></strong>');
+        h=h.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+        h=h.replace(/\*(.+?)\*/g,'<em>$1</em>');
+        // Inline code
+        h=h.replace(/`([^`]+)`/g,'<code>$1</code>');
+        // Links
+        h=h.replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2" target="_blank">$1</a>');
+        // Unordered lists
+        h=h.replace(/(^- .+$\n?)+/gm,m=>'<ul>'+m.replace(/^- (.+)$/gm,'<li>$1</li>')+'</ul>');
+        // Ordered lists
+        h=h.replace(/(^\d+\. .+$\n?)+/gm,m=>'<ol>'+m.replace(/^\d+\. (.+)$/gm,'<li>$1</li>')+'</ol>');
+        // Paragraphs
+        h=h.split('\n\n').map(block=>{
+            block=block.trim();
+            if(!block)return '';
+            if(block.startsWith('<'))return block;
+            return '<p>'+block.replace(/\n/g,'<br>')+'</p>';
+        }).join('\n');
+        return h;
+    }
+
+    const inp=document.getElementById('mdInput');
+    const prev=document.getElementById('preview');
+
+    function render(){prev.innerHTML=mdToHtml(inp.value)}
+    inp.addEventListener('input',render);
+
+    // Tab key
+    inp.addEventListener('keydown',function(e){
+        if(e.key==='Tab'){e.preventDefault();const s=this.selectionStart,en=this.selectionEnd;this.value=this.value.substring(0,s)+'  '+this.value.substring(en);this.selectionStart=this.selectionEnd=s+2;render()}
+    });
+
+    function copyMd(){navigator.clipboard.writeText(inp.value);showToast()}
+    function copyHtml(){navigator.clipboard.writeText(mdToHtml(inp.value));showToast()}
+    function clearAll(){inp.value='';render()}
+    function showToast(){const t=document.getElementById('copiedToast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1200)}
+
+    render();
+    </script>
+</body>
+</html>

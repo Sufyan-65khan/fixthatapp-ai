@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Case Conversion: When to Use camelCase, snake_case, and More | FixThatApp</title>
+    <meta name="description" content="A developer's guide to naming conventions. Learn when to use camelCase, snake_case, PascalCase, kebab-case, and more, with language-specific recommendations and free conversion tools.">
+    <meta name="keywords" content="camelCase, snake_case, PascalCase, kebab-case, naming conventions, text case converter, programming conventions, variable naming">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/text-case-guide.html">
+    <meta property="og:title" content="Text Case Conversion: When to Use camelCase, snake_case, and More | FixThatApp">
+    <meta property="og:description" content="A developer's guide to naming conventions. Learn when to use camelCase, snake_case, PascalCase, kebab-case, and more.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/text-case-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Text Case Conversion: When to Use camelCase, snake_case, and More | FixThatApp">
+    <meta name="twitter:description" content="A developer's guide to naming conventions. Learn when to use camelCase, snake_case, PascalCase, kebab-case, and more.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Text Case Conversion: When to Use camelCase, snake_case, and More",
+      "description": "A developer's guide to naming conventions. Learn when to use camelCase, snake_case, PascalCase, kebab-case, and more, with language-specific recommendations.",
+      "datePublished": "2026-03-05",
+      "dateModified": "2026-03-05",
+      "author": {
+        "@type": "Organization",
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.fixthatapp.com/blog/text-case-guide.html"
+      }
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .nav-links a:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .breadcrumb a:hover{text-decoration:underline}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article pre code{background:none;padding:0}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        .cta-box a:hover{opacity:.9;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        td code{font-size:.85rem}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        footer a:hover{text-decoration:underline}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; Text Case Conversion Guide</nav>
+        <article class="article">
+            <h1>Text Case Conversion: When to Use camelCase, snake_case, and More</h1>
+            <div class="updated">Published March 5, 2026</div>
+
+            <p>Naming things is one of the two hardest problems in computer science (alongside cache invalidation and off-by-one errors). Choosing the right case convention for your variables, functions, classes, and file names is not just about aesthetics -- it affects code readability, team collaboration, and even how well your code integrates with frameworks and libraries.</p>
+
+            <p>This guide explains every major naming convention, when to use each one, and which languages and contexts prefer which style.</p>
+
+            <h2>The Major Case Styles Explained</h2>
+
+            <table>
+                <tr><th>Style</th><th>Example</th><th>Also Known As</th></tr>
+                <tr><td><strong>camelCase</strong></td><td><code>getUserName</code></td><td>Lower camel case</td></tr>
+                <tr><td><strong>PascalCase</strong></td><td><code>UserAccount</code></td><td>Upper camel case</td></tr>
+                <tr><td><strong>snake_case</strong></td><td><code>user_name</code></td><td>Underscore case</td></tr>
+                <tr><td><strong>SCREAMING_SNAKE_CASE</strong></td><td><code>MAX_RETRIES</code></td><td>Constant case</td></tr>
+                <tr><td><strong>kebab-case</strong></td><td><code>user-profile</code></td><td>Dash case, hyphen case</td></tr>
+                <tr><td><strong>UPPERCASE</strong></td><td><code>USERNAME</code></td><td>All caps</td></tr>
+                <tr><td><strong>lowercase</strong></td><td><code>username</code></td><td>All lower</td></tr>
+                <tr><td><strong>Title Case</strong></td><td><code>User Name</code></td><td>Start case</td></tr>
+                <tr><td><strong>Sentence case</strong></td><td><code>User name here</code></td><td>--</td></tr>
+                <tr><td><strong>dot.case</strong></td><td><code>user.name</code></td><td>Dot notation</td></tr>
+            </table>
+
+            <h2>When to Use Each Convention</h2>
+
+            <h3>camelCase</h3>
+            <p>The go-to convention for <strong>variables and functions</strong> in JavaScript, TypeScript, Java, and C#. The first word is lowercase, and each subsequent word is capitalized. It is also the standard for JSON keys in most JavaScript-based APIs.</p>
+            <pre><code>let userName = "Alice";
+function getUserProfile() { ... }</code></pre>
+
+            <h3>PascalCase</h3>
+            <p>Used for <strong>class names, components, and types</strong> across nearly all languages. In React, all component names must be PascalCase. It is also the convention for C# methods and public properties.</p>
+            <pre><code>class UserAccount { ... }
+function ProfileCard() { return &lt;div&gt;...&lt;/div&gt;; }</code></pre>
+
+            <h3>snake_case</h3>
+            <p>The standard for <strong>variables and functions</strong> in Python, Ruby, Rust, and PHP. It is also the convention for database column names in most SQL databases and for JSON keys in Python-based APIs.</p>
+            <pre><code>user_name = "Alice"
+def get_user_profile():
+    pass</code></pre>
+
+            <h3>SCREAMING_SNAKE_CASE</h3>
+            <p>Reserved for <strong>constants</strong> in virtually every language. When you see all caps with underscores, it signals that a value should not be modified.</p>
+            <pre><code>const MAX_RETRIES = 3;
+const API_BASE_URL = "https://api.example.com";</code></pre>
+
+            <h3>kebab-case</h3>
+            <p>The standard for <strong>URLs, CSS class names, and file names</strong> in web projects. Hyphens are more readable than underscores in URLs and are the convention in HTML attribute names.</p>
+            <pre><code>&lt;div class="user-profile-card"&gt;...&lt;/div&gt;
+/* file: user-profile.css */</code></pre>
+
+            <div class="cta-box">
+                <h3>Convert Text Between Any Case Style</h3>
+                <p>Paste your text and instantly convert between camelCase, snake_case, PascalCase, and more.</p>
+                <a href="../tools/text-case-converter/">Try the Text Case Converter</a>
+            </div>
+
+            <h2>Language-Specific Conventions</h2>
+
+            <h3>JavaScript / TypeScript</h3>
+            <ul>
+                <li>Variables and functions: <code>camelCase</code></li>
+                <li>Classes and React components: <code>PascalCase</code></li>
+                <li>Constants: <code>SCREAMING_SNAKE_CASE</code></li>
+                <li>File names: <code>kebab-case</code> or <code>camelCase</code> (varies by project)</li>
+            </ul>
+
+            <h3>Python</h3>
+            <ul>
+                <li>Variables and functions: <code>snake_case</code></li>
+                <li>Classes: <code>PascalCase</code></li>
+                <li>Constants: <code>SCREAMING_SNAKE_CASE</code></li>
+                <li>Modules and packages: <code>snake_case</code></li>
+            </ul>
+
+            <h3>Java / C#</h3>
+            <ul>
+                <li>Variables and method parameters: <code>camelCase</code></li>
+                <li>Methods: <code>camelCase</code> (Java) or <code>PascalCase</code> (C#)</li>
+                <li>Classes and interfaces: <code>PascalCase</code></li>
+                <li>Constants: <code>SCREAMING_SNAKE_CASE</code></li>
+            </ul>
+
+            <h3>Go</h3>
+            <ul>
+                <li>Exported (public) names: <code>PascalCase</code></li>
+                <li>Unexported (private) names: <code>camelCase</code></li>
+                <li>Acronyms stay uppercase: <code>HTTPClient</code>, not <code>HttpClient</code></li>
+            </ul>
+
+            <h3>CSS / HTML</h3>
+            <ul>
+                <li>Class names: <code>kebab-case</code></li>
+                <li>CSS custom properties: <code>--kebab-case</code></li>
+                <li>Data attributes: <code>data-kebab-case</code></li>
+                <li>BEM methodology: <code>block__element--modifier</code></li>
+            </ul>
+
+            <h3>Databases</h3>
+            <ul>
+                <li>Table and column names: <code>snake_case</code> (PostgreSQL, MySQL) or <code>PascalCase</code> (SQL Server)</li>
+                <li>Avoid spaces and special characters in identifiers</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>Tip: Consistency beats correctness.</strong>
+                <p>The most important rule is to be consistent within your project. If your team uses <code>camelCase</code> for JSON keys, do not mix in <code>snake_case</code>. Use a linter to enforce conventions automatically. When working with JSON APIs, our <a href="../tools/json-formatter/">JSON Formatter</a> can help you spot inconsistent key naming.</p>
+            </div>
+
+            <h2>Troubleshooting Case-Related Issues</h2>
+
+            <h3>My CSS class names are not applying</h3>
+            <p>CSS class names are case-sensitive. If your HTML says <code>class="UserCard"</code> but your CSS targets <code>.usercard</code>, the styles will not apply. Stick to <code>kebab-case</code> for CSS classes to avoid this entirely.</p>
+
+            <h3>My imports are failing on Linux but work on Mac/Windows</h3>
+            <p>Mac and Windows file systems are case-insensitive by default, but Linux is case-sensitive. A file named <code>UserProfile.js</code> will not be found by <code>import './userprofile.js'</code> on Linux. Always match the exact case of file names in your imports.</p>
+
+            <h3>My API returns different cases than expected</h3>
+            <p>When a frontend (JavaScript, using camelCase) communicates with a backend (Python, using snake_case), you need a serialization layer that converts between them. Most frameworks (like Django REST Framework or NestJS) have built-in support for this.</p>
+
+            <h3>Database queries are case-sensitive when they should not be</h3>
+            <p>PostgreSQL treats unquoted identifiers as lowercase. If you create a column as <code>"userName"</code> (quoted), you must always quote it. Use <code>snake_case</code> without quotes to avoid this problem.</p>
+
+            <p>Getting naming conventions right saves time in code reviews, reduces bugs from case mismatches, and makes your codebase more welcoming to new contributors. Use our <a href="../tools/text-case-converter/">free Text Case Converter</a> to quickly transform text between any convention, and pick a style guide that matches your language's community standards.</p>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+</body>
+</html>

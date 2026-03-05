@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator - Free Strong Password Tool | FixThatApp</title>
+    <meta name="description" content="Generate strong, secure passwords instantly. Customize length, characters, and complexity. Free online password generator tool.">
+    <meta name="keywords" content="password generator, strong password, secure password, random password, free password tool">
+    <link rel="canonical" href="https://www.fixthatapp.com/tools/password-generator/">
+    <meta property="og:title" content="Free Password Generator - FixThatApp">
+    <meta property="og:description" content="Generate strong, secure passwords instantly. Customize length and complexity.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--muted:#777;--accent:#667eea;--accent2:#764ba2;--border:#e0e0e0;--input-bg:#f8f9ff;--code-bg:#f0f0f5}
+        [data-theme=dark]{--bg:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#999;--border:#2a2a4a;--input-bg:#1a1a3e;--code-bg:#0f3460}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+        header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:700}
+        .theme-toggle{background:rgba(255,255,255,.2);border:none;color:#fff;padding:.4rem .8rem;border-radius:50px;cursor:pointer;font-size:.85rem}
+        .container{max-width:700px;margin:0 auto;padding:2rem 1rem;flex:1;width:100%}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1.5rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        h1{font-size:1.8rem;margin-bottom:.5rem}
+        .subtitle{color:var(--muted);margin-bottom:2rem}
+        .tool-card{background:var(--card);border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:1.5rem}
+        .output-box{width:100%;padding:1rem;background:var(--code-bg);border:2px solid var(--border);border-radius:8px;font-family:'Courier New',monospace;font-size:1.2rem;color:var(--text);text-align:center;word-break:break-all;min-height:60px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;letter-spacing:1px}
+        .controls{display:flex;flex-direction:column;gap:1rem}
+        .control-row{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+        .control-row label{font-weight:500;white-space:nowrap}
+        input[type=range]{flex:1;accent-color:var(--accent)}
+        .range-val{font-weight:700;color:var(--accent);min-width:30px;text-align:center}
+        .checkbox-row{display:flex;flex-wrap:wrap;gap:.8rem 1.5rem;margin:.5rem 0}
+        .checkbox-row label{display:flex;align-items:center;gap:.4rem;cursor:pointer;font-size:.9rem}
+        .checkbox-row input{accent-color:var(--accent)}
+        .btn-row{display:flex;gap:.8rem;margin-top:1rem}
+        .btn{flex:1;padding:.75rem 1rem;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:all .2s}
+        .btn-primary{background:var(--accent);color:#fff}
+        .btn-primary:hover{background:#5a6fd6}
+        .btn-secondary{background:var(--input-bg);color:var(--text);border:2px solid var(--border)}
+        .btn-secondary:hover{border-color:var(--accent)}
+        .strength{margin-top:1rem}
+        .strength-bar{height:6px;background:var(--border);border-radius:3px;overflow:hidden;margin:.5rem 0}
+        .strength-fill{height:100%;border-radius:3px;transition:width .3s,background .3s}
+        .strength-label{font-size:.85rem;font-weight:600}
+        .info-section{margin-top:2rem}
+        .info-section h2{font-size:1.2rem;margin-bottom:.75rem;color:var(--text)}
+        .info-section p{color:var(--muted);margin-bottom:.75rem;font-size:.9rem}
+        .info-section a{color:var(--accent)}
+        .copied{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--accent);color:#fff;padding:.8rem 2rem;border-radius:8px;font-weight:600;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+        .copied.show{opacity:1}
+        footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){h1{font-size:1.4rem}.tool-card{padding:1.5rem 1rem}.output-box{font-size:1rem}.btn-row{flex-direction:column}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html">FixThatApp</a>
+        <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Tools</a> &rsaquo; Password Generator
+        </nav>
+        <h1>Password Generator</h1>
+        <p class="subtitle">Generate strong, secure passwords instantly</p>
+
+        <div class="tool-card">
+            <div class="output-box" id="passwordOutput">Click Generate</div>
+
+            <div class="controls">
+                <div class="control-row">
+                    <label>Length</label>
+                    <input type="range" id="length" min="4" max="64" value="16" oninput="updateLength()">
+                    <span class="range-val" id="lengthVal">16</span>
+                </div>
+                <div class="checkbox-row">
+                    <label><input type="checkbox" id="upper" checked> Uppercase (A-Z)</label>
+                    <label><input type="checkbox" id="lower" checked> Lowercase (a-z)</label>
+                    <label><input type="checkbox" id="numbers" checked> Numbers (0-9)</label>
+                    <label><input type="checkbox" id="symbols" checked> Symbols (!@#$)</label>
+                </div>
+                <div class="btn-row">
+                    <button class="btn btn-primary" onclick="generate()">Generate Password</button>
+                    <button class="btn btn-secondary" onclick="copyPassword()">Copy</button>
+                </div>
+            </div>
+
+            <div class="strength">
+                <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+                <span class="strength-label" id="strengthLabel">—</span>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>What Makes a Strong Password?</h2>
+            <p>A strong password should be at least 12 characters long and include a mix of uppercase letters, lowercase letters, numbers, and symbols. Avoid common words, names, or patterns.</p>
+            <h2>Tips for Password Security</h2>
+            <p>Use a unique password for every account. Consider using a password manager to keep track of them. Enable <a href="../../pages/two-factor-authentication-not-working.html">two-factor authentication</a> for extra security.</p>
+            <p><a href="../index.html">Browse more free tools</a> | <a href="../../blog/password-generator-guide.html">Read the full guide</a></p>
+        </div>
+    </div>
+    <div class="copied" id="copiedToast">Copied!</div>
+    <footer>&copy; 2026 FixThatApp | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../index.html">Troubleshooting Guides</a> | <a href="../index.html">All Tools</a></footer>
+
+    <script>
+    function toggleTheme(){
+        const d=document.documentElement;
+        const t=d.getAttribute('data-theme')==='dark'?'':'dark';
+        d.setAttribute('data-theme',t);
+        document.querySelector('.theme-toggle').textContent=t?'Light Mode':'Dark Mode';
+        localStorage.setItem('theme',t);
+    }
+    if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');
+
+    function updateLength(){document.getElementById('lengthVal').textContent=document.getElementById('length').value}
+
+    function generate(){
+        const len=parseInt(document.getElementById('length').value);
+        let chars='';
+        if(document.getElementById('upper').checked)chars+='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        if(document.getElementById('lower').checked)chars+='abcdefghijklmnopqrstuvwxyz';
+        if(document.getElementById('numbers').checked)chars+='0123456789';
+        if(document.getElementById('symbols').checked)chars+='!@#$%^&*()_+-=[]{}|;:,.<>?';
+        if(!chars){alert('Select at least one character type');return}
+        const arr=new Uint32Array(len);
+        crypto.getRandomValues(arr);
+        let pw='';
+        for(let i=0;i<len;i++)pw+=chars[arr[i]%chars.length];
+        document.getElementById('passwordOutput').textContent=pw;
+        updateStrength(pw);
+    }
+
+    function updateStrength(pw){
+        let score=0;
+        if(pw.length>=8)score++;if(pw.length>=12)score++;if(pw.length>=16)score++;
+        if(/[a-z]/.test(pw)&&/[A-Z]/.test(pw))score++;
+        if(/\d/.test(pw))score++;
+        if(/[^a-zA-Z0-9]/.test(pw))score++;
+        const levels=[{w:'16%',c:'#e74c3c',l:'Very Weak'},{w:'33%',c:'#e67e22',l:'Weak'},{w:'50%',c:'#f39c12',l:'Fair'},{w:'66%',c:'#27ae60',l:'Good'},{w:'83%',c:'#2ecc71',l:'Strong'},{w:'100%',c:'#00b894',l:'Very Strong'}];
+        const lv=levels[Math.min(score,5)];
+        const fill=document.getElementById('strengthFill');
+        fill.style.width=lv.w;fill.style.background=lv.c;
+        document.getElementById('strengthLabel').textContent='Strength: '+lv.l;
+        document.getElementById('strengthLabel').style.color=lv.c;
+    }
+
+    function copyPassword(){
+        const pw=document.getElementById('passwordOutput').textContent;
+        if(pw==='Click Generate')return;
+        navigator.clipboard.writeText(pw);
+        const t=document.getElementById('copiedToast');
+        t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1200);
+    }
+
+    generate();
+    </script>
+</body>
+</html>

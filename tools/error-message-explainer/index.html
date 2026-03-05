@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Message Explainer - Free Online Tool | FixThatApp</title>
+    <meta name="description" content="Paste any error message and get a plain-English explanation with step-by-step fixes. Covers HTTP errors, programming errors, app crashes, and system errors.">
+    <meta name="keywords" content="error message explainer, error code lookup, what does error mean, fix error message, error code search">
+    <link rel="canonical" href="https://www.fixthatapp.com/tools/error-message-explainer/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--muted:#777;--accent:#667eea;--border:#e0e0e0;--input-bg:#f8f9ff;--code-bg:#f0f0f5;--error:#e74c3c;--success:#27ae60;--warn:#f39c12}
+        [data-theme=dark]{--bg:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#999;--border:#2a2a4a;--input-bg:#1a1a3e;--code-bg:#0f3460}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+        header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:700}
+        .theme-toggle{background:rgba(255,255,255,.2);border:none;color:#fff;padding:.4rem .8rem;border-radius:50px;cursor:pointer;font-size:.85rem}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem;flex:1;width:100%}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1.5rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        h1{font-size:1.8rem;margin-bottom:.5rem}
+        .subtitle{color:var(--muted);margin-bottom:2rem}
+        .tool-card{background:var(--card);border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:1.5rem}
+        .input-row{display:flex;gap:.5rem}
+        .input-row input{flex:1;padding:.75rem 1rem;border:2px solid var(--border);border-radius:8px;font-size:1rem;background:var(--input-bg);color:var(--text)}
+        .input-row input:focus{outline:none;border-color:var(--accent)}
+        .btn{padding:.75rem 1.5rem;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer}
+        .btn:hover{background:#5a6fd6}
+        .result{margin-top:1.5rem;display:none}
+        .result.show{display:block}
+        .result-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem}
+        .severity{padding:.3rem .8rem;border-radius:50px;font-size:.75rem;font-weight:700;text-transform:uppercase}
+        .severity.critical{background:#fdecea;color:var(--error)}
+        .severity.warning{background:#fff8e1;color:var(--warn)}
+        .severity.info{background:#e8f5e9;color:var(--success)}
+        [data-theme=dark] .severity.critical{background:#3d1515}
+        [data-theme=dark] .severity.warning{background:#3d3015}
+        [data-theme=dark] .severity.info{background:#1a3d1a}
+        .error-code{font-family:'Courier New',monospace;font-size:1.1rem;font-weight:700;color:var(--accent)}
+        .explanation{background:var(--input-bg);border-radius:8px;padding:1.25rem;margin-bottom:1rem}
+        .explanation h3{font-size:1rem;margin-bottom:.5rem}
+        .explanation p{color:var(--muted);font-size:.9rem;margin-bottom:.5rem}
+        .fixes{margin-top:1rem}
+        .fixes h3{font-size:1rem;margin-bottom:.75rem}
+        .fix-item{display:flex;gap:.75rem;margin-bottom:.75rem;padding:.75rem;background:var(--code-bg);border-radius:8px;align-items:flex-start}
+        .fix-num{background:var(--accent);color:#fff;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0}
+        .fix-text{font-size:.9rem;color:var(--text)}
+        .related{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border)}
+        .related h3{font-size:.95rem;margin-bottom:.5rem;color:var(--muted)}
+        .related a{color:var(--accent);text-decoration:none;font-size:.9rem;display:inline-block;margin-right:1rem}
+        .common-errors{margin-top:1.5rem}
+        .common-errors h3{font-size:1rem;margin-bottom:.75rem}
+        .error-chip{display:inline-block;padding:.3rem .8rem;margin:.25rem;background:var(--input-bg);border:1px solid var(--border);border-radius:50px;font-size:.8rem;cursor:pointer;font-family:monospace;color:var(--text);transition:all .2s}
+        .error-chip:hover{border-color:var(--accent);color:var(--accent)}
+        .info-section{margin-top:2rem}
+        .info-section h2{font-size:1.2rem;margin-bottom:.75rem}
+        .info-section p{color:var(--muted);margin-bottom:.75rem;font-size:.9rem}
+        .info-section a{color:var(--accent)}
+        footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){h1{font-size:1.4rem}.tool-card{padding:1.5rem 1rem}.input-row{flex-direction:column}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html">FixThatApp</a>
+        <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Tools</a> &rsaquo; Error Message Explainer</nav>
+        <h1>Error Message Explainer</h1>
+        <p class="subtitle">Paste any error message to get a plain-English explanation and fixes</p>
+        <div class="tool-card">
+            <div class="input-row">
+                <input type="text" id="errorInput" placeholder="e.g. 404 Not Found, ECONNREFUSED, NullPointerException..." autofocus>
+                <button class="btn" onclick="explain()">Explain</button>
+            </div>
+            <div class="result" id="result"></div>
+            <div class="common-errors">
+                <h3>Common Errors (click to explain)</h3>
+                <span class="error-chip" onclick="quickSearch('404 Not Found')">404 Not Found</span>
+                <span class="error-chip" onclick="quickSearch('500 Internal Server Error')">500 Server Error</span>
+                <span class="error-chip" onclick="quickSearch('403 Forbidden')">403 Forbidden</span>
+                <span class="error-chip" onclick="quickSearch('502 Bad Gateway')">502 Bad Gateway</span>
+                <span class="error-chip" onclick="quickSearch('CORS error')">CORS Error</span>
+                <span class="error-chip" onclick="quickSearch('ECONNREFUSED')">ECONNREFUSED</span>
+                <span class="error-chip" onclick="quickSearch('NullPointerException')">NullPointerException</span>
+                <span class="error-chip" onclick="quickSearch('TypeError')">TypeError</span>
+                <span class="error-chip" onclick="quickSearch('ERR_CONNECTION_REFUSED')">ERR_CONNECTION_REFUSED</span>
+                <span class="error-chip" onclick="quickSearch('DNS_PROBE_FINISHED_NXDOMAIN')">DNS_PROBE_FINISHED_NXDOMAIN</span>
+                <span class="error-chip" onclick="quickSearch('SSL certificate error')">SSL Certificate Error</span>
+                <span class="error-chip" onclick="quickSearch('blue screen of death')">Blue Screen (BSOD)</span>
+                <span class="error-chip" onclick="quickSearch('out of memory')">Out of Memory</span>
+                <span class="error-chip" onclick="quickSearch('permission denied')">Permission Denied</span>
+                <span class="error-chip" onclick="quickSearch('timeout')">Timeout</span>
+            </div>
+        </div>
+        <div class="info-section">
+            <h2>How This Tool Works</h2>
+            <p>This tool matches your error message against a database of 50+ common errors across HTTP, programming, networking, and system categories. It provides plain-English explanations and actionable fixes.</p>
+            <p>For app-specific errors, check our <a href="../../index.html">troubleshooting guides</a> for <a href="../../pages/chatgpt-not-working.html">ChatGPT</a>, <a href="../../pages/netflix-error-code-nw-2-5.html">Netflix</a>, <a href="../../pages/discord-mic-not-working.html">Discord</a>, and 100+ more apps.</p>
+            <p><a href="../index.html">Browse more tools</a> | <a href="../json-formatter/">JSON Formatter</a> | <a href="../regex-tester/">Regex Tester</a></p>
+        </div>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../index.html">Troubleshooting Guides</a> | <a href="../index.html">All Tools</a></footer>
+    <script>
+    function toggleTheme(){const d=document.documentElement;const t=d.getAttribute('data-theme')==='dark'?'':'dark';d.setAttribute('data-theme',t);document.querySelector('.theme-toggle').textContent=t?'Light Mode':'Dark Mode';localStorage.setItem('theme',t)}
+    if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');
+
+    const db=[
+    {patterns:['400','bad request'],code:'400 Bad Request',severity:'warning',meaning:'The server cannot process the request because the client sent invalid data.',fixes:['Check the URL for typos or special characters','Verify form data or API request body is correct','Clear browser cookies and cache','Check Content-Type header matches the data format'],related:['json-formatter']},
+    {patterns:['401','unauthorized'],code:'401 Unauthorized',severity:'critical',meaning:'You need to log in or your credentials are invalid. The server requires authentication.',fixes:['Log in again with correct credentials','Check if your API key or token has expired','Verify the Authorization header format','Reset your password if needed'],related:['two-factor-authentication-not-working']},
+    {patterns:['403','forbidden'],code:'403 Forbidden',severity:'critical',meaning:'You don\'t have permission to access this resource. The server understood your request but refuses to authorize it.',fixes:['Check if you have the right permissions for this resource','Verify your account role or subscription level','Contact the site admin for access','Check if your IP is blocked by a firewall'],related:['vpn-not-connecting']},
+    {patterns:['404','not found'],code:'404 Not Found',severity:'warning',meaning:'The page or resource you\'re looking for doesn\'t exist at this URL. It may have been moved or deleted.',fixes:['Check the URL for typos','Try navigating from the site\'s homepage','Search for the page using the site\'s search feature','Check if the page was moved using the Wayback Machine'],related:['github-pages-not-loading']},
+    {patterns:['429','too many requests','rate limit'],code:'429 Too Many Requests',severity:'warning',meaning:'You\'ve sent too many requests in a short time. The server is rate-limiting you to prevent abuse.',fixes:['Wait a few minutes before trying again','Reduce the frequency of your requests','Check the Retry-After header for wait time','Use exponential backoff in API calls'],related:['openai-api-down']},
+    {patterns:['500','internal server error'],code:'500 Internal Server Error',severity:'critical',meaning:'Something went wrong on the server side. This is not your fault — the server encountered an unexpected condition.',fixes:['Wait a few minutes and try again','Clear browser cache and reload','Check the service\'s status page for outages','Contact the website administrator'],related:['google-services-outage']},
+    {patterns:['502','bad gateway'],code:'502 Bad Gateway',severity:'critical',meaning:'A server acting as a gateway received an invalid response from an upstream server. Often caused by server overload or misconfiguration.',fixes:['Refresh the page after a few minutes','Clear your DNS cache (ipconfig /flushdns)','Try a different browser','Check if the site is down for everyone at downdetector.com'],related:['cloudflare-outage']},
+    {patterns:['503','service unavailable'],code:'503 Service Unavailable',severity:'critical',meaning:'The server is temporarily unable to handle the request, usually due to maintenance or overload.',fixes:['Wait and retry — this is usually temporary','Check the service\'s status page','Try again during off-peak hours','Contact support if it persists'],related:['google-services-outage']},
+    {patterns:['504','gateway timeout'],code:'504 Gateway Timeout',severity:'critical',meaning:'The server didn\'t receive a timely response from an upstream server. Usually indicates server overload or network issues.',fixes:['Refresh the page','Check your internet connection','Try again later','Use a VPN if your ISP is having routing issues'],related:['vpn-not-connecting']},
+    {patterns:['cors','cross-origin','access-control-allow-origin'],code:'CORS Error',severity:'warning',meaning:'Cross-Origin Resource Sharing error. Your browser blocked a request to a different domain for security reasons.',fixes:['Add proper CORS headers on the server (Access-Control-Allow-Origin)','Use a proxy server for development','Check that the API supports CORS','For testing, use a CORS browser extension (not for production)'],related:[]},
+    {patterns:['econnrefused','connection refused'],code:'ECONNREFUSED',severity:'critical',meaning:'The connection was refused by the target server. The server is either not running or not accepting connections on that port.',fixes:['Check if the server/service is running','Verify the hostname and port number','Check firewall rules','Ensure the server is listening on the correct interface'],related:['vpn-not-connecting']},
+    {patterns:['econnreset','connection reset'],code:'ECONNRESET',severity:'warning',meaning:'The connection was forcibly closed by the remote server. Often caused by timeouts, server crashes, or network issues.',fixes:['Retry the request','Check your network stability','Increase timeout settings','Check if a firewall is dropping connections'],related:['wifi-connected-but-no-internet']},
+    {patterns:['etimedout','timed out','timeout'],code:'Connection Timeout',severity:'warning',meaning:'The request took too long to get a response. The server didn\'t respond within the expected time.',fixes:['Check your internet connection','Try again — the server may be overloaded','Increase the timeout value in your settings','Check if a firewall is blocking the connection'],related:['wifi-connected-but-no-internet']},
+    {patterns:['dns_probe_finished_nxdomain','nxdomain'],code:'DNS_PROBE_FINISHED_NXDOMAIN',severity:'critical',meaning:'The domain name doesn\'t exist or can\'t be resolved. DNS couldn\'t find the IP address for the domain.',fixes:['Check the URL for typos','Try using Google DNS (8.8.8.8) or Cloudflare DNS (1.1.1.1)','Flush your DNS cache: ipconfig /flushdns','Check if the domain registration has expired'],related:['wifi-connected-but-no-internet']},
+    {patterns:['err_connection_refused'],code:'ERR_CONNECTION_REFUSED',severity:'critical',meaning:'Chrome couldn\'t connect to the site. The site refused the connection.',fixes:['Check if the website is down for everyone','Clear browser cache and cookies','Disable proxy or VPN','Flush DNS and reset network settings'],related:['google-chrome-running-slow']},
+    {patterns:['ssl','certificate','err_cert','tls'],code:'SSL Certificate Error',severity:'critical',meaning:'The website\'s SSL/TLS certificate is invalid, expired, or doesn\'t match the domain. Your connection isn\'t secure.',fixes:['Check if the system clock is correct','Try in an incognito/private window','Clear browser SSL cache','If it\'s your site, renew or reinstall the SSL certificate'],related:['github-pages-not-loading']},
+    {patterns:['nullpointerexception','null pointer','cannot read properties of null','undefined is not an object'],code:'NullPointerException / Null Reference',severity:'critical',meaning:'Your code tried to use a variable or object that is null or undefined. This is one of the most common programming errors.',fixes:['Add null checks before accessing object properties','Use optional chaining (?.) in JavaScript','Initialize variables before using them','Check API responses for null/missing data'],related:[]},
+    {patterns:['typeerror','type error','is not a function','is not a constructor'],code:'TypeError',severity:'warning',meaning:'An operation was performed on a value of the wrong type. For example, calling a non-function as a function.',fixes:['Check variable types with typeof or console.log','Verify the function/method name is spelled correctly','Make sure imports are correct','Check if the object is initialized before calling methods'],related:[]},
+    {patterns:['syntaxerror','syntax error','unexpected token','unexpected end'],code:'SyntaxError',severity:'warning',meaning:'Your code has a syntax mistake — a missing bracket, comma, quote, or other structural error.',fixes:['Check for missing closing brackets, parentheses, or quotes','Look at the line number in the error for the location','Use a linter or code formatter','Validate JSON with a JSON formatter'],related:['json-formatter']},
+    {patterns:['referenceerror','reference error','is not defined'],code:'ReferenceError',severity:'warning',meaning:'Your code references a variable that hasn\'t been declared or is out of scope.',fixes:['Check if the variable is spelled correctly','Make sure the variable is declared before use','Check the variable scope (let/const are block-scoped)','Verify imports are correct'],related:[]},
+    {patterns:['stack overflow','maximum call stack'],code:'Stack Overflow Error',severity:'critical',meaning:'A function called itself too many times (infinite recursion), exceeding the maximum call stack size.',fixes:['Check for infinite recursive loops','Add a base case to recursive functions','Convert recursion to iteration if possible','Increase the stack size limit if needed'],related:[]},
+    {patterns:['out of memory','heap','oom','memory'],code:'Out of Memory Error',severity:'critical',meaning:'The application ran out of available memory. This can crash the app or the entire system.',fixes:['Close unused applications and browser tabs','Increase available memory/swap space','Check for memory leaks in your code','Optimize data processing to use less memory'],related:['google-chrome-crashing']},
+    {patterns:['permission denied','access denied','eperm','eacces'],code:'Permission Denied',severity:'critical',meaning:'You don\'t have the required file system or OS-level permissions to perform this action.',fixes:['Run the command as administrator/sudo','Check file permissions (chmod on Linux/Mac)','Verify you own the file or directory','Check if antivirus is blocking access'],related:[]},
+    {patterns:['blue screen','bsod','stop code','irql_not_less_or_equal','kernel_data_inpage_error','system_service_exception'],code:'Blue Screen of Death (BSOD)',severity:'critical',meaning:'Windows encountered a critical system error and had to shut down to prevent damage. Usually caused by hardware or driver issues.',fixes:['Restart your computer','Update or rollback recently installed drivers','Run Windows Memory Diagnostic (mdsched.exe)','Check for disk errors with chkdsk /f','Boot in Safe Mode and uninstall recent software'],related:['windows-wifi-not-connecting']},
+    {patterns:['segmentation fault','segfault','sigsegv'],code:'Segmentation Fault',severity:'critical',meaning:'The program tried to access memory it\'s not allowed to access. Common in C/C++ programs.',fixes:['Check for buffer overflows','Verify pointer operations','Use a debugger (gdb) to find the exact line','Check array bounds'],related:[]},
+    ];
+
+    function explain(){
+        const input=document.getElementById('errorInput').value.trim().toLowerCase();
+        if(!input){alert('Please enter an error message');return}
+        const resEl=document.getElementById('result');
+        let match=null;
+        let bestScore=0;
+        for(const entry of db){
+            let score=0;
+            for(const p of entry.patterns){
+                if(input.includes(p.toLowerCase()))score+=p.length;
+            }
+            if(score>bestScore){bestScore=score;match=entry}
+        }
+
+        if(!match){
+            resEl.innerHTML=`<div class="result-header"><span class="error-code">${document.getElementById('errorInput').value}</span><span class="severity warning">Unknown</span></div><div class="explanation"><h3>No exact match found</h3><p>We couldn't find this specific error in our database. Try these general steps:</p></div><div class="fixes"><div class="fix-item"><span class="fix-num">1</span><span class="fix-text">Search the exact error message on Google</span></div><div class="fix-item"><span class="fix-num">2</span><span class="fix-text">Check the application's documentation or help pages</span></div><div class="fix-item"><span class="fix-num">3</span><span class="fix-text">Look for the error on Stack Overflow</span></div><div class="fix-item"><span class="fix-num">4</span><span class="fix-text">Restart the application or your device</span></div></div><div class="related"><h3>Try our troubleshooting guides</h3><a href="../../index.html">Browse 100+ app guides</a></div>`;
+            resEl.classList.add('show');
+            return;
+        }
+
+        const fixesHtml=match.fixes.map((f,i)=>`<div class="fix-item"><span class="fix-num">${i+1}</span><span class="fix-text">${f}</span></div>`).join('');
+        let relatedHtml='';
+        if(match.related.length){
+            relatedHtml=`<div class="related"><h3>Related Guides</h3>${match.related.map(r=>`<a href="../../pages/${r}.html">${r.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}</a>`).join('')}</div>`;
+        }
+
+        resEl.innerHTML=`<div class="result-header"><span class="error-code">${match.code}</span><span class="severity ${match.severity}">${match.severity}</span></div><div class="explanation"><h3>What this means</h3><p>${match.meaning}</p></div><div class="fixes"><h3>How to fix it</h3>${fixesHtml}</div>${relatedHtml}`;
+        resEl.classList.add('show');
+    }
+
+    function quickSearch(q){
+        document.getElementById('errorInput').value=q;
+        explain();
+    }
+
+    document.getElementById('errorInput').addEventListener('keydown',e=>{if(e.key==='Enter')explain()});
+    </script>
+</body>
+</html>
