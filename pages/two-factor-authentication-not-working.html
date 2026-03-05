@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting Guide: Two-Factor Authentication (2FA) Not Working - FixThatApp</title>
+    <meta name="description" content="Two-factor authentication codes may not work when trying to log into your accounts. The codes from your authenticator app might be rejected, SMS codes may not a">
+    <meta name="keywords" content="two-factor authentication (2fa) not working, fix, troubleshooting, how to fix, not working, error, solution">
+    <link rel="canonical" href="https://www.fixthatapp.com/pages/two-factor-authentication-not-working.html">
+    <meta property="og:title" content="Troubleshooting Guide: Two-Factor Authentication (2FA) Not Working - FixThatApp">
+    <meta property="og:description" content="Two-factor authentication codes may not work when trying to log into your accounts. The codes from your authenticator app might be rejected, SMS codes may not a">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/pages/two-factor-authentication-not-working.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Troubleshooting Guide: Two-Factor Authentication (2FA) Not Working - FixThatApp">
+    <meta name="twitter:description" content="Two-factor authentication codes may not work when trying to log into your accounts. The codes from your authenticator app might be rejected, SMS codes may not a">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
+     crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Troubleshooting Guide: Two-Factor Authentication (2FA) Not Working",
+      "description": "Two-factor authentication codes may not work when trying to log into your accounts. The codes from your authenticator app might be rejected, SMS codes may not a",
+      "author": {
+        "@type": "Organization",
+        "name": "FixThatApp"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FixThatApp"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.fixthatapp.com/pages/two-factor-authentication-not-working.html"
+      }
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem 1rem;
+        }
+        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
+        .back:hover { text-decoration: underline; }
+        .article {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article p { margin-bottom: 1rem; color: #444; }
+        .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
+        .article li { margin-bottom: 0.5rem; }
+        .article strong { color: #333; }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.25rem; }
+        .faq .q { font-weight: 600; color: #333; }
+        .faq .a { color: #555; }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        footer a { color: #667eea; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header><a href="../index.html">FixThatApp</a></header>
+    <div class="container">
+        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <div class="article">
+            <h1>Troubleshooting Guide: Two-Factor Authentication (2FA) Not Working</h1>
+            <h2>Problem Description</h2>
+            <p>Two-factor authentication codes may not work when trying to log into your accounts. The codes from your authenticator app might be rejected, SMS codes may not arrive, or backup codes may fail, leaving you locked out of your account.</p>
+            <h2>Possible Causes</h2>
+            <p><strong>Time sync issues</strong>: Authenticator apps need your device clock to be accurate.</p>
+            <p><strong>SMS not delivered</strong>: Network issues can prevent text message delivery.</p>
+            <p><strong>Wrong account selected</strong>: You may be using codes from the wrong account in your authenticator.</p>
+            <p><strong>Expired codes</strong>: 2FA codes expire every 30 seconds — you may be entering them too late.</p>
+            <p><strong>Account recovery needed</strong>: If you lost your 2FA device, you need account recovery.</p>
+            <h2>Step-by-Step Fixes</h2>
+            <p>### Fix 1: Check Your Clock</p>
+            <p>&bull; Make sure your device's time is set to automatic.</p>
+            <p>&bull; On iPhone: Settings > General > Date & Time > Set Automatically.</p>
+            <p>&bull; On Android: Settings > System > Date & Time > Automatic Date & Time.</p>
+            <p>&bull; Google Authenticator: Open app > Menu > Settings > Time Correction for Codes > Sync Now.</p>
+            <p>### Fix 2: Enter Code Quickly</p>
+            <p>&bull; 2FA codes change every 30 seconds.</p>
+            <p>&bull; Wait for a fresh code to appear, then enter it immediately.</p>
+            <p>&bull; Don't use a code that's about to expire (less than 5 seconds left).</p>
+            <p>### Fix 3: Use Backup Codes</p>
+            <p>&bull; When you set up 2FA, you should have saved backup codes.</p>
+            <p>&bull; Check your email, password manager, or printed copies for backup codes.</p>
+            <p>&bull; Each backup code can usually only be used once.</p>
+            <p>### Fix 4: Check SMS Delivery</p>
+            <p>&bull; If using SMS 2FA, make sure your phone has signal.</p>
+            <p>&bull; Try restarting your phone.</p>
+            <p>&bull; Check if your carrier is blocking short codes.</p>
+            <p>&bull; Contact your carrier if SMS codes consistently don't arrive.</p>
+            <p>### Fix 5: Use an Alternative 2FA Method</p>
+            <p>&bull; Most services offer multiple 2FA options.</p>
+            <p>&bull; Try email verification, phone call, or security key if available.</p>
+            <p>&bull; Check the login page for "Try another way" or "More options".</p>
+            <p>### Fix 6: Account Recovery</p>
+            <p>&bull; If you can't access 2FA at all, use the service's account recovery process.</p>
+            <p>&bull; Google: accounts.google.com/signin/recovery</p>
+            <p>&bull; Apple: iforgot.apple.com</p>
+            <p>&bull; Most services have a "Lost access to 2FA" link on the login page.</p>
+            <h2>When to Contact Support</h2>
+            <p>If you're completely locked out, contact the service's support team. You'll likely need to verify your identity with personal information, ID documents, or other proof.</p>
+            <h2>FAQ</h2>
+            <div class="faq"><p class="q">Q: What if I lost my phone with the authenticator app?</p>
+            <p class="a">A: Use backup codes if you have them. If not, go through the account recovery process for each service. This is why it's important to save backup codes.</p>
+            </div>
+            <div class="faq"><p class="q">Q: Can I transfer my authenticator to a new phone?</p>
+            <p class="a">A: Google Authenticator allows cloud backup and transfer. Microsoft Authenticator has cloud backup too. Export your accounts before resetting or replacing your phone.</p>
+            </div>
+            <div class="faq"><p class="q">Q: Which is more secure: SMS or authenticator app?</p>
+            <p class="a">A: Authenticator apps are more secure. SMS can be intercepted through SIM swapping. Use an authenticator app or security key when possible.</p>
+            </div>
+            <div class="faq"><p class="q">Q: How do I avoid getting locked out of 2FA?</p>
+            <p class="a">A: Save backup codes in a safe place, set up multiple 2FA methods, use an authenticator app with cloud backup, and keep your recovery email and phone updated.</p>
+            </div>
+        </div>
+    </div>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+</body>
+</html>
