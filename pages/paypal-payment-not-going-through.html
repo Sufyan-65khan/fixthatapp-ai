@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troubleshooting Guide: PayPal Payment Not Going Through - FixThatApp</title>
-    <meta name="description" content="When trying to make a payment through PayPal, the transaction may fail, get declined, or show an error message. This can happen when paying on websites, sending">
+    <meta name="description" content="When trying to make a payment through PayPal, the transaction may fail, get declined, or show an error message. This can happen when paying on websites, se">
     <meta name="keywords" content="paypal payment not going through, fix, troubleshooting, how to fix, not working, error, solution">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/paypal-payment-not-going-through.html">
     <meta property="og:title" content="Troubleshooting Guide: PayPal Payment Not Going Through - FixThatApp">
-    <meta property="og:description" content="When trying to make a payment through PayPal, the transaction may fail, get declined, or show an error message. This can happen when paying on websites, sending">
+    <meta property="og:description" content="When trying to make a payment through PayPal, the transaction may fail, get declined, or show an error message. This can happen when paying on websites, se">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/paypal-payment-not-going-through.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Troubleshooting Guide: PayPal Payment Not Going Through - FixThatApp">
-    <meta name="twitter:description" content="When trying to make a payment through PayPal, the transaction may fail, get declined, or show an error message. This can happen when paying on websites, sending">
+    <meta name="twitter:description" content="When trying to make a payment through PayPal, the transaction may fail, get declined, or show an error message. This can happen when paying on websites, se">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -22,19 +23,62 @@
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Troubleshooting Guide: PayPal Payment Not Going Through",
-      "description": "When trying to make a payment through PayPal, the transaction may fail, get declined, or show an error message. This can happen when paying on websites, sending",
+      "description": "When trying to make a payment through PayPal, the transaction may fail, get declined, or show an error message. This can happen when paying on websites, se",
+      "dateModified": "2026-03-05",
       "author": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.fixthatapp.com/pages/paypal-payment-not-going-through.html"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does PayPal say &quot;This transaction cannot be completed&quot;?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This can happen for several reasons: insufficient funds, account limitations, or the merchant&#x27;s account has issues. Check your payment methods and account status first."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Can I still receive payments if my account is limited?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the type of limitation. Some limitations only affect sending money, while others may also prevent receiving. Check your Resolution Center for details."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "How long does it take to lift a PayPal limitation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It varies. If you provide the required documents promptly, it can be resolved within 1-3 business days. More complex issues may take up to a week."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Why does my payment fail only on certain websites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some websites have specific PayPal integration issues. Try paying directly through PayPal&#x27;s website instead of through the merchant&#x27;s checkout page. You can also try the &quot;Send Money&quot; feature if paying an individual."
+          }
+        }
+      ]
     }
     </script>
     <style>
@@ -48,28 +92,63 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search {
+            position: relative;
+            max-width: 260px;
+        }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .back:hover { text-decoration: underline; }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
         .article {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
-        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article p { margin-bottom: 1rem; color: #444; }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.5rem; }
+        .article li { margin-bottom: 0.4rem; }
         .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
         .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
@@ -79,17 +158,32 @@
             padding: 2rem 1rem;
             color: #999;
             font-size: 0.85rem;
+            border-top: 1px solid #eee;
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+        }
     </style>
 </head>
 <body>
-    <header><a href="../index.html">FixThatApp</a></header>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
     <div class="container">
-        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; PayPal Payment Not Going Through
+        </nav>
         <div class="article">
             <h1>Troubleshooting Guide: PayPal Payment Not Going Through</h1>
+            <p class="updated">Last updated: March 5, 2026</p>
             <h2>Problem Description</h2>
             <p>When trying to make a payment through PayPal, the transaction may fail, get declined, or show an error message. This can happen when paying on websites, sending money to friends, or making purchases through the PayPal app.</p>
             <h2>Possible Causes</h2>
@@ -100,36 +194,36 @@
             <p><strong>Merchant issues</strong>: The seller's PayPal account may have issues receiving payments.</p>
             <p><strong>Spending limits</strong>: Your account may have reached its sending or receiving limit.</p>
             <h2>Step-by-Step Fixes</h2>
-            <p>### Fix 1: Check Your PayPal Balance and Payment Methods</p>
+            <h3>Fix 1: Check Your PayPal Balance and Payment Methods</h3>
             <p>&bull; Log into PayPal and check your balance.</p>
             <p>&bull; Go to Wallet and verify your linked cards and bank accounts.</p>
             <p>&bull; Make sure at least one payment method has sufficient funds.</p>
             <p>&bull; Remove expired cards and add updated ones.</p>
-            <p>### Fix 2: Verify Your Account</p>
+            <h3>Fix 2: Verify Your Account</h3>
             <p>&bull; Go to PayPal Settings > Account > Verify your identity.</p>
             <p>&bull; You may need to confirm your email, phone number, and link a bank account.</p>
             <p>&bull; Verified accounts have higher sending limits and fewer restrictions.</p>
-            <p>### Fix 3: Check for Account Limitations</p>
+            <h3>Fix 3: Check for Account Limitations</h3>
             <p>&bull; Log into PayPal > Go to the Resolution Center.</p>
             <p>&bull; Check if there are any pending actions or limitations on your account.</p>
             <p>&bull; Follow the steps PayPal provides to resolve any limitations.</p>
-            <p>### Fix 4: Try a Different Payment Method</p>
+            <h3>Fix 4: Try a Different Payment Method</h3>
             <p>&bull; During checkout, click "Change" next to your payment method.</p>
             <p>&bull; Select a different card or bank account.</p>
             <p>&bull; If using PayPal balance, try linking a card directly instead.</p>
-            <p>### Fix 5: Clear Browser Cache and Try Again</p>
+            <h3>Fix 5: Clear Browser Cache and Try Again</h3>
             <p>&bull; If paying on a website, clear your browser cache and cookies.</p>
             <p>&bull; Try using a different browser or incognito/private mode.</p>
             <p>&bull; Disable browser extensions that might interfere with the payment page.</p>
-            <p>### Fix 6: Update the PayPal App</p>
+            <h3>Fix 6: Update the PayPal App</h3>
             <p>&bull; Go to the App Store or Google Play Store.</p>
             <p>&bull; Update PayPal to the latest version.</p>
             <p>&bull; Try the payment again through the updated app.</p>
             <h2>When to Contact Support</h2>
             <p>If payments continue to fail, contact PayPal support at paypal.com/smarthelp/contact-us. You can also call PayPal's customer service number or use the in-app chat feature for immediate assistance.</p>
             <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: Why does PayPal say "This transaction cannot be completed"?</p>
-            <p class="a">A: This can happen for several reasons: insufficient funds, account limitations, or the merchant's account has issues. Check your payment methods and account status first.</p>
+            <div class="faq"><p class="q">Q: Why does PayPal say &quot;This transaction cannot be completed&quot;?</p>
+            <p class="a">A: This can happen for several reasons: insufficient funds, account limitations, or the merchant&#x27;s account has issues. Check your payment methods and account status first.</p>
             </div>
             <div class="faq"><p class="q">Q: Can I still receive payments if my account is limited?</p>
             <p class="a">A: It depends on the type of limitation. Some limitations only affect sending money, while others may also prevent receiving. Check your Resolution Center for details.</p>
@@ -138,10 +232,10 @@
             <p class="a">A: It varies. If you provide the required documents promptly, it can be resolved within 1-3 business days. More complex issues may take up to a week.</p>
             </div>
             <div class="faq"><p class="q">Q: Why does my payment fail only on certain websites?</p>
-            <p class="a">A: Some websites have specific PayPal integration issues. Try paying directly through PayPal's website instead of through the merchant's checkout page. You can also try the "Send Money" feature if paying an individual.</p>
+            <p class="a">A: Some websites have specific PayPal integration issues. Try paying directly through PayPal&#x27;s website instead of through the merchant&#x27;s checkout page. You can also try the &quot;Send Money&quot; feature if paying an individual.</p>
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
 </body>
 </html>

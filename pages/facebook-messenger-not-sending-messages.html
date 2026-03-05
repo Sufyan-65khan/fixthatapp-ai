@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troubleshooting Guide: Facebook Messenger Not Sending Messages - FixThatApp</title>
-    <meta name="description" content="Facebook Messenger may fail to send messages, showing a red exclamation mark or a "Failed to send" error. Messages may also appear to be stuck in a "Sending" st">
+    <meta name="description" content="Facebook Messenger may fail to send messages, showing a red exclamation mark or a &quot;Failed to send&quot; error. Messages may also appear to be stuck in a &quot;Sendin">
     <meta name="keywords" content="facebook messenger not sending messages, fix, troubleshooting, how to fix, not working, error, solution">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/facebook-messenger-not-sending-messages.html">
     <meta property="og:title" content="Troubleshooting Guide: Facebook Messenger Not Sending Messages - FixThatApp">
-    <meta property="og:description" content="Facebook Messenger may fail to send messages, showing a red exclamation mark or a "Failed to send" error. Messages may also appear to be stuck in a "Sending" st">
+    <meta property="og:description" content="Facebook Messenger may fail to send messages, showing a red exclamation mark or a &quot;Failed to send&quot; error. Messages may also appear to be stuck in a &quot;Sendin">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/facebook-messenger-not-sending-messages.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Troubleshooting Guide: Facebook Messenger Not Sending Messages - FixThatApp">
-    <meta name="twitter:description" content="Facebook Messenger may fail to send messages, showing a red exclamation mark or a "Failed to send" error. Messages may also appear to be stuck in a "Sending" st">
+    <meta name="twitter:description" content="Facebook Messenger may fail to send messages, showing a red exclamation mark or a &quot;Failed to send&quot; error. Messages may also appear to be stuck in a &quot;Sendin">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -22,19 +23,62 @@
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Troubleshooting Guide: Facebook Messenger Not Sending Messages",
-      "description": "Facebook Messenger may fail to send messages, showing a red exclamation mark or a "Failed to send" error. Messages may also appear to be stuck in a "Sending" st",
+      "description": "Facebook Messenger may fail to send messages, showing a red exclamation mark or a &quot;Failed to send&quot; error. Messages may also appear to be stuck in a &quot;Sendin",
+      "dateModified": "2026-03-05",
       "author": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.fixthatapp.com/pages/facebook-messenger-not-sending-messages.html"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do my messages show a single grey check mark?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A single grey check means the message was sent but not yet delivered. The recipient may be offline or may have turned off notifications."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "What does the red exclamation mark mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The red exclamation mark means the message failed to send. Tap the message and select &quot;Retry&quot; to attempt sending it again."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Can I send messages if my Facebook account is deactivated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can still use Messenger even if your Facebook account is deactivated, as long as you didn&#x27;t deactivate Messenger separately."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "How do I know if someone blocked me on Messenger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you&#x27;ve been blocked, you won&#x27;t be able to see their profile picture, online status, or send them messages. The chat will appear differently than usual."
+          }
+        }
+      ]
     }
     </script>
     <style>
@@ -48,28 +92,63 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search {
+            position: relative;
+            max-width: 260px;
+        }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .back:hover { text-decoration: underline; }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
         .article {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
-        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article p { margin-bottom: 1rem; color: #444; }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.5rem; }
+        .article li { margin-bottom: 0.4rem; }
         .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
         .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
@@ -79,17 +158,32 @@
             padding: 2rem 1rem;
             color: #999;
             font-size: 0.85rem;
+            border-top: 1px solid #eee;
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+        }
     </style>
 </head>
 <body>
-    <header><a href="../index.html">FixThatApp</a></header>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
     <div class="container">
-        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; Facebook Messenger Not Sending Messages
+        </nav>
         <div class="article">
             <h1>Troubleshooting Guide: Facebook Messenger Not Sending Messages</h1>
+            <p class="updated">Last updated: March 5, 2026</p>
             <h2>Problem Description</h2>
             <p>Facebook Messenger may fail to send messages, showing a red exclamation mark or a "Failed to send" error. Messages may also appear to be stuck in a "Sending" state indefinitely.</p>
             <h2>Possible Causes</h2>
@@ -99,28 +193,28 @@
             <p><strong>Recipient has blocked you</strong>: If you've been blocked, your messages won't be delivered.</p>
             <p><strong>Server outage</strong>: Facebook's servers occasionally go down, affecting Messenger.</p>
             <h2>Step-by-Step Fixes</h2>
-            <p>### Fix 1: Check Your Internet Connection</p>
+            <h3>Fix 1: Check Your Internet Connection</h3>
             <p>&bull; Toggle Wi-Fi off and on, or switch to mobile data.</p>
             <p>&bull; Open a web browser and try loading a webpage to confirm your connection works.</p>
             <p>&bull; If the connection is weak, try moving to an area with better signal.</p>
-            <p>### Fix 2: Restart Messenger</p>
+            <h3>Fix 2: Restart Messenger</h3>
             <p>&bull; Close the Messenger app completely.</p>
             <p>&bull; On Android: Settings > Apps > Messenger > Force Stop.</p>
             <p>&bull; On iPhone: Swipe up and close Messenger from the app switcher.</p>
             <p>&bull; Reopen Messenger and try sending the message again.</p>
-            <p>### Fix 3: Check for App Updates</p>
+            <h3>Fix 3: Check for App Updates</h3>
             <p>&bull; Open the App Store (iPhone) or Google Play Store (Android).</p>
             <p>&bull; Search for "Messenger" and tap Update if available.</p>
             <p>&bull; Open the updated app and retry sending your message.</p>
-            <p>### Fix 4: Clear Messenger Cache (Android)</p>
+            <h3>Fix 4: Clear Messenger Cache (Android)</h3>
             <p>&bull; Go to Settings > Apps > Messenger > Storage.</p>
             <p>&bull; Tap "Clear Cache" (do not tap "Clear Data" as this will log you out).</p>
             <p>&bull; Reopen Messenger and try again.</p>
-            <p>### Fix 5: Check if Facebook is Down</p>
+            <h3>Fix 5: Check if Facebook is Down</h3>
             <p>&bull; Visit downdetector.com and search for Facebook or Messenger.</p>
             <p>&bull; If there's a widespread outage, wait for Facebook to fix the issue.</p>
             <p>&bull; Outages are usually resolved within a few hours.</p>
-            <p>### Fix 6: Reinstall Messenger</p>
+            <h3>Fix 6: Reinstall Messenger</h3>
             <p>&bull; Uninstall Messenger from your device.</p>
             <p>&bull; Restart your phone.</p>
             <p>&bull; Reinstall from the App Store or Google Play Store.</p>
@@ -132,16 +226,16 @@
             <p class="a">A: A single grey check means the message was sent but not yet delivered. The recipient may be offline or may have turned off notifications.</p>
             </div>
             <div class="faq"><p class="q">Q: What does the red exclamation mark mean?</p>
-            <p class="a">A: The red exclamation mark means the message failed to send. Tap the message and select "Retry" to attempt sending it again.</p>
+            <p class="a">A: The red exclamation mark means the message failed to send. Tap the message and select &quot;Retry&quot; to attempt sending it again.</p>
             </div>
             <div class="faq"><p class="q">Q: Can I send messages if my Facebook account is deactivated?</p>
-            <p class="a">A: Yes, you can still use Messenger even if your Facebook account is deactivated, as long as you didn't deactivate Messenger separately.</p>
+            <p class="a">A: Yes, you can still use Messenger even if your Facebook account is deactivated, as long as you didn&#x27;t deactivate Messenger separately.</p>
             </div>
             <div class="faq"><p class="q">Q: How do I know if someone blocked me on Messenger?</p>
-            <p class="a">A: If you've been blocked, you won't be able to see their profile picture, online status, or send them messages. The chat will appear differently than usual.</p>
+            <p class="a">A: If you&#x27;ve been blocked, you won&#x27;t be able to see their profile picture, online status, or send them messages. The chat will appear differently than usual.</p>
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
 </body>
 </html>

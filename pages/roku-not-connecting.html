@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troubleshooting Guide: Roku Not Connecting to Wi-Fi - FixThatApp</title>
-    <meta name="description" content="Your Roku streaming device may fail to connect to Wi-Fi, show "Not connected" status, buffer constantly, or lose connection during streaming. This prevents you ">
+    <meta name="description" content="Your Roku streaming device may fail to connect to Wi-Fi, show &quot;Not connected&quot; status, buffer constantly, or lose connection during streaming. This prevents">
     <meta name="keywords" content="roku not connecting to wi-fi, fix, troubleshooting, how to fix, not working, error, solution">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/roku-not-connecting.html">
     <meta property="og:title" content="Troubleshooting Guide: Roku Not Connecting to Wi-Fi - FixThatApp">
-    <meta property="og:description" content="Your Roku streaming device may fail to connect to Wi-Fi, show "Not connected" status, buffer constantly, or lose connection during streaming. This prevents you ">
+    <meta property="og:description" content="Your Roku streaming device may fail to connect to Wi-Fi, show &quot;Not connected&quot; status, buffer constantly, or lose connection during streaming. This prevents">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/roku-not-connecting.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Troubleshooting Guide: Roku Not Connecting to Wi-Fi - FixThatApp">
-    <meta name="twitter:description" content="Your Roku streaming device may fail to connect to Wi-Fi, show "Not connected" status, buffer constantly, or lose connection during streaming. This prevents you ">
+    <meta name="twitter:description" content="Your Roku streaming device may fail to connect to Wi-Fi, show &quot;Not connected&quot; status, buffer constantly, or lose connection during streaming. This prevents">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -22,19 +23,62 @@
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Troubleshooting Guide: Roku Not Connecting to Wi-Fi",
-      "description": "Your Roku streaming device may fail to connect to Wi-Fi, show "Not connected" status, buffer constantly, or lose connection during streaming. This prevents you ",
+      "description": "Your Roku streaming device may fail to connect to Wi-Fi, show &quot;Not connected&quot; status, buffer constantly, or lose connection during streaming. This prevents",
+      "dateModified": "2026-03-05",
       "author": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.fixthatapp.com/pages/roku-not-connecting.html"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does my Roku keep losing Wi-Fi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually caused by weak signal, router issues, or interference. Try using the 5GHz band and moving the Roku closer to the router."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Can I use Roku with ethernet instead of Wi-Fi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some Roku models (Ultra, Streambar) have ethernet ports. For others, you can use a USB ethernet adapter if supported."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Why does Roku buffer even with fast internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buffering can be caused by Wi-Fi congestion, ISP throttling, or the streaming service&#x27;s servers. Try lowering video quality temporarily."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Does Roku work with 5GHz Wi-Fi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most modern Roku devices support both 2.4GHz and 5GHz. The 5GHz band is faster but has shorter range."
+          }
+        }
+      ]
     }
     </script>
     <style>
@@ -48,28 +92,63 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search {
+            position: relative;
+            max-width: 260px;
+        }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .back:hover { text-decoration: underline; }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
         .article {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
-        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article p { margin-bottom: 1rem; color: #444; }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.5rem; }
+        .article li { margin-bottom: 0.4rem; }
         .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
         .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
@@ -79,17 +158,32 @@
             padding: 2rem 1rem;
             color: #999;
             font-size: 0.85rem;
+            border-top: 1px solid #eee;
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+        }
     </style>
 </head>
 <body>
-    <header><a href="../index.html">FixThatApp</a></header>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
     <div class="container">
-        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; Roku Not Connecting to Wi-Fi
+        </nav>
         <div class="article">
             <h1>Troubleshooting Guide: Roku Not Connecting to Wi-Fi</h1>
+            <p class="updated">Last updated: March 5, 2026</p>
             <h2>Problem Description</h2>
             <p>Your Roku streaming device may fail to connect to Wi-Fi, show "Not connected" status, buffer constantly, or lose connection during streaming. This prevents you from watching content on Netflix, Hulu, Disney+, and other streaming services.</p>
             <h2>Possible Causes</h2>
@@ -100,29 +194,29 @@
             <p><strong>Roku software outdated</strong>: Old firmware can cause connectivity issues.</p>
             <p><strong>DNS or IP conflict</strong>: Network configuration issues preventing connection.</p>
             <h2>Step-by-Step Fixes</h2>
-            <p>### Fix 1: Restart Your Roku and Router</p>
+            <h3>Fix 1: Restart Your Roku and Router</h3>
             <p>&bull; Unplug your Roku device from power.</p>
             <p>&bull; Unplug your router and wait 30 seconds.</p>
             <p>&bull; Plug the router back in and wait for it to fully start.</p>
             <p>&bull; Plug your Roku back in and try connecting.</p>
-            <p>### Fix 2: Check Wi-Fi Signal Strength</p>
+            <h3>Fix 2: Check Wi-Fi Signal Strength</h3>
             <p>&bull; Go to Roku Settings > Network > About.</p>
             <p>&bull; Check "Signal strength" — it should be Good or Excellent.</p>
             <p>&bull; If it's Poor or Fair, move your Roku closer to the router.</p>
             <p>&bull; Consider using a Roku with an ethernet port or a Wi-Fi extender.</p>
-            <p>### Fix 3: Re-enter Wi-Fi Password</p>
+            <h3>Fix 3: Re-enter Wi-Fi Password</h3>
             <p>&bull; Go to Settings > Network > Set up connection > Wireless.</p>
             <p>&bull; Select your network and re-enter the password carefully.</p>
             <p>&bull; Make sure you're connecting to the correct network (2.4GHz vs 5GHz).</p>
-            <p>### Fix 4: Change DNS Settings</p>
+            <h3>Fix 4: Change DNS Settings</h3>
             <p>&bull; Go to Settings > Network > Set up connection.</p>
             <p>&bull; Choose your network and enter the password.</p>
             <p>&bull; Under Advanced Settings, set DNS to 8.8.8.8 (Google) or 1.1.1.1 (Cloudflare).</p>
-            <p>### Fix 5: Update Roku Software</p>
+            <h3>Fix 5: Update Roku Software</h3>
             <p>&bull; Go to Settings > System > System Update > Check Now.</p>
             <p>&bull; Install any available updates.</p>
             <p>&bull; Restart Roku after updating.</p>
-            <p>### Fix 6: Factory Reset Roku</p>
+            <h3>Fix 6: Factory Reset Roku</h3>
             <p>&bull; Go to Settings > System > Advanced System Settings > Factory Reset.</p>
             <p>&bull; This erases all settings — you'll need to set up Roku again.</p>
             <p>&bull; Only do this as a last resort.</p>
@@ -136,13 +230,13 @@
             <p class="a">A: Some Roku models (Ultra, Streambar) have ethernet ports. For others, you can use a USB ethernet adapter if supported.</p>
             </div>
             <div class="faq"><p class="q">Q: Why does Roku buffer even with fast internet?</p>
-            <p class="a">A: Buffering can be caused by Wi-Fi congestion, ISP throttling, or the streaming service's servers. Try lowering video quality temporarily.</p>
+            <p class="a">A: Buffering can be caused by Wi-Fi congestion, ISP throttling, or the streaming service&#x27;s servers. Try lowering video quality temporarily.</p>
             </div>
             <div class="faq"><p class="q">Q: Does Roku work with 5GHz Wi-Fi?</p>
             <p class="a">A: Most modern Roku devices support both 2.4GHz and 5GHz. The 5GHz band is faster but has shorter range.</p>
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
 </body>
 </html>

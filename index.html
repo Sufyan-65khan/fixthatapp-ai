@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FixThatApp - App Troubleshooting Guides</title>
-    <meta name="description" content="Free troubleshooting guides for 100+ popular apps and services. Fix issues with ChatGPT, WhatsApp, Instagram, Netflix, YouTube, Spotify, TikTok, Discord, Zoom, Google, Apple, and more.">
+    <title>FixThatApp - Free Troubleshooting Guides for 100+ Apps & Devices</title>
+    <meta name="description" content="Free step-by-step troubleshooting guides for 100+ popular apps and services. Fix issues with ChatGPT, WhatsApp, Instagram, Netflix, YouTube, Spotify, TikTok, Discord, Zoom, Google, Apple, and more.">
+    <meta name="keywords" content="troubleshooting, fix app, app not working, how to fix, tech support, error fix, app error solution">
+    <link rel="canonical" href="https://www.fixthatapp.com/">
+    <meta property="og:title" content="FixThatApp - Free Troubleshooting Guides for 100+ Apps">
+    <meta property="og:description" content="Free step-by-step troubleshooting guides for 100+ popular apps and services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.fixthatapp.com/">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FixThatApp - Free Troubleshooting Guides for 100+ Apps">
+    <meta name="twitter:description" content="Free step-by-step troubleshooting guides for 100+ popular apps and services.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "FixThatApp",
+      "url": "https://www.fixthatapp.com/",
+      "description": "Free troubleshooting guides for 100+ popular apps and services",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.fixthatapp.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -19,561 +44,915 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 2.5rem 1rem 2rem;
         }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.3rem; }
+        header p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; }
+        .search-box {
+            max-width: 550px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 0.9rem 1.2rem 0.9rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .search-box input::placeholder { color: #aaa; }
+        .search-icon {
+            position: absolute;
+            left: 1.1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 1.1rem;
+            pointer-events: none;
+        }
+        .search-count {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 0.8rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem 2rem; }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            padding: 1.5rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: sticky;
+            top: 0;
+            background: #f5f7fa;
+            z-index: 100;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .cat-btn {
+            padding: 0.4rem 1rem;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            background: white;
+            color: #555;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .cat-btn:hover { border-color: #667eea; color: #667eea; }
+        .cat-btn.active { background: #667eea; color: white; border-color: #667eea; }
+        .results-info {
+            text-align: center;
+            padding: 1rem 0 0.5rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .no-results {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #888;
+        }
+        .no-results h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #555; }
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
+            gap: 1.2rem;
+            padding-top: 0.5rem;
         }
         .card {
             background: white;
             border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 1.4rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             transition: transform 0.2s, box-shadow 0.2s;
             text-decoration: none;
             color: inherit;
             display: block;
+            border-left: 4px solid transparent;
         }
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border-left-color: #667eea;
         }
         .card .app-name {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             color: #667eea;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
-        .card h2 { font-size: 1.15rem; margin-bottom: 0.75rem; color: #1a1a2e; }
-        .card p { font-size: 0.9rem; color: #666; }
+        .card h2 { font-size: 1.05rem; margin-bottom: 0.5rem; color: #1a1a2e; }
+        .card p { font-size: 0.85rem; color: #777; line-height: 1.5; }
+        .card .category-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            background: #f0f0ff;
+            color: #667eea;
+            padding: 0.15rem 0.5rem;
+            border-radius: 50px;
+            margin-top: 0.6rem;
+            font-weight: 500;
+        }
+        #scrollTop {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #667eea;
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+            z-index: 999;
+            transition: opacity 0.3s;
+        }
+        #scrollTop:hover { background: #5a6fd6; }
         footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: #999;
-            font-size: 0.85rem;
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 2.5rem 1rem 1.5rem;
         }
-        footer a { color: #667eea; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-grid h4 { color: white; margin-bottom: 0.75rem; font-size: 0.95rem; }
+        .footer-grid ul { list-style: none; }
+        .footer-grid li { margin-bottom: 0.4rem; }
+        .footer-grid a { color: #aaa; text-decoration: none; font-size: 0.85rem; }
+        .footer-grid a:hover { color: #667eea; }
+        .footer-grid p { font-size: 0.85rem; line-height: 1.6; }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #333;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        .footer-bottom a { color: #667eea; text-decoration: none; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            header p { font-size: 1rem; }
+            .grid { grid-template-columns: 1fr; }
+            .categories { gap: 0.4rem; padding: 1rem 0.5rem; }
+            .cat-btn { font-size: 0.78rem; padding: 0.35rem 0.75rem; }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>FixThatApp</h1>
-        <p>Quick troubleshooting guides for your favorite apps</p>
+        <p>Step-by-step troubleshooting guides for your favorite apps</p>
+        <div class="search-box">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" id="searchInput" placeholder="Search guides... (e.g. WhatsApp, Netflix, printer)" autocomplete="off">
+        </div>
+        <div class="search-count">100+ free troubleshooting guides</div>
     </header>
+
+    <div class="categories" id="categoryBar">
+        <button class="cat-btn active" data-cat="all">All Guides</button>
+        <button class="cat-btn" data-cat="social">Social Media</button>
+        <button class="cat-btn" data-cat="streaming">Streaming</button>
+        <button class="cat-btn" data-cat="messaging">Messaging</button>
+        <button class="cat-btn" data-cat="gaming">Gaming</button>
+        <button class="cat-btn" data-cat="ai">AI Tools</button>
+        <button class="cat-btn" data-cat="productivity">Productivity</button>
+        <button class="cat-btn" data-cat="devices">Devices</button>
+        <button class="cat-btn" data-cat="payments">Payments</button>
+        <button class="cat-btn" data-cat="outages">Outages</button>
+    </div>
+
     <div class="container">
-        <div class="grid">
-            <a class="card" href="pages/whatsapp-not-sending-messages.html">
+        <div class="results-info" id="resultsInfo"></div>
+        <div class="no-results" id="noResults" style="display:none;">
+            <h3>No guides found</h3>
+            <p>Try a different search term or browse by category above.</p>
+        </div>
+        <div class="grid" id="guideGrid">
+            <a class="card" href="pages/whatsapp-not-sending-messages.html" data-cat="messaging" data-tags="whatsapp messages sending delivered chat">
                 <div class="app-name">WhatsApp</div>
                 <h2>WhatsApp Not Sending Messages</h2>
                 <p>Fix issues with messages not being sent or delivered on WhatsApp.</p>
+                <span class="category-tag">Messaging</span>
             </a>
-            <a class="card" href="pages/instagram-login-error.html">
-                <div class="app-name">Instagram</div>
-                <h2>Instagram Login Error</h2>
-                <p>Resolve login errors, locked accounts, and unresponsive login buttons.</p>
-            </a>
-            <a class="card" href="pages/netflix-error-code-nw-2-5.html">
-                <div class="app-name">Netflix</div>
-                <h2>Netflix Error Code NW-2-5</h2>
-                <p>Fix network connectivity issues causing Netflix error NW-2-5.</p>
-            </a>
-            <a class="card" href="pages/youtube-app-buffering.html">
-                <div class="app-name">YouTube</div>
-                <h2>YouTube App Buffering</h2>
-                <p>Resolve buffering and playback issues in the YouTube app.</p>
-            </a>
-            <a class="card" href="pages/snapchat-not-loading.html">
-                <div class="app-name">Snapchat</div>
-                <h2>Snapchat Not Loading</h2>
-                <p>Fix Snapchat loading problems caused by server or browser issues.</p>
-            </a>
-            <a class="card" href="pages/zoom-microphone-not-working.html">
-                <div class="app-name">Zoom</div>
-                <h2>Zoom Microphone Not Working</h2>
-                <p>Troubleshoot microphone detection and connection issues in Zoom.</p>
-            </a>
-            <a class="card" href="pages/telegram-verification-code-not-received.html">
-                <div class="app-name">Telegram</div>
-                <h2>Telegram Verification Code Not Received</h2>
-                <p>Fix issues with not receiving Telegram verification codes.</p>
-            </a>
-            <a class="card" href="pages/amazon-app-not-loading.html">
-                <div class="app-name">Amazon</div>
-                <h2>Amazon App Not Loading</h2>
-                <p>Resolve Amazon app loading failures due to network or app issues.</p>
-            </a>
-            <a class="card" href="pages/canva-login-error.html">
-                <div class="app-name">Canva</div>
-                <h2>Canva Login Error</h2>
-                <p>Fix login errors caused by credentials, network, or browser compatibility.</p>
-            </a>
-            <a class="card" href="pages/capcut-export-failed.html">
-                <div class="app-name">CapCut</div>
-                <h2>CapCut Export Failed</h2>
-                <p>Resolve export failures due to file path or format issues in CapCut.</p>
-            </a>
-            <a class="card" href="pages/spotify-not-playing-songs.html">
-                <div class="app-name">Spotify</div>
-                <h2>Spotify Not Playing Songs</h2>
-                <p>Fix playback issues, greyed-out tracks, and songs skipping on Spotify.</p>
-            </a>
-            <a class="card" href="pages/tiktok-video-not-uploading.html">
-                <div class="app-name">TikTok</div>
-                <h2>TikTok Video Not Uploading</h2>
-                <p>Resolve upload failures, stuck uploads, and error messages on TikTok.</p>
-            </a>
-            <a class="card" href="pages/facebook-messenger-not-sending-messages.html">
-                <div class="app-name">Messenger</div>
-                <h2>Facebook Messenger Not Sending Messages</h2>
-                <p>Fix failed messages, red exclamation marks, and sending errors on Messenger.</p>
-            </a>
-            <a class="card" href="pages/google-maps-not-working.html">
-                <div class="app-name">Google Maps</div>
-                <h2>Google Maps Not Working</h2>
-                <p>Fix blank maps, incorrect locations, and navigation failures.</p>
-            </a>
-            <a class="card" href="pages/twitter-app-crashing.html">
-                <div class="app-name">X (Twitter)</div>
-                <h2>Twitter (X) App Crashing</h2>
-                <p>Resolve app crashes, freezing, and unexpected closures on X.</p>
-            </a>
-            <a class="card" href="pages/uber-app-not-connecting-to-driver.html">
-                <div class="app-name">Uber</div>
-                <h2>Uber App Not Connecting to Driver</h2>
-                <p>Fix ride request failures and driver connection issues on Uber.</p>
-            </a>
-            <a class="card" href="pages/discord-mic-not-working.html">
-                <div class="app-name">Discord</div>
-                <h2>Discord Mic Not Working</h2>
-                <p>Fix microphone issues in Discord voice channels and calls.</p>
-            </a>
-            <a class="card" href="pages/gmail-not-receiving-emails.html">
-                <div class="app-name">Gmail</div>
-                <h2>Gmail Not Receiving Emails</h2>
-                <p>Fix missing emails, spam filtering issues, and inbox delivery problems.</p>
-            </a>
-            <a class="card" href="pages/paypal-payment-not-going-through.html">
-                <div class="app-name">PayPal</div>
-                <h2>PayPal Payment Not Going Through</h2>
-                <p>Resolve payment failures, declined transactions, and checkout errors.</p>
-            </a>
-            <a class="card" href="pages/linkedin-profile-not-showing-in-search.html">
-                <div class="app-name">LinkedIn</div>
-                <h2>LinkedIn Profile Not Showing in Search</h2>
-                <p>Fix profile visibility issues and improve your LinkedIn search ranking.</p>
-            </a>
-            <a class="card" href="pages/apple-id-locked.html">
-                <div class="app-name">Apple</div>
-                <h2>Apple ID Locked</h2>
-                <p>Unlock your Apple ID and regain access to iCloud, App Store, and iTunes.</p>
-            </a>
-            <a class="card" href="pages/pinterest-images-not-loading.html">
-                <div class="app-name">Pinterest</div>
-                <h2>Pinterest Images Not Loading</h2>
-                <p>Fix blank images, broken pins, and endless loading on Pinterest.</p>
-            </a>
-            <a class="card" href="pages/microsoft-teams-camera-not-working.html">
-                <div class="app-name">Microsoft Teams</div>
-                <h2>Microsoft Teams Camera Not Working</h2>
-                <p>Fix camera detection, black screen, and video issues in Teams meetings.</p>
-            </a>
-            <a class="card" href="pages/reddit-app-not-loading-posts.html">
-                <div class="app-name">Reddit</div>
-                <h2>Reddit App Not Loading Posts</h2>
-                <p>Fix blank feeds, loading errors, and post display issues on Reddit.</p>
-            </a>
-            <a class="card" href="pages/airpods-not-connecting.html">
-                <div class="app-name">AirPods</div>
-                <h2>AirPods Not Connecting</h2>
-                <p>Fix pairing failures, disconnections, and Bluetooth issues with AirPods.</p>
-            </a>
-            <a class="card" href="pages/google-chrome-running-slow.html">
-                <div class="app-name">Chrome</div>
-                <h2>Google Chrome Running Slow</h2>
-                <p>Speed up Chrome by fixing memory issues, extensions, and cache problems.</p>
-            </a>
-            <a class="card" href="pages/samsung-phone-overheating.html">
-                <div class="app-name">Samsung</div>
-                <h2>Samsung Phone Overheating</h2>
-                <p>Cool down your Samsung phone and prevent overheating during use or charging.</p>
-            </a>
-            <a class="card" href="pages/windows-wifi-not-connecting.html">
-                <div class="app-name">Windows</div>
-                <h2>Windows Wi-Fi Not Connecting</h2>
-                <p>Fix Wi-Fi connection failures, missing networks, and no internet access on Windows.</p>
-            </a>
-            <a class="card" href="pages/iphone-battery-draining-fast.html">
-                <div class="app-name">iPhone</div>
-                <h2>iPhone Battery Draining Fast</h2>
-                <p>Extend your iPhone battery life by fixing background drain and settings issues.</p>
-            </a>
-            <a class="card" href="pages/amazon-prime-video-buffering.html">
-                <div class="app-name">Prime Video</div>
-                <h2>Amazon Prime Video Buffering</h2>
-                <p>Fix buffering, poor quality, and playback issues on Amazon Prime Video.</p>
-            </a>
-            <a class="card" href="pages/chatgpt-not-working.html">
-                <div class="app-name">ChatGPT</div>
-                <h2>ChatGPT Not Working</h2>
-                <p>Fix loading errors, "at capacity" messages, and response failures on ChatGPT.</p>
-            </a>
-            <a class="card" href="pages/midjourney-bot-not-responding.html">
-                <div class="app-name">Midjourney</div>
-                <h2>Midjourney Bot Not Responding</h2>
-                <p>Fix unresponsive bot, failed image generation, and Discord connection issues.</p>
-            </a>
-            <a class="card" href="pages/google-gemini-not-working.html">
-                <div class="app-name">Google Gemini</div>
-                <h2>Google Gemini Not Working</h2>
-                <p>Fix loading errors, region restrictions, and response failures on Gemini AI.</p>
-            </a>
-            <a class="card" href="pages/copilot-not-working.html">
-                <div class="app-name">Copilot</div>
-                <h2>Microsoft Copilot Not Working</h2>
-                <p>Fix Copilot errors in Microsoft 365 apps, Edge, and the web interface.</p>
-            </a>
-            <a class="card" href="pages/claude-ai-not-loading.html">
-                <div class="app-name">Claude AI</div>
-                <h2>Claude AI Not Loading</h2>
-                <p>Fix loading failures, usage limits, and response errors on Claude AI.</p>
-            </a>
-            <a class="card" href="pages/dall-e-image-generation-failed.html">
-                <div class="app-name">DALL-E</div>
-                <h2>DALL-E Image Generation Failed</h2>
-                <p>Fix image generation failures, content policy errors, and timeouts on DALL-E.</p>
-            </a>
-            <a class="card" href="pages/disney-plus-error-codes.html">
-                <div class="app-name">Disney+</div>
-                <h2>Disney Plus Error Codes</h2>
-                <p>Fix Error 83, Error 42, and other Disney+ error codes blocking playback.</p>
-            </a>
-            <a class="card" href="pages/hulu-keeps-buffering.html">
-                <div class="app-name">Hulu</div>
-                <h2>Hulu Keeps Buffering</h2>
-                <p>Fix constant buffering, freezing, and poor quality on Hulu streams.</p>
-            </a>
-            <a class="card" href="pages/apple-music-not-playing.html">
-                <div class="app-name">Apple Music</div>
-                <h2>Apple Music Not Playing</h2>
-                <p>Fix playback failures, skipping tracks, and sync issues on Apple Music.</p>
-            </a>
-            <a class="card" href="pages/twitch-stream-buffering.html">
-                <div class="app-name">Twitch</div>
-                <h2>Twitch Stream Buffering</h2>
-                <p>Fix live stream buffering, freezing, and quality drops on Twitch.</p>
-            </a>
-            <a class="card" href="pages/roblox-crashing.html">
-                <div class="app-name">Roblox</div>
-                <h2>Roblox Crashing</h2>
-                <p>Fix crashes on startup, during gameplay, and loading screen freezes.</p>
-            </a>
-            <a class="card" href="pages/fortnite-lag-issues.html">
-                <div class="app-name">Fortnite</div>
-                <h2>Fortnite Lag Issues</h2>
-                <p>Fix high ping, frame drops, and rubber-banding in Fortnite matches.</p>
-            </a>
-            <a class="card" href="pages/steam-games-not-downloading.html">
-                <div class="app-name">Steam</div>
-                <h2>Steam Games Not Downloading</h2>
-                <p>Fix download failures, slow speeds, and disk write errors on Steam.</p>
-            </a>
-            <a class="card" href="pages/google-drive-not-syncing.html">
-                <div class="app-name">Google Drive</div>
-                <h2>Google Drive Not Syncing</h2>
-                <p>Fix sync failures, missing files, and upload issues on Google Drive.</p>
-            </a>
-            <a class="card" href="pages/slack-notifications-not-working.html">
-                <div class="app-name">Slack</div>
-                <h2>Slack Notifications Not Working</h2>
-                <p>Fix missing notifications, DND issues, and alert settings in Slack.</p>
-            </a>
-            <a class="card" href="pages/imessage-not-delivering.html">
-                <div class="app-name">iMessage</div>
-                <h2>iMessage Not Delivering</h2>
-                <p>Fix undelivered messages, green bubbles, and iMessage activation errors.</p>
-            </a>
-            <a class="card" href="pages/cash-app-payment-failed.html">
-                <div class="app-name">Cash App</div>
-                <h2>Cash App Payment Failed</h2>
-                <p>Fix declined payments, transfer failures, and card issues on Cash App.</p>
-            </a>
-            <a class="card" href="pages/minecraft-not-launching.html">
-                <div class="app-name">Minecraft</div>
-                <h2>Minecraft Not Launching</h2>
-                <p>Fix startup crashes, black screens, and Java errors in Minecraft.</p>
-            </a>
-            <a class="card" href="pages/doordash-app-not-working.html">
-                <div class="app-name">DoorDash</div>
-                <h2>DoorDash App Not Working</h2>
-                <p>Fix app crashes, order failures, and loading issues on DoorDash.</p>
-            </a>
-            <a class="card" href="pages/venmo-payment-declined.html">
-                <div class="app-name">Venmo</div>
-                <h2>Venmo Payment Declined</h2>
-                <p>Fix declined payments, frozen accounts, and limit issues on Venmo.</p>
-            </a>
-            <a class="card" href="pages/facetime-not-connecting.html">
-                <div class="app-name">FaceTime</div>
-                <h2>FaceTime Not Connecting</h2>
-                <p>Fix call failures, black screens, and connection errors on FaceTime.</p>
-            </a>
-            <a class="card" href="pages/skype-calls-dropping.html">
-                <div class="app-name">Skype</div>
-                <h2>Skype Calls Dropping</h2>
-                <p>Fix dropped calls, poor audio, and connection failures on Skype.</p>
-            </a>
-            <a class="card" href="pages/google-meet-camera-not-working.html">
-                <div class="app-name">Google Meet</div>
-                <h2>Google Meet Camera Not Working</h2>
-                <p>Fix camera blocked errors, black screens, and permission issues in Meet.</p>
-            </a>
-            <a class="card" href="pages/android-phone-running-slow.html">
-                <div class="app-name">Android</div>
-                <h2>Android Phone Running Slow</h2>
-                <p>Speed up your Android phone by clearing cache, storage, and optimizing settings.</p>
-            </a>
-            <a class="card" href="pages/google-photos-not-backing-up.html">
-                <div class="app-name">Google Photos</div>
-                <h2>Google Photos Not Backing Up</h2>
-                <p>Fix backup failures, stuck uploads, and storage issues on Google Photos.</p>
-            </a>
-            <a class="card" href="pages/whatsapp-web-not-connecting.html">
-                <div class="app-name">WhatsApp Web</div>
-                <h2>WhatsApp Web Not Connecting</h2>
-                <p>Fix QR code issues, disconnections, and linking failures on WhatsApp Web.</p>
-            </a>
-            <a class="card" href="pages/alexa-not-responding.html">
-                <div class="app-name">Alexa</div>
-                <h2>Alexa Not Responding</h2>
-                <p>Fix unresponsive Alexa, red ring issues, and voice command failures.</p>
-            </a>
-            <a class="card" href="pages/siri-not-working.html">
-                <div class="app-name">Siri</div>
-                <h2>Siri Not Working</h2>
-                <p>Fix Hey Siri activation, response failures, and microphone issues.</p>
-            </a>
-            <a class="card" href="pages/fitbit-not-syncing.html">
-                <div class="app-name">Fitbit</div>
-                <h2>Fitbit Not Syncing</h2>
-                <p>Fix sync failures, Bluetooth issues, and data not transferring to the app.</p>
-            </a>
-            <a class="card" href="pages/apple-watch-not-pairing.html">
-                <div class="app-name">Apple Watch</div>
-                <h2>Apple Watch Not Pairing</h2>
-                <p>Fix pairing failures, setup errors, and disconnection issues with Apple Watch.</p>
-            </a>
-            <a class="card" href="pages/outlook-not-sending-emails.html">
-                <div class="app-name">Outlook</div>
-                <h2>Outlook Not Sending Emails</h2>
-                <p>Fix stuck emails, Outbox issues, and send/receive errors in Outlook.</p>
-            </a>
-            <a class="card" href="pages/notion-app-not-loading.html">
-                <div class="app-name">Notion</div>
-                <h2>Notion App Not Loading</h2>
-                <p>Fix blank screens, loading errors, and sync issues on Notion.</p>
-            </a>
-            <a class="card" href="pages/bluetooth-not-working-android.html">
-                <div class="app-name">Android</div>
-                <h2>Bluetooth Not Working on Android</h2>
-                <p>Fix pairing failures, disconnections, and discovery issues on Android Bluetooth.</p>
-            </a>
-            <a class="card" href="pages/iphone-camera-not-working.html">
-                <div class="app-name">iPhone</div>
-                <h2>iPhone Camera Not Working</h2>
-                <p>Fix black screen, blurry photos, and camera app crashes on iPhone.</p>
-            </a>
-            <a class="card" href="pages/mac-running-slow.html">
-                <div class="app-name">Mac</div>
-                <h2>Mac Running Slow</h2>
-                <p>Speed up your Mac by fixing storage, startup items, and resource issues.</p>
-            </a>
-            <a class="card" href="pages/duolingo-app-not-loading.html">
-                <div class="app-name">Duolingo</div>
-                <h2>Duolingo App Not Loading</h2>
-                <p>Fix loading failures, lesson errors, and streak issues on Duolingo.</p>
-            </a>
-            <a class="card" href="pages/instagram-stories-not-loading.html">
-                <div class="app-name">Instagram</div>
-                <h2>Instagram Stories Not Loading</h2>
-                <p>Fix Stories not playing, gray circles, and endless loading on Instagram.</p>
-            </a>
-            <a class="card" href="pages/snapchat-camera-not-working.html">
-                <div class="app-name">Snapchat</div>
-                <h2>Snapchat Camera Not Working</h2>
-                <p>Fix black screen, filter failures, and camera permission issues on Snapchat.</p>
-            </a>
-            <a class="card" href="pages/google-assistant-not-working.html">
-                <div class="app-name">Google Assistant</div>
-                <h2>Google Assistant Not Working</h2>
-                <p>Fix voice activation, command failures, and response issues with Google Assistant.</p>
-            </a>
-            <a class="card" href="pages/dropbox-files-not-syncing.html">
-                <div class="app-name">Dropbox</div>
-                <h2>Dropbox Files Not Syncing</h2>
-                <p>Fix sync failures, conflicted copies, and file upload issues on Dropbox.</p>
-            </a>
-            <a class="card" href="pages/xbox-live-connection-issues.html">
-                <div class="app-name">Xbox</div>
-                <h2>Xbox Live Connection Issues</h2>
-                <p>Fix connection failures, NAT type issues, and online gaming problems on Xbox.</p>
-            </a>
-            <a class="card" href="pages/playstation-network-down.html">
-                <div class="app-name">PlayStation</div>
-                <h2>PlayStation Network Down</h2>
-                <p>Fix PSN connection errors, sign-in failures, and online gaming issues.</p>
-            </a>
-            <a class="card" href="pages/valorant-connection-error.html">
-                <div class="app-name">Valorant</div>
-                <h2>Valorant Connection Error</h2>
-                <p>Fix VAN errors, Vanguard issues, and connection failures in Valorant.</p>
-            </a>
-            <a class="card" href="pages/facebook-app-crashing.html">
-                <div class="app-name">Facebook</div>
-                <h2>Facebook App Crashing</h2>
-                <p>Fix crashes, freezing, and unexpected closures on the Facebook app.</p>
-            </a>
-            <a class="card" href="pages/tiktok-account-banned.html">
-                <div class="app-name">TikTok</div>
-                <h2>TikTok Account Banned</h2>
-                <p>Appeal bans, fix shadow bans, and understand TikTok account restrictions.</p>
-            </a>
-            <a class="card" href="pages/onedrive-sync-issues.html">
-                <div class="app-name">OneDrive</div>
-                <h2>OneDrive Sync Issues</h2>
-                <p>Fix sync errors, stuck uploads, and file conflicts on Microsoft OneDrive.</p>
-            </a>
-            <a class="card" href="pages/zelle-transfer-not-going-through.html">
-                <div class="app-name">Zelle</div>
-                <h2>Zelle Transfer Not Going Through</h2>
-                <p>Fix pending transfers, failed payments, and recipient issues on Zelle.</p>
-            </a>
-            <a class="card" href="pages/ubereats-order-issues.html">
-                <div class="app-name">Uber Eats</div>
-                <h2>Uber Eats Order Issues</h2>
-                <p>Fix order failures, checkout errors, and delivery tracking problems.</p>
-            </a>
-            <a class="card" href="pages/github-pages-not-loading.html">
-                <div class="app-name">GitHub Pages</div>
-                <h2>GitHub Pages Not Loading</h2>
-                <p>Fix 404 errors, build failures, and custom domain issues on GitHub Pages.</p>
-            </a>
-            <a class="card" href="pages/google-classroom-not-loading.html">
-                <div class="app-name">Google Classroom</div>
-                <h2>Google Classroom Not Loading</h2>
-                <p>Fix loading errors, missing classes, and assignment issues on Google Classroom.</p>
-            </a>
-            <a class="card" href="pages/call-of-duty-lag-disconnects.html">
-                <div class="app-name">Call of Duty</div>
-                <h2>Call of Duty Lag and Disconnects</h2>
-                <p>Fix high ping, rubber-banding, and disconnections in COD multiplayer.</p>
-            </a>
-            <a class="card" href="pages/openai-api-down.html">
-                <div class="app-name">OpenAI API</div>
-                <h2>OpenAI API Down</h2>
-                <p>Handle API outages, rate limits, and errors for ChatGPT and GPT-4 APIs.</p>
-            </a>
-            <a class="card" href="pages/google-services-outage.html">
-                <div class="app-name">Google</div>
-                <h2>Google Services Outage</h2>
-                <p>What to do when Gmail, YouTube, Drive, and other Google services go down.</p>
-            </a>
-            <a class="card" href="pages/cloudflare-outage.html">
-                <div class="app-name">Cloudflare</div>
-                <h2>Cloudflare Outage Affecting Websites</h2>
-                <p>Fix access issues when Cloudflare outages take down multiple websites.</p>
-            </a>
-            <a class="card" href="pages/shopify-store-not-loading.html">
-                <div class="app-name">Shopify</div>
-                <h2>Shopify Store Not Loading</h2>
-                <p>Fix store loading failures, theme errors, and performance issues on Shopify.</p>
-            </a>
-            <a class="card" href="pages/wifi-connected-but-no-internet.html">
-                <div class="app-name">Wi-Fi</div>
-                <h2>Wi-Fi Connected But No Internet</h2>
-                <p>Fix "Connected, no internet" errors on phones, laptops, and tablets.</p>
-            </a>
-            <a class="card" href="pages/screen-mirroring-not-working.html">
-                <div class="app-name">Screen Mirroring</div>
-                <h2>Screen Mirroring Not Working</h2>
-                <p>Fix AirPlay, Miracast, Chromecast, and Smart View connection failures.</p>
-            </a>
-            <a class="card" href="pages/printer-not-printing.html">
-                <div class="app-name">Printer</div>
-                <h2>Printer Not Printing</h2>
-                <p>Fix offline printers, stuck queues, blank pages, and driver issues.</p>
-            </a>
-            <a class="card" href="pages/vpn-not-connecting.html">
-                <div class="app-name">VPN</div>
-                <h2>VPN Not Connecting</h2>
-                <p>Fix VPN connection failures, authentication errors, and frequent disconnects.</p>
-            </a>
-            <a class="card" href="pages/two-factor-authentication-not-working.html">
-                <div class="app-name">Security</div>
-                <h2>Two-Factor Authentication Not Working</h2>
-                <p>Fix 2FA code rejections, SMS not arriving, and authenticator app issues.</p>
-            </a>
-            <a class="card" href="pages/roku-not-connecting.html">
-                <div class="app-name">Roku</div>
-                <h2>Roku Not Connecting to Wi-Fi</h2>
-                <p>Fix Roku streaming issues, Wi-Fi drops, and buffering problems.</p>
-            </a>
-            <a class="card" href="pages/google-chrome-crashing.html">
-                <div class="app-name">Chrome</div>
-                <h2>Google Chrome Keeps Crashing</h2>
-                <p>Fix Chrome crashes, freezes, high memory usage, and extension conflicts.</p>
-            </a>
-            <a class="card" href="pages/instagram-reels-not-working.html">
-                <div class="app-name">Instagram</div>
-                <h2>Instagram Reels Not Working</h2>
-                <p>Fix Reels not playing, upload failures, and audio sync issues.</p>
-            </a>
-            <a class="card" href="pages/youtube-tv-buffering.html">
-                <div class="app-name">YouTube TV</div>
-                <h2>YouTube TV Buffering Issues</h2>
-                <p>Fix buffering, freezing, and playback errors on YouTube TV.</p>
-            </a>
-            <a class="card" href="pages/apple-pay-not-working.html">
-                <div class="app-name">Apple Pay</div>
-                <h2>Apple Pay Not Working</h2>
-                <p>Fix Apple Pay transaction failures, card not added, and terminal issues.</p>
-            </a>
-            <a class="card" href="pages/google-pay-not-working.html">
-                <div class="app-name">Google Pay</div>
-                <h2>Google Pay Not Working</h2>
-                <p>Fix Google Pay payment failures, card errors, and NFC issues.</p>
-            </a>
-            <a class="card" href="pages/ring-doorbell-not-connecting.html">
-                <div class="app-name">Ring</div>
-                <h2>Ring Doorbell Not Connecting</h2>
-                <p>Fix Ring doorbell offline issues, Wi-Fi drops, and live view failures.</p>
-            </a>
-            <a class="card" href="pages/hbo-max-not-loading.html">
-                <div class="app-name">HBO Max</div>
-                <h2>HBO Max Not Loading</h2>
-                <p>Fix HBO Max streaming errors, playback failures, and login issues.</p>
-            </a>
-            <a class="card" href="pages/twitter-spaces-not-working.html">
-                <div class="app-name">X (Twitter)</div>
-                <h2>Twitter/X Spaces Not Working</h2>
-                <p>Fix Spaces audio issues, connection drops, and join failures.</p>
-            </a>
-            <a class="card" href="pages/whatsapp-calls-not-working.html">
+            <a class="card" href="pages/whatsapp-calls-not-working.html" data-cat="messaging" data-tags="whatsapp calls voice video calling failed">
                 <div class="app-name">WhatsApp</div>
                 <h2>WhatsApp Calls Not Working</h2>
                 <p>Fix WhatsApp voice and video call failures, poor quality, and drops.</p>
+                <span class="category-tag">Messaging</span>
+            </a>
+            <a class="card" href="pages/whatsapp-web-not-connecting.html" data-cat="messaging" data-tags="whatsapp web qr code linking desktop">
+                <div class="app-name">WhatsApp Web</div>
+                <h2>WhatsApp Web Not Connecting</h2>
+                <p>Fix QR code issues, disconnections, and linking failures on WhatsApp Web.</p>
+                <span class="category-tag">Messaging</span>
+            </a>
+            <a class="card" href="pages/instagram-login-error.html" data-cat="social" data-tags="instagram login error locked account password">
+                <div class="app-name">Instagram</div>
+                <h2>Instagram Login Error</h2>
+                <p>Resolve login errors, locked accounts, and unresponsive login buttons.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/instagram-stories-not-loading.html" data-cat="social" data-tags="instagram stories loading gray circles">
+                <div class="app-name">Instagram</div>
+                <h2>Instagram Stories Not Loading</h2>
+                <p>Fix Stories not playing, gray circles, and endless loading on Instagram.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/instagram-reels-not-working.html" data-cat="social" data-tags="instagram reels video playing upload audio">
+                <div class="app-name">Instagram</div>
+                <h2>Instagram Reels Not Working</h2>
+                <p>Fix Reels not playing, upload failures, and audio sync issues.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/netflix-error-code-nw-2-5.html" data-cat="streaming" data-tags="netflix error nw-2-5 network streaming playback">
+                <div class="app-name">Netflix</div>
+                <h2>Netflix Error Code NW-2-5</h2>
+                <p>Fix network connectivity issues causing Netflix error NW-2-5.</p>
+                <span class="category-tag">Streaming</span>
+            </a>
+            <a class="card" href="pages/youtube-app-buffering.html" data-cat="streaming" data-tags="youtube buffering video playback loading slow">
+                <div class="app-name">YouTube</div>
+                <h2>YouTube App Buffering</h2>
+                <p>Resolve buffering and playback issues in the YouTube app.</p>
+                <span class="category-tag">Streaming</span>
+            </a>
+            <a class="card" href="pages/youtube-tv-buffering.html" data-cat="streaming" data-tags="youtube tv buffering live freezing playback">
+                <div class="app-name">YouTube TV</div>
+                <h2>YouTube TV Buffering Issues</h2>
+                <p>Fix buffering, freezing, and playback errors on YouTube TV.</p>
+                <span class="category-tag">Streaming</span>
+            </a>
+            <a class="card" href="pages/snapchat-not-loading.html" data-cat="social" data-tags="snapchat loading server app crash">
+                <div class="app-name">Snapchat</div>
+                <h2>Snapchat Not Loading</h2>
+                <p>Fix Snapchat loading problems caused by server or browser issues.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/snapchat-camera-not-working.html" data-cat="social" data-tags="snapchat camera black screen filter permission">
+                <div class="app-name">Snapchat</div>
+                <h2>Snapchat Camera Not Working</h2>
+                <p>Fix black screen, filter failures, and camera permission issues on Snapchat.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/zoom-microphone-not-working.html" data-cat="productivity" data-tags="zoom microphone audio meeting call muted">
+                <div class="app-name">Zoom</div>
+                <h2>Zoom Microphone Not Working</h2>
+                <p>Troubleshoot microphone detection and connection issues in Zoom.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/telegram-verification-code-not-received.html" data-cat="messaging" data-tags="telegram verification code sms login">
+                <div class="app-name">Telegram</div>
+                <h2>Telegram Verification Code Not Received</h2>
+                <p>Fix issues with not receiving Telegram verification codes.</p>
+                <span class="category-tag">Messaging</span>
+            </a>
+            <a class="card" href="pages/amazon-app-not-loading.html" data-cat="productivity" data-tags="amazon app loading shopping cart error">
+                <div class="app-name">Amazon</div>
+                <h2>Amazon App Not Loading</h2>
+                <p>Resolve Amazon app loading failures due to network or app issues.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/canva-login-error.html" data-cat="productivity" data-tags="canva login error design tool">
+                <div class="app-name">Canva</div>
+                <h2>Canva Login Error</h2>
+                <p>Fix login errors caused by credentials, network, or browser compatibility.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/capcut-export-failed.html" data-cat="productivity" data-tags="capcut export failed video editing render">
+                <div class="app-name">CapCut</div>
+                <h2>CapCut Export Failed</h2>
+                <p>Resolve export failures due to file path or format issues in CapCut.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/spotify-not-playing-songs.html" data-cat="streaming" data-tags="spotify music playing songs skipping greyed">
+                <div class="app-name">Spotify</div>
+                <h2>Spotify Not Playing Songs</h2>
+                <p>Fix playback issues, greyed-out tracks, and songs skipping on Spotify.</p>
+                <span class="category-tag">Streaming</span>
+            </a>
+            <a class="card" href="pages/tiktok-video-not-uploading.html" data-cat="social" data-tags="tiktok video upload stuck error posting">
+                <div class="app-name">TikTok</div>
+                <h2>TikTok Video Not Uploading</h2>
+                <p>Resolve upload failures, stuck uploads, and error messages on TikTok.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/tiktok-account-banned.html" data-cat="social" data-tags="tiktok banned account suspended shadow ban appeal">
+                <div class="app-name">TikTok</div>
+                <h2>TikTok Account Banned</h2>
+                <p>Appeal bans, fix shadow bans, and understand TikTok account restrictions.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/facebook-messenger-not-sending-messages.html" data-cat="messaging" data-tags="messenger facebook messages sending failed red">
+                <div class="app-name">Messenger</div>
+                <h2>Facebook Messenger Not Sending Messages</h2>
+                <p>Fix failed messages, red exclamation marks, and sending errors on Messenger.</p>
+                <span class="category-tag">Messaging</span>
+            </a>
+            <a class="card" href="pages/facebook-app-crashing.html" data-cat="social" data-tags="facebook app crashing freezing closing">
+                <div class="app-name">Facebook</div>
+                <h2>Facebook App Crashing</h2>
+                <p>Fix crashes, freezing, and unexpected closures on the Facebook app.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/google-maps-not-working.html" data-cat="productivity" data-tags="google maps navigation location gps blank">
+                <div class="app-name">Google Maps</div>
+                <h2>Google Maps Not Working</h2>
+                <p>Fix blank maps, incorrect locations, and navigation failures.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/twitter-app-crashing.html" data-cat="social" data-tags="twitter x app crashing freezing closing">
+                <div class="app-name">X (Twitter)</div>
+                <h2>Twitter (X) App Crashing</h2>
+                <p>Resolve app crashes, freezing, and unexpected closures on X.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/twitter-spaces-not-working.html" data-cat="social" data-tags="twitter x spaces audio live conversation join">
+                <div class="app-name">X (Twitter)</div>
+                <h2>Twitter/X Spaces Not Working</h2>
+                <p>Fix Spaces audio issues, connection drops, and join failures.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/uber-app-not-connecting-to-driver.html" data-cat="productivity" data-tags="uber ride driver connecting request">
+                <div class="app-name">Uber</div>
+                <h2>Uber App Not Connecting to Driver</h2>
+                <p>Fix ride request failures and driver connection issues on Uber.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/discord-mic-not-working.html" data-cat="messaging" data-tags="discord microphone voice channel audio server">
+                <div class="app-name">Discord</div>
+                <h2>Discord Mic Not Working</h2>
+                <p>Fix microphone issues in Discord voice channels and calls.</p>
+                <span class="category-tag">Messaging</span>
+            </a>
+            <a class="card" href="pages/gmail-not-receiving-emails.html" data-cat="productivity" data-tags="gmail email receiving missing inbox spam">
+                <div class="app-name">Gmail</div>
+                <h2>Gmail Not Receiving Emails</h2>
+                <p>Fix missing emails, spam filtering issues, and inbox delivery problems.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/paypal-payment-not-going-through.html" data-cat="payments" data-tags="paypal payment declined failed transaction checkout">
+                <div class="app-name">PayPal</div>
+                <h2>PayPal Payment Not Going Through</h2>
+                <p>Resolve payment failures, declined transactions, and checkout errors.</p>
+                <span class="category-tag">Payments</span>
+            </a>
+            <a class="card" href="pages/linkedin-profile-not-showing-in-search.html" data-cat="social" data-tags="linkedin profile search visibility seo">
+                <div class="app-name">LinkedIn</div>
+                <h2>LinkedIn Profile Not Showing in Search</h2>
+                <p>Fix profile visibility issues and improve your LinkedIn search ranking.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/apple-id-locked.html" data-cat="devices" data-tags="apple id locked icloud account disabled">
+                <div class="app-name">Apple</div>
+                <h2>Apple ID Locked</h2>
+                <p>Unlock your Apple ID and regain access to iCloud, App Store, and iTunes.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/pinterest-images-not-loading.html" data-cat="social" data-tags="pinterest images loading blank pins broken">
+                <div class="app-name">Pinterest</div>
+                <h2>Pinterest Images Not Loading</h2>
+                <p>Fix blank images, broken pins, and endless loading on Pinterest.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/microsoft-teams-camera-not-working.html" data-cat="productivity" data-tags="microsoft teams camera video meeting black screen">
+                <div class="app-name">Microsoft Teams</div>
+                <h2>Microsoft Teams Camera Not Working</h2>
+                <p>Fix camera detection, black screen, and video issues in Teams meetings.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/reddit-app-not-loading-posts.html" data-cat="social" data-tags="reddit app loading posts feed blank">
+                <div class="app-name">Reddit</div>
+                <h2>Reddit App Not Loading Posts</h2>
+                <p>Fix blank feeds, loading errors, and post display issues on Reddit.</p>
+                <span class="category-tag">Social Media</span>
+            </a>
+            <a class="card" href="pages/airpods-not-connecting.html" data-cat="devices" data-tags="airpods bluetooth pairing connecting disconnecting">
+                <div class="app-name">AirPods</div>
+                <h2>AirPods Not Connecting</h2>
+                <p>Fix pairing failures, disconnections, and Bluetooth issues with AirPods.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/google-chrome-running-slow.html" data-cat="devices" data-tags="chrome slow browser speed memory ram">
+                <div class="app-name">Chrome</div>
+                <h2>Google Chrome Running Slow</h2>
+                <p>Speed up Chrome by fixing memory issues, extensions, and cache problems.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/google-chrome-crashing.html" data-cat="devices" data-tags="chrome crashing freezing aw snap memory extensions">
+                <div class="app-name">Chrome</div>
+                <h2>Google Chrome Keeps Crashing</h2>
+                <p>Fix Chrome crashes, freezes, high memory usage, and extension conflicts.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/samsung-phone-overheating.html" data-cat="devices" data-tags="samsung phone overheating hot battery temperature">
+                <div class="app-name">Samsung</div>
+                <h2>Samsung Phone Overheating</h2>
+                <p>Cool down your Samsung phone and prevent overheating during use or charging.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/windows-wifi-not-connecting.html" data-cat="devices" data-tags="windows wifi connecting network internet adapter driver">
+                <div class="app-name">Windows</div>
+                <h2>Windows Wi-Fi Not Connecting</h2>
+                <p>Fix Wi-Fi connection failures, missing networks, and no internet access on Windows.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/iphone-battery-draining-fast.html" data-cat="devices" data-tags="iphone battery draining fast charging power">
+                <div class="app-name">iPhone</div>
+                <h2>iPhone Battery Draining Fast</h2>
+                <p>Extend your iPhone battery life by fixing background drain and settings issues.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/iphone-camera-not-working.html" data-cat="devices" data-tags="iphone camera black screen blurry photos app">
+                <div class="app-name">iPhone</div>
+                <h2>iPhone Camera Not Working</h2>
+                <p>Fix black screen, blurry photos, and camera app crashes on iPhone.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/amazon-prime-video-buffering.html" data-cat="streaming" data-tags="amazon prime video buffering streaming playback quality">
+                <div class="app-name">Prime Video</div>
+                <h2>Amazon Prime Video Buffering</h2>
+                <p>Fix buffering, poor quality, and playback issues on Amazon Prime Video.</p>
+                <span class="category-tag">Streaming</span>
+            </a>
+            <a class="card" href="pages/chatgpt-not-working.html" data-cat="ai" data-tags="chatgpt openai loading error capacity response gpt">
+                <div class="app-name">ChatGPT</div>
+                <h2>ChatGPT Not Working</h2>
+                <p>Fix loading errors, "at capacity" messages, and response failures on ChatGPT.</p>
+                <span class="category-tag">AI Tools</span>
+            </a>
+            <a class="card" href="pages/midjourney-bot-not-responding.html" data-cat="ai" data-tags="midjourney bot discord image generation ai art">
+                <div class="app-name">Midjourney</div>
+                <h2>Midjourney Bot Not Responding</h2>
+                <p>Fix unresponsive bot, failed image generation, and Discord connection issues.</p>
+                <span class="category-tag">AI Tools</span>
+            </a>
+            <a class="card" href="pages/google-gemini-not-working.html" data-cat="ai" data-tags="google gemini bard ai loading region error">
+                <div class="app-name">Google Gemini</div>
+                <h2>Google Gemini Not Working</h2>
+                <p>Fix loading errors, region restrictions, and response failures on Gemini AI.</p>
+                <span class="category-tag">AI Tools</span>
+            </a>
+            <a class="card" href="pages/copilot-not-working.html" data-cat="ai" data-tags="microsoft copilot ai edge 365 office assistant">
+                <div class="app-name">Copilot</div>
+                <h2>Microsoft Copilot Not Working</h2>
+                <p>Fix Copilot errors in Microsoft 365 apps, Edge, and the web interface.</p>
+                <span class="category-tag">AI Tools</span>
+            </a>
+            <a class="card" href="pages/claude-ai-not-loading.html" data-cat="ai" data-tags="claude ai anthropic loading limit response error">
+                <div class="app-name">Claude AI</div>
+                <h2>Claude AI Not Loading</h2>
+                <p>Fix loading failures, usage limits, and response errors on Claude AI.</p>
+                <span class="category-tag">AI Tools</span>
+            </a>
+            <a class="card" href="pages/dall-e-image-generation-failed.html" data-cat="ai" data-tags="dall-e openai image generation failed content policy">
+                <div class="app-name">DALL-E</div>
+                <h2>DALL-E Image Generation Failed</h2>
+                <p>Fix image generation failures, content policy errors, and timeouts on DALL-E.</p>
+                <span class="category-tag">AI Tools</span>
+            </a>
+            <a class="card" href="pages/disney-plus-error-codes.html" data-cat="streaming" data-tags="disney plus error 83 42 streaming playback">
+                <div class="app-name">Disney+</div>
+                <h2>Disney Plus Error Codes</h2>
+                <p>Fix Error 83, Error 42, and other Disney+ error codes blocking playback.</p>
+                <span class="category-tag">Streaming</span>
+            </a>
+            <a class="card" href="pages/hulu-keeps-buffering.html" data-cat="streaming" data-tags="hulu buffering freezing streaming quality slow">
+                <div class="app-name">Hulu</div>
+                <h2>Hulu Keeps Buffering</h2>
+                <p>Fix constant buffering, freezing, and poor quality on Hulu streams.</p>
+                <span class="category-tag">Streaming</span>
+            </a>
+            <a class="card" href="pages/hbo-max-not-loading.html" data-cat="streaming" data-tags="hbo max loading streaming error crash login">
+                <div class="app-name">HBO Max</div>
+                <h2>HBO Max Not Loading</h2>
+                <p>Fix HBO Max streaming errors, playback failures, and login issues.</p>
+                <span class="category-tag">Streaming</span>
+            </a>
+            <a class="card" href="pages/apple-music-not-playing.html" data-cat="streaming" data-tags="apple music playing skipping songs sync library">
+                <div class="app-name">Apple Music</div>
+                <h2>Apple Music Not Playing</h2>
+                <p>Fix playback failures, skipping tracks, and sync issues on Apple Music.</p>
+                <span class="category-tag">Streaming</span>
+            </a>
+            <a class="card" href="pages/twitch-stream-buffering.html" data-cat="streaming" data-tags="twitch stream buffering live lag quality drops">
+                <div class="app-name">Twitch</div>
+                <h2>Twitch Stream Buffering</h2>
+                <p>Fix live stream buffering, freezing, and quality drops on Twitch.</p>
+                <span class="category-tag">Streaming</span>
+            </a>
+            <a class="card" href="pages/roblox-crashing.html" data-cat="gaming" data-tags="roblox crashing startup loading freeze game">
+                <div class="app-name">Roblox</div>
+                <h2>Roblox Crashing</h2>
+                <p>Fix crashes on startup, during gameplay, and loading screen freezes.</p>
+                <span class="category-tag">Gaming</span>
+            </a>
+            <a class="card" href="pages/fortnite-lag-issues.html" data-cat="gaming" data-tags="fortnite lag ping frame drops rubber banding">
+                <div class="app-name">Fortnite</div>
+                <h2>Fortnite Lag Issues</h2>
+                <p>Fix high ping, frame drops, and rubber-banding in Fortnite matches.</p>
+                <span class="category-tag">Gaming</span>
+            </a>
+            <a class="card" href="pages/steam-games-not-downloading.html" data-cat="gaming" data-tags="steam download slow failed disk write error install">
+                <div class="app-name">Steam</div>
+                <h2>Steam Games Not Downloading</h2>
+                <p>Fix download failures, slow speeds, and disk write errors on Steam.</p>
+                <span class="category-tag">Gaming</span>
+            </a>
+            <a class="card" href="pages/minecraft-not-launching.html" data-cat="gaming" data-tags="minecraft launching startup crash black screen java">
+                <div class="app-name">Minecraft</div>
+                <h2>Minecraft Not Launching</h2>
+                <p>Fix startup crashes, black screens, and Java errors in Minecraft.</p>
+                <span class="category-tag">Gaming</span>
+            </a>
+            <a class="card" href="pages/valorant-connection-error.html" data-cat="gaming" data-tags="valorant van error vanguard connection anti-cheat">
+                <div class="app-name">Valorant</div>
+                <h2>Valorant Connection Error</h2>
+                <p>Fix VAN errors, Vanguard issues, and connection failures in Valorant.</p>
+                <span class="category-tag">Gaming</span>
+            </a>
+            <a class="card" href="pages/call-of-duty-lag-disconnects.html" data-cat="gaming" data-tags="call of duty cod warzone lag disconnect ping">
+                <div class="app-name">Call of Duty</div>
+                <h2>Call of Duty Lag and Disconnects</h2>
+                <p>Fix high ping, rubber-banding, and disconnections in COD multiplayer.</p>
+                <span class="category-tag">Gaming</span>
+            </a>
+            <a class="card" href="pages/xbox-live-connection-issues.html" data-cat="gaming" data-tags="xbox live connection nat type online multiplayer">
+                <div class="app-name">Xbox</div>
+                <h2>Xbox Live Connection Issues</h2>
+                <p>Fix connection failures, NAT type issues, and online gaming problems on Xbox.</p>
+                <span class="category-tag">Gaming</span>
+            </a>
+            <a class="card" href="pages/playstation-network-down.html" data-cat="gaming" data-tags="playstation psn network down sign in online">
+                <div class="app-name">PlayStation</div>
+                <h2>PlayStation Network Down</h2>
+                <p>Fix PSN connection errors, sign-in failures, and online gaming issues.</p>
+                <span class="category-tag">Gaming</span>
+            </a>
+            <a class="card" href="pages/google-drive-not-syncing.html" data-cat="productivity" data-tags="google drive sync files upload missing storage">
+                <div class="app-name">Google Drive</div>
+                <h2>Google Drive Not Syncing</h2>
+                <p>Fix sync failures, missing files, and upload issues on Google Drive.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/slack-notifications-not-working.html" data-cat="productivity" data-tags="slack notifications missing dnd alert settings">
+                <div class="app-name">Slack</div>
+                <h2>Slack Notifications Not Working</h2>
+                <p>Fix missing notifications, DND issues, and alert settings in Slack.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/imessage-not-delivering.html" data-cat="messaging" data-tags="imessage delivering green bubble activation error">
+                <div class="app-name">iMessage</div>
+                <h2>iMessage Not Delivering</h2>
+                <p>Fix undelivered messages, green bubbles, and iMessage activation errors.</p>
+                <span class="category-tag">Messaging</span>
+            </a>
+            <a class="card" href="pages/facetime-not-connecting.html" data-cat="messaging" data-tags="facetime connecting call failed black screen">
+                <div class="app-name">FaceTime</div>
+                <h2>FaceTime Not Connecting</h2>
+                <p>Fix call failures, black screens, and connection errors on FaceTime.</p>
+                <span class="category-tag">Messaging</span>
+            </a>
+            <a class="card" href="pages/skype-calls-dropping.html" data-cat="messaging" data-tags="skype calls dropping audio connection poor">
+                <div class="app-name">Skype</div>
+                <h2>Skype Calls Dropping</h2>
+                <p>Fix dropped calls, poor audio, and connection failures on Skype.</p>
+                <span class="category-tag">Messaging</span>
+            </a>
+            <a class="card" href="pages/google-meet-camera-not-working.html" data-cat="productivity" data-tags="google meet camera blocked permission video black">
+                <div class="app-name">Google Meet</div>
+                <h2>Google Meet Camera Not Working</h2>
+                <p>Fix camera blocked errors, black screens, and permission issues in Meet.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/cash-app-payment-failed.html" data-cat="payments" data-tags="cash app payment failed declined transfer card">
+                <div class="app-name">Cash App</div>
+                <h2>Cash App Payment Failed</h2>
+                <p>Fix declined payments, transfer failures, and card issues on Cash App.</p>
+                <span class="category-tag">Payments</span>
+            </a>
+            <a class="card" href="pages/venmo-payment-declined.html" data-cat="payments" data-tags="venmo payment declined frozen account limit">
+                <div class="app-name">Venmo</div>
+                <h2>Venmo Payment Declined</h2>
+                <p>Fix declined payments, frozen accounts, and limit issues on Venmo.</p>
+                <span class="category-tag">Payments</span>
+            </a>
+            <a class="card" href="pages/zelle-transfer-not-going-through.html" data-cat="payments" data-tags="zelle transfer pending failed recipient bank">
+                <div class="app-name">Zelle</div>
+                <h2>Zelle Transfer Not Going Through</h2>
+                <p>Fix pending transfers, failed payments, and recipient issues on Zelle.</p>
+                <span class="category-tag">Payments</span>
+            </a>
+            <a class="card" href="pages/apple-pay-not-working.html" data-cat="payments" data-tags="apple pay nfc contactless terminal card declined">
+                <div class="app-name">Apple Pay</div>
+                <h2>Apple Pay Not Working</h2>
+                <p>Fix Apple Pay transaction failures, card not added, and terminal issues.</p>
+                <span class="category-tag">Payments</span>
+            </a>
+            <a class="card" href="pages/google-pay-not-working.html" data-cat="payments" data-tags="google pay wallet nfc contactless card tap">
+                <div class="app-name">Google Pay</div>
+                <h2>Google Pay Not Working</h2>
+                <p>Fix Google Pay payment failures, card errors, and NFC issues.</p>
+                <span class="category-tag">Payments</span>
+            </a>
+            <a class="card" href="pages/doordash-app-not-working.html" data-cat="productivity" data-tags="doordash app crash order delivery loading">
+                <div class="app-name">DoorDash</div>
+                <h2>DoorDash App Not Working</h2>
+                <p>Fix app crashes, order failures, and loading issues on DoorDash.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/ubereats-order-issues.html" data-cat="productivity" data-tags="uber eats order checkout delivery tracking error">
+                <div class="app-name">Uber Eats</div>
+                <h2>Uber Eats Order Issues</h2>
+                <p>Fix order failures, checkout errors, and delivery tracking problems.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/alexa-not-responding.html" data-cat="devices" data-tags="alexa echo amazon voice not responding red ring">
+                <div class="app-name">Alexa</div>
+                <h2>Alexa Not Responding</h2>
+                <p>Fix unresponsive Alexa, red ring issues, and voice command failures.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/siri-not-working.html" data-cat="devices" data-tags="siri hey activation microphone response apple">
+                <div class="app-name">Siri</div>
+                <h2>Siri Not Working</h2>
+                <p>Fix Hey Siri activation, response failures, and microphone issues.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/google-assistant-not-working.html" data-cat="devices" data-tags="google assistant hey voice command response activate">
+                <div class="app-name">Google Assistant</div>
+                <h2>Google Assistant Not Working</h2>
+                <p>Fix voice activation, command failures, and response issues with Google Assistant.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/fitbit-not-syncing.html" data-cat="devices" data-tags="fitbit sync bluetooth data app tracker">
+                <div class="app-name">Fitbit</div>
+                <h2>Fitbit Not Syncing</h2>
+                <p>Fix sync failures, Bluetooth issues, and data not transferring to the app.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/apple-watch-not-pairing.html" data-cat="devices" data-tags="apple watch pairing setup disconnect bluetooth">
+                <div class="app-name">Apple Watch</div>
+                <h2>Apple Watch Not Pairing</h2>
+                <p>Fix pairing failures, setup errors, and disconnection issues with Apple Watch.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/ring-doorbell-not-connecting.html" data-cat="devices" data-tags="ring doorbell offline wifi live view security camera">
+                <div class="app-name">Ring</div>
+                <h2>Ring Doorbell Not Connecting</h2>
+                <p>Fix Ring doorbell offline issues, Wi-Fi drops, and live view failures.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/roku-not-connecting.html" data-cat="devices" data-tags="roku wifi streaming connecting buffering tv">
+                <div class="app-name">Roku</div>
+                <h2>Roku Not Connecting to Wi-Fi</h2>
+                <p>Fix Roku streaming issues, Wi-Fi drops, and buffering problems.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/outlook-not-sending-emails.html" data-cat="productivity" data-tags="outlook email sending stuck outbox error receive">
+                <div class="app-name">Outlook</div>
+                <h2>Outlook Not Sending Emails</h2>
+                <p>Fix stuck emails, Outbox issues, and send/receive errors in Outlook.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/notion-app-not-loading.html" data-cat="productivity" data-tags="notion app loading blank sync error workspace">
+                <div class="app-name">Notion</div>
+                <h2>Notion App Not Loading</h2>
+                <p>Fix blank screens, loading errors, and sync issues on Notion.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/dropbox-files-not-syncing.html" data-cat="productivity" data-tags="dropbox files sync upload conflict storage">
+                <div class="app-name">Dropbox</div>
+                <h2>Dropbox Files Not Syncing</h2>
+                <p>Fix sync failures, conflicted copies, and file upload issues on Dropbox.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/onedrive-sync-issues.html" data-cat="productivity" data-tags="onedrive sync upload error stuck microsoft">
+                <div class="app-name">OneDrive</div>
+                <h2>OneDrive Sync Issues</h2>
+                <p>Fix sync errors, stuck uploads, and file conflicts on Microsoft OneDrive.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/google-classroom-not-loading.html" data-cat="productivity" data-tags="google classroom loading class assignment error">
+                <div class="app-name">Google Classroom</div>
+                <h2>Google Classroom Not Loading</h2>
+                <p>Fix loading errors, missing classes, and assignment issues on Google Classroom.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/google-photos-not-backing-up.html" data-cat="productivity" data-tags="google photos backup stuck upload storage wifi">
+                <div class="app-name">Google Photos</div>
+                <h2>Google Photos Not Backing Up</h2>
+                <p>Fix backup failures, stuck uploads, and storage issues on Google Photos.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/duolingo-app-not-loading.html" data-cat="productivity" data-tags="duolingo app loading lesson streak error">
+                <div class="app-name">Duolingo</div>
+                <h2>Duolingo App Not Loading</h2>
+                <p>Fix loading failures, lesson errors, and streak issues on Duolingo.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/bluetooth-not-working-android.html" data-cat="devices" data-tags="bluetooth android pairing discovery disconnect">
+                <div class="app-name">Android</div>
+                <h2>Bluetooth Not Working on Android</h2>
+                <p>Fix pairing failures, disconnections, and discovery issues on Android Bluetooth.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/android-phone-running-slow.html" data-cat="devices" data-tags="android phone slow speed cache storage optimize">
+                <div class="app-name">Android</div>
+                <h2>Android Phone Running Slow</h2>
+                <p>Speed up your Android phone by clearing cache, storage, and optimizing settings.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/mac-running-slow.html" data-cat="devices" data-tags="mac slow speed startup storage activity monitor">
+                <div class="app-name">Mac</div>
+                <h2>Mac Running Slow</h2>
+                <p>Speed up your Mac by fixing storage, startup items, and resource issues.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/wifi-connected-but-no-internet.html" data-cat="devices" data-tags="wifi connected no internet router dns ip isp">
+                <div class="app-name">Wi-Fi</div>
+                <h2>Wi-Fi Connected But No Internet</h2>
+                <p>Fix "Connected, no internet" errors on phones, laptops, and tablets.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/screen-mirroring-not-working.html" data-cat="devices" data-tags="screen mirroring airplay miracast chromecast smart view tv">
+                <div class="app-name">Screen Mirroring</div>
+                <h2>Screen Mirroring Not Working</h2>
+                <p>Fix AirPlay, Miracast, Chromecast, and Smart View connection failures.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/printer-not-printing.html" data-cat="devices" data-tags="printer not printing offline queue blank driver usb">
+                <div class="app-name">Printer</div>
+                <h2>Printer Not Printing</h2>
+                <p>Fix offline printers, stuck queues, blank pages, and driver issues.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/vpn-not-connecting.html" data-cat="devices" data-tags="vpn connecting server protocol firewall isp blocked">
+                <div class="app-name">VPN</div>
+                <h2>VPN Not Connecting</h2>
+                <p>Fix VPN connection failures, authentication errors, and frequent disconnects.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/two-factor-authentication-not-working.html" data-cat="devices" data-tags="2fa two factor authentication code sms authenticator backup">
+                <div class="app-name">Security</div>
+                <h2>Two-Factor Authentication Not Working</h2>
+                <p>Fix 2FA code rejections, SMS not arriving, and authenticator app issues.</p>
+                <span class="category-tag">Devices</span>
+            </a>
+            <a class="card" href="pages/github-pages-not-loading.html" data-cat="productivity" data-tags="github pages 404 build deploy custom domain">
+                <div class="app-name">GitHub Pages</div>
+                <h2>GitHub Pages Not Loading</h2>
+                <p>Fix 404 errors, build failures, and custom domain issues on GitHub Pages.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/shopify-store-not-loading.html" data-cat="productivity" data-tags="shopify store loading theme performance checkout">
+                <div class="app-name">Shopify</div>
+                <h2>Shopify Store Not Loading</h2>
+                <p>Fix store loading failures, theme errors, and performance issues on Shopify.</p>
+                <span class="category-tag">Productivity</span>
+            </a>
+            <a class="card" href="pages/openai-api-down.html" data-cat="outages" data-tags="openai api down outage rate limit gpt error 429 500">
+                <div class="app-name">OpenAI API</div>
+                <h2>OpenAI API Down</h2>
+                <p>Handle API outages, rate limits, and errors for ChatGPT and GPT-4 APIs.</p>
+                <span class="category-tag">Outages</span>
+            </a>
+            <a class="card" href="pages/google-services-outage.html" data-cat="outages" data-tags="google outage gmail youtube drive services down">
+                <div class="app-name">Google</div>
+                <h2>Google Services Outage</h2>
+                <p>What to do when Gmail, YouTube, Drive, and other Google services go down.</p>
+                <span class="category-tag">Outages</span>
+            </a>
+            <a class="card" href="pages/cloudflare-outage.html" data-cat="outages" data-tags="cloudflare outage websites down 522 502 error cdn">
+                <div class="app-name">Cloudflare</div>
+                <h2>Cloudflare Outage Affecting Websites</h2>
+                <p>Fix access issues when Cloudflare outages take down multiple websites.</p>
+                <span class="category-tag">Outages</span>
             </a>
         </div>
     </div>
+
+    <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">&#8593;</button>
+
     <footer>
-        &copy; 2026 FixThatApp. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a>
+        <div class="footer-grid">
+            <div>
+                <h4>FixThatApp</h4>
+                <p>Free step-by-step troubleshooting guides for 100+ popular apps, devices, and services. No signups. No paywalls. Just solutions.</p>
+            </div>
+            <div>
+                <h4>Popular Guides</h4>
+                <ul>
+                    <li><a href="pages/chatgpt-not-working.html">ChatGPT Not Working</a></li>
+                    <li><a href="pages/whatsapp-not-sending-messages.html">WhatsApp Issues</a></li>
+                    <li><a href="pages/instagram-login-error.html">Instagram Login Error</a></li>
+                    <li><a href="pages/netflix-error-code-nw-2-5.html">Netflix Error NW-2-5</a></li>
+                    <li><a href="pages/wifi-connected-but-no-internet.html">Wi-Fi No Internet</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#" onclick="filterCat('social');return false;">Social Media</a></li>
+                    <li><a href="#" onclick="filterCat('streaming');return false;">Streaming</a></li>
+                    <li><a href="#" onclick="filterCat('gaming');return false;">Gaming</a></li>
+                    <li><a href="#" onclick="filterCat('ai');return false;">AI Tools</a></li>
+                    <li><a href="#" onclick="filterCat('devices');return false;">Devices & Tech</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                <h4 style="margin-top:1rem;">Contact</h4>
+                <ul>
+                    <li><a href="mailto:sufyankhan65@gmail.com">sufyankhan65@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 FixThatApp. All rights reserved.
+        </div>
     </footer>
+
+    <script>
+    const searchInput = document.getElementById('searchInput');
+    const grid = document.getElementById('guideGrid');
+    const cards = Array.from(grid.querySelectorAll('.card'));
+    const resultsInfo = document.getElementById('resultsInfo');
+    const noResults = document.getElementById('noResults');
+    const catBtns = document.querySelectorAll('.cat-btn');
+    let activeCat = 'all';
+
+    function filterCards() {
+        const q = searchInput.value.toLowerCase().trim();
+        let visible = 0;
+        cards.forEach(card => {
+            const text = (card.textContent + ' ' + (card.dataset.tags || '')).toLowerCase();
+            const cat = card.dataset.cat;
+            const matchesSearch = !q || text.includes(q);
+            const matchesCat = activeCat === 'all' || cat === activeCat;
+            const show = matchesSearch && matchesCat;
+            card.style.display = show ? '' : 'none';
+            if (show) visible++;
+        });
+        noResults.style.display = visible === 0 ? '' : 'none';
+        grid.style.display = visible === 0 ? 'none' : '';
+        if (q || activeCat !== 'all') {
+            resultsInfo.textContent = visible + ' guide' + (visible !== 1 ? 's' : '') + ' found';
+        } else {
+            resultsInfo.textContent = '';
+        }
+    }
+
+    searchInput.addEventListener('input', filterCards);
+
+    catBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            catBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeCat = btn.dataset.cat;
+            filterCards();
+        });
+    });
+
+    function filterCat(cat) {
+        activeCat = cat;
+        catBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.cat === cat);
+        });
+        filterCards();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // Scroll to top button
+    window.addEventListener('scroll', () => {
+        document.getElementById('scrollTop').style.display = window.scrollY > 600 ? 'block' : 'none';
+    });
+
+    // URL search param support
+    const urlQ = new URLSearchParams(window.location.search).get('q');
+    if (urlQ) {
+        searchInput.value = urlQ;
+        filterCards();
+    }
+    </script>
 </body>
 </html>

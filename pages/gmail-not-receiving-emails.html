@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troubleshooting Guide: Gmail Not Receiving Emails - FixThatApp</title>
-    <meta name="description" content="You're not receiving emails in your Gmail inbox. Expected emails may be going to spam, getting blocked, or not arriving at all. This can cause you to miss impor">
+    <meta name="description" content="You&#x27;re not receiving emails in your Gmail inbox. Expected emails may be going to spam, getting blocked, or not arriving at all. This can cause you to miss ">
     <meta name="keywords" content="gmail not receiving emails, fix, troubleshooting, how to fix, not working, error, solution">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/gmail-not-receiving-emails.html">
     <meta property="og:title" content="Troubleshooting Guide: Gmail Not Receiving Emails - FixThatApp">
-    <meta property="og:description" content="You're not receiving emails in your Gmail inbox. Expected emails may be going to spam, getting blocked, or not arriving at all. This can cause you to miss impor">
+    <meta property="og:description" content="You&#x27;re not receiving emails in your Gmail inbox. Expected emails may be going to spam, getting blocked, or not arriving at all. This can cause you to miss ">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/gmail-not-receiving-emails.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Troubleshooting Guide: Gmail Not Receiving Emails - FixThatApp">
-    <meta name="twitter:description" content="You're not receiving emails in your Gmail inbox. Expected emails may be going to spam, getting blocked, or not arriving at all. This can cause you to miss impor">
+    <meta name="twitter:description" content="You&#x27;re not receiving emails in your Gmail inbox. Expected emails may be going to spam, getting blocked, or not arriving at all. This can cause you to miss ">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -22,19 +23,62 @@
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Troubleshooting Guide: Gmail Not Receiving Emails",
-      "description": "You're not receiving emails in your Gmail inbox. Expected emails may be going to spam, getting blocked, or not arriving at all. This can cause you to miss impor",
+      "description": "You&#x27;re not receiving emails in your Gmail inbox. Expected emails may be going to spam, getting blocked, or not arriving at all. This can cause you to miss ",
+      "dateModified": "2026-03-05",
       "author": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.fixthatapp.com/pages/gmail-not-receiving-emails.html"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I stop important emails from going to Spam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open the email in Spam, click &quot;Not Spam&quot;. You can also add the sender to your Contacts or create a filter: search for the sender &gt; click the filter icon &gt; &quot;Never send it to Spam&quot;."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "How long does Gmail keep emails in Trash and Spam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gmail automatically deletes emails in Trash and Spam after 30 days. If you need to recover an email, check these folders as soon as possible."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Can someone send me an email and it just disappears?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if you have a filter that automatically deletes emails matching certain criteria. Check your filters in Gmail Settings to make sure no filter is deleting incoming mail."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "How much storage do I need to receive emails?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need at least some free space in your 15GB Google account storage. Large attachments take up more space. Consider using Google One for additional storage if you frequently receive large files."
+          }
+        }
+      ]
     }
     </script>
     <style>
@@ -48,28 +92,63 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search {
+            position: relative;
+            max-width: 260px;
+        }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .back:hover { text-decoration: underline; }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
         .article {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
-        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article p { margin-bottom: 1rem; color: #444; }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.5rem; }
+        .article li { margin-bottom: 0.4rem; }
         .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
         .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
@@ -79,17 +158,32 @@
             padding: 2rem 1rem;
             color: #999;
             font-size: 0.85rem;
+            border-top: 1px solid #eee;
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+        }
     </style>
 </head>
 <body>
-    <header><a href="../index.html">FixThatApp</a></header>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
     <div class="container">
-        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; Gmail Not Receiving Emails
+        </nav>
         <div class="article">
             <h1>Troubleshooting Guide: Gmail Not Receiving Emails</h1>
+            <p class="updated">Last updated: March 5, 2026</p>
             <h2>Problem Description</h2>
             <p>You're not receiving emails in your Gmail inbox. Expected emails may be going to spam, getting blocked, or not arriving at all. This can cause you to miss important messages, work communications, or verification codes.</p>
             <h2>Possible Causes</h2>
@@ -99,35 +193,35 @@
             <p><strong>Forwarding enabled</strong>: Emails may be forwarded to another account without keeping a copy in Gmail.</p>
             <p><strong>Sender-side issues</strong>: The sender's email server may be having problems delivering to Gmail.</p>
             <h2>Step-by-Step Fixes</h2>
-            <p>### Fix 1: Check Spam and Other Folders</p>
+            <h3>Fix 1: Check Spam and Other Folders</h3>
             <p>&bull; Open Gmail and click on "Spam" in the left sidebar.</p>
             <p>&bull; Also check "Promotions", "Social", "Updates", and "All Mail" tabs.</p>
             <p>&bull; If you find the missing email, select it and click "Not Spam" or move it to Inbox.</p>
-            <p>### Fix 2: Check Google Account Storage</p>
+            <h3>Fix 2: Check Google Account Storage</h3>
             <p>&bull; Visit drive.google.com/settings to see your storage usage.</p>
             <p>&bull; Gmail, Drive, and Photos share 15GB of free storage.</p>
             <p>&bull; If full, delete large emails with attachments, empty Trash, or upgrade your storage plan.</p>
-            <p>### Fix 3: Review Filters and Blocked Addresses</p>
+            <h3>Fix 3: Review Filters and Blocked Addresses</h3>
             <p>&bull; Open Gmail > Click the gear icon > See All Settings > Filters and Blocked Addresses.</p>
             <p>&bull; Check if any filter is automatically deleting, archiving, or forwarding emails.</p>
             <p>&bull; Delete any unwanted filters.</p>
             <p>&bull; Also check the "Blocked" list to make sure you haven't blocked the sender.</p>
-            <p>### Fix 4: Check Email Forwarding</p>
+            <h3>Fix 4: Check Email Forwarding</h3>
             <p>&bull; Go to Gmail Settings > Forwarding and POP/IMAP.</p>
             <p>&bull; If forwarding is enabled, make sure "Keep Gmail's copy in the Inbox" is selected.</p>
             <p>&bull; Or disable forwarding if you don't need it.</p>
-            <p>### Fix 5: Send Yourself a Test Email</p>
+            <h3>Fix 5: Send Yourself a Test Email</h3>
             <p>&bull; Send an email to your own Gmail address from a different email account.</p>
             <p>&bull; If you receive it, the issue may be on the original sender's end.</p>
             <p>&bull; If you don't receive it, the problem is with your Gmail settings.</p>
-            <p>### Fix 6: Check Gmail on the Web</p>
+            <h3>Fix 6: Check Gmail on the Web</h3>
             <p>&bull; If you're using an email client (Outlook, Apple Mail, etc.), log into Gmail directly at gmail.com.</p>
             <p>&bull; If emails appear on the web but not in your email client, the issue is with the client's sync settings.</p>
             <h2>When to Contact Support</h2>
             <p>If you've tried all fixes and still aren't receiving emails, contact Google support through the Google One help page or visit support.google.com/mail. Business users (Google Workspace) should contact their IT administrator.</p>
             <h2>FAQ</h2>
             <div class="faq"><p class="q">Q: How do I stop important emails from going to Spam?</p>
-            <p class="a">A: Open the email in Spam, click "Not Spam". You can also add the sender to your Contacts or create a filter: search for the sender > click the filter icon > "Never send it to Spam".</p>
+            <p class="a">A: Open the email in Spam, click &quot;Not Spam&quot;. You can also add the sender to your Contacts or create a filter: search for the sender &gt; click the filter icon &gt; &quot;Never send it to Spam&quot;.</p>
             </div>
             <div class="faq"><p class="q">Q: How long does Gmail keep emails in Trash and Spam?</p>
             <p class="a">A: Gmail automatically deletes emails in Trash and Spam after 30 days. If you need to recover an email, check these folders as soon as possible.</p>
@@ -140,6 +234,6 @@
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
 </body>
 </html>

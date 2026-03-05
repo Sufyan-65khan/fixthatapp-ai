@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troubleshooting Guide: Google Photos Not Backing Up - FixThatApp</title>
-    <meta name="description" content="Google Photos may stop backing up your photos and videos, showing "Backup is off", "Waiting for Wi-Fi", or "Backup stuck" messages. New photos may not appear in">
+    <meta name="description" content="Google Photos may stop backing up your photos and videos, showing &quot;Backup is off&quot;, &quot;Waiting for Wi-Fi&quot;, or &quot;Backup stuck&quot; messages. New photos may not appe">
     <meta name="keywords" content="google photos not backing up, fix, troubleshooting, how to fix, not working, error, solution">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/google-photos-not-backing-up.html">
     <meta property="og:title" content="Troubleshooting Guide: Google Photos Not Backing Up - FixThatApp">
-    <meta property="og:description" content="Google Photos may stop backing up your photos and videos, showing "Backup is off", "Waiting for Wi-Fi", or "Backup stuck" messages. New photos may not appear in">
+    <meta property="og:description" content="Google Photos may stop backing up your photos and videos, showing &quot;Backup is off&quot;, &quot;Waiting for Wi-Fi&quot;, or &quot;Backup stuck&quot; messages. New photos may not appe">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/google-photos-not-backing-up.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Troubleshooting Guide: Google Photos Not Backing Up - FixThatApp">
-    <meta name="twitter:description" content="Google Photos may stop backing up your photos and videos, showing "Backup is off", "Waiting for Wi-Fi", or "Backup stuck" messages. New photos may not appear in">
+    <meta name="twitter:description" content="Google Photos may stop backing up your photos and videos, showing &quot;Backup is off&quot;, &quot;Waiting for Wi-Fi&quot;, or &quot;Backup stuck&quot; messages. New photos may not appe">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -22,19 +23,62 @@
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Troubleshooting Guide: Google Photos Not Backing Up",
-      "description": "Google Photos may stop backing up your photos and videos, showing "Backup is off", "Waiting for Wi-Fi", or "Backup stuck" messages. New photos may not appear in",
+      "description": "Google Photos may stop backing up your photos and videos, showing &quot;Backup is off&quot;, &quot;Waiting for Wi-Fi&quot;, or &quot;Backup stuck&quot; messages. New photos may not appe",
+      "dateModified": "2026-03-05",
       "author": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.fixthatapp.com/pages/google-photos-not-backing-up.html"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Google Photos backup for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Photos uses your Google account storage (15 GB free). Photos over the free limit require a Google One subscription."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Will deleting photos from my phone remove them from Google Photos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not if they&#x27;ve been backed up. Once backed up to Google Photos, the cloud copy is independent. Use &quot;Free up space&quot; in Google Photos to safely remove backed-up photos from your device."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "How long does backup take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the number and size of your photos. First backup can take hours or days. You can check progress in the Google Photos backup settings."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Can I back up photos from other apps (WhatsApp, Screenshots)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, go to Google Photos Settings &gt; Backup &gt; Back up Device Folders and enable the folders you want backed up."
+          }
+        }
+      ]
     }
     </script>
     <style>
@@ -48,28 +92,63 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search {
+            position: relative;
+            max-width: 260px;
+        }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .back:hover { text-decoration: underline; }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
         .article {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
-        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article p { margin-bottom: 1rem; color: #444; }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.5rem; }
+        .article li { margin-bottom: 0.4rem; }
         .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
         .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
@@ -79,17 +158,32 @@
             padding: 2rem 1rem;
             color: #999;
             font-size: 0.85rem;
+            border-top: 1px solid #eee;
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+        }
     </style>
 </head>
 <body>
-    <header><a href="../index.html">FixThatApp</a></header>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
     <div class="container">
-        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; Google Photos Not Backing Up
+        </nav>
         <div class="article">
             <h1>Troubleshooting Guide: Google Photos Not Backing Up</h1>
+            <p class="updated">Last updated: March 5, 2026</p>
             <h2>Problem Description</h2>
             <p>Google Photos may stop backing up your photos and videos, showing "Backup is off", "Waiting for Wi-Fi", or "Backup stuck" messages. New photos may not appear in the cloud, putting your memories at risk.</p>
             <h2>Possible Causes</h2>
@@ -99,27 +193,27 @@
             <p><strong>App not updated</strong>: An outdated Google Photos app may have backup bugs.</p>
             <p><strong>Backup turned off</strong>: The backup setting may have been accidentally disabled.</p>
             <h2>Step-by-Step Fixes</h2>
-            <p>### Fix 1: Check Backup Settings</p>
+            <h3>Fix 1: Check Backup Settings</h3>
             <p>&bull; Open Google Photos > Tap profile icon > Photos Settings > Backup.</p>
             <p>&bull; Make sure Backup is toggled On.</p>
             <p>&bull; Check if "Back up over mobile data" is enabled if you want backup without Wi-Fi.</p>
-            <p>### Fix 2: Check Storage Space</p>
+            <h3>Fix 2: Check Storage Space</h3>
             <p>&bull; Visit drive.google.com/settings to see your storage usage.</p>
             <p>&bull; Google Photos shares the 15 GB free storage with Gmail and Drive.</p>
             <p>&bull; Delete old backups, empty Trash, or upgrade to Google One for more storage.</p>
-            <p>### Fix 3: Connect to Wi-Fi</p>
+            <h3>Fix 3: Connect to Wi-Fi</h3>
             <p>&bull; If backup is set to Wi-Fi only, connect to a Wi-Fi network.</p>
             <p>&bull; Check that your Wi-Fi is working properly.</p>
             <p>&bull; If you want backup over mobile data, enable it in Backup settings.</p>
-            <p>### Fix 4: Disable Battery Saver</p>
+            <h3>Fix 4: Disable Battery Saver</h3>
             <p>&bull; Go to Settings > Battery > Turn off Battery Saver.</p>
             <p>&bull; Battery saver restricts background activity, which includes photo backups.</p>
             <p>&bull; You can also exclude Google Photos from battery optimization.</p>
-            <p>### Fix 5: Force Stop and Restart Google Photos</p>
+            <h3>Fix 5: Force Stop and Restart Google Photos</h3>
             <p>&bull; Go to Settings > Apps > Google Photos > Force Stop.</p>
             <p>&bull; Clear Cache in the same menu.</p>
             <p>&bull; Reopen Google Photos and check if backup resumes.</p>
-            <p>### Fix 6: Update Google Photos</p>
+            <h3>Fix 6: Update Google Photos</h3>
             <p>&bull; Go to the Play Store or App Store.</p>
             <p>&bull; Update Google Photos to the latest version.</p>
             <p>&bull; Restart the app and check backup status.</p>
@@ -130,16 +224,16 @@
             <p class="a">A: Google Photos uses your Google account storage (15 GB free). Photos over the free limit require a Google One subscription.</p>
             </div>
             <div class="faq"><p class="q">Q: Will deleting photos from my phone remove them from Google Photos?</p>
-            <p class="a">A: Not if they've been backed up. Once backed up to Google Photos, the cloud copy is independent. Use "Free up space" in Google Photos to safely remove backed-up photos from your device.</p>
+            <p class="a">A: Not if they&#x27;ve been backed up. Once backed up to Google Photos, the cloud copy is independent. Use &quot;Free up space&quot; in Google Photos to safely remove backed-up photos from your device.</p>
             </div>
             <div class="faq"><p class="q">Q: How long does backup take?</p>
             <p class="a">A: It depends on the number and size of your photos. First backup can take hours or days. You can check progress in the Google Photos backup settings.</p>
             </div>
             <div class="faq"><p class="q">Q: Can I back up photos from other apps (WhatsApp, Screenshots)?</p>
-            <p class="a">A: Yes, go to Google Photos Settings > Backup > Back up Device Folders and enable the folders you want backed up.</p>
+            <p class="a">A: Yes, go to Google Photos Settings &gt; Backup &gt; Back up Device Folders and enable the folders you want backed up.</p>
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
 </body>
 </html>

@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troubleshooting Guide: ChatGPT Not Working - FixThatApp</title>
-    <meta name="description" content="ChatGPT may fail to load, show error messages like "Something went wrong", give incomplete responses, or become completely unresponsive. This affects both free ">
+    <meta name="description" content="ChatGPT may fail to load, show error messages like &quot;Something went wrong&quot;, give incomplete responses, or become completely unresponsive. This affects both ">
     <meta name="keywords" content="chatgpt not working, fix, troubleshooting, how to fix, not working, error, solution">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/chatgpt-not-working.html">
     <meta property="og:title" content="Troubleshooting Guide: ChatGPT Not Working - FixThatApp">
-    <meta property="og:description" content="ChatGPT may fail to load, show error messages like "Something went wrong", give incomplete responses, or become completely unresponsive. This affects both free ">
+    <meta property="og:description" content="ChatGPT may fail to load, show error messages like &quot;Something went wrong&quot;, give incomplete responses, or become completely unresponsive. This affects both ">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/chatgpt-not-working.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Troubleshooting Guide: ChatGPT Not Working - FixThatApp">
-    <meta name="twitter:description" content="ChatGPT may fail to load, show error messages like "Something went wrong", give incomplete responses, or become completely unresponsive. This affects both free ">
+    <meta name="twitter:description" content="ChatGPT may fail to load, show error messages like &quot;Something went wrong&quot;, give incomplete responses, or become completely unresponsive. This affects both ">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -22,19 +23,62 @@
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Troubleshooting Guide: ChatGPT Not Working",
-      "description": "ChatGPT may fail to load, show error messages like "Something went wrong", give incomplete responses, or become completely unresponsive. This affects both free ",
+      "description": "ChatGPT may fail to load, show error messages like &quot;Something went wrong&quot;, give incomplete responses, or become completely unresponsive. This affects both ",
+      "dateModified": "2026-03-05",
       "author": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.fixthatapp.com/pages/chatgpt-not-working.html"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does ChatGPT say &quot;at capacity&quot;?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This happens during peak usage times when too many users are accessing the service. ChatGPT Plus subscribers get priority access during high-traffic periods. Try again in a few minutes."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Why are ChatGPT responses cut off mid-sentence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This can happen due to token limits or server issues. Type &quot;continue&quot; to get the rest of the response. If it keeps happening, try starting a new conversation."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Is ChatGPT free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, ChatGPT has a free tier. ChatGPT Plus costs $20/month and offers faster responses, priority access, and access to the latest models."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Can I use ChatGPT without an account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OpenAI has introduced limited access without an account, but for the full experience and conversation history, creating a free account is recommended."
+          }
+        }
+      ]
     }
     </script>
     <style>
@@ -48,28 +92,63 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search {
+            position: relative;
+            max-width: 260px;
+        }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .back:hover { text-decoration: underline; }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
         .article {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
-        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article p { margin-bottom: 1rem; color: #444; }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.5rem; }
+        .article li { margin-bottom: 0.4rem; }
         .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
         .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
@@ -79,17 +158,32 @@
             padding: 2rem 1rem;
             color: #999;
             font-size: 0.85rem;
+            border-top: 1px solid #eee;
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+        }
     </style>
 </head>
 <body>
-    <header><a href="../index.html">FixThatApp</a></header>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
     <div class="container">
-        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; ChatGPT Not Working
+        </nav>
         <div class="article">
             <h1>Troubleshooting Guide: ChatGPT Not Working</h1>
+            <p class="updated">Last updated: March 5, 2026</p>
             <h2>Problem Description</h2>
             <p>ChatGPT may fail to load, show error messages like "Something went wrong", give incomplete responses, or become completely unresponsive. This affects both free and paid users and can interrupt important work or conversations.</p>
             <h2>Possible Causes</h2>
@@ -99,38 +193,38 @@
             <p><strong>Account issues</strong>: Free tier rate limits or subscription problems can restrict access.</p>
             <p><strong>OpenAI outage</strong>: The service may be experiencing a platform-wide outage.</p>
             <h2>Step-by-Step Fixes</h2>
-            <p>### Fix 1: Check OpenAI Status</p>
+            <h3>Fix 1: Check OpenAI Status</h3>
             <p>&bull; Visit status.openai.com to check if there's an ongoing outage.</p>
             <p>&bull; Check Twitter/X @OpenAI for any announcements about service issues.</p>
             <p>&bull; If there's an outage, wait for OpenAI to resolve it.</p>
-            <p>### Fix 2: Refresh and Clear Browser Cache</p>
+            <h3>Fix 2: Refresh and Clear Browser Cache</h3>
             <p>&bull; Press Ctrl+Shift+R (or Cmd+Shift+R on Mac) to hard refresh the page.</p>
             <p>&bull; Clear browser cache: Settings > Privacy > Clear Browsing Data.</p>
             <p>&bull; Try loading ChatGPT in an incognito or private browsing window.</p>
-            <p>### Fix 3: Try a Different Browser</p>
+            <h3>Fix 3: Try a Different Browser</h3>
             <p>&bull; If ChatGPT isn't working in Chrome, try Firefox, Edge, or Safari.</p>
             <p>&bull; Disable browser extensions, especially ad blockers, that may interfere.</p>
             <p>&bull; Make sure your browser is updated to the latest version.</p>
-            <p>### Fix 4: Check Your Internet Connection</p>
+            <h3>Fix 4: Check Your Internet Connection</h3>
             <p>&bull; Test your internet speed at fast.com.</p>
             <p>&bull; Try switching between Wi-Fi and mobile data.</p>
             <p>&bull; Restart your router if the connection is unstable.</p>
-            <p>### Fix 5: Log Out and Log Back In</p>
+            <h3>Fix 5: Log Out and Log Back In</h3>
             <p>&bull; Click your profile icon in ChatGPT and select "Log Out".</p>
             <p>&bull; Clear your browser cookies for openai.com.</p>
             <p>&bull; Log back in and try again.</p>
-            <p>### Fix 6: Use the ChatGPT Mobile App</p>
+            <h3>Fix 6: Use the ChatGPT Mobile App</h3>
             <p>&bull; If the web version isn't working, try the ChatGPT app on iOS or Android.</p>
             <p>&bull; The mobile app sometimes works when the website is having issues.</p>
             <p>&bull; Download it from the App Store or Google Play Store.</p>
             <h2>When to Contact Support</h2>
             <p>If ChatGPT is not working and there's no reported outage, contact OpenAI support at help.openai.com. Plus and Team subscribers have priority support access.</p>
             <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: Why does ChatGPT say "at capacity"?</p>
+            <div class="faq"><p class="q">Q: Why does ChatGPT say &quot;at capacity&quot;?</p>
             <p class="a">A: This happens during peak usage times when too many users are accessing the service. ChatGPT Plus subscribers get priority access during high-traffic periods. Try again in a few minutes.</p>
             </div>
             <div class="faq"><p class="q">Q: Why are ChatGPT responses cut off mid-sentence?</p>
-            <p class="a">A: This can happen due to token limits or server issues. Type "continue" to get the rest of the response. If it keeps happening, try starting a new conversation.</p>
+            <p class="a">A: This can happen due to token limits or server issues. Type &quot;continue&quot; to get the rest of the response. If it keeps happening, try starting a new conversation.</p>
             </div>
             <div class="faq"><p class="q">Q: Is ChatGPT free?</p>
             <p class="a">A: Yes, ChatGPT has a free tier. ChatGPT Plus costs $20/month and offers faster responses, priority access, and access to the latest models.</p>
@@ -140,6 +234,6 @@
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
 </body>
 </html>

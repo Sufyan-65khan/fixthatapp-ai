@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troubleshooting Guide: iPhone Camera Not Working - FixThatApp</title>
-    <meta name="description" content="Your iPhone camera may show a black screen, freeze, fail to switch between front and rear cameras, or refuse to open. The Camera app might crash, or photos may ">
+    <meta name="description" content="Your iPhone camera may show a black screen, freeze, fail to switch between front and rear cameras, or refuse to open. The Camera app might crash, or photos">
     <meta name="keywords" content="iphone camera not working, fix, troubleshooting, how to fix, not working, error, solution">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/iphone-camera-not-working.html">
     <meta property="og:title" content="Troubleshooting Guide: iPhone Camera Not Working - FixThatApp">
-    <meta property="og:description" content="Your iPhone camera may show a black screen, freeze, fail to switch between front and rear cameras, or refuse to open. The Camera app might crash, or photos may ">
+    <meta property="og:description" content="Your iPhone camera may show a black screen, freeze, fail to switch between front and rear cameras, or refuse to open. The Camera app might crash, or photos">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/iphone-camera-not-working.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Troubleshooting Guide: iPhone Camera Not Working - FixThatApp">
-    <meta name="twitter:description" content="Your iPhone camera may show a black screen, freeze, fail to switch between front and rear cameras, or refuse to open. The Camera app might crash, or photos may ">
+    <meta name="twitter:description" content="Your iPhone camera may show a black screen, freeze, fail to switch between front and rear cameras, or refuse to open. The Camera app might crash, or photos">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -22,19 +23,62 @@
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Troubleshooting Guide: iPhone Camera Not Working",
-      "description": "Your iPhone camera may show a black screen, freeze, fail to switch between front and rear cameras, or refuse to open. The Camera app might crash, or photos may ",
+      "description": "Your iPhone camera may show a black screen, freeze, fail to switch between front and rear cameras, or refuse to open. The Camera app might crash, or photos",
+      "dateModified": "2026-03-05",
       "author": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.fixthatapp.com/pages/iphone-camera-not-working.html"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does my iPhone camera show a black screen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Force close the Camera app, restart your phone, and make sure no case or accessory is covering the lens. If it persists, it may be a hardware issue."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Why is my iPhone camera blurry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Clean the lens first. If still blurry, check if your case is interfering, restart the phone, or try resetting camera settings."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Can I use a third-party camera app if the default one doesn&#x27;t work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, try apps like Halide or ProCamera. If third-party apps also don&#x27;t work, the issue is hardware-related."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Why does only the front/rear camera work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One camera module may be damaged. Try switching cameras in the Camera app. If one doesn&#x27;t work, contact Apple Support."
+          }
+        }
+      ]
     }
     </script>
     <style>
@@ -48,28 +92,63 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search {
+            position: relative;
+            max-width: 260px;
+        }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .back:hover { text-decoration: underline; }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
         .article {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
-        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article p { margin-bottom: 1rem; color: #444; }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.5rem; }
+        .article li { margin-bottom: 0.4rem; }
         .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
         .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
@@ -79,17 +158,32 @@
             padding: 2rem 1rem;
             color: #999;
             font-size: 0.85rem;
+            border-top: 1px solid #eee;
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+        }
     </style>
 </head>
 <body>
-    <header><a href="../index.html">FixThatApp</a></header>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
     <div class="container">
-        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; iPhone Camera Not Working
+        </nav>
         <div class="article">
             <h1>Troubleshooting Guide: iPhone Camera Not Working</h1>
+            <p class="updated">Last updated: March 5, 2026</p>
             <h2>Problem Description</h2>
             <p>Your iPhone camera may show a black screen, freeze, fail to switch between front and rear cameras, or refuse to open. The Camera app might crash, or photos may appear blurry or overexposed.</p>
             <h2>Possible Causes</h2>
@@ -99,31 +193,31 @@
             <p><strong>Third-party app conflict</strong>: Another app may be using the camera.</p>
             <p><strong>Hardware damage</strong>: Physical damage to the camera module.</p>
             <h2>Step-by-Step Fixes</h2>
-            <p>### Fix 1: Force Close the Camera App</p>
+            <h3>Fix 1: Force Close the Camera App</h3>
             <p>&bull; Swipe up from the bottom and close the Camera app.</p>
             <p>&bull; Wait a few seconds and reopen it.</p>
             <p>&bull; This resolves most temporary glitches.</p>
-            <p>### Fix 2: Remove Your Case</p>
+            <h3>Fix 2: Remove Your Case</h3>
             <p>&bull; Some cases can block the camera lens or flash.</p>
             <p>&bull; Remove your case and test the camera.</p>
             <p>&bull; If it works without the case, get a case that doesn't obstruct the camera.</p>
-            <p>### Fix 3: Clean the Lens</p>
+            <h3>Fix 3: Clean the Lens</h3>
             <p>&bull; Gently wipe the camera lens with a soft, lint-free cloth.</p>
             <p>&bull; Remove any fingerprints, dust, or debris.</p>
             <p>&bull; A dirty lens causes blurry or hazy photos.</p>
-            <p>### Fix 4: Check Storage Space</p>
+            <h3>Fix 4: Check Storage Space</h3>
             <p>&bull; Go to Settings > General > iPhone Storage.</p>
             <p>&bull; If storage is almost full, delete old photos, apps, or videos.</p>
             <p>&bull; The camera can't save new photos without free space.</p>
-            <p>### Fix 5: Restart Your iPhone</p>
+            <h3>Fix 5: Restart Your iPhone</h3>
             <p>&bull; Power off your iPhone completely.</p>
             <p>&bull; Wait 30 seconds and turn it back on.</p>
             <p>&bull; Open the Camera app and test.</p>
-            <p>### Fix 6: Update iOS</p>
+            <h3>Fix 6: Update iOS</h3>
             <p>&bull; Go to Settings > General > Software Update.</p>
             <p>&bull; Install any available updates.</p>
             <p>&bull; Camera bugs are often fixed in iOS updates.</p>
-            <p>### Fix 7: Reset All Settings</p>
+            <h3>Fix 7: Reset All Settings</h3>
             <p>&bull; Go to Settings > General > Transfer or Reset iPhone > Reset > Reset All Settings.</p>
             <p>&bull; This doesn't delete your data but resets all system settings.</p>
             <h2>When to Contact Support</h2>
@@ -135,14 +229,14 @@
             <div class="faq"><p class="q">Q: Why is my iPhone camera blurry?</p>
             <p class="a">A: Clean the lens first. If still blurry, check if your case is interfering, restart the phone, or try resetting camera settings.</p>
             </div>
-            <div class="faq"><p class="q">Q: Can I use a third-party camera app if the default one doesn't work?</p>
-            <p class="a">A: Yes, try apps like Halide or ProCamera. If third-party apps also don't work, the issue is hardware-related.</p>
+            <div class="faq"><p class="q">Q: Can I use a third-party camera app if the default one doesn&#x27;t work?</p>
+            <p class="a">A: Yes, try apps like Halide or ProCamera. If third-party apps also don&#x27;t work, the issue is hardware-related.</p>
             </div>
             <div class="faq"><p class="q">Q: Why does only the front/rear camera work?</p>
-            <p class="a">A: One camera module may be damaged. Try switching cameras in the Camera app. If one doesn't work, contact Apple Support.</p>
+            <p class="a">A: One camera module may be damaged. Try switching cameras in the Camera app. If one doesn&#x27;t work, contact Apple Support.</p>
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
 </body>
 </html>

@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troubleshooting Guide: Outlook Not Sending Emails - FixThatApp</title>
-    <meta name="description" content="Microsoft Outlook may fail to send emails, showing errors like "Send/Receive Error", keeping emails stuck in the Outbox, or displaying server connection errors.">
+    <meta name="description" content="Microsoft Outlook may fail to send emails, showing errors like &quot;Send/Receive Error&quot;, keeping emails stuck in the Outbox, or displaying server connection er">
     <meta name="keywords" content="outlook not sending emails, fix, troubleshooting, how to fix, not working, error, solution">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/outlook-not-sending-emails.html">
     <meta property="og:title" content="Troubleshooting Guide: Outlook Not Sending Emails - FixThatApp">
-    <meta property="og:description" content="Microsoft Outlook may fail to send emails, showing errors like "Send/Receive Error", keeping emails stuck in the Outbox, or displaying server connection errors.">
+    <meta property="og:description" content="Microsoft Outlook may fail to send emails, showing errors like &quot;Send/Receive Error&quot;, keeping emails stuck in the Outbox, or displaying server connection er">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/outlook-not-sending-emails.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Troubleshooting Guide: Outlook Not Sending Emails - FixThatApp">
-    <meta name="twitter:description" content="Microsoft Outlook may fail to send emails, showing errors like "Send/Receive Error", keeping emails stuck in the Outbox, or displaying server connection errors.">
+    <meta name="twitter:description" content="Microsoft Outlook may fail to send emails, showing errors like &quot;Send/Receive Error&quot;, keeping emails stuck in the Outbox, or displaying server connection er">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -22,19 +23,62 @@
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Troubleshooting Guide: Outlook Not Sending Emails",
-      "description": "Microsoft Outlook may fail to send emails, showing errors like "Send/Receive Error", keeping emails stuck in the Outbox, or displaying server connection errors.",
+      "description": "Microsoft Outlook may fail to send emails, showing errors like &quot;Send/Receive Error&quot;, keeping emails stuck in the Outbox, or displaying server connection er",
+      "dateModified": "2026-03-05",
       "author": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.fixthatapp.com/pages/outlook-not-sending-emails.html"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why are my emails stuck in the Outbox?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually due to large attachments, lost internet connection, or authentication issues. Open the stuck email, reduce its size, and try again."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "What&#x27;s the maximum attachment size in Outlook?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "25MB for Outlook.com and most Exchange accounts. For larger files, use OneDrive and share a link instead."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Can I recall a sent email in Outlook?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the desktop app with Exchange, go to Sent Items &gt; open the email &gt; Message tab &gt; Actions &gt; Recall This Message. This only works if the recipient hasn&#x27;t read it yet."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Why does Outlook keep asking for my password?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your password may have changed, or your authentication token expired. Re-enter your credentials or enable modern authentication."
+          }
+        }
+      ]
     }
     </script>
     <style>
@@ -48,28 +92,63 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search {
+            position: relative;
+            max-width: 260px;
+        }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .back:hover { text-decoration: underline; }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
         .article {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
-        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article p { margin-bottom: 1rem; color: #444; }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.5rem; }
+        .article li { margin-bottom: 0.4rem; }
         .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
         .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
@@ -79,17 +158,32 @@
             padding: 2rem 1rem;
             color: #999;
             font-size: 0.85rem;
+            border-top: 1px solid #eee;
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+        }
     </style>
 </head>
 <body>
-    <header><a href="../index.html">FixThatApp</a></header>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
     <div class="container">
-        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; Outlook Not Sending Emails
+        </nav>
         <div class="article">
             <h1>Troubleshooting Guide: Outlook Not Sending Emails</h1>
+            <p class="updated">Last updated: March 5, 2026</p>
             <h2>Problem Description</h2>
             <p>Microsoft Outlook may fail to send emails, showing errors like "Send/Receive Error", keeping emails stuck in the Outbox, or displaying server connection errors. This affects both desktop and web versions of Outlook.</p>
             <h2>Possible Causes</h2>
@@ -99,27 +193,27 @@
             <p><strong>Account authentication</strong>: Your password may have changed or expired.</p>
             <p><strong>Server settings wrong</strong>: Incorrect SMTP settings prevent sending.</p>
             <h2>Step-by-Step Fixes</h2>
-            <p>### Fix 1: Check Internet Connection</p>
+            <h3>Fix 1: Check Internet Connection</h3>
             <p>&bull; Make sure you're connected to the internet.</p>
             <p>&bull; Check if you can browse websites normally.</p>
             <p>&bull; Try sending from Outlook on the web (outlook.live.com) to isolate the issue.</p>
-            <p>### Fix 2: Check the Outbox</p>
+            <h3>Fix 2: Check the Outbox</h3>
             <p>&bull; Go to the Outbox folder and open any stuck emails.</p>
             <p>&bull; Check if attachments are too large (over 25MB).</p>
             <p>&bull; Delete the stuck email, reduce attachment size, and try again.</p>
-            <p>### Fix 3: Re-enter Your Password</p>
+            <h3>Fix 3: Re-enter Your Password</h3>
             <p>&bull; Go to File > Account Settings > Account Settings.</p>
             <p>&bull; Select your email account and click "Repair".</p>
             <p>&bull; Re-enter your password when prompted.</p>
-            <p>### Fix 4: Work Offline Toggle</p>
+            <h3>Fix 4: Work Offline Toggle</h3>
             <p>&bull; Check if "Work Offline" is enabled in the Send/Receive tab.</p>
             <p>&bull; If it's highlighted, click it to go back online.</p>
             <p>&bull; Outlook won't send emails while in offline mode.</p>
-            <p>### Fix 5: Create a New Outlook Profile</p>
+            <h3>Fix 5: Create a New Outlook Profile</h3>
             <p>&bull; Go to Control Panel > Mail > Show Profiles > Add.</p>
             <p>&bull; Create a new profile and set up your email account.</p>
             <p>&bull; Set the new profile as default and restart Outlook.</p>
-            <p>### Fix 6: Repair Office Installation</p>
+            <h3>Fix 6: Repair Office Installation</h3>
             <p>&bull; Go to Settings > Apps > Microsoft Office > Modify > Repair.</p>
             <p>&bull; Choose "Online Repair" for a thorough fix.</p>
             <p>&bull; Restart your computer after the repair completes.</p>
@@ -129,17 +223,17 @@
             <div class="faq"><p class="q">Q: Why are my emails stuck in the Outbox?</p>
             <p class="a">A: Usually due to large attachments, lost internet connection, or authentication issues. Open the stuck email, reduce its size, and try again.</p>
             </div>
-            <div class="faq"><p class="q">Q: What's the maximum attachment size in Outlook?</p>
+            <div class="faq"><p class="q">Q: What&#x27;s the maximum attachment size in Outlook?</p>
             <p class="a">A: 25MB for Outlook.com and most Exchange accounts. For larger files, use OneDrive and share a link instead.</p>
             </div>
             <div class="faq"><p class="q">Q: Can I recall a sent email in Outlook?</p>
-            <p class="a">A: In the desktop app with Exchange, go to Sent Items > open the email > Message tab > Actions > Recall This Message. This only works if the recipient hasn't read it yet.</p>
+            <p class="a">A: In the desktop app with Exchange, go to Sent Items &gt; open the email &gt; Message tab &gt; Actions &gt; Recall This Message. This only works if the recipient hasn&#x27;t read it yet.</p>
             </div>
             <div class="faq"><p class="q">Q: Why does Outlook keep asking for my password?</p>
             <p class="a">A: Your password may have changed, or your authentication token expired. Re-enter your credentials or enable modern authentication.</p>
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
 </body>
 </html>

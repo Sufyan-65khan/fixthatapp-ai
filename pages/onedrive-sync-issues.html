@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troubleshooting Guide: OneDrive Sync Issues - FixThatApp</title>
-    <meta name="description" content="Microsoft OneDrive may stop syncing files, showing sync errors, pending uploads, or files not appearing across devices. The OneDrive icon may show a red X or ex">
+    <meta name="description" content="Microsoft OneDrive may stop syncing files, showing sync errors, pending uploads, or files not appearing across devices. The OneDrive icon may show a red X ">
     <meta name="keywords" content="onedrive sync issues, fix, troubleshooting, how to fix, not working, error, solution">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/onedrive-sync-issues.html">
     <meta property="og:title" content="Troubleshooting Guide: OneDrive Sync Issues - FixThatApp">
-    <meta property="og:description" content="Microsoft OneDrive may stop syncing files, showing sync errors, pending uploads, or files not appearing across devices. The OneDrive icon may show a red X or ex">
+    <meta property="og:description" content="Microsoft OneDrive may stop syncing files, showing sync errors, pending uploads, or files not appearing across devices. The OneDrive icon may show a red X ">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/onedrive-sync-issues.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Troubleshooting Guide: OneDrive Sync Issues - FixThatApp">
-    <meta name="twitter:description" content="Microsoft OneDrive may stop syncing files, showing sync errors, pending uploads, or files not appearing across devices. The OneDrive icon may show a red X or ex">
+    <meta name="twitter:description" content="Microsoft OneDrive may stop syncing files, showing sync errors, pending uploads, or files not appearing across devices. The OneDrive icon may show a red X ">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -22,19 +23,62 @@
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Troubleshooting Guide: OneDrive Sync Issues",
-      "description": "Microsoft OneDrive may stop syncing files, showing sync errors, pending uploads, or files not appearing across devices. The OneDrive icon may show a red X or ex",
+      "description": "Microsoft OneDrive may stop syncing files, showing sync errors, pending uploads, or files not appearing across devices. The OneDrive icon may show a red X ",
+      "dateModified": "2026-03-05",
       "author": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.fixthatapp.com/pages/onedrive-sync-issues.html"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Will resetting OneDrive delete my files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, files in the cloud are safe. Resetting only resets the local sync engine. Files may need to re-download."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Why does OneDrive show &quot;Processing changes&quot;?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OneDrive is scanning for changes. This happens after reset or reconnection. Wait for it to complete — it can take hours for large libraries."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Can OneDrive sync external drives?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, OneDrive can only sync folders within the OneDrive folder on your main drive. Move files there or use symbolic links."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Why is OneDrive using so much CPU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This usually happens during initial sync or after reset. It should calm down after syncing is complete. If persistent, try pausing and resuming sync."
+          }
+        }
+      ]
     }
     </script>
     <style>
@@ -48,28 +92,63 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search {
+            position: relative;
+            max-width: 260px;
+        }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .back:hover { text-decoration: underline; }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
         .article {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
-        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article p { margin-bottom: 1rem; color: #444; }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.5rem; }
+        .article li { margin-bottom: 0.4rem; }
         .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
         .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
@@ -79,17 +158,32 @@
             padding: 2rem 1rem;
             color: #999;
             font-size: 0.85rem;
+            border-top: 1px solid #eee;
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+        }
     </style>
 </head>
 <body>
-    <header><a href="../index.html">FixThatApp</a></header>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
     <div class="container">
-        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; OneDrive Sync Issues
+        </nav>
         <div class="article">
             <h1>Troubleshooting Guide: OneDrive Sync Issues</h1>
+            <p class="updated">Last updated: March 5, 2026</p>
             <h2>Problem Description</h2>
             <p>Microsoft OneDrive may stop syncing files, showing sync errors, pending uploads, or files not appearing across devices. The OneDrive icon may show a red X or exclamation mark indicating sync problems.</p>
             <h2>Possible Causes</h2>
@@ -99,27 +193,27 @@
             <p><strong>OneDrive paused</strong>: Syncing may be manually paused.</p>
             <p><strong>Outdated OneDrive</strong>: Old versions may have sync bugs.</p>
             <h2>Step-by-Step Fixes</h2>
-            <p>### Fix 1: Check Sync Status</p>
+            <h3>Fix 1: Check Sync Status</h3>
             <p>&bull; Click the OneDrive icon in the system tray.</p>
             <p>&bull; If paused, click "Resume syncing".</p>
             <p>&bull; Look for error messages and affected files.</p>
-            <p>### Fix 2: Check Storage</p>
+            <h3>Fix 2: Check Storage</h3>
             <p>&bull; Click OneDrive icon > Settings > Account.</p>
             <p>&bull; Check your storage usage.</p>
             <p>&bull; Free accounts get 5 GB. Delete files or upgrade to Microsoft 365 for 1 TB.</p>
-            <p>### Fix 3: Fix File Issues</p>
+            <h3>Fix 3: Fix File Issues</h3>
             <p>&bull; Shorten file names and paths (max 400 characters total).</p>
             <p>&bull; Remove special characters: # % & { } \ < > * ? / ! ' " : @ + ` | =</p>
             <p>&bull; Reduce file sizes — OneDrive has a 250 GB per-file limit.</p>
-            <p>### Fix 4: Reset OneDrive</p>
-            <p>&bull; Press Win+R and type: `%localappdata%\Microsoft\OneDrive\onedrive.exe /reset`</p>
+            <h3>Fix 4: Reset OneDrive</h3>
+            <p>&bull; Press Win+R and type: <code>%localappdata%\Microsoft\OneDrive\onedrive.exe /reset</code></p>
             <p>&bull; Wait 2 minutes, then OneDrive should restart automatically.</p>
             <p>&bull; If it doesn't restart, launch OneDrive from the Start menu.</p>
-            <p>### Fix 5: Unlink and Relink Account</p>
+            <h3>Fix 5: Unlink and Relink Account</h3>
             <p>&bull; Click OneDrive icon > Settings > Account > Unlink this PC.</p>
             <p>&bull; Restart OneDrive and sign in again.</p>
             <p>&bull; Your files will re-sync from the cloud.</p>
-            <p>### Fix 6: Reinstall OneDrive</p>
+            <h3>Fix 6: Reinstall OneDrive</h3>
             <p>&bull; Uninstall OneDrive from Settings > Apps.</p>
             <p>&bull; Download the latest version from onedrive.com.</p>
             <p>&bull; Install, sign in, and let files re-sync.</p>
@@ -129,7 +223,7 @@
             <div class="faq"><p class="q">Q: Will resetting OneDrive delete my files?</p>
             <p class="a">A: No, files in the cloud are safe. Resetting only resets the local sync engine. Files may need to re-download.</p>
             </div>
-            <div class="faq"><p class="q">Q: Why does OneDrive show "Processing changes"?</p>
+            <div class="faq"><p class="q">Q: Why does OneDrive show &quot;Processing changes&quot;?</p>
             <p class="a">A: OneDrive is scanning for changes. This happens after reset or reconnection. Wait for it to complete — it can take hours for large libraries.</p>
             </div>
             <div class="faq"><p class="q">Q: Can OneDrive sync external drives?</p>
@@ -140,6 +234,6 @@
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
 </body>
 </html>

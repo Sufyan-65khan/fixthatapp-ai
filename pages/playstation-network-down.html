@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troubleshooting Guide: PlayStation Network Down - FixThatApp</title>
-    <meta name="description" content="PlayStation Network (PSN) may go down, preventing you from playing online games, accessing the PlayStation Store, or using social features. You might see errors">
+    <meta name="description" content="PlayStation Network (PSN) may go down, preventing you from playing online games, accessing the PlayStation Store, or using social features. You might see e">
     <meta name="keywords" content="playstation network down, fix, troubleshooting, how to fix, not working, error, solution">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/playstation-network-down.html">
     <meta property="og:title" content="Troubleshooting Guide: PlayStation Network Down - FixThatApp">
-    <meta property="og:description" content="PlayStation Network (PSN) may go down, preventing you from playing online games, accessing the PlayStation Store, or using social features. You might see errors">
+    <meta property="og:description" content="PlayStation Network (PSN) may go down, preventing you from playing online games, accessing the PlayStation Store, or using social features. You might see e">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/playstation-network-down.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Troubleshooting Guide: PlayStation Network Down - FixThatApp">
-    <meta name="twitter:description" content="PlayStation Network (PSN) may go down, preventing you from playing online games, accessing the PlayStation Store, or using social features. You might see errors">
+    <meta name="twitter:description" content="PlayStation Network (PSN) may go down, preventing you from playing online games, accessing the PlayStation Store, or using social features. You might see e">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -22,19 +23,62 @@
       "@context": "https://schema.org",
       "@type": "TechArticle",
       "headline": "Troubleshooting Guide: PlayStation Network Down",
-      "description": "PlayStation Network (PSN) may go down, preventing you from playing online games, accessing the PlayStation Store, or using social features. You might see errors",
+      "description": "PlayStation Network (PSN) may go down, preventing you from playing online games, accessing the PlayStation Store, or using social features. You might see e",
+      "dateModified": "2026-03-05",
       "author": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "FixThatApp"
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.fixthatapp.com/pages/playstation-network-down.html"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long do PSN outages usually last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scheduled maintenance typically lasts 2-4 hours. Unexpected outages vary but are usually resolved within a few hours."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Can I play single-player games when PSN is down?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, offline single-player games work without PSN. However, some games require an online check at launch."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "What does error NW-31456-9 mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This error indicates a connection timeout. Check your internet, restart your router, and try changing DNS settings."
+          }
+        },
+    {
+          "@type": "Question",
+          "name": "Do I need PS Plus to play online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, PlayStation Plus Essential (or higher) is required for online multiplayer on PS4 and PS5. Free-to-play games like Fortnite don&#x27;t require PS Plus."
+          }
+        }
+      ]
     }
     </script>
     <style>
@@ -48,28 +92,63 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1.5rem 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search {
+            position: relative;
+            max-width: 260px;
+        }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        .back { display: inline-block; margin-bottom: 1.5rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .back:hover { text-decoration: underline; }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
         .article {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 1.5rem; }
-        .article h2 { font-size: 1.3rem; color: #333; margin: 1.5rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article p { margin-bottom: 1rem; color: #444; }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.5rem; }
+        .article li { margin-bottom: 0.4rem; }
         .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
         .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
@@ -79,17 +158,32 @@
             padding: 2rem 1rem;
             color: #999;
             font-size: 0.85rem;
+            border-top: 1px solid #eee;
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+        }
     </style>
 </head>
 <body>
-    <header><a href="../index.html">FixThatApp</a></header>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
     <div class="container">
-        <a class="back" href="../index.html">&larr; Back to all guides</a>
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; PlayStation Network Down
+        </nav>
         <div class="article">
             <h1>Troubleshooting Guide: PlayStation Network Down</h1>
+            <p class="updated">Last updated: March 5, 2026</p>
             <h2>Problem Description</h2>
             <p>PlayStation Network (PSN) may go down, preventing you from playing online games, accessing the PlayStation Store, or using social features. You might see errors like "Cannot connect to server" or NW-31456-9.</p>
             <h2>Possible Causes</h2>
@@ -99,28 +193,28 @@
             <p><strong>DNS configuration</strong>: Incorrect DNS can block PSN connections.</p>
             <p><strong>Console software outdated</strong>: Your PS4/PS5 may need updating.</p>
             <h2>Step-by-Step Fixes</h2>
-            <p>### Fix 1: Check PSN Status</p>
+            <h3>Fix 1: Check PSN Status</h3>
             <p>&bull; Visit status.playstation.com to see service status.</p>
             <p>&bull; Check for specific services — gaming, store, and social may have different statuses.</p>
             <p>&bull; If there's maintenance, check the estimated completion time.</p>
-            <p>### Fix 2: Test Internet Connection</p>
+            <h3>Fix 2: Test Internet Connection</h3>
             <p>&bull; On PS5: Settings > Network > Connection Status > Test Internet Connection.</p>
             <p>&bull; On PS4: Settings > Network > Test Internet Connection.</p>
             <p>&bull; This identifies whether the issue is your network or PSN.</p>
-            <p>### Fix 3: Restart Console and Router</p>
+            <h3>Fix 3: Restart Console and Router</h3>
             <p>&bull; Power off your PlayStation completely (not rest mode).</p>
             <p>&bull; Unplug your router for 30 seconds, then plug it back in.</p>
             <p>&bull; Turn on your PlayStation and try connecting.</p>
-            <p>### Fix 4: Change DNS Settings</p>
+            <h3>Fix 4: Change DNS Settings</h3>
             <p>&bull; Go to Settings > Network > Set Up Internet Connection.</p>
             <p>&bull; Choose your connection type > Custom.</p>
             <p>&bull; Set DNS to Manual: Primary 8.8.8.8, Secondary 8.8.4.4.</p>
             <p>&bull; Test the connection.</p>
-            <p>### Fix 5: Use Wired Connection</p>
+            <h3>Fix 5: Use Wired Connection</h3>
             <p>&bull; Connect your console directly to the router with ethernet.</p>
             <p>&bull; Wired connections are more reliable for PSN.</p>
             <p>&bull; Go to Network Settings and configure the wired connection.</p>
-            <p>### Fix 6: Rebuild Database (PS5/PS4)</p>
+            <h3>Fix 6: Rebuild Database (PS5/PS4)</h3>
             <p>&bull; Turn off PlayStation completely.</p>
             <p>&bull; Hold the power button until you hear two beeps (about 7 seconds).</p>
             <p>&bull; Connect controller via USB and select "Rebuild Database".</p>
@@ -138,10 +232,10 @@
             <p class="a">A: This error indicates a connection timeout. Check your internet, restart your router, and try changing DNS settings.</p>
             </div>
             <div class="faq"><p class="q">Q: Do I need PS Plus to play online?</p>
-            <p class="a">A: Yes, PlayStation Plus Essential (or higher) is required for online multiplayer on PS4 and PS5. Free-to-play games like Fortnite don't require PS Plus.</p>
+            <p class="a">A: Yes, PlayStation Plus Essential (or higher) is required for online multiplayer on PS4 and PS5. Free-to-play games like Fortnite don&#x27;t require PS Plus.</p>
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a></footer>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
 </body>
 </html>
