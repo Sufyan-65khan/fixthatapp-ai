@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Compatibility Checker - Free Online Tool | FixThatApp</title>
+    <meta name="description" content="Test whether your browser supports modern web APIs required by apps.">
+    <meta name="keywords" content="browser compatibility checker, troubleshooting tool, fixthatapp">
+    <link rel="canonical" href="https://www.fixthatapp.com/tools/browser-compatibility-checker/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--muted:#777;--accent:#667eea;--border:#e0e0e0;--input-bg:#f8f9ff}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+        header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:700}
+        .container{max-width:920px;margin:0 auto;padding:1.5rem 1rem;flex:1;width:100%}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .tool-card{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:1rem}
+        .badge{display:inline-block;font-size:.72rem;background:var(--input-bg);color:var(--accent);padding:.2rem .6rem;border-radius:999px;font-weight:600;margin-bottom:.6rem}
+        h1{font-size:1.6rem;margin-bottom:.4rem}
+        .subtitle{color:var(--muted);margin-bottom:1rem}
+        .row{display:flex;gap:.5rem;flex-wrap:wrap}
+        input{flex:1;min-width:240px;padding:.7rem .9rem;border:2px solid var(--border);border-radius:8px;font-size:.95rem;background:var(--input-bg);color:var(--text)}
+        input:focus{outline:none;border-color:var(--accent)}
+        .btn{padding:.7rem 1rem;background:var(--accent);color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:600}
+        .btn.secondary{background:#fff;color:var(--accent);border:2px solid var(--accent)}
+        .result{margin-top:1rem;background:var(--input-bg);border-radius:8px;padding:1rem;display:none}
+        .result.show{display:block}
+        .result p{margin-bottom:.5rem}
+        .result a{color:var(--accent);text-decoration:none;display:inline-block;margin-right:.8rem;margin-top:.3rem}
+        .checklist{background:var(--card);border-radius:12px;padding:1.25rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .checklist h2{font-size:1.1rem;margin-bottom:.6rem}
+        .checklist ul{margin-left:1.2rem;color:#444}
+        .checklist li{margin-bottom:.45rem}
+        footer{text-align:center;padding:1.5rem;color:#999;font-size:.82rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+        @media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html">FixThatApp</a>
+        <a href="../">All Tools</a>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Tools</a> &rsaquo; Browser Compatibility Checker</nav>
+        <div class="tool-card">
+            <span class="badge">Browser</span>
+            <h1>Browser Compatibility Checker</h1>
+            <p class="subtitle">Test whether your browser supports modern web APIs required by apps.</p>
+            <div class="row">
+                <input id="toolInput" placeholder="" />
+                <button class="btn" onclick="runTool()">Run Check</button>
+                <button class="btn secondary" onclick="resetTool()">Reset</button>
+            </div>
+            <div id="result" class="result"></div>
+        </div>
+        <div class="checklist">
+            <h2>Quick Troubleshooting Checklist</h2>
+            <ul>
+                <li>Update browser to latest stable.</li>
+                <li>Disable legacy/unsafe flags.</li>
+                <li>Check WebRTC and storage support.</li>
+                <li>Test issue in alternate browser.</li>
+            </ul>
+        </div>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    const MODE = 'compat';
+    function escapeHtml(str){return String(str||'').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+    function showResult(html){const el=document.getElementById('result');el.innerHTML=html;el.classList.add('show');}
+    function normalizeInput(v){return (v||'').trim();}
+
+    async function runTool(){
+      const raw = normalizeInput(document.getElementById('toolInput').value);
+      if (MODE !== 'speed' && MODE !== 'checklist' && MODE !== 'notify' && MODE !== 'media' && MODE !== 'perm' && MODE !== 'compat' && MODE !== 'storage' && MODE !== 'battery' && MODE !== 'latency' && !raw){showResult('<p>Please enter a value first.</p>');return;}
+
+      if (MODE === 'service' || MODE === 'website' || MODE === 'update' || MODE === 'cancel'){
+        const q = encodeURIComponent(raw);
+        const base = raw.toLowerCase().replace(/\s+/g,'');
+        let extra = '';
+        if (MODE === 'update') {extra = '<a target="_blank" rel="noopener" href="https://play.google.com/store/search?q=' + q + '&c=apps">Play Store Search</a><a target="_blank" rel="noopener" href="https://apps.apple.com/us/search?term=' + q + '">App Store Search</a>';}
+        else if (MODE === 'cancel') {extra = '<a target="_blank" rel="noopener" href="https://support.google.com/googleplay/answer/7018481">Cancel on Google Play</a><a target="_blank" rel="noopener" href="https://support.apple.com/en-us/HT202039">Cancel on Apple</a>';}
+        showResult('<p><strong>Search links for:</strong> ' + escapeHtml(raw) + '</p><a target="_blank" rel="noopener" href="https://downdetector.com/search/?q=' + q + '">DownDetector Search</a><a target="_blank" rel="noopener" href="https://www.google.com/search?q=' + q + '+status+page">Official Status Page</a><a target="_blank" rel="noopener" href="https://www.google.com/search?q=' + q + '+not+working">Latest Issue Reports</a><a target="_blank" rel="noopener" href="https://x.com/search?q=' + q + '%20down&src=typed_query">X Reports</a>' + extra + '<p>Tip: also check <code>status.' + escapeHtml(base) + '.com</code> if it exists.</p>');
+        return;
+      }
+
+      if (MODE === 'dns'){
+        const domain = raw.replace(/^https?:\/\//,'').split('/')[0];
+        try {
+          const aRes = await fetch('https://dns.google/resolve?name=' + encodeURIComponent(domain) + '&type=A').then(r=>r.json());
+          const mxRes = await fetch('https://dns.google/resolve?name=' + encodeURIComponent(domain) + '&type=MX').then(r=>r.json());
+          const a = (aRes.Answer||[]).map(x=>x.data).join(', ') || 'No A record found';
+          const mx = (mxRes.Answer||[]).map(x=>x.data).join(', ') || 'No MX record found';
+          showResult('<p><strong>Domain:</strong> ' + escapeHtml(domain) + '</p><p><strong>A Records:</strong> ' + escapeHtml(a) + '</p><p><strong>MX Records:</strong> ' + escapeHtml(mx) + '</p><a target="_blank" rel="noopener" href="https://dnschecker.org/#A/' + encodeURIComponent(domain) + '">Global DNS Propagation</a>');
+        } catch(e){ showResult('<p>DNS lookup failed in browser. Try again or use external resolver tools.</p>'); }
+        return;
+      }
+
+      if (MODE === 'speed'){
+        const url='https://proof.ovh.net/files/10Mb.dat?ts='+Date.now();
+        const t0=performance.now();
+        try {await fetch(url,{mode:'no-cors',cache:'no-store'}); const s=(performance.now()-t0)/1000; const mbps=((10*8)/Math.max(s,0.3)).toFixed(2); showResult('<p><strong>Estimated Speed:</strong> '+mbps+' Mbps</p><p><strong>Transfer Time:</strong> '+s.toFixed(2)+'s</p><p>This is a quick estimate, not a full ISP-grade benchmark.</p>');}
+        catch(e){showResult('<p>Speed test request failed. Check connection and retry.</p>');}
+        return;
+      }
+
+      if (MODE === 'api'){
+        const url=raw.startsWith('http')?raw:('https://'+raw); const t0=performance.now();
+        try {const res=await fetch(url,{method:'GET',cache:'no-store'}); const ms=Math.round(performance.now()-t0); showResult('<p><strong>Reachable:</strong> Yes</p><p><strong>Status:</strong> '+res.status+' '+escapeHtml(res.statusText)+'</p><p><strong>Response Time:</strong> '+ms+' ms</p>');}
+        catch(e){showResult('<p>Browser request failed. Endpoint may block CORS or be unreachable.</p><a target="_blank" rel="noopener" href="https://www.google.com/search?q=curl+'+encodeURIComponent(url)+'">Test with curl</a>');}
+        return;
+      }
+
+      if (MODE === 'latency'){
+        const target=raw&&raw.startsWith('http')?raw:'https://www.google.com/favicon.ico'; const samples=[];
+        for(let i=0;i<5;i++){const t0=performance.now(); try{await fetch(target+(target.includes('?')?'&':'?')+'t='+Date.now()+i,{mode:'no-cors',cache:'no-store'});}catch(e){} samples.push(Math.round(performance.now()-t0));}
+        const avg=Math.round(samples.reduce((a,b)=>a+b,0)/samples.length); showResult('<p><strong>Latency Samples (ms):</strong> '+samples.join(', ')+'</p><p><strong>Average:</strong> '+avg+' ms</p>');
+        return;
+      }
+
+      if (MODE === 'notify'){const support='Notification' in window; const perm=support?Notification.permission:'unsupported'; showResult('<p><strong>Notification API:</strong> '+(support?'Supported':'Not supported')+'</p><p><strong>Permission:</strong> '+perm+'</p>' + (support&&perm==='default'?'<button class="btn" onclick="Notification.requestPermission().then(()=>location.reload())">Request Permission</button>':'')); return;}
+      if (MODE === 'media'){const can=!!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia); if(!can){showResult('<p>Media device API not supported in this browser.</p>'); return;} try{const stream=await navigator.mediaDevices.getUserMedia({audio:true,video:true}); stream.getTracks().forEach(t=>t.stop()); showResult('<p><strong>Camera:</strong> Available</p><p><strong>Microphone:</strong> Available</p>');}catch(e){showResult('<p>Camera/microphone check failed. Permission denied or device busy.</p>');} return;}
+      if (MODE === 'perm'){showResult('<p><strong>Notifications:</strong> '+(('Notification' in window)?Notification.permission:'unsupported')+'</p><p><strong>Geolocation:</strong> '+(('geolocation' in navigator)?'supported':'unsupported')+'</p><p><strong>Camera API:</strong> '+((navigator.mediaDevices&&navigator.mediaDevices.getUserMedia)?'supported':'unsupported')+'</p>'); return;}
+      if (MODE === 'compat'){const checks={'Fetch API':!!window.fetch,'LocalStorage':!!window.localStorage,'Service Worker':'serviceWorker' in navigator,'WebRTC':!!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia),'Notifications':'Notification' in window}; showResult(Object.keys(checks).map(k=>'<p><strong>'+k+':</strong> '+(checks[k]?'Supported':'Missing')+'</p>').join('')); return;}
+      if (MODE === 'storage'){if(!(navigator.storage&&navigator.storage.estimate)){showResult('<p>Storage estimate API not supported.</p>'); return;} const s=await navigator.storage.estimate(); showResult('<p><strong>Estimated Used:</strong> '+(s.usage/(1024*1024)).toFixed(2)+' MB</p><p><strong>Estimated Quota:</strong> '+(s.quota/(1024*1024)).toFixed(2)+' MB</p>'); return;}
+      if (MODE === 'battery'){if(!navigator.getBattery){showResult('<p>Battery API not available on this browser/device.</p>'); return;} const b=await navigator.getBattery(); showResult('<p><strong>Battery Level:</strong> '+Math.round(b.level*100)+'%</p><p><strong>Charging:</strong> '+(b.charging?'Yes':'No')+'</p>'); return;}
+
+      showResult('<p>This helper provides a checklist flow. Follow the steps below for best results.</p>');
+    }
+
+    function resetTool(){document.getElementById('toolInput').value=''; const el=document.getElementById('result'); el.classList.remove('show'); el.innerHTML='';}
+
+    (function(){var key='fta_cookie_consent'; var banner=document.getElementById('cookieBanner'); var acceptBtn=document.getElementById('cookieAccept'); var rejectBtn=document.getElementById('cookieReject'); if(!banner||!acceptBtn||!rejectBtn)return; var saved=null; try{saved=localStorage.getItem(key);}catch(e){} if(!saved)banner.style.display='flex'; acceptBtn.addEventListener('click',function(){try{localStorage.setItem(key,'accepted');}catch(e){} banner.style.display='none';}); rejectBtn.addEventListener('click',function(){try{localStorage.setItem(key,'rejected');}catch(e){} window.adsbygoogle=window.adsbygoogle||[]; window.adsbygoogle.requestNonPersonalizedAds=1; banner.style.display='none';});})();
+    </script>
+</body>
+</html>

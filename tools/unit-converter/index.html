@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Converter - Free Online Tool | FixThatApp</title>
+  <meta name="description" content="Convert length, weight, temperature, and speed units instantly." />
+  <meta name="keywords" content="unit converter, online tool, free tool, fixthatapp" />
+  <link rel="canonical" href="https://www.fixthatapp.com/tools/unit-converter/" />
+  <script>
+  (function() {
+    try {
+      var consent = localStorage.getItem('fta_cookie_consent');
+      if (consent === 'rejected') {
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+      }
+    } catch (e) {}
+  })();
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+  <style>
+    :root{--bg:#f5f7fa;--card:#fff;--text:#333;--muted:#777;--accent:#667eea;--border:#e0e0e0;--input-bg:#f8f9ff}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+    header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+    header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}
+    .container{max-width:930px;margin:0 auto;padding:1.5rem 1rem;flex:1;width:100%}
+    .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+    .breadcrumb a{color:var(--accent);text-decoration:none}
+    .card{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:1rem}
+    .badge{display:inline-block;font-size:.72rem;background:var(--input-bg);color:var(--accent);padding:.2rem .6rem;border-radius:999px;font-weight:600;margin-bottom:.5rem}
+    h1{font-size:1.55rem;margin-bottom:.35rem}
+    .subtitle{color:var(--muted);margin-bottom:1rem}
+    .row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.5rem}
+    input,select,textarea{flex:1;min-width:180px;padding:.72rem .9rem;border:2px solid var(--border);border-radius:8px;font-size:.95rem;background:var(--input-bg);color:var(--text)}
+    textarea{min-height:140px;resize:vertical}
+    .btn{padding:.72rem 1rem;background:var(--accent);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer}
+    .btn.secondary{background:#fff;color:var(--accent);border:2px solid var(--accent)}
+    .result{margin-top:.6rem;background:var(--input-bg);border-radius:8px;padding:1rem;display:none;overflow:auto}
+    .result.show{display:block}
+    .tip{background:#fff;border-radius:12px;padding:1.1rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    .tip h2{font-size:1.05rem;margin-bottom:.5rem}
+    .tip ul{margin-left:1.2rem;color:#444}
+    .tip li{margin-bottom:.35rem}
+    footer{text-align:center;padding:1.5rem;color:#999;font-size:.82rem;border-top:1px solid var(--border)}
+    footer a{color:var(--accent);text-decoration:none}
+    .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+    .cookie-banner a{color:#9ec2ff}
+    .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+    .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+    .cookie-btn.primary{background:#667eea}
+    @media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}
+  </style>
+</head>
+<body>
+  <header><a href="../../index.html">FixThatApp</a><a href="../">All Tools</a></header>
+  <div class="container">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Tools</a> &rsaquo; Unit Converter</nav>
+    <div class="card">
+      <span class="badge">Converter</span>
+      <h1>Unit Converter</h1>
+      <p class="subtitle">Convert length, weight, temperature, and speed units instantly.</p>
+      
+            <div class="row"><input id="num" placeholder="Value" /><select id="type"><option value="length">Length</option><option value="weight">Weight</option><option value="temp">Temperature</option><option value="speed">Speed</option></select></div>
+            <div class="row"><select id="from"></select><select id="to"></select><button class="btn" onclick="convert()">Convert</button></div>
+            <div id="result" class="result"></div>
+        
+    </div>
+    <div class="tip">
+      <h2>Quick Usage Tips</h2>
+      <ul>
+        <li>Use realistic values to get accurate outputs.</li>
+        <li>Retry from another browser if a request-based tool fails.</li>
+        <li>For critical decisions, verify results with official sources.</li>
+      </ul>
+    </div>
+  </div>
+  <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
+  <div class="cookie-banner" id="cookieBanner">
+    <span>We use cookies for ads and core site functions. <a href="../../cookie-policy.html">Cookie Policy</a></span>
+    <div class="cookie-actions">
+      <button class="cookie-btn" id="cookieReject">Reject</button>
+      <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+  <script>
+    function escapeHtml(str){return String(str||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));}
+    function show(html){const e=document.getElementById('result');e.innerHTML=html;e.classList.add('show');}
+    function hide(){const e=document.getElementById('result');e.classList.remove('show');e.innerHTML='';}
+    
+            const maps={
+              length:{m:1,km:1000,cm:0.01,mm:0.001,mi:1609.344,ft:0.3048,in:0.0254},
+              weight:{kg:1,g:0.001,lb:0.45359237,oz:0.0283495231},
+              speed:{'m/s':1,'km/h':0.277777778,'mph':0.44704,'kn':0.514444},
+            };
+            const temp=['c','f','k'];
+            function fill(){
+              const t=document.getElementById('type').value;const f=document.getElementById('from');const to=document.getElementById('to');f.innerHTML='';to.innerHTML='';
+              const vals=t==='temp'?temp:Object.keys(maps[t]);
+              vals.forEach(v=>{f.innerHTML+=`<option value="${v}">${v}</option>`;to.innerHTML+=`<option value="${v}">${v}</option>`});
+              to.selectedIndex=vals.length>1?1:0;
+            }
+            function t2c(v,u){if(u==='c')return v;if(u==='f')return (v-32)*5/9;return v-273.15}
+            function c2t(v,u){if(u==='c')return v;if(u==='f')return v*9/5+32;return v+273.15}
+            function convert(){
+              const n=parseFloat(document.getElementById('num').value); if(Number.isNaN(n)){show('Enter a valid number.');return;}
+              const t=document.getElementById('type').value,fr=document.getElementById('from').value,to=document.getElementById('to').value;
+              let out;
+              if(t==='temp'){out=c2t(t2c(n,fr),to);} else {out=n*maps[t][fr]/maps[t][to];}
+              show(`<strong>${n} ${fr}</strong> = <strong>${out.toFixed(6).replace(/\.?0+$/,'')} ${to}</strong>`);
+            }
+            document.getElementById('type').addEventListener('change',fill);fill();
+        
+    (function() {
+      var key='fta_cookie_consent';
+      var banner=document.getElementById('cookieBanner');
+      var acceptBtn=document.getElementById('cookieAccept');
+      var rejectBtn=document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved=null; try{saved=localStorage.getItem(key);}catch(e){}
+      if(!saved) banner.style.display='flex';
+      acceptBtn.addEventListener('click',function(){try{localStorage.setItem(key,'accepted');}catch(e){} banner.style.display='none';});
+      rejectBtn.addEventListener('click',function(){try{localStorage.setItem(key,'rejected');}catch(e){} window.adsbygoogle=window.adsbygoogle||[]; window.adsbygoogle.requestNonPersonalizedAds=1; banner.style.display='none';});
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Password List Generator - Free Online Tool | FixThatApp</title>
+  <meta name="description" content="Generate batch random passwords for testing." />
+  <meta name="keywords" content="random password list generator, online tool, free tool, fixthatapp" />
+  <link rel="canonical" href="https://www.fixthatapp.com/tools/random-password-list-generator/" />
+  <script>(function(){try{var c=localStorage.getItem('fta_cookie_consent');if(c==='rejected'){window.adsbygoogle=window.adsbygoogle||[];window.adsbygoogle.requestNonPersonalizedAds=1;}}catch(e){}})();</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:930px;margin:0 auto;padding:1.5rem 1rem;flex:1;width:100%}.breadcrumb{font-size:.85rem;color:#777;margin-bottom:1rem}.breadcrumb a{color:#667eea;text-decoration:none}.card{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:1rem}.badge{display:inline-block;font-size:.72rem;background:#f8f9ff;color:#667eea;padding:.2rem .6rem;border-radius:999px;font-weight:600;margin-bottom:.5rem}h1{font-size:1.55rem;margin-bottom:.35rem}.subtitle{color:#777;margin-bottom:1rem}.row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.5rem}input,select,textarea{flex:1;min-width:180px;padding:.72rem .9rem;border:2px solid #e0e0e0;border-radius:8px;font-size:.95rem;background:#f8f9ff;color:#333}textarea{min-height:140px;resize:vertical}.btn{padding:.72rem 1rem;background:#667eea;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer}.btn.secondary{background:#fff;color:#667eea;border:2px solid #667eea}.result{margin-top:.6rem;background:#f8f9ff;border-radius:8px;padding:1rem;display:none;overflow:auto}.result.show{display:block}.result code{background:#eef2ff;padding:.1rem .3rem;border-radius:4px}.tip{background:#fff;border-radius:12px;padding:1.1rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}.tip h2{font-size:1.05rem;margin-bottom:.5rem}.tip ul{margin-left:1.2rem;color:#444}.tip li{margin-bottom:.35rem}footer{text-align:center;padding:1.5rem;color:#999;font-size:.82rem;border-top:1px solid #e0e0e0}footer a{color:#667eea;text-decoration:none}@media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}</style>
+</head>
+<body>
+  <header><a href="../../index.html">FixThatApp</a><a href="../">All Tools</a></header>
+  <div class="container">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Tools</a> &rsaquo; Random Password List Generator</nav>
+    <div class="card">
+      <span class="badge">Security</span>
+      <h1>Random Password List Generator</h1>
+      <p class="subtitle">Generate batch random passwords for testing.</p>
+      <div class="row"><textarea id="a" placeholder="Input A / primary value"></textarea></div>
+      <div class="row"><textarea id="b" placeholder="Input B / optional value"></textarea></div>
+      <div class="row"><button class="btn" onclick="runTool()">Run</button><button class="btn secondary" onclick="clearAll()">Clear</button></div>
+      <div id="result" class="result"></div>
+    </div>
+    <div class="tip"><h2>Usage Tips</h2><ul><li>Use clean inputs for accurate output.</li><li>Validate important results with a secondary source.</li><li>Copy output directly for workflow speed.</li></ul></div>
+  </div>
+  <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
+  <script>
+    const MODE = 'pwd_list';
+    function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+    function show(h){const r=document.getElementById('result');r.innerHTML=h;r.classList.add('show');}
+    function clearAll(){a.value='';b.value='';const r=document.getElementById('result');r.classList.remove('show');r.innerHTML='';}
+    function num(x){return parseFloat((x||'').replace(/,/g,''));}
+    function lines(t){return (t||'').split(/?
+/);}
+    function runTool(){
+      const A=(a.value||'').trim(); const B=(b.value||'').trim();
+      if(MODE==='percent'){const x=num(A),y=num(B); if(isNaN(x)||isNaN(y)||y===0)return show('Use A=part, B=whole.'); return show('<strong>'+((x/y)*100).toFixed(2)+'%</strong>');}
+      if(MODE==='discount'){const p=num(A),d=num(B); if(isNaN(p)||isNaN(d))return show('Use A=price, B=discount%.'); const off=p*d/100,fin=p-off; return show('Discount: '+off.toFixed(2)+'<br>Final Price: <strong>'+fin.toFixed(2)+'</strong>');}
+      if(MODE==='tax'){const p=num(A),t=num(B); if(isNaN(p)||isNaN(t))return show('Use A=amount, B=tax%.'); const tax=p*t/100; return show('Tax: '+tax.toFixed(2)+'<br>Total: <strong>'+(p+tax).toFixed(2)+'</strong>');}
+      if(MODE==='gst'){const p=num(A),g=num(B); if(isNaN(p)||isNaN(g))return show('Use A=amount, B=GST%.'); const gst=p*g/100; return show('GST: '+gst.toFixed(2)+'<br>Inclusive: '+(p+gst).toFixed(2));}
+      if(MODE==='profit'){const c=num(A),s=num(B); if(isNaN(c)||isNaN(s)||c===0)return show('Use A=cost, B=selling.'); const pr=s-c; return show('Profit: '+pr.toFixed(2)+'<br>Margin: '+((pr/s)*100).toFixed(2)+'%');}
+      if(MODE==='interest'){const p=num(A),ir=num(B); if(isNaN(p)||isNaN(ir))return show('Use A=principal, B=annual rate%.'); return show('Simple yearly interest: <strong>'+(p*ir/100).toFixed(2)+'</strong>');}
+      if(MODE==='sip'){const m=num(A),r=num(B); if(isNaN(m)||isNaN(r))return show('Use A=monthly investment, B=annual return%.'); const n=120,i=r/1200,fv=m*((Math.pow(1+i,n)-1)/i)*(1+i); return show('10-year estimated value: <strong>'+fv.toFixed(2)+'</strong>');}
+      if(MODE==='compound'){const p=num(A),ir=num(B); if(isNaN(p)||isNaN(ir))return show('Use A=principal, B=annual rate%.'); const fv=p*Math.pow(1+ir/100,10); return show('10-year compound value: <strong>'+fv.toFixed(2)+'</strong>');}
+      if(MODE==='age_days'){const d=new Date(A); if(String(d)==='Invalid Date')return show('Use A=YYYY-MM-DD'); const days=Math.floor((Date.now()-d.getTime())/86400000); return show('Age in days: <strong>'+days+'</strong>');}
+      if(MODE==='date_diff'){const d1=new Date(A),d2=new Date(B); if(String(d1)==='Invalid Date'||String(d2)==='Invalid Date')return show('Use valid dates in A and B.'); return show('Difference: <strong>'+Math.abs(Math.floor((d2-d1)/86400000))+'</strong> days');}
+      if(MODE==='countdown'){const sec=Math.max(1,parseInt(A||'60',10)); let s=sec; show('Countdown: <strong>'+s+'</strong>s'); const id=setInterval(()=>{s--; if(s<=0){clearInterval(id); show('Done.');} else show('Countdown: <strong>'+s+'</strong>s');},1000); return;}
+      if(MODE==='pomodoro'){return show('Pomodoro started: 25 min focus + 5 min break.');}
+      if(MODE==='tz_planner'){const dt=new Date(A||Date.now()); return show('UTC: '+new Intl.DateTimeFormat('en-US',{dateStyle:'full',timeStyle:'long',timeZone:'UTC'}).format(dt)+'<br>New York: '+new Intl.DateTimeFormat('en-US',{dateStyle:'full',timeStyle:'long',timeZone:'America/New_York'}).format(dt)+'<br>India: '+new Intl.DateTimeFormat('en-US',{dateStyle:'full',timeStyle:'long',timeZone:'Asia/Kolkata'}).format(dt));}
+      if(MODE==='unix'){if(!A)return show('Use A=unix seconds OR ISO date'); if(/^\d+$/.test(A)){const d=new Date(parseInt(A,10)*1000); return show('Date: <strong>'+d.toISOString()+'</strong>');} const d=new Date(A); if(String(d)==='Invalid Date')return show('Invalid input'); return show('Unix seconds: <strong>'+Math.floor(d.getTime()/1000)+'</strong>');}
+      if(MODE==='json_to_csv'){try{const arr=JSON.parse(A); if(!Array.isArray(arr)||!arr.length)return show('A must be JSON array of objects.'); const keys=[...new Set(arr.flatMap(o=>Object.keys(o)))]; const rows=[keys.join(',')].concat(arr.map(o=>keys.map(k=>JSON.stringify(o[k]??'')).join(','))); return show('<code>'+esc(rows.join('
+'))+'</code>');}catch(e){return show('Invalid JSON input.');}}
+      if(MODE==='csv_to_json'){const ls=lines(A).filter(x=>x.trim()); if(ls.length<2)return show('CSV must have header + rows.'); const h=ls[0].split(',').map(x=>x.trim()); const out=ls.slice(1).map(r=>{const c=r.split(',');const o={};h.forEach((k,i)=>o[k]=c[i]?.trim()??''); return o;}); return show('<code>'+esc(JSON.stringify(out,null,2))+'</code>');}
+      if(MODE==='md_html'){const t=A.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/^### (.+)$/gm,'<h3>$1</h3>').replace(/^## (.+)$/gm,'<h2>$1</h2>').replace(/^# (.+)$/gm,'<h1>$1</h1>').replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*(.+?)\*/g,'<em>$1</em>').replace(/
+/g,'<br>'); return show('<code>'+esc(t)+'</code><hr>'+t);}
+      if(MODE==='html_md'){let t=A; t=t.replace(/<h1>(.*?)<\/h1>/gi,'# $1
+').replace(/<h2>(.*?)<\/h2>/gi,'## $1
+').replace(/<strong>(.*?)<\/strong>/gi,'**$1**').replace(/<em>(.*?)<\/em>/gi,'*$1*').replace(/<br\s*\/?>/gi,'
+').replace(/<[^>]+>/g,''); return show('<code>'+esc(t)+'</code>');}
+      if(MODE==='url_codec'){if(B==='decode'){try{return show('<code>'+esc(decodeURIComponent(A))+'</code>');}catch(e){return show('Invalid encoded URL');}} return show('<code>'+esc(encodeURIComponent(A))+'</code>');}
+      if(MODE==='entity'){if(B==='decode'){const ta=document.createElement('textarea'); ta.innerHTML=A; return show('<code>'+esc(ta.value)+'</code>');} return show('<code>'+esc(A).replace(/
+/g,'<br>')+'</code>');}
+      if(MODE==='jwt'){const parts=A.split('.'); if(parts.length<2)return show('Paste JWT in A.'); try{const dec=x=>JSON.parse(atob(x.replace(/-/g,'+').replace(/_/g,'/'))); return show('<strong>Header</strong><br><code>'+esc(JSON.stringify(dec(parts[0]),null,2))+'</code><br><strong>Payload</strong><br><code>'+esc(JSON.stringify(dec(parts[1]),null,2))+'</code>');}catch(e){return show('Invalid JWT');}}
+      if(MODE==='hash'){const txt=A||''; const enc=new TextEncoder().encode(txt); Promise.all(['SHA-1','SHA-256'].map(async alg=>{const h=await crypto.subtle.digest(alg,enc); return alg+': '+Array.from(new Uint8Array(h)).map(b=>b.toString(16).padStart(2,'0')).join('');})).then(rows=>show(rows.join('<br>'))); return;}
+      if(MODE==='pwd_strength'){const s=A||''; let score=0; if(s.length>=8)score++; if(s.length>=12)score++; if(/[A-Z]/.test(s))score++; if(/[a-z]/.test(s))score++; if(/[0-9]/.test(s))score++; if(/[^A-Za-z0-9]/.test(s))score++; const lvl=score<=2?'Weak':score<=4?'Medium':'Strong'; return show('Strength: <strong>'+lvl+'</strong> ('+score+'/6)');}
+      if(MODE==='lorem'){const n=Math.min(20,Math.max(1,parseInt(A||'3',10))); const p='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'; return show(Array.from({length:n}).map(()=>p).join('<br><br>'));}
+      if(MODE==='slug'){return show('<code>'+esc((A||'').toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''))+'</code>');}
+      if(MODE==='meta'){const t=A||'Page Title', d=B||'Page description'; const out='<title>'+t+'</title>
+<meta name="description" content="'+d+'">
+<meta property="og:title" content="'+t+'">
+<meta property="og:description" content="'+d+'">'; return show('<code>'+esc(out)+'</code>');}
+      if(MODE==='robots'){const out='User-agent: *
+Allow: /
+Sitemap: https://example.com/sitemap.xml'; return show('<code>'+esc(out)+'</code>');}
+      if(MODE==='url_clean'){const out=lines(A).map(x=>x.trim()).filter(Boolean).map(x=>x.replace(/\/+$/,'')).filter((v,i,a)=>a.indexOf(v)===i).join('
+'); return show('<code>'+esc(out)+'</code>');}
+      if(MODE==='text_diff'){const l1=lines(A), l2=lines(B); const only1=l1.filter(x=>!l2.includes(x)), only2=l2.filter(x=>!l1.includes(x)); return show('<strong>Only in A</strong><br><code>'+esc(only1.join('
+')||'(none)')+'</code><br><strong>Only in B</strong><br><code>'+esc(only2.join('
+')||'(none)')+'</code>');}
+      if(MODE==='dup_lines'){const out=[...new Set(lines(A).map(x=>x.trim()).filter(Boolean))].join('
+'); return show('<code>'+esc(out)+'</code>');}
+      if(MODE==='line_sort'){const out=lines(A).filter(Boolean).sort((x,y)=>x.localeCompare(y)).join('
+'); return show('<code>'+esc(out)+'</code>');}
+      if(MODE==='whitespace'){const out=(A||'').split(/?
+/).map(x=>x.trim().replace(/\s+/g,' ')).filter(Boolean).join('
+'); return show('<code>'+esc(out)+'</code>');}
+      if(MODE==='num_words'){const n=Math.floor(Math.abs(num(A))); if(isNaN(n))return show('Enter integer in A.'); const ones=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen']; const tens=['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']; function toWords(x){if(x<20)return ones[x]; if(x<100)return tens[Math.floor(x/10)] + (x%10?'-'+ones[x%10]:''); if(x<1000)return ones[Math.floor(x/100)]+' hundred'+(x%100?' '+toWords(x%100):''); if(x<1000000)return toWords(Math.floor(x/1000))+' thousand'+(x%1000?' '+toWords(x%1000):''); return String(x);} return show('<strong>'+esc(toWords(n))+'</strong>');}
+      if(MODE==='pwd_list'){const c=Math.min(100,Math.max(1,parseInt(A||'10',10))); const chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%^&*'; const mk=()=>Array.from({length:14},()=>chars[Math.floor(Math.random()*chars.length)]).join(''); return show('<code>'+Array.from({length:c},mk).join('
+')+'</code>');}
+      if(MODE==='color'){const v=A.trim(); if(/^#?[0-9a-fA-F]{6}$/.test(v)){const h=v.startsWith('#')?v:'#'+v; const n=parseInt(h.slice(1),16); const r=(n>>16)&255,g=(n>>8)&255,b=n&255; return show('HEX: <code>'+h+'</code><br>RGB: <code>rgb('+r+', '+g+', '+b+')</code><div style="margin-top:8px;width:80px;height:28px;border-radius:6px;background:'+h+';border:1px solid #ddd"></div>');} return show('Enter HEX color in A, e.g. #3366ff');}
+      if(MODE==='gradient'){const c1=A||'#667eea', c2=B||'#764ba2'; const css='background: linear-gradient(135deg, '+c1+', '+c2+');'; return show('<div style="height:80px;border-radius:10px;'+css+'"></div><br><code>'+esc(css)+'</code>');}
+      if(MODE==='css_min'||MODE==='js_min'||MODE==='html_min'){const out=(A||'').replace(/\/\*[\s\S]*?\*\//g,'').replace(/
+/g,' ').replace(/\s+/g,' ').replace(/\s*([{}:;,=+\-<>])\s*/g,'$1').trim(); return show('<code>'+esc(out)+'</code>');}
+      if(MODE==='word_freq'){const words=(A||'').toLowerCase().match(/[a-z0-9']+/g)||[]; const map={}; words.forEach(w=>map[w]=(map[w]||0)+1); const top=Object.entries(map).sort((a,b)=>b[1]-a[1]).slice(0,20); return show(top.map(([w,c])=>esc(w)+': <strong>'+c+'</strong>').join('<br>')||'No words found.');}
+      show('Tool mode not configured.');
+    }
+  </script>
+</body>
+</html>

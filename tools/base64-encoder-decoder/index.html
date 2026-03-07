@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base64 Encoder Decoder - Free Online Tool | FixThatApp</title>
+  <meta name="description" content="Encode and decode Base64 text directly in your browser." />
+  <meta name="keywords" content="base64 encoder decoder, online tool, free tool, fixthatapp" />
+  <link rel="canonical" href="https://www.fixthatapp.com/tools/base64-encoder-decoder/" />
+  <script>
+  (function() {
+    try {
+      var consent = localStorage.getItem('fta_cookie_consent');
+      if (consent === 'rejected') {
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+      }
+    } catch (e) {}
+  })();
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+  <style>
+    :root{--bg:#f5f7fa;--card:#fff;--text:#333;--muted:#777;--accent:#667eea;--border:#e0e0e0;--input-bg:#f8f9ff}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+    header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+    header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}
+    .container{max-width:930px;margin:0 auto;padding:1.5rem 1rem;flex:1;width:100%}
+    .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+    .breadcrumb a{color:var(--accent);text-decoration:none}
+    .card{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:1rem}
+    .badge{display:inline-block;font-size:.72rem;background:var(--input-bg);color:var(--accent);padding:.2rem .6rem;border-radius:999px;font-weight:600;margin-bottom:.5rem}
+    h1{font-size:1.55rem;margin-bottom:.35rem}
+    .subtitle{color:var(--muted);margin-bottom:1rem}
+    .row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.5rem}
+    input,select,textarea{flex:1;min-width:180px;padding:.72rem .9rem;border:2px solid var(--border);border-radius:8px;font-size:.95rem;background:var(--input-bg);color:var(--text)}
+    textarea{min-height:140px;resize:vertical}
+    .btn{padding:.72rem 1rem;background:var(--accent);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer}
+    .btn.secondary{background:#fff;color:var(--accent);border:2px solid var(--accent)}
+    .result{margin-top:.6rem;background:var(--input-bg);border-radius:8px;padding:1rem;display:none;overflow:auto}
+    .result.show{display:block}
+    .tip{background:#fff;border-radius:12px;padding:1.1rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    .tip h2{font-size:1.05rem;margin-bottom:.5rem}
+    .tip ul{margin-left:1.2rem;color:#444}
+    .tip li{margin-bottom:.35rem}
+    footer{text-align:center;padding:1.5rem;color:#999;font-size:.82rem;border-top:1px solid var(--border)}
+    footer a{color:var(--accent);text-decoration:none}
+    .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+    .cookie-banner a{color:#9ec2ff}
+    .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+    .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+    .cookie-btn.primary{background:#667eea}
+    @media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}
+  </style>
+</head>
+<body>
+  <header><a href="../../index.html">FixThatApp</a><a href="../">All Tools</a></header>
+  <div class="container">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Tools</a> &rsaquo; Base64 Encoder Decoder</nav>
+    <div class="card">
+      <span class="badge">Developer</span>
+      <h1>Base64 Encoder Decoder</h1>
+      <p class="subtitle">Encode and decode Base64 text directly in your browser.</p>
+      
+            <div class="row"><textarea id="txt" placeholder="Enter text or Base64..."></textarea></div><div class="row"><button class="btn" onclick="enc()">Encode</button><button class="btn" onclick="dec()">Decode</button></div><div id="result" class="result"></div>
+        
+    </div>
+    <div class="tip">
+      <h2>Quick Usage Tips</h2>
+      <ul>
+        <li>Use realistic values to get accurate outputs.</li>
+        <li>Retry from another browser if a request-based tool fails.</li>
+        <li>For critical decisions, verify results with official sources.</li>
+      </ul>
+    </div>
+  </div>
+  <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
+  <div class="cookie-banner" id="cookieBanner">
+    <span>We use cookies for ads and core site functions. <a href="../../cookie-policy.html">Cookie Policy</a></span>
+    <div class="cookie-actions">
+      <button class="cookie-btn" id="cookieReject">Reject</button>
+      <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+  <script>
+    function escapeHtml(str){return String(str||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[m]));}
+    function show(html){const e=document.getElementById('result');e.innerHTML=html;e.classList.add('show');}
+    function hide(){const e=document.getElementById('result');e.classList.remove('show');e.innerHTML='';}
+    
+            function enc(){try{show('<strong>Encoded:</strong><br><code>'+btoa(unescape(encodeURIComponent(txt.value||'')))+'</code>');}catch(e){show('Unable to encode input.');}}
+            function dec(){try{show('<strong>Decoded:</strong><br><code>'+escapeHtml(decodeURIComponent(escape(atob(txt.value||''))))+'</code>');}catch(e){show('Invalid Base64 input.');}}
+        
+    (function() {
+      var key='fta_cookie_consent';
+      var banner=document.getElementById('cookieBanner');
+      var acceptBtn=document.getElementById('cookieAccept');
+      var rejectBtn=document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved=null; try{saved=localStorage.getItem(key);}catch(e){}
+      if(!saved) banner.style.display='flex';
+      acceptBtn.addEventListener('click',function(){try{localStorage.setItem(key,'accepted');}catch(e){} banner.style.display='none';});
+      rejectBtn.addEventListener('click',function(){try{localStorage.setItem(key,'rejected');}catch(e){} window.adsbygoogle=window.adsbygoogle||[]; window.adsbygoogle.requestNonPersonalizedAds=1; banner.style.display='none';});
+    })();
+  </script>
+</body>
+</html>
