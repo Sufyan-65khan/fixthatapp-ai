@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact FixThatApp</title>
+    <meta name="description" content="Contact FixThatApp for policy questions, content corrections, business inquiries, or technical feedback.">
+    <link rel="canonical" href="https://www.fixthatapp.com/contact.html">
+        <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1.5rem 1rem}
+        header a{color:#fff;text-decoration:none;font-size:1.4rem;font-weight:700}
+        .container{max-width:840px;margin:0 auto;padding:2rem 1rem}
+        .card{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        h1{font-size:1.9rem;color:#1a1a2e;margin-bottom:.6rem}
+        h2{font-size:1.15rem;margin:1.2rem 0 .6rem}
+        p{margin-bottom:1rem;color:#444}
+        .email{display:inline-block;padding:.75rem 1rem;background:#f0f0ff;border-radius:8px;color:#667eea;text-decoration:none;font-weight:600}
+        .meta{font-size:.95rem;color:#666}
+        footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.85rem}
+        footer a{color:#667eea;text-decoration:none}
+            .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
+</head>
+<body>
+    <header><a href="index.html">FixThatApp</a></header>
+    <div class="container">
+        <div class="card">
+            <h1>Contact</h1>
+            <p>For policy requests, content corrections, or business inquiries, contact us via email.</p>
+            <p><a class="email" href="mailto:sufyankhan65@gmail.com">sufyankhan65@gmail.com</a></p>
+            <h2>Response Time</h2>
+            <p class="meta">Typical response window: 2-5 business days.</p>
+            <h2>What to Include</h2>
+            <p class="meta">Share the page URL, issue details, screenshots if relevant, and the device/browser used.</p>
+        </div>
+    </div>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="cookie-policy.html">Cookie Policy</a> | <a href="terms.html">Terms</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
+</body>
+</html>
+
+
