@@ -16,6 +16,17 @@
     <meta name="twitter:title" content="Troubleshooting Guide: Claude AI Not Loading - FixThatApp">
     <meta name="twitter:description" content="Claude AI by Anthropic may fail to load, show error messages, give incomplete responses, or become unresponsive. You might see &quot;Something went wrong&quot; error">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
      crossorigin="anonymous"></script>
     <script type="application/ld+json">
@@ -162,10 +173,47 @@
         }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
+        .cookie-banner {
+            position: fixed;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 0.85rem 1rem;
+            border-radius: 10px;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.8rem;
+            z-index: 2000;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            font-size: 0.85rem;
+        }
+        .cookie-banner a { color: #9ec2ff; }
+        .cookie-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+        .cookie-btn {
+            border: 1px solid #667eea;
+            background: transparent;
+            color: #fff;
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        .cookie-btn.primary { background: #667eea; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
             .header-search { display: none; }
+            .cookie-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -234,6 +282,46 @@
             </div>
         </div>
     </div>
-    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">All Guides</a></footer>
+    <footer>
+        &copy; 2026 FixThatApp. All rights reserved.
+        | <a href="../about.html">About</a>
+        | <a href="../privacy-policy.html">Privacy Policy</a>
+        | <a href="../cookie-policy.html">Cookie Policy</a>
+        | <a href="../terms.html">Terms</a>
+        | <a href="../contact.html">Contact</a>
+        | <a href="../seo-troubleshooting-guides.html">SEO Guides</a>
+        | <a href="../index.html">All Guides</a>
+    </footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) {
+        banner.style.display = 'flex';
+      }
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>
