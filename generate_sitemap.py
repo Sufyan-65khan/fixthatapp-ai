@@ -15,12 +15,24 @@ urls.append(f"""  <url>
     <priority>1.0</priority>
   </url>""")
 
-# Privacy policy
-urls.append(f"""  <url>
-    <loc>{DOMAIN}/privacy-policy.html</loc>
+# Core compliance and SEO pages
+for path, changefreq, priority in [
+    ("about.html", "monthly", "0.4"),
+    ("all-guides.html", "daily", "0.9"),
+    ("privacy-policy.html", "monthly", "0.3"),
+    ("cookie-policy.html", "monthly", "0.3"),
+    ("terms.html", "monthly", "0.3"),
+    ("contact.html", "monthly", "0.4"),
+    ("seo-troubleshooting-guides.html", "weekly", "0.7"),
+    ("seo-page-not-indexed.html", "monthly", "0.6"),
+    ("seo-crawled-not-indexed.html", "monthly", "0.6"),
+    ("seo-ranking-dropped.html", "monthly", "0.6"),
+]:
+    urls.append(f"""  <url>
+    <loc>{DOMAIN}/{path}</loc>
     <lastmod>{TODAY}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <changefreq>{changefreq}</changefreq>
+    <priority>{priority}</priority>
   </url>""")
 
 # Tools index
