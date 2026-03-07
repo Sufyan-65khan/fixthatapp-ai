@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Troubleshooting Guides - FixThatApp</title>
+    <meta name="description" content="SEO troubleshooting guides for indexing, crawling, ranking drops, sitemap issues, and Google Search Console errors.">
+    <meta name="keywords" content="SEO troubleshooting, indexing issues, crawled not indexed, ranking drop, Google Search Console guide">
+    <link rel="canonical" href="https://www.fixthatapp.com/seo-troubleshooting-guides.html">
+        <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;text-align:center;padding:2.2rem 1rem}
+        header a{color:#fff;text-decoration:none;font-size:1.4rem;font-weight:700}
+        header h1{font-size:2rem;margin-top:.6rem}
+        .container{max-width:980px;margin:0 auto;padding:2rem 1rem}
+        .intro{background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-bottom:1.25rem}
+        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+        .card{display:block;background:#fff;padding:1.3rem;border-radius:12px;text-decoration:none;color:inherit;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid transparent;transition:all .2s}
+        .card:hover{border-left-color:#667eea;transform:translateY(-2px)}
+        .tag{display:inline-block;font-size:.7rem;background:#f0f0ff;color:#667eea;padding:.15rem .45rem;border-radius:40px;margin-bottom:.5rem;font-weight:600}
+        .card h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.45rem}
+        .card p{font-size:.9rem;color:#666}
+        footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.85rem}
+        footer a{color:#667eea;text-decoration:none}
+            .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">FixThatApp</a>
+        <h1>SEO Troubleshooting Guides</h1>
+    </header>
+    <div class="container">
+        <section class="intro">
+            <p>Use these SEO troubleshooting guides to diagnose indexing and ranking problems. Each guide is structured for practical implementation with checks, common causes, and remediation steps.</p>
+        </section>
+        <section class="grid">
+            <a class="card" href="seo-page-not-indexed.html">
+                <span class="tag">Indexing</span>
+                <h2>Page Not Indexed in Google</h2>
+                <p>Fix pages that never appear in Google Search results after publishing.</p>
+            </a>
+            <a class="card" href="seo-crawled-not-indexed.html">
+                <span class="tag">Search Console</span>
+                <h2>Crawled - Currently Not Indexed</h2>
+                <p>Resolve quality, duplication, and crawl-budget issues behind this status.</p>
+            </a>
+            <a class="card" href="seo-ranking-dropped.html">
+                <span class="tag">Rankings</span>
+                <h2>Organic Rankings Dropped</h2>
+                <p>Triage sudden ranking loss after updates, migrations, or technical changes.</p>
+            </a>
+        </section>
+    </div>
+    <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="about.html">About</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="cookie-policy.html">Cookie Policy</a> | <a href="terms.html">Terms</a> | <a href="contact.html">Contact</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
+</body>
+</html>
+
+
