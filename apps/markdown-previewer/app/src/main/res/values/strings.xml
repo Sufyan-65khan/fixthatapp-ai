@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Markdown Previewer</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy_text">Privacy Policy\n\nLast updated: March 5, 2026\n\nMarkdown Previewer by FixThatApp\n\nThis app processes all data entirely on your device. No data is stored, transmitted, or collected by us.\n\nData Collection:\nWe do not collect any personal data. The app works completely offline.\n\nAdvertising:\nThis app uses Google AdMob to display advertisements. AdMob may collect device identifiers and usage data to serve relevant ads. You can learn more at https://policies.google.com/privacy\n\nThird-Party Services:\n\u2022 Google AdMob (advertising)\n\nChildren\'s Privacy:\nThis app is not intended for children under 13.\n\nContact:\nFor questions, contact us at sufyankhan65@gmail.com\n\nPublisher: FixThatApp\nWebsite: www.fixthatapp.com</string>
+</resources>
