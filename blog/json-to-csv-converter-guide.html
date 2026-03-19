@@ -1,28 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSON To CSV Converter Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use JSON To CSV Converter with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/json-to-csv-converter-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to CSV Converter Guide: Export API Data to Spreadsheets | FixThatApp</title>
+    <meta name="description" content="Learn how to convert JSON to CSV for Excel, Google Sheets, and pandas. Understand how nested objects are flattened, when data is lost, and how to keep your output clean.">
+    <meta name="keywords" content="json to csv, convert json csv, json csv converter, export json spreadsheet, flatten json, json to excel, api data csv export">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/json-to-csv-converter-guide.html">
+    <meta property="og:title" content="JSON to CSV Converter Guide: Export API Data to Spreadsheets">
+    <meta property="og:description" content="Learn how to convert JSON to CSV for Excel, Google Sheets, and pandas. Understand how nested objects are flattened, when data is lost, and how to keep your output clean.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/json-to-csv-converter-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "JSON to CSV Converter Guide: Export API Data to Spreadsheets",
+      "description": "Learn how to convert JSON to CSV for Excel, Google Sheets, and pandas. Understand how nested objects are flattened, when data is lost, and how to keep your output clean.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/json-to-csv-converter-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .nav-links a:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>JSON To CSV Converter Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>JSON To CSV Converter is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/json-to-csv-converter/">JSON To CSV Converter</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; JSON to CSV Converter Guide</nav>
+        <article class="article">
+            <h1>JSON to CSV Converter Guide: Export API Data to Spreadsheets</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>Modern APIs return data as JSON. But the people who need to analyze that data — business analysts, product managers, finance teams — live in spreadsheets. Converting JSON to CSV bridges that gap, letting you take API responses or database exports and open them directly in Excel, Google Sheets, or a Python pandas workflow.</p>
+
+            <p>This guide explains how the conversion works, shows a complete worked example, covers the tricky parts (nested objects, arrays within arrays), and explains when JSON-to-CSV conversion is inherently lossy.</p>
+
+            <h2>Common Use Cases</h2>
+            <ul>
+                <li><strong>Exporting API data to a spreadsheet</strong> — fetching order data, user records, or analytics from an API and sharing it with stakeholders in CSV format</li>
+                <li><strong>Database exports for reporting</strong> — exporting a MongoDB collection or a REST API response for use in Excel pivot tables or Google Sheets dashboards</li>
+                <li><strong>Data preparation for machine learning</strong> — many ML libraries (scikit-learn, pandas) prefer flat tabular data; JSON records often need to be flattened to CSV first</li>
+                <li><strong>Debugging API responses</strong> — converting a JSON array to CSV makes it easy to visually scan for missing or malformed records in a spreadsheet</li>
+                <li><strong>Archiving or auditing</strong> — flat CSV files are simple to store, search, and share across systems that may not support JSON</li>
+            </ul>
+
+            <h2>How the Conversion Works: Flattening JSON</h2>
+            <p>For a simple JSON array of flat objects, the conversion is direct: the keys of the first object become the CSV header row, and each subsequent object becomes a row. Each key's value fills the corresponding column.</p>
+
+            <p>The complexity arises with <strong>nested JSON</strong>. JSON supports objects within objects and arrays of objects — structures that have no direct equivalent in the flat rows-and-columns model of CSV. Converting nested JSON to CSV requires "flattening" it.</p>
+
+            <h2>Worked Example: Flat JSON to CSV</h2>
+            <p>Input JSON:</p>
+            <pre>[
+  {"id": 1, "name": "Alice", "email": "alice@example.com", "plan": "pro"},
+  {"id": 2, "name": "Bob", "email": "bob@example.com", "plan": "free"},
+  {"id": 3, "name": "Carol", "email": "carol@example.com", "plan": "pro"}
+]</pre>
+
+            <p>Output CSV:</p>
+            <pre>id,name,email,plan
+1,Alice,alice@example.com,pro
+2,Bob,bob@example.com,free
+3,Carol,carol@example.com,pro</pre>
+
+            <p>Clean and straightforward. This opens directly in Excel or Google Sheets.</p>
+
+            <div class="cta-box">
+                <h3>Convert Your JSON to CSV Now</h3>
+                <p>Paste your JSON array and get a clean CSV file instantly — free, no login required.</p>
+                <a href="../tools/json-to-csv-converter/">Open JSON to CSV Converter</a>
+            </div>
+
+            <h2>Handling Nested Objects</h2>
+            <p>When an object contains nested objects, the converter flattens them using dot notation for column names. For example:</p>
+
+            <pre>[
+  {
+    "id": 1,
+    "name": "Alice",
+    "address": {
+      "city": "Portland",
+      "country": "US"
+    }
+  }
+]</pre>
+
+            <p>Flattened to CSV:</p>
+            <pre>id,name,address.city,address.country
+1,Alice,Portland,US</pre>
+
+            <p>The nested <code>address</code> object becomes two columns: <code>address.city</code> and <code>address.country</code>. This is lossless — all the data is preserved, just restructured.</p>
+
+            <h2>Handling Arrays Within Objects</h2>
+            <p>Arrays within JSON objects are the hardest case. Consider a user record with multiple tags:</p>
+
+            <pre>[
+  {"id": 1, "name": "Alice", "tags": ["admin", "beta-tester"]}
+]</pre>
+
+            <p>There is no clean single-row representation for this in CSV. Converters handle it one of a few ways:</p>
+            <ul>
+                <li><strong>Serialize to string:</strong> The array becomes a quoted string in the cell: <code>"admin,beta-tester"</code>. Simple but not easily parseable in Excel.</li>
+                <li><strong>Expand to multiple columns:</strong> Creates <code>tags.0</code>, <code>tags.1</code>, etc. Works if all rows have the same number of tags; breaks badly if they differ.</li>
+                <li><strong>Expand to multiple rows:</strong> Creates one row per tag value. This is the relational approach and is most correct, but it changes the shape of the data significantly.</li>
+            </ul>
+
+            <p>For most use cases, serializing arrays to a delimited string per cell is the most practical approach when you need a quick export.</p>
+
+            <h2>Handling Inconsistent Keys</h2>
+            <p>Real-world JSON APIs sometimes return records with different keys. One object might have a <code>phone</code> field while another does not. A good converter uses the union of all keys it finds as the header row, and fills empty cells with blank or null values. Always check your CSV output for unexpected empty columns.</p>
+
+            <h2>Using the Output in Spreadsheet Tools</h2>
+
+            <h3>Excel</h3>
+            <p>Open Excel and use <strong>File &gt; Open</strong> or import via the Data ribbon. When importing a <code>.csv</code> file, Excel shows a Text Import Wizard — confirm that the delimiter is a comma and that the encoding is UTF-8 to avoid garbled special characters.</p>
+
+            <h3>Google Sheets</h3>
+            <p>In Google Sheets, use <strong>File &gt; Import</strong> and upload the CSV. Choose "Comma" as the separator type and "No" for "Convert text to numbers and dates" if you want to preserve values exactly as strings.</p>
+
+            <h3>Python pandas</h3>
+            <pre>import pandas as pd
+
+df = pd.read_csv('output.csv')
+print(df.head())</pre>
+
+            <p>Pandas reads CSV files natively and attempts type inference — numbers will become integers or floats, and date strings may be parsed automatically. If this causes issues, use <code>dtype=str</code> to load everything as strings first.</p>
+
+            <h2>When JSON to CSV Is Lossy</h2>
+            <p>CSV is a flat, two-dimensional format. JSON can represent arbitrarily complex hierarchical data. Any time you convert from JSON to CSV, you risk losing information:</p>
+
+            <ul>
+                <li><strong>Deeply nested objects</strong> flatten to long dot-notation column names that may be difficult to work with in a spreadsheet</li>
+                <li><strong>Arrays of objects within arrays</strong> — an order with multiple line items, each with multiple attributes — cannot be losslessly represented in a single CSV without choosing a specific flattening strategy</li>
+                <li><strong>Data types</strong> — JSON distinguishes between <code>null</code>, <code>false</code>, <code>0</code>, and <code>""</code>. CSV represents all of these as empty or the string "false"/"0" — the distinction can be lost</li>
+                <li><strong>Unicode and special characters</strong> — if the CSV is not properly encoded as UTF-8, non-ASCII characters may be corrupted</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>Keep your JSON as the source of truth</strong>
+                Always export to CSV from the original JSON; do not modify the CSV and try to import it back to JSON. CSV-to-JSON round-trips are lossy — especially for nested structures and typed values.
+            </div>
+
+            <h2>Tips for Clean Output</h2>
+            <ul>
+                <li><strong>Consistent keys:</strong> Ensure all objects in your JSON array have the same set of keys. Missing keys become empty cells.</li>
+                <li><strong>Avoid null in key fields:</strong> Null values in identifier columns (like <code>id</code>) create confusing rows in spreadsheets.</li>
+                <li><strong>Pre-flatten complex fields:</strong> If you control the API or the JSON generation, flatten nested structures before exporting rather than relying on the converter to do it.</li>
+                <li><strong>Wrap strings with commas in quotes:</strong> If any string value contains a comma, the CSV converter should automatically quote the field. Verify this in your output before opening in Excel.</li>
+            </ul>
+
+            <h2>Summary</h2>
+            <p>Converting JSON to CSV maps the keys of each object to column headers and each object to a row. Flat JSON converts cleanly. Nested objects are flattened with dot-notation column names. Arrays within objects require a strategy choice: serialize to string, expand to columns, or expand to rows. The conversion is lossy for complex structures — CSV cannot represent all of JSON's expressiveness. For a clean result, start with flat or lightly nested JSON, use consistent keys, and verify your output in a spreadsheet before distributing.</p>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

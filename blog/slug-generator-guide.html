@@ -1,28 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slug Generator Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use Slug Generator with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/slug-generator-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Slug Generator Guide: SEO Best Practices & CMS Tips | FixThatApp</title>
+    <meta name="description" content="Learn what a URL slug is, why slugs matter for SEO, the rules for creating good slugs, how to handle slug changes safely, and tips for WordPress, Ghost, and Shopify.">
+    <meta name="keywords" content="URL slug generator, slug SEO, URL slug best practices, WordPress slug, clean URLs, URL structure SEO, slug vs URL, changing URL slugs">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/slug-generator-guide.html">
+    <meta property="og:title" content="URL Slug Generator Guide: SEO Best Practices & CMS Tips">
+    <meta property="og:description" content="Learn what a URL slug is, why slugs matter for SEO, the rules for creating good slugs, how to handle slug changes safely, and tips for WordPress, Ghost, and Shopify.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/slug-generator-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "URL Slug Generator Guide: SEO Best Practices & CMS Tips",
+      "description": "Learn what a URL slug is, why slugs matter for SEO, the rules for creating good slugs, how to handle slug changes safely, and tips for WordPress, Ghost, and Shopify.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/slug-generator-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .nav-links a:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>Slug Generator Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>Slug Generator is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/slug-generator/">Slug Generator</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; URL Slug Generator Guide</nav>
+        <article class="article">
+            <h1>URL Slug Generator Guide: SEO Best Practices &amp; CMS Tips</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>The URL slug is the human-readable part of a web address that identifies a specific page. In <code>https://www.example.com/blog/how-to-make-sourdough-bread</code>, the slug is <code>how-to-make-sourdough-bread</code>. It sits between your domain name and (optionally) a query string, and it's one of the few SEO factors you can optimize with zero technical complexity. This guide covers what makes a slug good or bad, how to handle slug changes on existing pages, and how the conversion from a title to a slug works.</p>
+
+            <h2>What a URL Slug Is</h2>
+            <p>The slug is the URL-safe, human-readable identifier for a page. It's the component most web frameworks and CMSs use to map a URL to a specific piece of content in the database. The term comes from publishing, where a "slug" was a short identifier assigned to an article before publication.</p>
+            <p>A full URL has several components:</p>
+            <pre><code>https://www.example.com/blog/how-to-make-sourdough-bread
+         \_____________/\____/\______________________________/
+              domain    path       slug (within the path)</code></pre>
+            <p>In content management systems, the slug is usually the last path segment — the part you type in when creating a new post or page. WordPress calls this the "permalink slug." Ghost, Shopify, and most other systems use the same concept under similar names.</p>
+
+            <h2>Why Slugs Matter for SEO</h2>
+            <p>URLs are a minor but real ranking signal. More importantly, they affect click-through rates from search results and social shares, which are behavioral signals that influence rankings indirectly. A well-structured slug:</p>
+            <ul>
+                <li><strong>Contains the primary keyword</strong> — Google and other search engines use URL words as a relevance signal. A page about sourdough bread at <code>/how-to-make-sourdough-bread</code> sends a clearer topical signal than one at <code>/post-12847</code>.</li>
+                <li><strong>Is readable by humans</strong> — When a URL is displayed in search results, on social media, or in a shared link, a readable slug tells users what they'll find before they click. <code>/best-password-managers-2026</code> is more clickable than <code>/p?id=847&cat=3</code>.</li>
+                <li><strong>Is concise</strong> — Shorter slugs are easier to share, easier to type, and display better in search result snippets. Cut every word that doesn't add meaning.</li>
+                <li><strong>Avoids keyword stuffing</strong> — A slug like <code>/seo-tips-seo-guide-seo-best-practices-seo-2026</code> looks spammy and triggers negative signals in Google's quality algorithms. Include your keyword once, naturally.</li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>Generate Clean URL Slugs Instantly</h3>
+                <p>Paste any title or phrase and get a properly formatted, SEO-ready URL slug in one click.</p>
+                <a href="../tools/slug-generator/">Open URL Slug Generator</a>
+            </div>
+
+            <h2>Rules for a Good Slug</h2>
+
+            <h3>Use Lowercase Letters Only</h3>
+            <p>URLs are technically case-sensitive on most servers. <code>/Blog/HowToMakeBread</code> and <code>/blog/howtomakebread</code> could be different pages on a Linux server. Keeping slugs entirely lowercase prevents duplicate content issues and the confusion of mixed-case URLs in links and analytics.</p>
+
+            <h3>Use Hyphens, Not Underscores</h3>
+            <p>Google treats hyphens as word separators in URLs: <code>how-to-make-bread</code> is read as four separate words. Underscores are treated differently — Google historically treated <code>how_to_make_bread</code> as a single compound token "howtomakebread." While Google has improved its handling of underscores over the years, hyphens remain the universal standard and the safest choice. Every major style guide and CMS defaults to hyphens.</p>
+
+            <h3>Remove Special Characters</h3>
+            <p>Characters like <code>?</code>, <code>&</code>, <code>#</code>, <code>%</code>, <code>+</code>, <code>=</code>, <code>@</code>, and others have special meanings in URLs and must be percent-encoded when used in a slug — turning <code>what's</code> into <code>what%27s</code>. This makes URLs unreadable. Remove apostrophes, ampersands, quotation marks, and other punctuation from slugs entirely rather than encoding them.</p>
+
+            <h3>Remove Stop Words (Optional but Recommended)</h3>
+            <p>Stop words are common words that add little semantic meaning: "a," "an," "the," "in," "of," "to," "for," "and," "or," "but," "is," "are," "was." Removing them makes slugs shorter without losing meaning:</p>
+            <ul>
+                <li>"How to Make the Perfect Sourdough Bread" → <code>how-to-make-perfect-sourdough-bread</code></li>
+                <li>"The Best Password Managers of 2026" → <code>best-password-managers-2026</code></li>
+                <li>"What Is a URL Slug and Why Does It Matter?" → <code>what-is-url-slug-why-it-matters</code></li>
+            </ul>
+            <p>Some SEO practitioners keep "how-to" intact even though "to" is a stop word, because "how-to" reads as a unit. Apply judgment — the goal is a concise, readable slug, not mechanical stop-word deletion.</p>
+
+            <h2>How Slug Conversion Works</h2>
+            <p>Converting a page title to a URL slug follows these steps:</p>
+            <ol>
+                <li>Convert all characters to lowercase</li>
+                <li>Replace spaces with hyphens</li>
+                <li>Remove or replace special characters (apostrophes removed, ampersands replaced with "and")</li>
+                <li>Remove accents from accented characters (é → e, ñ → n, ü → u)</li>
+                <li>Remove consecutive hyphens (replace <code>--</code> with <code>-</code>)</li>
+                <li>Trim leading and trailing hyphens</li>
+                <li>Optionally remove stop words</li>
+            </ol>
+            <pre><code>Input:  "10 Best CSS Gradients for Web Design (2026)"
+Step 1: "10 best css gradients for web design (2026)"
+Step 2: "10-best-css-gradients-for-web-design-(2026)"
+Step 3: "10-best-css-gradients-for-web-design-2026"
+Result: 10-best-css-gradients-for-web-design-2026</code></pre>
+
+            <h2>Slug Best Practices by CMS Platform</h2>
+
+            <h3>WordPress</h3>
+            <p>WordPress generates slugs automatically from post titles, but it includes stop words by default. Edit the slug in the "Permalink" field in the post editor (below the title). WordPress also has a permalink settings page (Settings &gt; Permalinks) where you choose the URL structure. The "Post name" structure (<code>/sample-post/</code>) is the best option for SEO — avoid the default settings that include dates (<code>/2026/03/19/sample-post/</code>) unless your content is highly time-sensitive.</p>
+
+            <h3>Ghost</h3>
+            <p>Ghost auto-generates slugs from post titles, typically doing a better job of removing stop words than WordPress. Edit the slug in the post settings panel on the right side of the editor. Ghost enforces lowercase and hyphen conventions automatically.</p>
+
+            <h3>Shopify</h3>
+            <p>Shopify generates product slugs (called "handles") from product titles. Edit them in the "Search engine listing preview" section at the bottom of each product, collection, or page. Shopify slugs follow the pattern <code>/products/product-handle</code>, <code>/collections/collection-handle</code>, and <code>/pages/page-handle</code>. Keep product handles concise — Shopify's full product URLs already include the <code>/products/</code> prefix.</p>
+
+            <h2>Changing Slugs on Existing Pages: The 301 Redirect</h2>
+            <p>Changing the slug of a published page changes its URL. If you simply change the slug without doing anything else, all existing links to the old URL — in search engine indexes, in other websites' backlinks, in your own internal links — will produce 404 errors. This destroys the SEO value accumulated by that page.</p>
+            <p>The correct procedure when changing a slug:</p>
+            <ol>
+                <li>Change the slug in your CMS to the new, improved version.</li>
+                <li>Implement a <strong>301 redirect</strong> from the old URL to the new URL. A 301 is a "permanent redirect" that tells both users and search engines that the page has moved permanently. Search engines transfer the majority of the ranking signals from the old URL to the new one.</li>
+                <li>Update internal links throughout your site from the old slug to the new slug (important for crawl efficiency, even though 301s handle it for users).</li>
+                <li>Update any external links you control (social profiles, email signatures, partner sites).</li>
+            </ol>
+
+            <div class="tip-box">
+                <strong>Warning: Never Change Slugs Without 301 Redirects</strong>
+                A high-traffic page that has accumulated backlinks and rankings represents months or years of SEO work. Changing its slug without a redirect discards all of that accumulated value. WordPress handles this automatically when you change a permalink through the admin UI — but other CMSs may not. Always verify your redirects are in place before publishing a slug change.
+            </div>
+
+            <h2>Multilingual Slugs and URL Encoding</h2>
+            <p>For websites targeting non-English languages, slugs present a choice between two approaches:</p>
+            <p><strong>Transliterated slugs</strong> — Convert non-Latin characters to their Latin equivalents (romanization). A French article titled "Les Meilleures Recettes" becomes <code>les-meilleures-recettes</code>. German umlauts are typically expanded (ü → ue, ö → oe, ä → ae). This produces ASCII-only URLs that work universally without encoding.</p>
+            <p><strong>Native language slugs</strong> — Use the actual characters of the target language in the URL. Modern browsers display these correctly, and Google supports them. However, when these URLs are copied into plain text contexts (emails, some messaging apps), they get percent-encoded. A URL like <code>/مقالات/أفضل-الوصفات</code> becomes a long string of <code>%XX</code> codes when pasted into some applications, making shared links unreadable.</p>
+            <p>For most sites, transliterated slugs are the safer choice for practical link sharing. For strongly localized sites serving native-script audiences, native slugs may provide marginal local SEO benefits and better user experience in the native market.</p>
+
+            <h2>How to Use the URL Slug Generator</h2>
+            <ol>
+                <li>Open the <a href="../tools/slug-generator/">URL Slug Generator</a>.</li>
+                <li>Paste or type your page title or headline into the input field.</li>
+                <li>The generator instantly produces a slug following best practices: lowercase, hyphens, special characters removed.</li>
+                <li>Toggle the stop-word removal option to see the slug with and without common stop words.</li>
+                <li>Review the output — occasionally you may want to manually add or remove a word for clarity or keyword targeting.</li>
+                <li>Click Copy to copy the slug to your clipboard and paste it directly into your CMS's slug field.</li>
+            </ol>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

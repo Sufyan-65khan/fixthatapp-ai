@@ -1,28 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Code Converter Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use Color Code Converter with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/color-code-converter-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Code Converter Guide: HEX, RGB, HSL & CMYK Explained | FixThatApp</title>
+    <meta name="description" content="Learn the differences between HEX, RGB, HSL, and CMYK color formats, when to use each, how to convert between them, and tips for accessible web design colors.">
+    <meta name="keywords" content="color code converter, HEX to RGB, RGB to HSL, CMYK colors, CSS color formats, color conversion guide">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/color-code-converter-guide.html">
+    <meta property="og:title" content="Color Code Converter Guide: HEX, RGB, HSL & CMYK Explained">
+    <meta property="og:description" content="Learn the differences between HEX, RGB, HSL, and CMYK color formats, when to use each, how to convert between them, and tips for accessible web design colors.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/color-code-converter-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Color Code Converter Guide: HEX, RGB, HSL & CMYK Explained",
+      "description": "Learn the differences between HEX, RGB, HSL, and CMYK color formats, when to use each, how to convert between them, and tips for accessible web design colors.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/color-code-converter-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .nav-links a:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>Color Code Converter Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>Color Code Converter is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/color-code-converter/">Color Code Converter</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; Color Code Converter Guide</nav>
+        <article class="article">
+            <h1>Color Code Converter Guide: HEX, RGB, HSL &amp; CMYK Explained</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>Colors look identical on screen whether you write them as <code>#3498db</code>, <code>rgb(52, 152, 219)</code>, or <code>hsl(204, 70%, 53%)</code> — but behind the scenes these formats serve very different purposes. Knowing when to use each format, and how to move between them, saves time and prevents the frustration of hunting down why a color looks slightly off between your design tool and your browser.</p>
+
+            <h2>The Four Main Color Formats</h2>
+
+            <h3>HEX — The Web Standard</h3>
+            <p>HEX (hexadecimal) color codes like <code>#FF5733</code> are the most common format on the web. Each pair of characters represents the red, green, and blue channels as values from <code>00</code> (0) to <code>FF</code> (255) in base-16 notation. The shorthand form <code>#F53</code> works when both digits of each pair are identical — <code>#FF5533</code> becomes <code>#F53</code>.</p>
+            <p><strong>When to use HEX:</strong> CSS stylesheets, HTML attributes, design handoff notes, brand color documentation. HEX is compact, copy-paste-friendly, and universally understood by browsers and design tools alike.</p>
+
+            <h3>RGB — Red, Green, Blue Channels</h3>
+            <p>RGB expresses the same information as HEX but in decimal: <code>rgb(255, 87, 51)</code>. Each value runs from 0 to 255. This format becomes especially useful in JavaScript when you need to manipulate individual channels programmatically, or when working with the Canvas API where you're computing colors mathematically.</p>
+            <p><strong>When to use RGB:</strong> JavaScript color manipulation, HTML Canvas drawing, any situation where you need to do arithmetic on individual channels — for example, darkening a color by subtracting a fixed amount from each channel value.</p>
+
+            <h3>HSL — Hue, Saturation, Lightness</h3>
+            <p>HSL is the most human-intuitive color format. Instead of mixing channels, you specify:</p>
+            <ul>
+                <li><strong>Hue</strong> — the color angle on a 360-degree wheel (0/360 = red, 120 = green, 240 = blue)</li>
+                <li><strong>Saturation</strong> — how vivid the color is, from 0% (grey) to 100% (full color)</li>
+                <li><strong>Lightness</strong> — how light or dark, from 0% (black) to 100% (white)</li>
+            </ul>
+            <p>The power of HSL is that creating tints, shades, and accessible color variations is trivial. Want a lighter version of your brand color? Increase the lightness. Want a muted, desaturated tone? Lower the saturation. With RGB or HEX you'd have to recalculate all three channels separately.</p>
+            <p><strong>When to use HSL:</strong> CSS custom properties for design systems, generating color palettes programmatically, creating hover states and disabled states that are visually consistent with the base color.</p>
+
+            <h3>CMYK — Cyan, Magenta, Yellow, Key (Black)</h3>
+            <p>CMYK is a subtractive color model used in print. Where RGB adds light to create color, CMYK subtracts it using ink. Values are expressed as percentages: <code>cmyk(0%, 66%, 80%, 0%)</code>. Web browsers do not natively support CMYK — it is strictly a print format.</p>
+            <p><strong>When to use CMYK:</strong> Sending files to a printer or print shop, working in Adobe Illustrator or InDesign for print output, specifying brand colors in brand guidelines that include print materials. Note that an RGB color cannot be converted to CMYK with 100% accuracy because the gamuts (ranges of possible colors) differ — some bright screen colors simply cannot be reproduced in print ink.</p>
+
+            <h2>How to Convert Between Formats</h2>
+
+            <h3>HEX to RGB</h3>
+            <p>Split the HEX string into three two-character pairs, then convert each from base-16 to base-10:</p>
+            <pre><code>#3498DB
+R = 0x34 = 52
+G = 0x98 = 152
+B = 0xDB = 219
+Result: rgb(52, 152, 219)</code></pre>
+
+            <h3>RGB to HSL</h3>
+            <p>Normalize each channel to 0–1 (divide by 255), find the min and max values, then apply these formulas:</p>
+            <pre><code>r=52/255=0.204, g=152/255=0.596, b=219/255=0.859
+max=0.859 (b), min=0.204 (r), delta=0.655
+
+Lightness = (max + min) / 2 = 0.532 → 53.2%
+Saturation = delta / (1 - |2L - 1|) = 0.655 / 0.936 ≈ 70%
+Hue: since max=b → H = 60 × ((r - g)/delta + 4) = 60 × (-0.598 + 4) = 204°
+Result: hsl(204, 70%, 53%)</code></pre>
+            <p>You don't need to memorize these formulas — that's what converters are for. But understanding the structure helps you know what you're changing when you tweak a value.</p>
+
+            <div class="cta-box">
+                <h3>Convert Colors Instantly</h3>
+                <p>Use our free Color Code Converter to switch between HEX, RGB, HSL, and CMYK with a single click.</p>
+                <a href="../tools/color-code-converter/">Open Color Converter</a>
+            </div>
+
+            <h2>Common Colors Reference Table</h2>
+            <table>
+                <thead><tr><th>Color</th><th>HEX</th><th>RGB</th><th>HSL</th></tr></thead>
+                <tbody>
+                    <tr><td>Red</td><td><code>#FF0000</code></td><td><code>rgb(255,0,0)</code></td><td><code>hsl(0,100%,50%)</code></td></tr>
+                    <tr><td>Green</td><td><code>#00FF00</code></td><td><code>rgb(0,255,0)</code></td><td><code>hsl(120,100%,50%)</code></td></tr>
+                    <tr><td>Blue</td><td><code>#0000FF</code></td><td><code>rgb(0,0,255)</code></td><td><code>hsl(240,100%,50%)</code></td></tr>
+                    <tr><td>White</td><td><code>#FFFFFF</code></td><td><code>rgb(255,255,255)</code></td><td><code>hsl(0,0%,100%)</code></td></tr>
+                    <tr><td>Black</td><td><code>#000000</code></td><td><code>rgb(0,0,0)</code></td><td><code>hsl(0,0%,0%)</code></td></tr>
+                    <tr><td>Coral</td><td><code>#FF6B6B</code></td><td><code>rgb(255,107,107)</code></td><td><code>hsl(0,100%,71%)</code></td></tr>
+                    <tr><td>Teal</td><td><code>#2ECC71</code></td><td><code>rgb(46,204,113)</code></td><td><code>hsl(145,63%,49%)</code></td></tr>
+                    <tr><td>Purple</td><td><code>#9B59B6</code></td><td><code>rgb(155,89,182)</code></td><td><code>hsl(283,39%,53%)</code></td></tr>
+                    <tr><td>Orange</td><td><code>#E67E22</code></td><td><code>rgb(230,126,34)</code></td><td><code>hsl(28,80%,52%)</code></td></tr>
+                    <tr><td>Slate</td><td><code>#7F8C8D</code></td><td><code>rgb(127,140,141)</code></td><td><code>hsl(184,6%,53%)</code></td></tr>
+                </tbody>
+            </table>
+
+            <h2>Why HSL Is Better for Creating Color Variations</h2>
+            <p>Suppose your brand blue is <code>hsl(210, 80%, 50%)</code>. Creating a full accessible palette becomes mechanical:</p>
+            <ul>
+                <li><strong>Dark variant (for dark backgrounds):</strong> <code>hsl(210, 80%, 30%)</code></li>
+                <li><strong>Light variant (for backgrounds/chips):</strong> <code>hsl(210, 80%, 90%)</code></li>
+                <li><strong>Muted/disabled:</strong> <code>hsl(210, 25%, 60%)</code></li>
+                <li><strong>Hover state (slightly darker):</strong> <code>hsl(210, 80%, 42%)</code></li>
+            </ul>
+            <p>All of these share the same hue, so they look visually related. Achieving the same result with HEX or RGB requires recalculating all three channels by hand or guessing.</p>
+
+            <h2>Alpha Channels: RGBA and HSLA</h2>
+            <p>Both RGB and HSL support a fourth channel for opacity. The alpha value runs from 0 (fully transparent) to 1 (fully opaque):</p>
+            <pre><code>rgba(52, 152, 219, 0.5)    /* 50% transparent blue */
+hsla(204, 70%, 53%, 0.8)   /* 80% opaque blue */</code></pre>
+            <p>HEX also supports alpha in 8-character form: <code>#3498DBCC</code> where the last two digits (<code>CC</code> = 204 in decimal) represent opacity. This is less commonly used because the values are harder to read and browser support arrived later than RGBA.</p>
+
+            <div class="tip-box">
+                <strong>Tip: Use CSS Custom Properties for Colors</strong>
+                Define your brand colors once as CSS variables and reference them everywhere. This makes global color changes a one-line update:
+                <pre style="margin-top:.5rem"><code>:root {
+  --color-primary: hsl(210, 80%, 50%);
+  --color-primary-dark: hsl(210, 80%, 35%);
+  --color-primary-light: hsl(210, 80%, 90%);
+}</code></pre>
+            </div>
+
+            <h2>Accessibility: Contrast Ratios</h2>
+            <p>WCAG 2.1 requires a minimum contrast ratio of <strong>4.5:1</strong> between text and its background for normal text (3:1 for large text). Contrast is calculated from relative luminance — a value derived from the RGB channels. This is why it's important to check accessibility whenever you adjust color lightness.</p>
+            <p>A common mistake is choosing a brand color for both a button background and its text. Even if they look different on a calibrated monitor, they may fail contrast requirements for users with visual impairments or on lower-quality displays. Always verify contrast ratios after any color change.</p>
+
+            <h2>Real-World Use Cases</h2>
+            <p><strong>Matching brand colors across tools:</strong> Your brand guide specifies a color in CMYK for print. The developer needs HEX for the website. The marketing team needs RGB for PowerPoint. One conversion gives everyone what they need from a single source of truth.</p>
+            <p><strong>Working across design tools:</strong> Figma uses HEX and RGB natively. Photoshop works in HSB (similar to HSL). Converting between these prevents colors from drifting as assets move between tools.</p>
+            <p><strong>Creating accessible contrast:</strong> Start with your brand HEX, convert to HSL, adjust lightness until your contrast checker shows a passing ratio, then convert back to HEX for your stylesheet. This is far faster than guessing adjustments blindly in HEX.</p>
+
+            <h2>How to Use the Color Code Converter</h2>
+            <ol>
+                <li>Open the <a href="../tools/color-code-converter/">Color Code Converter tool</a>.</li>
+                <li>Paste or type a color value in any supported format — HEX, RGB, HSL, or CMYK.</li>
+                <li>The tool instantly displays the equivalent values in all other formats.</li>
+                <li>Click any output field to copy the value to your clipboard.</li>
+                <li>A live color preview lets you confirm you're looking at the right color before copying.</li>
+            </ol>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

@@ -1,28 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gradient Generator Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use Gradient Generator with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/gradient-generator-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradient Generator Guide: Linear, Radial & Conic Gradients Explained | FixThatApp</title>
+    <meta name="description" content="Master CSS gradients with this complete guide. Learn linear, radial, and conic gradient syntax, color stops, directions, and popular gradient recipes for web design.">
+    <meta name="keywords" content="CSS gradient generator, linear gradient, radial gradient, conic gradient, CSS background gradient, gradient color stops, web design gradients">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/gradient-generator-guide.html">
+    <meta property="og:title" content="CSS Gradient Generator Guide: Linear, Radial & Conic Gradients Explained">
+    <meta property="og:description" content="Master CSS gradients with this complete guide. Learn linear, radial, and conic gradient syntax, color stops, directions, and popular gradient recipes for web design.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/gradient-generator-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "CSS Gradient Generator Guide: Linear, Radial & Conic Gradients Explained",
+      "description": "Master CSS gradients with this complete guide. Learn linear, radial, and conic gradient syntax, color stops, directions, and popular gradient recipes for web design.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/gradient-generator-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .nav-links a:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>Gradient Generator Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>Gradient Generator is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/gradient-generator/">Gradient Generator</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; CSS Gradient Generator Guide</nav>
+        <article class="article">
+            <h1>CSS Gradient Generator Guide: Linear, Radial &amp; Conic Gradients Explained</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>CSS gradients let you create smooth color transitions entirely in code — no images, no external files, zero HTTP requests. They're resolution-independent (crisp at any screen density), animatable with CSS transitions, and far more flexible than static images. This guide covers all three gradient types, explains color stops in depth, and includes ready-to-use recipes for the most popular gradient patterns in modern web design.</p>
+
+            <h2>The Three Types of CSS Gradients</h2>
+
+            <h3>Linear Gradients</h3>
+            <p>A linear gradient transitions colors along a straight line. The basic syntax is:</p>
+            <pre><code>background: linear-gradient(direction, color-stop-1, color-stop-2, ...);</code></pre>
+            <p>The direction can be specified using keywords or degree values. Keywords are the most readable for common directions:</p>
+            <pre><code>background: linear-gradient(to right, #667eea, #764ba2);
+background: linear-gradient(to bottom right, #f093fb, #f5576c);
+background: linear-gradient(to bottom, #4facfe, #00f2fe);</code></pre>
+            <p>Degree values give precise control over the angle:</p>
+            <pre><code>background: linear-gradient(45deg, #667eea, #764ba2);
+background: linear-gradient(135deg, #f093fb, #f5576c);
+background: linear-gradient(0deg, #4facfe, #00f2fe);  /* bottom to top */</code></pre>
+            <p>Degrees follow a clockwise convention: 0deg points upward (same as <code>to top</code>), 90deg points right, 180deg points down, and 270deg points left.</p>
+
+            <h3>Radial Gradients</h3>
+            <p>Radial gradients radiate outward from a center point in an elliptical or circular shape:</p>
+            <pre><code>background: radial-gradient(shape size at position, color-stop-1, color-stop-2);</code></pre>
+            <p>Common examples:</p>
+            <pre><code>/* Simple circle from center */
+background: radial-gradient(circle, #f093fb, #f5576c);
+
+/* Default ellipse */
+background: radial-gradient(ellipse at center, #667eea, #764ba2);
+
+/* Off-center spotlight effect */
+background: radial-gradient(circle at 30% 40%, rgba(255,255,255,.2), transparent 60%);
+
+/* Size keywords */
+background: radial-gradient(circle farthest-corner at 50% 50%, #4facfe, #00f2fe);</code></pre>
+
+            <h3>Conic Gradients</h3>
+            <p>Conic gradients rotate colors around a central point — like looking down at a color wheel or slicing a pie chart. They have excellent browser support as of 2026:</p>
+            <pre><code>/* Pie chart segments */
+background: conic-gradient(red 0deg 120deg, green 120deg 240deg, blue 240deg 360deg);
+
+/* Smooth color wheel */
+background: conic-gradient(from 0deg, red, yellow, green, cyan, blue, magenta, red);
+
+/* Off-center rotation */
+background: conic-gradient(from 45deg at 30% 70%, #667eea, #764ba2, #667eea);</code></pre>
+
+            <div class="cta-box">
+                <h3>Generate CSS Gradients Visually</h3>
+                <p>Build and preview any CSS gradient with our free generator — then copy the code directly into your project.</p>
+                <a href="../tools/gradient-generator/">Open Gradient Generator</a>
+            </div>
+
+            <h2>How Color Stops Work</h2>
+            <p>Color stops define what color appears at what position along the gradient axis. Without explicit positions, colors are distributed evenly. With explicit positions, you have full control:</p>
+            <pre><code>/* Evenly distributed */
+background: linear-gradient(to right, red, yellow, green);
+
+/* Explicit percentage positions */
+background: linear-gradient(to right, red 0%, yellow 30%, green 100%);
+
+/* Pixel positions (less flexible for responsive layouts) */
+background: linear-gradient(to right, red 0px, yellow 100px, green 200px);
+
+/* Hard stop: same position creates an instant color change */
+background: linear-gradient(to right, red 50%, blue 50%);</code></pre>
+
+            <p>You can add as many color stops as needed. Browsers interpolate smoothly between stops in the sRGB color space by default. CSS Color Level 4 allows specifying the interpolation color space (<code>in oklch</code>, <code>in hsl</code>, etc.) for perceptually smoother gradients, though this is a newer feature.</p>
+
+            <h3>Creating Hard Transitions and Stripes</h3>
+            <p>Setting two adjacent stops at the same position creates an instant color change with no gradual blending. This technique produces stripe patterns entirely in CSS:</p>
+            <pre><code>background: linear-gradient(
+  to right,
+  #667eea 0%, #667eea 33.33%,
+  #764ba2 33.33%, #764ba2 66.66%,
+  #f093fb 66.66%, #f093fb 100%
+);</code></pre>
+
+            <h2>Direction Syntax for Linear Gradients</h2>
+            <table>
+                <thead><tr><th>Keyword</th><th>Angle</th><th>Direction</th></tr></thead>
+                <tbody>
+                    <tr><td><code>to top</code></td><td>0deg</td><td>Bottom to top</td></tr>
+                    <tr><td><code>to right</code></td><td>90deg</td><td>Left to right</td></tr>
+                    <tr><td><code>to bottom</code></td><td>180deg</td><td>Top to bottom (default)</td></tr>
+                    <tr><td><code>to left</code></td><td>270deg</td><td>Right to left</td></tr>
+                    <tr><td><code>to top right</code></td><td>~45deg</td><td>Bottom-left to top-right</td></tr>
+                    <tr><td><code>to bottom right</code></td><td>~135deg</td><td>Top-left to bottom-right</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Use Cases in Web Design</h2>
+
+            <h3>Hero Section Backgrounds</h3>
+            <p>Full-screen gradient backgrounds are a staple of modern landing pages. They add depth and visual interest without the loading cost of a large photo. Diagonal gradients (45deg or 135deg) tend to feel more dynamic than purely horizontal or vertical ones.</p>
+            <pre><code>.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}</code></pre>
+
+            <h3>Button Hover States</h3>
+            <p>Subtle gradient shifts on hover create a sense of depth without JavaScript. Use CSS transitions to animate between gradient states:</p>
+            <pre><code>.btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: filter 0.2s ease;
+}
+.btn:hover {
+  filter: brightness(0.9);
+}</code></pre>
+
+            <h3>Card Image Overlays</h3>
+            <p>A transparent-to-dark gradient over a card image ensures text stays readable while the photo shows through:</p>
+            <pre><code>.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+}</code></pre>
+
+            <h3>Text Gradients</h3>
+            <p>Gradient text is a popular design treatment for headings. It requires three CSS properties working together:</p>
+            <pre><code>.gradient-text {
+  background: linear-gradient(135deg, #667eea, #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}</code></pre>
+
+            <div class="tip-box">
+                <strong>Accessibility Warning: Gradient Text and Contrast</strong>
+                Gradient text can fail WCAG contrast requirements if the gradient passes through low-contrast zones relative to the background. Always check contrast at the lightest and darkest points of the gradient, not just at the midpoint. If in doubt, add a solid fallback color for high-contrast mode users.
+            </div>
+
+            <h2>Popular Gradient Recipes</h2>
+            <table>
+                <thead><tr><th>Name</th><th>CSS</th></tr></thead>
+                <tbody>
+                    <tr><td>Ocean Blue</td><td><code>linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)</code></td></tr>
+                    <tr><td>Purple Dream</td><td><code>linear-gradient(135deg, #667eea 0%, #764ba2 100%)</code></td></tr>
+                    <tr><td>Sunset Pink</td><td><code>linear-gradient(135deg, #f093fb 0%, #f5576c 100%)</code></td></tr>
+                    <tr><td>Citrus</td><td><code>linear-gradient(135deg, #f7971e 0%, #ffd200 100%)</code></td></tr>
+                    <tr><td>Forest</td><td><code>linear-gradient(135deg, #11998e 0%, #38ef7d 100%)</code></td></tr>
+                    <tr><td>Dark Matter</td><td><code>linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%)</code></td></tr>
+                    <tr><td>Rose Gold</td><td><code>linear-gradient(135deg, #f6d365 0%, #fda085 100%)</code></td></tr>
+                    <tr><td>Steel</td><td><code>linear-gradient(135deg, #536976 0%, #292e49 100%)</code></td></tr>
+                </tbody>
+            </table>
+
+            <h2>Accessibility: Sufficient Contrast Over Gradients</h2>
+            <p>Gradients introduce a unique accessibility challenge: contrast varies across the gradient. If you're placing text over a gradient background, the text must meet WCAG contrast requirements at every point it overlaps — not just at the average. The safest approaches are:</p>
+            <ul>
+                <li>Position text only over the darkest or lightest portion of the gradient where contrast is highest.</li>
+                <li>Add a semi-transparent dark overlay behind text (<code>rgba(0,0,0,0.5)</code>) to guarantee contrast regardless of the underlying gradient.</li>
+                <li>Choose gradients that stay within a narrow lightness range, avoiding transitions from very light to very dark behind body text.</li>
+                <li>Test contrast at both the lightest and darkest points using a WCAG 2.1 contrast checker tool.</li>
+            </ul>
+
+            <h2>Browser Support</h2>
+            <p>All three gradient types — <code>linear-gradient</code>, <code>radial-gradient</code>, and <code>conic-gradient</code> — are supported in all modern browsers without vendor prefixes as of 2026. You do not need <code>-webkit-</code> or <code>-moz-</code> prefixes for any currently supported browser version.</p>
+            <p>For situations where you need a solid color fallback (very old browsers or environments where CSS gradients fail), declare the fallback before the gradient:</p>
+            <pre><code>background: #667eea;  /* solid fallback */
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</code></pre>
+
+            <h2>How to Use the CSS Gradient Generator</h2>
+            <ol>
+                <li>Open the <a href="../tools/gradient-generator/">CSS Gradient Generator</a>.</li>
+                <li>Choose the gradient type: linear, radial, or conic.</li>
+                <li>Pick your colors using the color pickers or enter HEX/RGB values directly.</li>
+                <li>Adjust the direction or angle using the visual controls.</li>
+                <li>Add or remove color stops for multi-color gradients.</li>
+                <li>Preview the result on the live canvas in real time.</li>
+                <li>Copy the generated CSS declaration and paste it into your stylesheet.</li>
+            </ol>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

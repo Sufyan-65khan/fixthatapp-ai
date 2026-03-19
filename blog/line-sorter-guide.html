@@ -1,28 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Line Sorter Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use Line Sorter with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/line-sorter-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Sorter Guide: Sort Lists Alphabetically, Numerically, or by Length | FixThatApp</title>
+    <meta name="description" content="Learn how to sort lines of text alphabetically, numerically, by length, or randomly — including natural sort, case-sensitive sort, and how to sort in Excel, terminal, and Python.">
+    <meta name="keywords" content="line sorter, sort lines alphabetically, sort text, natural sort, sort list online, sort lines python, sort lines terminal">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/line-sorter-guide.html">
+    <meta property="og:title" content="Line Sorter Guide: Sort Lists Alphabetically, Numerically, or by Length | FixThatApp">
+    <meta property="og:description" content="Learn how to sort lines alphabetically, numerically, by length, or randomly — with examples for Excel, terminal, and Python.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/line-sorter-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Line Sorter Guide: Sort Lists Alphabetically, Numerically, or by Length",
+      "description": "Learn how to sort lines alphabetically, numerically, by length, or randomly with examples.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/line-sorter-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article pre code{background:none;padding:0}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>Line Sorter Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>Line Sorter is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/line-sorter/">Line Sorter</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; Line Sorter Guide</nav>
+        <article class="article">
+            <h1>Line Sorter Guide: Sort Lists Alphabetically, Numerically, or by Length</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>Sorting lines of text is one of those tasks that sounds simple but hides surprising complexity. Alphabetical order depends on whether comparison is case-sensitive. Numerical sort differs from alphabetical sort. "Natural sort" (where <code>file10</code> comes after <code>file9</code>, not before <code>file2</code>) is different again. This guide covers the different sorting modes and when to use each.</p>
+
+            <h2>Types of Sort</h2>
+
+            <table>
+                <tr><th>Sort type</th><th>Description</th><th>Example</th></tr>
+                <tr><td>Alphabetical A–Z</td><td>Dictionary order, case-sensitive by default</td><td>apple, banana, cherry</td></tr>
+                <tr><td>Alphabetical Z–A</td><td>Reverse alphabetical</td><td>cherry, banana, apple</td></tr>
+                <tr><td>Numerical ascending</td><td>By numeric value, not lexicographic</td><td>1, 2, 10, 20, 100</td></tr>
+                <tr><td>Numerical descending</td><td>Highest value first</td><td>100, 20, 10, 2, 1</td></tr>
+                <tr><td>By length (short first)</td><td>Shorter lines first</td><td>cat, bird, banana</td></tr>
+                <tr><td>By length (long first)</td><td>Longer lines first</td><td>banana, bird, cat</td></tr>
+                <tr><td>Natural sort</td><td>Handles embedded numbers intelligently</td><td>file1, file2, file10</td></tr>
+                <tr><td>Random / shuffle</td><td>Randomise the order</td><td>Unpredictable</td></tr>
+            </table>
+
+            <h2>Lexicographic Sort vs Natural Sort</h2>
+
+            <p>This is the most common sorting surprise. In lexicographic (alphabetical) order, strings are compared character by character. Since <code>'1'</code> &lt; <code>'2'</code> &lt; <code>'9'</code>, but <code>'1'</code> also comes before <code>'2'</code> in <code>'10'</code> vs <code>'2'</code>, the string <code>"10"</code> sorts before <code>"2"</code> lexicographically:</p>
+
+            <pre><code>// Lexicographic sort (wrong for filenames)
+["file1", "file10", "file2", "file20"].sort()
+// Result: ["file1", "file10", "file2", "file20"]
+// file10 before file2 — NOT what humans expect
+
+// Natural sort (correct for filenames)
+["file1", "file10", "file2", "file20"].sort((a, b) =>
+  a.localeCompare(b, undefined, {numeric: true})
+)
+// Result: ["file1", "file2", "file10", "file20"]</code></pre>
+
+            <p>Always use natural sort for filenames, version numbers, numbered list items, or any strings that mix text and numbers.</p>
+
+            <h2>Case Sensitivity in Sorting</h2>
+
+            <p>In standard ASCII ordering, all uppercase letters (A–Z, codes 65–90) come before all lowercase letters (a–z, codes 97–122). This means a case-sensitive sort puts <code>Banana</code> before <code>apple</code>, which is often not what people expect.</p>
+
+            <pre><code>// Case-sensitive sort (default in most languages)
+["banana", "Apple", "cherry"].sort()
+// Result: ["Apple", "banana", "cherry"]
+// Capital A comes before lowercase b
+
+// Case-insensitive sort
+["banana", "Apple", "cherry"].sort((a, b) =>
+  a.toLowerCase().localeCompare(b.toLowerCase())
+)
+// Result: ["Apple", "banana", "cherry"]
+// Same result here, but Apple sorts with A items, not before all lowercase</code></pre>
+
+            <h2>Common Use Cases</h2>
+
+            <h3>Alphabetising CSS Property Lists</h3>
+            <p>Many style guides recommend alphabetising CSS properties within each rule. Sorting them makes it easier to check if a property is already defined and prevents duplicates. Some tools like Stylelint can enforce this automatically, but the online sorter works well for a quick one-time cleanup.</p>
+
+            <h3>Organising Import Statements</h3>
+            <p>In Python and JavaScript, import statements are often sorted alphabetically by convention (and enforced by linters like isort or ESLint import/order). Sorting imports consistently reduces merge conflicts when multiple developers add imports to the same file.</p>
+
+            <h3>Sorting Configuration Keys</h3>
+            <p>JSON and YAML configuration files are easier to navigate when keys are sorted alphabetically. It also makes diffs cleaner — a new key always appears in the same predictable position.</p>
+
+            <h3>Creating Ordered Wordlists</h3>
+            <p>SEO keyword lists, dictionary wordlists, and glossaries all benefit from alphabetical sorting. A sorted wordlist is easier to scan, and deduplication works more efficiently on sorted input (adjacent duplicates only need one comparison).</p>
+
+            <div class="tip-box">
+                <strong>Sort + deduplicate in the right order</strong>
+                <p>If you want both sorted output and no duplicates, sort first and then run duplicate removal — or use <code>sort -u</code> on the command line which does both in one step. If you care about preserving original order while only removing duplicates, see the <a href="./duplicate-line-remover-guide.html">Duplicate Line Remover guide</a>.</p>
+            </div>
+
+            <div class="cta-box">
+                <h3>Sort Any List of Lines Instantly</h3>
+                <p>Paste your lines and sort them alphabetically, numerically, by length, or randomly — with case-sensitive or case-insensitive options.</p>
+                <a href="../tools/line-sorter/">Open the Line Sorter</a>
+            </div>
+
+            <h2>Sorting in Different Tools</h2>
+
+            <h3>Terminal (Linux / macOS)</h3>
+            <pre><code>sort file.txt             # alphabetical A-Z
+sort -r file.txt          # reverse (Z-A)
+sort -n file.txt          # numerical sort
+sort -rn file.txt         # numerical descending
+sort -f file.txt          # case-insensitive
+sort -u file.txt          # sort + remove duplicates
+sort -V file.txt          # version/natural sort (GNU sort)</code></pre>
+
+            <h3>Python</h3>
+            <pre><code>lines = open('file.txt').read().splitlines()
+
+# Alphabetical
+lines.sort()
+
+# Case-insensitive
+lines.sort(key=str.lower)
+
+# By length
+lines.sort(key=len)
+
+# Natural sort (requires natsort library)
+from natsort import natsorted
+lines = natsorted(lines)</code></pre>
+
+            <h2>How to Use the Line Sorter Tool</h2>
+
+            <ol>
+                <li>Open the <a href="../tools/line-sorter/">Line Sorter</a></li>
+                <li>Paste your lines into the input area</li>
+                <li>Select the sort mode: A–Z, Z–A, numeric, by length, or random</li>
+                <li>Toggle case-sensitive or case-insensitive as needed</li>
+                <li>Click Sort and copy the output</li>
+            </ol>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

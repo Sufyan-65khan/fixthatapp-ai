@@ -1,28 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timezone Meeting Planner Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use Timezone Meeting Planner with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/timezone-meeting-planner-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timezone Meeting Planner Guide: Schedule Across Time Zones | FixThatApp</title>
+    <meta name="description" content="Learn how to schedule meetings across time zones, avoid DST pitfalls, find overlap windows for global teams, and include timezone info correctly in calendar invites.">
+    <meta name="keywords" content="timezone meeting planner, schedule across time zones, international meeting scheduler, DST time zone, UTC offset, world clock meeting">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/timezone-meeting-planner-guide.html">
+    <meta property="og:title" content="Timezone Meeting Planner Guide: Schedule Across Time Zones | FixThatApp">
+    <meta property="og:description" content="Learn how to schedule meetings across time zones, avoid DST pitfalls, and find overlap windows for global teams.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/timezone-meeting-planner-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Timezone Meeting Planner Guide: Schedule Across Time Zones",
+      "description": "Learn how to schedule meetings across time zones and find overlap windows for global teams.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/timezone-meeting-planner-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>Timezone Meeting Planner Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>Timezone Meeting Planner is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/timezone-meeting-planner/">Timezone Meeting Planner</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; Timezone Meeting Planner Guide</nav>
+        <article class="article">
+            <h1>Timezone Meeting Planner Guide: Schedule Across Time Zones Without Confusion</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>Scheduling a meeting that works for people in London, New York, and Singapore is genuinely difficult. When it is 9am in London, it is 4am in New York and 5pm in Singapore. There are no good times for everyone — only least-bad compromises. A timezone meeting planner helps you visualise all time zones at once so you can find the overlap windows that minimise inconvenience for all participants.</p>
+
+            <h2>Understanding UTC Offsets</h2>
+
+            <p>Every timezone is defined by its offset from <strong>UTC</strong> (Coordinated Universal Time), the global time standard. London in winter is UTC+0, New York in winter is UTC-5, Tokyo is UTC+9. When it is 12:00 UTC, it is simultaneously 12:00 in London, 07:00 in New York, and 21:00 in Tokyo.</p>
+
+            <table>
+                <tr><th>City</th><th>Standard offset</th><th>DST offset</th><th>Region</th></tr>
+                <tr><td>London</td><td>UTC+0</td><td>UTC+1</td><td>Europe</td></tr>
+                <tr><td>Paris / Berlin / Amsterdam</td><td>UTC+1</td><td>UTC+2</td><td>Europe</td></tr>
+                <tr><td>New York / Toronto</td><td>UTC-5</td><td>UTC-4</td><td>North America East</td></tr>
+                <tr><td>Chicago / Dallas</td><td>UTC-6</td><td>UTC-5</td><td>North America Central</td></tr>
+                <tr><td>Los Angeles / Vancouver</td><td>UTC-8</td><td>UTC-7</td><td>North America West</td></tr>
+                <tr><td>Mumbai / Delhi</td><td>UTC+5:30</td><td>No DST</td><td>South Asia</td></tr>
+                <tr><td>Singapore / Kuala Lumpur</td><td>UTC+8</td><td>No DST</td><td>Southeast Asia</td></tr>
+                <tr><td>Tokyo / Seoul</td><td>UTC+9</td><td>No DST</td><td>East Asia</td></tr>
+                <tr><td>Sydney</td><td>UTC+10</td><td>UTC+11</td><td>Australia</td></tr>
+            </table>
+
+            <h2>The DST Trap</h2>
+
+            <p>Daylight Saving Time (DST) is the biggest source of scheduling errors. The US and Europe both observe DST but on different dates — the US typically changes on the second Sunday of March, while Europe changes on the last Sunday. For about two weeks each spring and autumn, the difference between New York and London is 4 hours instead of the usual 5.</p>
+
+            <p>If you have a recurring weekly call at "9am New York time", it will appear at a different local time for European participants during those transition weeks. Always use a timezone planner with up-to-date DST rules rather than manually calculating offsets.</p>
+
+            <div class="tip-box">
+                <strong>India and some other countries don't observe DST</strong>
+                <p>India (UTC+5:30), China (UTC+8), Japan (UTC+9), and Singapore (UTC+8) do not observe Daylight Saving Time. This means the offset between these countries and Europe or North America changes twice a year even though the Asian city's clocks never change.</p>
+            </div>
+
+            <h2>Finding Good Overlap Windows</h2>
+
+            <p>When scheduling across regions, here are the typical best overlap windows:</p>
+
+            <table>
+                <tr><th>Team combination</th><th>Best overlap window (approximate)</th></tr>
+                <tr><td>US East + UK / Western Europe</td><td>2pm–5pm London = 9am–12pm New York</td></tr>
+                <tr><td>US West + UK / Western Europe</td><td>4pm–6pm London = 8am–10am Los Angeles</td></tr>
+                <tr><td>UK / Europe + India</td><td>9am–12pm London = 2:30pm–5:30pm Mumbai</td></tr>
+                <tr><td>UK / Europe + Singapore / Tokyo</td><td>8am–10am London = 4pm–6pm Singapore</td></tr>
+                <tr><td>US East + Asia (any)</td><td>Very difficult — early morning US or late evening Asia</td></tr>
+                <tr><td>US West + Asia</td><td>8am–10am Los Angeles = midnight–2am in Asia (next day)</td></tr>
+            </table>
+
+            <h2>Etiquette for International Meetings</h2>
+
+            <ul>
+                <li><strong>Rotate inconvenient time slots</strong> — if one team always has to join at 7am or 9pm, alternate who bears the inconvenience</li>
+                <li><strong>State the time in UTC in meeting invites</strong> — "10am London / 5am New York / 6pm Singapore" removes ambiguity for all attendees</li>
+                <li><strong>Record meetings</strong> — attendees who can't join at a reasonable hour can watch the recording later</li>
+                <li><strong>Send agendas in advance</strong> — attendees in inconvenient timezones can submit questions or comments asynchronously if they know the agenda</li>
+                <li><strong>Be mindful of national holidays</strong> — a US holiday does not affect India, and vice versa; check before scheduling important calls</li>
+            </ul>
+
+            <h2>Including Timezone in Calendar Invites</h2>
+
+            <p>Google Calendar and Outlook both handle timezone correctly when you create an event — they store the time in UTC internally and display it in each attendee's local timezone. However, the invitation email should still mention the timezone explicitly, because recipients who receive the email on a device with an unexpected timezone setting may be confused.</p>
+
+            <p>Best practice: include the full timezone name and UTC offset in the meeting title or description. Example: <em>"Weekly sync — 9am New York (UTC-4) / 2pm London (UTC+1) / 9pm Singapore (UTC+8)"</em>.</p>
+
+            <div class="cta-box">
+                <h3>Plan Your Next Cross-Timezone Meeting</h3>
+                <p>Add all your participants' locations and see what time it is for everyone simultaneously — find the time that works best for the whole group.</p>
+                <a href="../tools/timezone-meeting-planner/">Open the Meeting Planner</a>
+            </div>
+
+            <h2>How to Use the Timezone Meeting Planner Tool</h2>
+
+            <ol>
+                <li>Open the <a href="../tools/timezone-meeting-planner/">Timezone Meeting Planner</a></li>
+                <li>Add the cities or timezones of all participants</li>
+                <li>The tool shows all time zones side by side across the day — colour-coded by working hours (green) and out-of-hours (red/orange)</li>
+                <li>Click any time slot to see the corresponding local time for all participants at once</li>
+                <li>Identify the green overlap windows where the most (or all) participants are within working hours</li>
+            </ol>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

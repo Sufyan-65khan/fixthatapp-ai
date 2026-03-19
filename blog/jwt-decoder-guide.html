@@ -1,28 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JWT Decoder Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use JWT Decoder with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/jwt-decoder-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT Decoder Guide: Read JSON Web Tokens and Debug Auth Issues | FixThatApp</title>
+    <meta name="description" content="Learn what a JWT is, understand the header/payload/signature structure, decode tokens manually, check expiry, and avoid security mistakes when working with JWTs.">
+    <meta name="keywords" content="jwt decoder, json web token, decode jwt, jwt claims, jwt expiry, jwt vs session, jwt authentication, base64url decode jwt">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/jwt-decoder-guide.html">
+    <meta property="og:title" content="JWT Decoder Guide: Read JSON Web Tokens and Debug Auth Issues">
+    <meta property="og:description" content="Learn what a JWT is, understand the header/payload/signature structure, decode tokens manually, check expiry, and avoid security mistakes when working with JWTs.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/jwt-decoder-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "JWT Decoder Guide: Read JSON Web Tokens and Debug Auth Issues",
+      "description": "Learn what a JWT is, understand the header/payload/signature structure, decode tokens manually, check expiry, and avoid security mistakes when working with JWTs.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/jwt-decoder-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .nav-links a:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>JWT Decoder Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>JWT Decoder is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/jwt-decoder/">JWT Decoder</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; JWT Decoder Guide</nav>
+        <article class="article">
+            <h1>JWT Decoder Guide: Read JSON Web Tokens and Debug Auth Issues</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>If you have worked with any modern API that uses OAuth, OpenID Connect, or token-based authentication, you have almost certainly encountered a JWT. These tokens look like a long, intimidating string of random characters — but they are actually structured data you can read directly. Understanding how to decode a JWT is an essential skill for debugging authentication problems.</p>
+
+            <p>This guide explains the structure of a JWT, what is in each part, the critical difference between decoding and verifying, and the security mistakes to avoid.</p>
+
+            <h2>What Is a JWT?</h2>
+            <p>JWT stands for JSON Web Token. It is an open standard (RFC 7519) for securely transmitting information between parties as a compact, URL-safe string. JWTs are widely used for:</p>
+            <ul>
+                <li><strong>Authentication:</strong> After a user logs in, the server issues a JWT. The client sends this token with every subsequent request to prove identity.</li>
+                <li><strong>Authorization:</strong> The token contains claims about what the user is allowed to do, so the server can make access decisions without querying a database.</li>
+                <li><strong>Information exchange:</strong> JWTs can carry verified data between services in a microservices architecture.</li>
+            </ul>
+
+            <h2>The Three-Part Structure</h2>
+            <p>A JWT consists of three base64url-encoded parts separated by dots:</p>
+            <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+.eyJzdWIiOiJ1c2VyXzEyMyIsIm5hbWUiOiJBbGljZSIsImlhdCI6MTcxMDAwMDAwMCwiZXhwIjoxNzEwMDg2NDAwfQ
+.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</pre>
+
+            <p>The three parts are:</p>
+            <ol>
+                <li><strong>Header</strong> — specifies the token type and signing algorithm</li>
+                <li><strong>Payload</strong> — contains the claims (the actual data)</li>
+                <li><strong>Signature</strong> — verifies the token has not been tampered with</li>
+            </ol>
+
+            <h2>Decoded: What Each Part Contains</h2>
+
+            <h3>The Header</h3>
+            <p>Base64url-decoding the first part of the example token gives:</p>
+            <pre>{
+  "alg": "HS256",
+  "typ": "JWT"
+}</pre>
+
+            <p><code>alg</code> specifies the signing algorithm (HMAC-SHA256 in this case). <code>typ</code> identifies the token type. Common algorithm values include <code>HS256</code>, <code>RS256</code> (RSA with SHA-256), and <code>ES256</code> (ECDSA).</p>
+
+            <h3>The Payload</h3>
+            <p>Base64url-decoding the second part gives the claims:</p>
+            <pre>{
+  "sub": "user_123",
+  "name": "Alice",
+  "iat": 1710000000,
+  "exp": 1710086400
+}</pre>
+
+            <p>This is where the useful information lives — the user's identity, permissions, and timing constraints.</p>
+
+            <h3>The Signature</h3>
+            <p>The third part is a cryptographic signature computed over the header and payload using the algorithm and secret key specified in the header. You cannot meaningfully "decode" the signature — its purpose is to be verified, not read.</p>
+
+            <h2>Standard JWT Claims</h2>
+            <table>
+                <thead>
+                    <tr><th>Claim</th><th>Name</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>iss</code></td><td>Issuer</td><td>Who issued the token (e.g., <code>https://auth.example.com</code>)</td></tr>
+                    <tr><td><code>sub</code></td><td>Subject</td><td>Who the token is about (usually a user ID)</td></tr>
+                    <tr><td><code>aud</code></td><td>Audience</td><td>Who the token is intended for (e.g., your API)</td></tr>
+                    <tr><td><code>exp</code></td><td>Expiration</td><td>Unix timestamp when the token expires</td></tr>
+                    <tr><td><code>iat</code></td><td>Issued At</td><td>Unix timestamp when the token was issued</td></tr>
+                    <tr><td><code>nbf</code></td><td>Not Before</td><td>Token is not valid before this Unix timestamp</td></tr>
+                    <tr><td><code>jti</code></td><td>JWT ID</td><td>Unique identifier for this token (for revocation)</td></tr>
+                </tbody>
+            </table>
+
+            <p>Applications also add their own custom claims. You might see <code>email</code>, <code>roles</code>, <code>permissions</code>, <code>tenant_id</code>, or any other application-specific data that needs to travel with the token.</p>
+
+            <div class="cta-box">
+                <h3>Decode a JWT Instantly</h3>
+                <p>Paste any JWT and see the decoded header and payload in human-readable format — free, no login required.</p>
+                <a href="../tools/jwt-decoder/">Open JWT Decoder Tool</a>
+            </div>
+
+            <h2>Decoding vs. Verifying: A Critical Distinction</h2>
+            <p>This is the most important concept to understand when working with JWTs.</p>
+
+            <p><strong>Decoding</strong> means base64url-decoding the header and payload to read their contents. Anyone can do this — no secret is required. The JWT decoder tool does exactly this.</p>
+
+            <p><strong>Verifying</strong> means checking the signature to confirm the token was issued by a trusted party and has not been modified. Verification requires the secret key (for HMAC algorithms) or the public key (for RSA/ECDSA algorithms). Without verification, you cannot trust the claims in the token.</p>
+
+            <p>A decoder tool is useful for reading and debugging — seeing what claims are present, checking expiry times, understanding the token structure. It does not and cannot tell you whether a token is authentic. Never use an unverified JWT to make authorization decisions in your application.</p>
+
+            <h2>How to Check if a JWT Is Expired</h2>
+            <p>The <code>exp</code> claim is a Unix timestamp — the number of seconds since January 1, 1970 UTC. To check if a token is expired:</p>
+            <ol>
+                <li>Decode the payload and find the <code>exp</code> value</li>
+                <li>Compare it to the current Unix timestamp</li>
+                <li>If <code>exp</code> is less than the current time, the token is expired</li>
+            </ol>
+
+            <p>You can quickly check the current Unix timestamp with <code>Math.floor(Date.now() / 1000)</code> in JavaScript or <code>import time; int(time.time())</code> in Python. The JWT decoder tool typically converts the timestamp to a human-readable date automatically.</p>
+
+            <h2>How to Decode a JWT Manually</h2>
+            <p>JWT parts are encoded with base64url encoding, which uses <code>-</code> instead of <code>+</code> and <code>_</code> instead of <code>/</code> compared to standard base64, and omits padding characters. To decode manually in JavaScript:</p>
+
+            <pre>function decodeJwtPayload(token) {
+  const parts = token.split('.');
+  const payload = parts[1];
+  // Replace base64url chars with standard base64
+  const base64 = payload.replace(/-/g, '+').replace(/_/g, '/');
+  // Pad to multiple of 4 if needed
+  const padded = base64.padEnd(base64.length + (4 - base64.length % 4) % 4, '=');
+  return JSON.parse(atob(padded));
+}</pre>
+
+            <p>This is exactly what the decoder tool does — base64url-decodes the header and payload and formats them as JSON.</p>
+
+            <h2>Security Warning: JWT Payload Is Not Encrypted</h2>
+            <p>This is the most commonly misunderstood aspect of JWTs. The payload is only <strong>base64url encoded</strong> — not encrypted. Base64 encoding is completely reversible by anyone. Any data in a JWT payload can be read by anyone who has the token.</p>
+
+            <p>This means you should never put sensitive data in a JWT payload:</p>
+            <ul>
+                <li>Do not include passwords or password hashes</li>
+                <li>Do not include API keys or secrets</li>
+                <li>Do not include full credit card numbers or government IDs</li>
+                <li>Do not include data the user should not be able to see</li>
+            </ul>
+
+            <p>JWTs are safe for user identifiers, roles, permissions, email addresses, and other non-sensitive profile information. If you need to transmit encrypted data in a token, use JWE (JSON Web Encryption) rather than a standard JWT.</p>
+
+            <h2>JWT vs. Session Tokens</h2>
+            <p>Traditional session-based authentication stores session data on the server. The client holds only a session ID cookie. Every request, the server looks up the session ID to find the associated user data.</p>
+
+            <p>JWTs are <strong>stateless</strong> — all the user information is in the token itself. The server does not need to look anything up; it just verifies the signature. This makes JWTs excellent for distributed systems and APIs used by multiple services. The trade-off is that JWTs cannot be easily revoked before expiry (since there is no server-side state to invalidate), and if a token is stolen, it remains valid until it expires.</p>
+
+            <h2>Use Cases for the JWT Decoder Tool</h2>
+            <ul>
+                <li>Debugging a "401 Unauthorized" error by checking whether the token is expired or contains the expected claims</li>
+                <li>Verifying that your auth provider is issuing tokens with the correct roles or permissions</li>
+                <li>Inspecting the <code>aud</code> claim to confirm the token is issued for the right audience</li>
+                <li>Checking the <code>iss</code> claim to confirm the token came from the expected issuer</li>
+                <li>Understanding the structure of a third-party token during integration work</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>Do not paste production tokens into public tools</strong>
+                If a JWT contains sensitive user data or grants access to production systems, be careful about pasting it into any online tool. Use test tokens or expired tokens when debugging in public environments. The decoder on this site runs in your browser and does not transmit your token to any server.
+            </div>
+
+            <h2>Summary</h2>
+            <p>A JWT is a three-part token: a header specifying the algorithm, a payload containing claims, and a signature for verification. The payload is base64url-encoded — not encrypted — and can be read by anyone with the token. Never include sensitive data in a JWT payload. Decoding reads the contents; verifying checks the signature using the secret or public key. Use the decoder tool to inspect token claims, check expiry, and debug authentication issues. For making authorization decisions in your application, always verify the signature using a proper JWT library.</p>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

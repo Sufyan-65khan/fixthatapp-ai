@@ -1,28 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unix Timestamp Converter Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use Unix Timestamp Converter with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/unix-timestamp-converter-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unix Timestamp Converter: Complete Guide to Epoch Time | FixThatApp</title>
+    <meta name="description" content="Learn what Unix timestamps are, how to convert epoch time to readable dates, and why developers use Unix time. Includes code examples in JavaScript, Python, and PHP.">
+    <meta name="keywords" content="unix timestamp, epoch time, unix time converter, timestamp to date, epoch converter, javascript timestamp, python timestamp">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/unix-timestamp-converter-guide.html">
+    <meta property="og:title" content="Unix Timestamp Converter: Complete Guide to Epoch Time | FixThatApp">
+    <meta property="og:description" content="Learn what Unix timestamps are, how to convert epoch time to readable dates, and why developers use Unix time.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/unix-timestamp-converter-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Unix Timestamp Converter: Complete Guide to Epoch Time",
+      "description": "Learn what Unix timestamps are, how to convert epoch time to readable dates, and why developers use Unix time.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/unix-timestamp-converter-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .nav-links a:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article pre code{background:none;padding:0}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>Unix Timestamp Converter Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>Unix Timestamp Converter is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/unix-timestamp-converter/">Unix Timestamp Converter</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; Unix Timestamp Converter Guide</nav>
+        <article class="article">
+            <h1>Unix Timestamp Converter: Complete Guide to Epoch Time</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>A Unix timestamp (also called epoch time or POSIX time) is the number of seconds that have elapsed since <strong>January 1, 1970 at 00:00:00 UTC</strong>. It is the single most common way computers store and compare dates and times in code, databases, and APIs. If you have ever seen a number like <code>1742380800</code> in a log file or API response and wondered what it means — this guide explains everything.</p>
+
+            <h2>Why Unix Timestamps Exist</h2>
+
+            <p>Human-readable date strings like "March 19, 2026 09:00 AM" are complicated for computers. They require parsing, timezone handling, and locale awareness. A Unix timestamp is just an integer — simple to store, sort, and compare. Subtract two timestamps and you get the elapsed seconds instantly. That is why timestamps appear in:</p>
+            <ul>
+                <li>Database records (<code>created_at</code>, <code>updated_at</code> columns)</li>
+                <li>JWT tokens (<code>exp</code> and <code>iat</code> claims)</li>
+                <li>HTTP cache headers (<code>Last-Modified</code>, <code>Expires</code>)</li>
+                <li>Log files and audit trails</li>
+                <li>File system metadata (creation/modification time)</li>
+                <li>Cookie expiry values</li>
+            </ul>
+
+            <h2>Seconds vs Milliseconds</h2>
+
+            <p>This is the most common source of confusion. Unix timestamps traditionally count <strong>seconds</strong>, but JavaScript's <code>Date.now()</code> returns <strong>milliseconds</strong>. A seconds-based timestamp for March 2026 is around <code>1742000000</code> (10 digits). A milliseconds-based timestamp is around <code>1742000000000</code> (13 digits). If a timestamp looks 1000× too large, you are likely looking at milliseconds when you expected seconds.</p>
+
+            <table>
+                <tr><th>Format</th><th>Example value</th><th>Digits</th></tr>
+                <tr><td>Unix seconds</td><td><code>1742380800</code></td><td>10</td></tr>
+                <tr><td>Unix milliseconds</td><td><code>1742380800000</code></td><td>13</td></tr>
+                <tr><td>Unix microseconds</td><td><code>1742380800000000</code></td><td>16</td></tr>
+            </table>
+
+            <h2>Notable Unix Timestamps</h2>
+
+            <table>
+                <tr><th>Timestamp</th><th>Date</th><th>Significance</th></tr>
+                <tr><td><code>0</code></td><td>Jan 1, 1970 00:00 UTC</td><td>The Unix epoch — the origin point</td></tr>
+                <tr><td><code>1000000000</code></td><td>Sep 9, 2001</td><td>Unix time hit 1 billion</td></tr>
+                <tr><td><code>1234567890</code></td><td>Feb 13, 2009</td><td>Celebrated by developers worldwide</td></tr>
+                <tr><td><code>2147483647</code></td><td>Jan 19, 2038</td><td>Y2K38: max value for 32-bit signed int</td></tr>
+                <tr><td><code>2000000000</code></td><td>May 18, 2033</td><td>Unix time hits 2 billion</td></tr>
+            </table>
+
+            <div class="tip-box">
+                <strong>The Y2K38 Problem</strong>
+                <p>Systems that store Unix time as a 32-bit signed integer will overflow on January 19, 2038 at 03:14:07 UTC. Modern 64-bit systems can store timestamps hundreds of billions of years into the future, but embedded systems and legacy software may still be affected. Check that your database timestamp columns use 64-bit integers or the <code>TIMESTAMP(6)</code> type.</p>
+            </div>
+
+            <h2>Getting the Current Timestamp in Code</h2>
+
+            <h3>JavaScript</h3>
+            <pre><code>// Milliseconds (divide by 1000 for seconds)
+Date.now()                          // e.g. 1742380800000
+Math.floor(Date.now() / 1000)       // seconds: 1742380800
+
+// From a Date object
+new Date().getTime()                // milliseconds</code></pre>
+
+            <h3>Python</h3>
+            <pre><code>import time
+time.time()           # seconds as float: 1742380800.123
+int(time.time())      # integer seconds: 1742380800
+
+# Using datetime
+from datetime import datetime, timezone
+datetime.now(timezone.utc).timestamp()</code></pre>
+
+            <h3>PHP</h3>
+            <pre><code>time()          // current Unix timestamp in seconds
+microtime(true) // with microseconds as float</code></pre>
+
+            <h3>SQL</h3>
+            <pre><code>-- MySQL / MariaDB
+SELECT UNIX_TIMESTAMP();
+SELECT UNIX_TIMESTAMP('2026-03-19 09:00:00');
+
+-- PostgreSQL
+SELECT EXTRACT(EPOCH FROM NOW());
+
+-- SQLite
+SELECT strftime('%s', 'now');</code></pre>
+
+            <div class="cta-box">
+                <h3>Convert Any Unix Timestamp Instantly</h3>
+                <p>Paste a timestamp and get the human-readable date in your local timezone — or convert a date back to a timestamp.</p>
+                <a href="../tools/unix-timestamp-converter/">Open the Timestamp Converter</a>
+            </div>
+
+            <h2>Converting a Timestamp to a Readable Date</h2>
+
+            <p>To convert <code>1742380800</code> back to a date, the tool (or your code) takes the number of seconds, adds them to January 1 1970, and applies the target timezone offset. The same timestamp will display as a different local time depending on the viewer's timezone — but it always refers to the exact same moment in time.</p>
+
+            <h3>JavaScript example</h3>
+            <pre><code>const ts = 1742380800;
+const date = new Date(ts * 1000); // multiply by 1000 for ms
+console.log(date.toISOString());   // "2026-03-19T08:00:00.000Z"
+console.log(date.toLocaleString()); // local timezone</code></pre>
+
+            <h3>Python example</h3>
+            <pre><code>from datetime import datetime, timezone
+ts = 1742380800
+dt = datetime.fromtimestamp(ts, tz=timezone.utc)
+print(dt.isoformat())  # 2026-03-19T08:00:00+00:00</code></pre>
+
+            <h2>Unix Timestamps in JWT Tokens</h2>
+
+            <p>JSON Web Tokens use Unix timestamps for two critical claims: <code>iat</code> (issued at) and <code>exp</code> (expires at). If a JWT is expiring unexpectedly or "in the past", the first thing to check is whether the server clock is in sync. An NTP drift of even a few minutes can cause token rejections. Use our <a href="./jwt-decoder-guide.html">JWT Decoder guide</a> to inspect token claims directly.</p>
+
+            <h2>How to Use the Unix Timestamp Converter Tool</h2>
+
+            <ol>
+                <li>Open the <a href="../tools/unix-timestamp-converter/">Unix Timestamp Converter</a></li>
+                <li>To convert a timestamp to a date: paste the number (seconds or milliseconds) into the timestamp field and click Convert</li>
+                <li>To convert a date to a timestamp: enter the date and time, select the timezone, and the tool returns the corresponding Unix timestamp</li>
+                <li>The result shows both UTC and your local time</li>
+            </ol>
+
+            <h2>Common Mistakes</h2>
+
+            <ul>
+                <li><strong>Mixing seconds and milliseconds</strong> — always check the digit count (10 = seconds, 13 = milliseconds)</li>
+                <li><strong>Ignoring timezone</strong> — a timestamp is always UTC internally; timezone only affects display</li>
+                <li><strong>Storing as 32-bit integer</strong> — will overflow in 2038; use 64-bit or BIGINT</li>
+                <li><strong>Negative timestamps</strong> — valid and refer to dates before 1970 (e.g. <code>-86400</code> = Dec 31, 1969)</li>
+                <li><strong>Comparing timestamps from different precision systems</strong> — always normalise to the same unit before comparing</li>
+            </ul>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

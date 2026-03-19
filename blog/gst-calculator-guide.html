@@ -1,28 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GST Calculator Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use GST Calculator with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/gst-calculator-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Calculator Guide: Add GST, Remove GST, and Understand Tax-Inclusive Pricing | FixThatApp</title>
+    <meta name="description" content="Learn how to add GST to a price, extract GST from a tax-inclusive amount, and understand how GST works across different rates. Includes formulas and worked examples for India, Australia, New Zealand, and Canada.">
+    <meta name="keywords" content="GST calculator, add GST to price, remove GST, GST inclusive price, GST exclusive price, how to calculate GST, GST formula, reverse GST calculator">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/gst-calculator-guide.html">
+    <meta property="og:title" content="GST Calculator Guide: Add GST, Remove GST, and Understand Tax-Inclusive Pricing | FixThatApp">
+    <meta property="og:description" content="Learn how to add GST to a price, extract GST from a tax-inclusive amount, with worked examples and formulas.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/gst-calculator-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "GST Calculator Guide: Add GST, Remove GST, and Understand Tax-Inclusive Pricing",
+      "description": "Learn how to add GST to a price, extract GST from a tax-inclusive amount, with worked examples.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/gst-calculator-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article pre code{background:none;padding:0}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>GST Calculator Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>GST Calculator is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/gst-calculator/">GST Calculator</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; GST Calculator Guide</nav>
+        <article class="article">
+            <h1>GST Calculator Guide: Add GST, Remove GST, and Understand Tax-Inclusive Pricing</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>GST (Goods and Services Tax) is a broad-based consumption tax levied in many countries including India, Australia, New Zealand, Canada, and Singapore. The tax is applied as a percentage of the sale price. Businesses need to add GST to invoices, and consumers need to know the before-tax price when comparing costs. A GST calculator handles both directions: adding GST to a net price, and extracting the GST component from a GST-inclusive total.</p>
+
+            <h2>GST Rates by Country</h2>
+
+            <table>
+                <tr><th>Country</th><th>Standard GST/VAT rate</th><th>Notes</th></tr>
+                <tr><td>India</td><td>5%, 12%, 18%, 28%</td><td>Multiple slabs; most goods 18%</td></tr>
+                <tr><td>Australia</td><td>10%</td><td>Flat rate with some exemptions</td></tr>
+                <tr><td>New Zealand</td><td>15%</td><td>Almost no exemptions</td></tr>
+                <tr><td>Canada</td><td>5% GST + provincial HST/PST</td><td>Combined rate 13–15% in most provinces</td></tr>
+                <tr><td>Singapore</td><td>9%</td><td>Increased from 8% in 2024</td></tr>
+                <tr><td>UK</td><td>20%</td><td>Called VAT; some goods at 5% or 0%</td></tr>
+                <tr><td>Germany / France</td><td>19% / 20%</td><td>Called VAT; reduced rates for food/essentials</td></tr>
+            </table>
+
+            <h2>Adding GST to a Price (Exclusive to Inclusive)</h2>
+
+            <p>When you have a price <strong>before tax</strong> (GST-exclusive) and want to find the total price the customer pays:</p>
+
+            <pre><code>GST Amount = Net Price × (GST Rate / 100)
+Gross Price = Net Price + GST Amount
+           = Net Price × (1 + GST Rate / 100)
+
+Example (10% GST):
+Net Price = $450
+GST Amount = 450 × 0.10 = $45
+Gross Price = $450 + $45 = $495</code></pre>
+
+            <h2>Removing GST from a Price (Inclusive to Exclusive)</h2>
+
+            <p>When you have a price that <strong>already includes tax</strong> and need to find the pre-tax amount or the exact GST component:</p>
+
+            <pre><code>Net Price = Gross Price / (1 + GST Rate / 100)
+GST Amount = Gross Price - Net Price
+
+Example (10% GST):
+Gross Price = $495
+Net Price = 495 / 1.10 = $450
+GST Amount = 495 - 450 = $45</code></pre>
+
+            <div class="tip-box">
+                <strong>Common mistake: dividing by the rate instead of (1 + rate)</strong>
+                <p>To remove 10% GST from $495, the correct method is to divide by 1.10, giving $450. A common error is to calculate 10% of $495 = $49.50, then subtract to get $445.50. This is wrong because it treats 10% as a percentage of the gross (inclusive) price rather than the net price. The GST is always calculated on the net price.</p>
+            </div>
+
+            <h2>India's Multi-Rate GST Slabs</h2>
+
+            <p>India operates a tiered GST system where different goods and services attract different rates. Understanding which slab applies is as important as knowing how to calculate it.</p>
+
+            <table>
+                <tr><th>GST rate</th><th>Typical goods and services</th></tr>
+                <tr><td>0% (exempt)</td><td>Fresh produce, milk, curd, books, newspapers</td></tr>
+                <tr><td>5%</td><td>Packaged food, small restaurants, economy hotel rooms</td></tr>
+                <tr><td>12%</td><td>Processed food, computers, business class air travel</td></tr>
+                <tr><td>18%</td><td>Most manufactured goods, professional services, telecom</td></tr>
+                <tr><td>28%</td><td>Luxury goods, automobiles, tobacco, aerated drinks</td></tr>
+            </table>
+
+            <h2>GST on Invoices and Business Records</h2>
+
+            <p>For businesses registered for GST, invoices must show the net amount, the GST amount, and the gross total separately. The GST collected is held in trust for the government and remitted periodically (monthly or quarterly depending on the country and turnover).</p>
+
+            <p><strong>Input Tax Credit (ITC)</strong> is the mechanism that prevents double taxation: GST-registered businesses can claim back the GST they paid on their own business purchases (inputs) against the GST they collected from sales (outputs). Only the net GST — collected minus paid — is remitted to the government.</p>
+
+            <h2>Reverse Charge Mechanism</h2>
+
+            <p>In some transactions, particularly imports or services received from unregistered suppliers, the buyer is required to pay GST directly to the government rather than paying it to the supplier. This is called the reverse charge mechanism. A GST calculator helps verify the correct amounts in these cases as well.</p>
+
+            <div class="cta-box">
+                <h3>Calculate GST Instantly</h3>
+                <p>Add GST to a net price or extract GST from a gross amount — choose your country's rate or enter a custom rate.</p>
+                <a href="../tools/gst-calculator/">Open the GST Calculator</a>
+            </div>
+
+            <h2>How to Use the GST Calculator</h2>
+
+            <ol>
+                <li>Open the <a href="../tools/gst-calculator/">GST Calculator</a></li>
+                <li>Select your country or enter a custom GST rate percentage</li>
+                <li>Choose the direction: "Add GST" (net to gross) or "Remove GST" (gross to net)</li>
+                <li>Enter the price amount</li>
+                <li>The tool shows the net price, GST amount, and gross price all at once</li>
+                <li>For Indian users, select the applicable GST slab (5%, 12%, 18%, 28%) from the preset options</li>
+            </ol>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

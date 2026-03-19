@@ -1,28 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tax Calculator Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use Tax Calculator with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/tax-calculator-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator Guide: Income Tax Slabs, Effective Rate, and Take-Home Pay | FixThatApp</title>
+    <meta name="description" content="Understand how progressive income tax works, calculate your effective tax rate vs marginal rate, estimate take-home pay, and learn how deductions reduce your taxable income. Covers India, US, and general concepts.">
+    <meta name="keywords" content="tax calculator, income tax calculator, effective tax rate, marginal tax rate, tax slabs India, take home pay calculator, tax deductions, salary after tax">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/tax-calculator-guide.html">
+    <meta property="og:title" content="Tax Calculator Guide: Income Tax Slabs, Effective Rate, and Take-Home Pay | FixThatApp">
+    <meta property="og:description" content="Understand progressive income tax, effective vs marginal rate, and how deductions reduce your taxable income.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/tax-calculator-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Tax Calculator Guide: Income Tax Slabs, Effective Rate, and Take-Home Pay",
+      "description": "Understand progressive income tax, effective vs marginal rate, and how deductions reduce your taxable income.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/tax-calculator-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article pre code{background:none;padding:0}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>Tax Calculator Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>Tax Calculator is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/tax-calculator/">Tax Calculator</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; Tax Calculator Guide</nav>
+        <article class="article">
+            <h1>Tax Calculator Guide: Income Tax Slabs, Effective Rate, and Take-Home Pay</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>Understanding how much tax you pay — and how it is calculated — is essential for financial planning, salary negotiation, and investment decisions. Most countries use a <strong>progressive tax system</strong> where different portions of your income are taxed at different rates. This means "I'm in the 30% tax bracket" does NOT mean you pay 30% of your entire income. Only the slice of income above that bracket's threshold is taxed at 30%.</p>
+
+            <h2>How Progressive Tax Slabs Work</h2>
+
+            <p>In a progressive system, income is divided into bands (slabs). Only the income within each band is taxed at that band's rate. Here is an illustrative example with a simplified 3-slab system:</p>
+
+            <table>
+                <tr><th>Income slab</th><th>Tax rate</th><th>Tax on that slice</th></tr>
+                <tr><td>₹0 – ₹3,00,000</td><td>0%</td><td>₹0</td></tr>
+                <tr><td>₹3,00,001 – ₹7,00,000</td><td>5%</td><td>₹20,000</td></tr>
+                <tr><td>₹7,00,001 – ₹10,00,000</td><td>10%</td><td>₹30,000</td></tr>
+                <tr><td>₹10,00,001 – ₹12,00,000</td><td>15%</td><td>₹30,000</td></tr>
+                <tr><td>₹12,00,001 – ₹15,00,000</td><td>20%</td><td>₹60,000</td></tr>
+                <tr><td>Above ₹15,00,000</td><td>30%</td><td>30% on amount above ₹15L</td></tr>
+            </table>
+
+            <h2>Marginal Rate vs Effective Rate</h2>
+
+            <p>These two rates are often confused:</p>
+
+            <ul>
+                <li><strong>Marginal tax rate</strong> — the rate applied to the last (highest) rupee of income. If you earn ₹16,00,000, your marginal rate is 30% (only on the ₹1L above the ₹15L threshold)</li>
+                <li><strong>Effective tax rate</strong> — the actual percentage of your total income paid as tax. Always lower than the marginal rate in a progressive system</li>
+            </ul>
+
+            <pre><code>Example: Annual income ₹16,00,000 (using simplified slabs above)
+Tax = 0 + 20,000 + 30,000 + 30,000 + 60,000 + (1,00,000 × 30%)
+    = 0 + 20,000 + 30,000 + 30,000 + 60,000 + 30,000
+    = ₹1,70,000
+
+Marginal rate: 30%
+Effective rate: 1,70,000 / 16,00,000 × 100 = 10.6%</code></pre>
+
+            <h2>How Deductions Reduce Tax</h2>
+
+            <p>Deductions reduce your <strong>taxable income</strong> — the income on which tax is calculated — rather than directly reducing your tax bill. The tax saving from a deduction depends on your marginal rate.</p>
+
+            <pre><code>Tax saving from a deduction = Deduction Amount × Marginal Tax Rate
+
+Example: ₹1,50,000 deduction under Section 80C, marginal rate 20%
+Tax saving = 1,50,000 × 0.20 = ₹30,000</code></pre>
+
+            <p>This is why high earners get more tax benefit from the same deduction than lower earners — their marginal rate is higher.</p>
+
+            <h2>India: Old vs New Tax Regime</h2>
+
+            <p>India offers two tax regimes for individual taxpayers:</p>
+
+            <table>
+                <tr><th>Feature</th><th>Old regime</th><th>New regime (default from FY 2024-25)</th></tr>
+                <tr><td>Deductions allowed</td><td>Yes (HRA, 80C, 80D, etc.)</td><td>No (standard deduction of ₹75,000 only)</td></tr>
+                <tr><td>Tax rates</td><td>Higher slabs</td><td>Lower slabs</td></tr>
+                <tr><td>Best for</td><td>High deduction claims</td><td>Low or no deductions</td></tr>
+                <tr><td>Standard deduction</td><td>₹50,000</td><td>₹75,000</td></tr>
+            </table>
+
+            <p>Which regime is better depends on your total deduction claims. If your deductions are large enough to bring down taxable income significantly, the old regime may still produce a lower tax bill despite higher rates. The breakeven point varies by income level and must be calculated individually.</p>
+
+            <div class="tip-box">
+                <strong>Salary CTC vs in-hand pay are very different</strong>
+                <p>CTC (Cost to Company) includes components the employer pays on your behalf: PF (Provident Fund) employer contribution, gratuity provisions, insurance premiums. Your in-hand (take-home) pay is after subtracting income tax, employee PF contribution (12% of basic), professional tax (state-level), and any salary advances. Always use a tax calculator on your taxable salary — not your CTC — for accurate results.</p>
+            </div>
+
+            <h2>Components That Reduce Taxable Salary</h2>
+
+            <ul>
+                <li><strong>HRA (House Rent Allowance)</strong> — partially or fully exempt if you pay rent; calculated based on actual rent paid, HRA received, and city</li>
+                <li><strong>LTA (Leave Travel Allowance)</strong> — exempt for actual travel costs twice in a 4-year block</li>
+                <li><strong>Standard Deduction</strong> — ₹75,000 flat deduction for salaried employees under new regime</li>
+                <li><strong>Section 80C</strong> — up to ₹1,50,000 for PPF, ELSS, life insurance premium, home loan principal repayment (old regime)</li>
+                <li><strong>Section 80D</strong> — health insurance premiums (old regime)</li>
+                <li><strong>NPS (Section 80CCD)</strong> — additional ₹50,000 beyond 80C limit (old regime)</li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>Calculate Your Income Tax Instantly</h3>
+                <p>Enter your income, deductions, and regime choice to see your tax liability, effective rate, and take-home pay.</p>
+                <a href="../tools/tax-calculator/">Open the Tax Calculator</a>
+            </div>
+
+            <h2>How to Use the Tax Calculator</h2>
+
+            <ol>
+                <li>Open the <a href="../tools/tax-calculator/">Tax Calculator</a></li>
+                <li>Select your country and assessment year</li>
+                <li>Enter your gross annual income</li>
+                <li>Enter applicable deductions (HRA, 80C, 80D, etc.)</li>
+                <li>The tool shows: taxable income, tax by slab, total tax, effective rate, and estimated monthly take-home</li>
+                <li>For Indian users, switch between old and new regime to see which produces lower tax</li>
+                <li>Include surcharge and cess (4% health and education cess in India) in the final calculation</li>
+            </ol>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

@@ -1,28 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>URL Encoder Decoder Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use URL Encoder Decoder with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/url-encoder-decoder-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encoder/Decoder Guide: Safely Pass Data in URLs | FixThatApp</title>
+    <meta name="description" content="Learn why URL encoding exists, which characters get encoded, the difference between encodeURI and encodeURIComponent, percent-encoding vs form encoding, and common mistakes to avoid.">
+    <meta name="keywords" content="url encoder decoder, percent encoding, url encode, encodeURIComponent, url encoding special characters, query string encoding, url decode online">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/url-encoder-decoder-guide.html">
+    <meta property="og:title" content="URL Encoder/Decoder Guide: Safely Pass Data in URLs">
+    <meta property="og:description" content="Learn why URL encoding exists, which characters get encoded, the difference between encodeURI and encodeURIComponent, percent-encoding vs form encoding, and common mistakes to avoid.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/url-encoder-decoder-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "URL Encoder/Decoder Guide: Safely Pass Data in URLs",
+      "description": "Learn why URL encoding exists, which characters get encoded, the difference between encodeURI and encodeURIComponent, percent-encoding vs form encoding, and common mistakes to avoid.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/url-encoder-decoder-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .nav-links a:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>URL Encoder Decoder Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>URL Encoder Decoder is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/url-encoder-decoder/">URL Encoder Decoder</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; URL Encoder/Decoder Guide</nav>
+        <article class="article">
+            <h1>URL Encoder/Decoder Guide: Safely Pass Data in URLs</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>URLs can only contain a limited set of characters. When you need to include data that contains spaces, ampersands, equals signs, or non-ASCII characters in a URL, those characters must be encoded. Failing to encode them correctly leads to broken links, malformed query strings, and subtle bugs that can be infuriating to trace.</p>
+
+            <p>This guide explains why URL encoding exists, which characters must be encoded, the difference between percent-encoding and form encoding, how to use JavaScript's encoding functions correctly, and the common mistakes that trip up developers.</p>
+
+            <h2>Why URL Encoding Exists</h2>
+            <p>URLs are defined by the RFC 3986 specification, which specifies that a URL may only contain a specific set of "unreserved" characters without encoding: uppercase and lowercase letters (A-Z, a-z), digits (0-9), and four symbols: <code>-</code>, <code>_</code>, <code>.</code>, and <code>~</code>.</p>
+
+            <p>Other characters either have special structural meaning in a URL (like <code>/</code> for path separators, <code>?</code> for the query string start, <code>&amp;</code> for parameter separators, <code>=</code> for key-value pairs, and <code>#</code> for fragment identifiers) or simply cannot be reliably transmitted in a URL as-is.</p>
+
+            <p>When you need to include a character that has special meaning — or any character outside the safe set — you must percent-encode it: replace it with a <code>%</code> followed by the character's two-digit hexadecimal code.</p>
+
+            <h2>How Percent-Encoding Works</h2>
+            <p>Each character to be encoded is represented as <code>%XX</code> where <code>XX</code> is the hexadecimal value of the character's byte. For ASCII characters this is straightforward. For multi-byte Unicode characters, the UTF-8 encoding of the character is used, and each byte is percent-encoded separately.</p>
+
+            <p>For example:</p>
+            <ul>
+                <li>Space becomes <code>%20</code></li>
+                <li>Ampersand <code>&amp;</code> becomes <code>%26</code></li>
+                <li>Equals sign <code>=</code> becomes <code>%3D</code></li>
+                <li>Plus sign <code>+</code> becomes <code>%2B</code></li>
+                <li>Hash <code>#</code> becomes <code>%23</code></li>
+                <li>Forward slash <code>/</code> becomes <code>%2F</code></li>
+                <li>Question mark <code>?</code> becomes <code>%3F</code></li>
+            </ul>
+
+            <h2>Common URL-Encoded Characters Reference</h2>
+            <table>
+                <thead>
+                    <tr><th>Character</th><th>Percent Encoded</th><th>Why It Needs Encoding</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Space</td><td><code>%20</code></td><td>Not allowed in URLs</td></tr>
+                    <tr><td>&amp;</td><td><code>%26</code></td><td>Separates query parameters</td></tr>
+                    <tr><td>=</td><td><code>%3D</code></td><td>Separates key from value</td></tr>
+                    <tr><td>+</td><td><code>%2B</code></td><td>Can mean "space" in form encoding</td></tr>
+                    <tr><td>#</td><td><code>%23</code></td><td>Starts the fragment identifier</td></tr>
+                    <tr><td>/</td><td><code>%2F</code></td><td>Path separator</td></tr>
+                    <tr><td>?</td><td><code>%3F</code></td><td>Starts the query string</td></tr>
+                    <tr><td>@</td><td><code>%40</code></td><td>Used in authority component</td></tr>
+                    <tr><td>:</td><td><code>%3A</code></td><td>Used in scheme and port</td></tr>
+                    <tr><td>"</td><td><code>%22</code></td><td>Not allowed in URLs</td></tr>
+                    <tr><td>&lt;</td><td><code>%3C</code></td><td>Not allowed in URLs</td></tr>
+                    <tr><td>&gt;</td><td><code>%3E</code></td><td>Not allowed in URLs</td></tr>
+                </tbody>
+            </table>
+
+            <h2>A Worked Example</h2>
+            <p>Suppose you want to build a search URL that passes this query string as a parameter value:</p>
+            <pre>coffee &amp; tea prices</pre>
+
+            <p>Unencoded (broken) URL:</p>
+            <pre>https://example.com/search?q=coffee &amp; tea prices&amp;category=drinks</pre>
+
+            <p>The ampersands and spaces will be interpreted as URL structure, not as part of the query value. The server will receive garbled parameters.</p>
+
+            <p>Correctly encoded URL:</p>
+            <pre>https://example.com/search?q=coffee%20%26%20tea%20prices&amp;category=drinks</pre>
+
+            <p>Now the <code>q</code> parameter correctly contains the full string <code>coffee &amp; tea prices</code>, and the structural <code>&amp;</code> between parameters is preserved correctly.</p>
+
+            <div class="cta-box">
+                <h3>Encode or Decode URLs Instantly</h3>
+                <p>Paste your URL or text and encode or decode it with one click — free, no login required.</p>
+                <a href="../tools/url-encoder-decoder/">Open URL Encoder/Decoder Tool</a>
+            </div>
+
+            <h2>Percent-Encoding vs. application/x-www-form-urlencoded</h2>
+            <p>There are two different encoding schemes you will encounter, and they differ in one key way: how they handle spaces.</p>
+
+            <p><strong>Percent-encoding (RFC 3986):</strong> Spaces are encoded as <code>%20</code>. This is the standard for URLs in general.</p>
+
+            <p><strong>application/x-www-form-urlencoded:</strong> Spaces are encoded as <code>+</code> (a plus sign). This is the encoding used when HTML forms are submitted with method GET or POST and the default content type. When a server receives a <code>+</code> in a query string parameter, it decodes it as a space.</p>
+
+            <p>These two schemes are compatible in most cases, but mixing them can cause issues. If a value legitimately contains a <code>+</code> character, form encoding must encode it as <code>%2B</code> to distinguish it from a space. Use <code>%20</code> in URLs that you construct manually to avoid any ambiguity.</p>
+
+            <h2>encodeURI vs. encodeURIComponent in JavaScript</h2>
+            <p>JavaScript provides two built-in functions for URL encoding, and choosing the wrong one is a very common mistake.</p>
+
+            <h3>encodeURI()</h3>
+            <p><code>encodeURI()</code> encodes a complete URL. It preserves characters that have structural meaning in a URL — <code>:</code>, <code>/</code>, <code>?</code>, <code>#</code>, <code>&amp;</code>, <code>=</code>, and others — because removing these would break the URL structure.</p>
+
+            <pre>encodeURI('https://example.com/search?q=coffee & tea')
+// Returns: 'https://example.com/search?q=coffee%20&%20tea'
+// Problem: & is NOT encoded, so it still acts as a separator!</pre>
+
+            <h3>encodeURIComponent()</h3>
+            <p><code>encodeURIComponent()</code> encodes a URL component — a single value that will be placed inside a URL. It encodes everything except unreserved characters (letters, digits, <code>-</code>, <code>_</code>, <code>.</code>, <code>~</code>), including the structural characters that <code>encodeURI</code> preserves.</p>
+
+            <pre>encodeURIComponent('coffee & tea')
+// Returns: 'coffee%20%26%20tea'
+// Correct: & is encoded so it won't be misread as a parameter separator
+
+// Build a URL correctly:
+const query = encodeURIComponent('coffee & tea');
+const url = `https://example.com/search?q=${query}&category=drinks`;
+// Result: https://example.com/search?q=coffee%20%26%20tea&category=drinks</pre>
+
+            <p>The rule is simple: <strong>use <code>encodeURIComponent()</code> when encoding individual parameter values</strong>. Only use <code>encodeURI()</code> if you have a complete URL that already has correct structure and you just want to handle non-ASCII characters.</p>
+
+            <h2>How to Use the URL Encoder/Decoder Tool</h2>
+            <ol>
+                <li>Open the <a href="../tools/url-encoder-decoder/">URL Encoder/Decoder tool</a>.</li>
+                <li>To encode: paste your text (a parameter value, a path segment, or a full URL) into the input area and click <strong>Encode</strong>. Special characters are converted to percent-encoded sequences.</li>
+                <li>To decode: paste the encoded URL or string and click <strong>Decode</strong>. Percent-encoded sequences are converted back to their original characters.</li>
+                <li>Copy the output for use in your code, browser, or API request.</li>
+            </ol>
+
+            <h2>Common Mistakes to Avoid</h2>
+
+            <h3>Encoding the Entire URL When You Should Only Encode Parameters</h3>
+            <p>The most frequent mistake is passing a full URL through an encoder, which turns <code>https://</code> into <code>https%3A%2F%2F</code> and makes the URL completely invalid. Only encode the <em>values</em> of your query parameters, not the structural parts of the URL like the scheme, domain, path separators, and parameter delimiters.</p>
+
+            <h3>Double-Encoding</h3>
+            <p>If a value has already been encoded and you encode it again, <code>%20</code> becomes <code>%2520</code> — because the <code>%</code> character itself gets encoded to <code>%25</code>. Double-encoded URLs cause the server to receive the literal string <code>%20</code> instead of a space. Always decode before re-encoding if you are unsure of the current state of a string.</p>
+
+            <h3>Not Encoding When Building URLs in Code</h3>
+            <p>When constructing URLs by concatenating strings in code, always encode each parameter value with <code>encodeURIComponent()</code> before appending it. If you concatenate raw user input directly into a URL string, any special characters in that input will break the URL structure.</p>
+
+            <h3>Confusion Between + and %20 for Spaces</h3>
+            <p>A <code>+</code> in a URL query string usually means a space in form-encoded values. A <code>+</code> in a URL path segment is a literal plus sign. To avoid any ambiguity, use <code>%20</code> when you want an unambiguous space, and use <code>%2B</code> when you want a literal plus sign in a query parameter value.</p>
+
+            <h2>Summary</h2>
+            <p>URL encoding converts characters that would be misinterpreted in a URL into percent-encoded <code>%XX</code> sequences. Always use <code>encodeURIComponent()</code> in JavaScript when encoding individual parameter values — not <code>encodeURI()</code>, which preserves structural characters and is therefore wrong for encoding values. The two most common mistakes are encoding the whole URL instead of just the parameter values, and double-encoding already-encoded strings. The URL encoder/decoder tool above handles both directions instantly, making it easy to debug URL issues or prepare values for API requests and links.</p>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>

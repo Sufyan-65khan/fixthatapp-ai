@@ -1,28 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whitespace Cleaner Guide | FixThatApp</title>
-  <meta name="description" content="Learn how to use Whitespace Cleaner with practical examples and troubleshooting tips.">
-  <link rel="canonical" href="https://www.fixthatapp.com/blog/whitespace-cleaner-guide.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
-  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f7fa;color:#333;line-height:1.7}header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}header a{color:#fff;text-decoration:none;font-size:1.2rem;font-weight:700}.container{max-width:820px;margin:0 auto;padding:2rem 1rem}.article{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}h1{font-size:1.6rem;margin-bottom:.4rem}.muted{font-size:.82rem;color:#888;margin-bottom:1rem}h2{font-size:1.15rem;margin:1.4rem 0 .6rem}p{margin-bottom:.85rem;color:#444}ul,ol{margin:.4rem 0 1rem 1.4rem;color:#444}.cta{background:#eef2ff;border-left:4px solid #667eea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}a{color:#667eea;text-decoration:none}footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.84rem;border-top:1px solid #e0e0e0}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitespace Cleaner Guide: Fix Trailing Spaces, Non-Breaking Spaces and More | FixThatApp</title>
+    <meta name="description" content="Learn to detect and fix whitespace bugs — trailing spaces, non-breaking spaces from Word/HTML, Windows CRLF line endings, zero-width characters, and mixed indentation.">
+    <meta name="keywords" content="whitespace cleaner, remove trailing spaces, non-breaking space, CRLF LF line endings, zero width space, trim whitespace, clean text">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/whitespace-cleaner-guide.html">
+    <meta property="og:title" content="Whitespace Cleaner Guide: Fix Trailing Spaces, Non-Breaking Spaces and More | FixThatApp">
+    <meta property="og:description" content="Learn to detect and fix trailing spaces, non-breaking spaces, Windows CRLF line endings, and zero-width characters.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/whitespace-cleaner-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Whitespace Cleaner Guide: Fix Trailing Spaces, Non-Breaking Spaces and More",
+      "description": "Learn to detect and fix trailing spaces, non-breaking spaces, CRLF line endings, and zero-width characters.",
+      "datePublished": "2026-03-07",
+      "dateModified": "2026-03-19",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/whitespace-cleaner-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article pre code{background:none;padding:0}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
 </head>
 <body>
-  <header><a href="../index.html">FixThatApp</a><a href="./">Blog</a></header>
-  <div class="container"><article class="article">
-    <h1>Whitespace Cleaner Guide</h1><div class="muted">Published March 7, 2026</div>
-    <p>Whitespace Cleaner is a high-frequency utility intent in day-to-day workflows. This quick guide helps you use it effectively and avoid common mistakes.</p>
-    <h2>Best Use Cases</h2>
-    <ul><li>Fast browser-based execution with no app install.</li><li>Quick validation and reference checks.</li><li>Repeat tasks in daily work, study, or business operations.</li></ul>
-    <h2>How to Use</h2>
-    <ol><li>Open the tool page.</li><li>Enter clean input values.</li><li>Run and verify output.</li></ol>
-    <div class="cta">Open tool: <a href="../tools/whitespace-cleaner/">Whitespace Cleaner</a></div>
-    <h2>Troubleshooting</h2>
-    <p>If output seems wrong, check formatting (decimals, units, separators), retry with simplified input, and validate with a secondary trusted source when needed.</p>
-    <h2>Related</h2>
-    <ul><li><a href="../tools/">All Tools</a></li><li><a href="../all-guides.html">All Guides Directory</a></li></ul>
-  </article></div>
-  <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../tools/">Tools</a></footer>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; Whitespace Cleaner Guide</nav>
+        <article class="article">
+            <h1>Whitespace Cleaner Guide: Fix Invisible Character Problems</h1>
+            <div class="updated">Updated March 19, 2026</div>
+
+            <p>Whitespace bugs are among the most frustrating to diagnose — they are invisible. A database query that returns no results despite looking correct, a CSV that parses wrong, a string comparison that always fails — these are often caused by trailing spaces, non-breaking spaces from copy-paste, or Windows line endings hiding inside Unix files.</p>
+
+            <h2>Types of Whitespace Problems</h2>
+
+            <h3>1. Trailing and Leading Spaces</h3>
+            <p>Spaces at the start or end of a string cause exact-match failures silently. The database field <code>"Alice "</code> does not match a query for <code>"Alice"</code>. This happens when users copy-paste text, when data is imported from spreadsheets, or when CSV exports lack proper quoting.</p>
+
+            <h3>2. Non-Breaking Spaces (U+00A0)</h3>
+            <p>When you copy text from a web page, Microsoft Word, or a PDF, non-breaking spaces (<code>&amp;nbsp;</code>, Unicode <code>U+00A0</code>) often come along silently. They look identical to regular spaces visually but are a different character entirely. Standard <code>trim()</code> functions leave them behind, and string comparisons fail unexpectedly.</p>
+
+            <h3>3. Windows CRLF vs Unix LF Line Endings</h3>
+            <p>Windows uses <code>\r\n</code> (carriage return + newline) to end lines; Unix/macOS uses <code>\n</code> only. When a Windows file is processed on Linux, the <code>\r</code> character appears attached to the last word on each line. This breaks shell scripts (causing cryptic errors), breaks CSV parsing, and makes <code>git diff</code> show every single line as changed.</p>
+
+            <h3>4. Tabs Mixed with Spaces</h3>
+            <p>Python raises <code>IndentationError</code> when tabs and spaces are mixed. Even in other languages, mixing creates noise in diffs and causes code review confusion. Most style guides pick one (spaces are more common) and enforce it via linter.</p>
+
+            <h3>5. Zero-Width Characters</h3>
+            <p>Unicode includes several invisible characters: zero-width space (<code>U+200B</code>), zero-width non-joiner (<code>U+200C</code>), zero-width joiner (<code>U+200D</code>), and byte order mark (<code>U+FEFF</code>). These sneak into text from social media, chat apps, or certain CMS platforms and cause comparison failures that are impossible to see visually.</p>
+
+            <table>
+                <tr><th>Character</th><th>Unicode</th><th>Common source</th><th>Problem</th></tr>
+                <tr><td>Non-breaking space</td><td>U+00A0</td><td>Web pages, Word, PDFs</td><td>Fails string comparisons</td></tr>
+                <tr><td>Zero-width space</td><td>U+200B</td><td>Social media, chat apps</td><td>Invisible, breaks matching</td></tr>
+                <tr><td>Byte order mark</td><td>U+FEFF</td><td>Windows UTF-8 files</td><td>Breaks CSV and API parsing</td></tr>
+                <tr><td>Carriage return</td><td>U+000D</td><td>Windows line endings</td><td>Appended to last token on each line</td></tr>
+                <tr><td>Em space / En space</td><td>U+2003 / U+2002</td><td>Word processors</td><td>Wider than space, not caught by standard trim</td></tr>
+            </table>
+
+            <h2>How to Detect Hidden Whitespace</h2>
+
+            <ul>
+                <li><strong>Select and highlight text</strong> — trailing spaces show as a blue selection extending past the last visible character</li>
+                <li><strong>Show whitespace in your editor</strong> — VS Code: View &rarr; Render Whitespace; Notepad++: View &rarr; Show Symbol &rarr; Show All Characters</li>
+                <li><strong>Terminal</strong> — <code>cat -A file.txt</code> shows <code>^M</code> for carriage returns, <code>$</code> at each line end</li>
+                <li><strong>Hex dump</strong> — <code>hexdump -C file.txt | head</code> reveals non-breaking spaces as byte sequence <code>c2 a0</code></li>
+            </ul>
+
+            <h2>Fixing Whitespace in Code</h2>
+
+            <h3>Python</h3>
+            <pre><code># Basic trimming
+text.strip()    # removes leading and trailing whitespace
+text.lstrip()   # leading only
+text.rstrip()   # trailing only
+
+# Remove non-breaking spaces and zero-width characters
+import re
+text = re.sub(r'[\u00A0\u200B\u200C\u200D\uFEFF]', ' ', text).strip()
+
+# Normalise multiple spaces to single
+text = re.sub(r' +', ' ', text)
+
+# Fix Windows line endings
+text = text.replace('\r\n', '\n').replace('\r', '\n')</code></pre>
+
+            <h3>JavaScript</h3>
+            <pre><code>// Basic trim
+text.trim()
+
+// Remove non-breaking spaces
+text.replace(/\u00A0/g, ' ').trim()
+
+// Remove zero-width characters
+text.replace(/[\u200B\u200C\u200D\uFEFF]/g, '')
+
+// Normalise all whitespace to single spaces
+text.replace(/\s+/g, ' ').trim()</code></pre>
+
+            <div class="tip-box">
+                <strong>Excel TRIM does not remove non-breaking spaces</strong>
+                <p>The <code>=TRIM(A1)</code> formula removes leading/trailing spaces and collapses multiple spaces, but it does not remove non-breaking spaces (<code>U+00A0</code>). Use <code>=TRIM(SUBSTITUTE(A1, CHAR(160), " "))</code> to handle those as well.</p>
+            </div>
+
+            <div class="cta-box">
+                <h3>Clean Any Text in One Click</h3>
+                <p>Paste your text to remove trailing spaces, non-breaking spaces, extra blank lines, Windows line endings, and invisible Unicode characters.</p>
+                <a href="../tools/whitespace-cleaner/">Open the Whitespace Cleaner</a>
+            </div>
+
+            <h2>How to Use the Whitespace Cleaner Tool</h2>
+
+            <ol>
+                <li>Open the <a href="../tools/whitespace-cleaner/">Whitespace Cleaner</a></li>
+                <li>Paste your text into the input area</li>
+                <li>Select the options you need: trim leading/trailing spaces, collapse multiple spaces, remove non-breaking spaces, normalise line endings, or strip zero-width characters</li>
+                <li>Click Clean and copy the output</li>
+            </ol>
+
+            <h2>When Whitespace Is Intentional</h2>
+
+            <p>Not all unusual whitespace is a bug. Non-breaking spaces are intentionally used to prevent line breaks between words that should stay together — "10&nbsp;km", "Dr.&nbsp;Smith", or a number and its unit. Before cleaning, check whether the whitespace serves a purpose. The tool's selective options let you target only the whitespace types causing problems, rather than stripping everything blindly.</p>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
 </body>
 </html>
