@@ -43,6 +43,16 @@
     .tip h2{font-size:1.05rem;margin-bottom:.5rem}
     .tip ul{margin-left:1.2rem;color:#444}
     .tip li{margin-bottom:.35rem}
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.92rem;color:#1a1a2e;font-weight:600;margin-bottom:.35rem}
+    .faq-a{font-size:.9rem;color:#444;line-height:1.6}
     footer{text-align:center;padding:1.5rem;color:#999;font-size:.82rem;border-top:1px solid var(--border)}
     footer a{color:var(--accent);text-decoration:none}
     .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
@@ -65,13 +75,29 @@
             <div class="row"><input id="dt" type="datetime-local" /><select id="from"></select><select id="to"></select><button class="btn" onclick="tz()">Convert</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>This converter uses the browser's <code>Intl.DateTimeFormat</code> API and the IANA Time Zone Database to convert a date and time from one time zone to another. All conversions account for daylight saving time (DST) automatically — you do not need to manually add or subtract DST offsets.</p>
+        <p>Useful for scheduling meetings across regions, converting event times for global audiences, calculating deadlines across time zones, or verifying server log timestamps.</p>
+    </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps">
+            <li>Select your date and time using the datetime picker in the input field.</li>
+            <li>Choose your source time zone (the zone the time is currently in) from the From dropdown.</li>
+            <li>Choose your target time zone (the zone you want to convert to) from the To dropdown.</li>
+            <li>Click Convert. The equivalent date and time in the target zone is shown, including whether DST is in effect.</li>
+        </ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item"><h3 class="faq-q">Does this handle daylight saving time automatically?</h3><p class="faq-a">Yes. The IANA Time Zone Database includes all historical DST transitions. The tool automatically determines whether DST is active for the selected date and adjusts accordingly. For example, converting New York time in January uses EST (UTC-5), while the same conversion in July uses EDT (UTC-4).</p></div>
+            <div class="faq-item"><h3 class="faq-q">What is UTC and why does it matter?</h3><p class="faq-a">UTC (Coordinated Universal Time) is the primary global time standard with no UTC offset and no daylight saving time. It is used in servers, APIs, and databases to avoid ambiguity. All other time zones are defined as offsets from UTC (e.g., India Standard Time is UTC+5:30).</p></div>
+            <div class="faq-item"><h3 class="faq-q">What is the difference between GMT and UTC?</h3><p class="faq-a">GMT (Greenwich Mean Time) and UTC share the same offset (0 hours) and are often used interchangeably in casual contexts. Technically, UTC is the atomic time standard used for most technical applications, while GMT is a time zone that observes BST (British Summer Time) in summer. For scheduling purposes, treat them as identical.</p></div>
+        </div>
+    </div>
     </div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>

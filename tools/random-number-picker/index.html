@@ -43,6 +43,16 @@
     .tip h2{font-size:1.05rem;margin-bottom:.5rem}
     .tip ul{margin-left:1.2rem;color:#444}
     .tip li{margin-bottom:.35rem}
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.92rem;color:#1a1a2e;font-weight:600;margin-bottom:.35rem}
+    .faq-a{font-size:.9rem;color:#444;line-height:1.6}
     footer{text-align:center;padding:1.5rem;color:#999;font-size:.82rem;border-top:1px solid var(--border)}
     footer a{color:var(--accent);text-decoration:none}
     .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
@@ -65,13 +75,29 @@
             <div class="row"><input id="min" placeholder="Min" value="1" /><input id="max" placeholder="Max" value="100" /><input id="count" placeholder="Count" value="1" /><button class="btn" onclick="pick()">Pick</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>This tool uses your browser's built-in <code>Math.random()</code> function to generate cryptographically pseudo-random integers within a range you define. You set a minimum value, a maximum value, and how many numbers to pick. The tool guarantees each number is within your specified range (inclusive on both ends).</p>
+        <p>Common uses include giveaway winner selection, random sampling for testing, deciding between options, generating lottery number sets, and classroom activities like random student selection.</p>
+    </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps">
+            <li>Enter a minimum value in the Min field (default: 1).</li>
+            <li>Enter a maximum value in the Max field (default: 100). The max must be greater than or equal to min.</li>
+            <li>Enter how many numbers you want in the Count field. For a single draw, leave it at 1.</li>
+            <li>Click Pick. Results are shown immediately. Click Pick again for a new set of numbers.</li>
+        </ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item"><h3 class="faq-q">Can the same number appear twice in multiple picks?</h3><p class="faq-a">Yes, unless the tool explicitly samples without replacement. Each pick is independent, so the same number can appear more than once if you generate multiple numbers. This is equivalent to picking from a bag and putting the number back before each draw.</p></div>
+            <div class="faq-item"><h3 class="faq-q">Is this suitable for lottery or gambling?</h3><p class="faq-a">This tool uses <code>Math.random()</code>, which is a pseudorandom number generator (PRNG) — not a cryptographically secure random number generator (CSPRNG). It is fine for casual draws, giveaways, and sampling. For cryptographic or legally regulated applications, use a certified hardware RNG.</p></div>
+            <div class="faq-item"><h3 class="faq-q">What is the maximum range I can use?</h3><p class="faq-a">JavaScript's <code>Math.random()</code> is limited by floating-point precision to integers up to 2^53 (about 9 quadrillion). For practical purposes, any range you'd realistically use (1–10,000,000) works without issues.</p></div>
+        </div>
+    </div>
     </div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>

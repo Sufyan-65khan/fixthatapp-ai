@@ -51,7 +51,22 @@
     .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
     .cookie-btn.primary{background:#667eea}
     @media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}
-  </style>
+  
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.95rem;color:#1a1a2e;font-weight:600;margin-bottom:.3rem}
+    .faq-a{font-size:.88rem;color:#555;line-height:1.6}
+    .guide-cta{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;padding:.85rem 1.2rem;margin-top:1rem}
+    .guide-cta a{color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
+    .guide-cta a:hover{text-decoration:underline}
+
+    </style>
 </head>
 <body>
   <header><a href="../../index.html">FixThatApp</a><a href="../">All Tools</a></header>
@@ -65,14 +80,21 @@
             <div class="row"><input id="w" placeholder="Weight (kg)" /><input id="h" placeholder="Height (cm)" /><button class="btn" onclick="bmi()">Calculate BMI</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>The BMI (Body Mass Index) Calculator computes BMI from height and weight using the formula BMI = weight(kg) ÷ height(m)². BMI is a population-level screening tool used to categorize weight status: underweight (<18.5), normal weight (18.5–24.9), overweight (25–29.9), and obese (≥30). It is a simple initial indicator, not a diagnostic tool — BMI does not measure body fat percentage, muscle mass, or fat distribution. Athletes and people with high muscle mass often have elevated BMI despite being healthy.</p>
     </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps"><li>Enter your weight in kg in field A.</li><li>Enter your height in meters in field B (e.g. 1.75 for 175 cm).</li><li>Click Run. Your BMI and weight category are shown.</li><li>For pounds and feet: convert first — 1 lb = 0.454 kg; 1 inch = 0.0254 m.</li></ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list"><div class='faq-item'><h3 class='faq-q'>What are the BMI categories?</h3><p class='faq-a'>Underweight: below 18.5. Normal weight: 18.5–24.9. Overweight: 25–29.9. Obese class I: 30–34.9. Obese class II: 35–39.9. Obese class III (severe): 40 and above. Different thresholds apply for Asian populations (overweight begins at 23).</p></div><div class='faq-item'><h3 class='faq-q'>Is BMI accurate for athletes?</h3><p class='faq-a'>No. BMI cannot distinguish muscle from fat. A muscular athlete with low body fat may have a BMI of 28 (overweight category) because muscle is denser than fat. For athletes, body fat percentage (via DEXA scan or skinfold measurement) is more accurate.</p></div><div class='faq-item'><h3 class='faq-q'>Is BMI accurate for children?</h3><p class='faq-a'>Children use a different calculation: BMI-for-age percentile, which compares BMI to other children of the same age and sex. An adult BMI calculator should not be used for children under 18.</p></div></div>
+    </div>
+    
+</div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
   <div class="cookie-banner" id="cookieBanner">

@@ -51,7 +51,22 @@
     .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
     .cookie-btn.primary{background:#667eea}
     @media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}
-  </style>
+  
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.95rem;color:#1a1a2e;font-weight:600;margin-bottom:.3rem}
+    .faq-a{font-size:.88rem;color:#555;line-height:1.6}
+    .guide-cta{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;padding:.85rem 1.2rem;margin-top:1rem}
+    .guide-cta a{color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
+    .guide-cta a:hover{text-decoration:underline}
+
+    </style>
 </head>
 <body>
   <header><a href="../../index.html">FixThatApp</a><a href="../">All Tools</a></header>
@@ -65,14 +80,21 @@
             <div class="row"><input id="city" placeholder="Enter city (e.g. New York)" /><button class="btn" onclick="weather()">Get Weather</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>The Weather Checker provides current weather conditions and a short forecast for any city. Enter a location and get the current temperature, weather condition, humidity, and wind speed. This is a quick reference tool for checking weather before planning outdoor activities, travel decisions, or understanding current conditions in a remote location.</p>
     </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps"><li>Enter the city name in field A (e.g. London, Mumbai, New York).</li><li>Click Run. Current weather conditions are displayed.</li><li>For more detailed forecasts and hourly breakdowns, use a dedicated weather service.</li><li>If the city name is ambiguous, add the country code (e.g. London, UK vs London, Ontario, CA).</li></ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list"><div class='faq-item'><h3 class='faq-q'>Why does this differ from my local weather app?</h3><p class='faq-a'>Weather data comes from different sources and observation stations. Hyperlocal conditions (your specific neighbourhood vs the airport observation station) can differ by several degrees in temperature and vary in precipitation.</p></div><div class='faq-item'><h3 class='faq-q'>What is humidity and what percentage is comfortable?</h3><p class='faq-a'>Relative humidity is the amount of water vapour in the air as a percentage of the maximum it can hold at that temperature. 30–60% is generally comfortable indoors. Above 60% feels humid and sticky; below 30% causes dry skin and static.</p></div><div class='faq-item'><h3 class='faq-q'>What does 'feels like' temperature mean?</h3><p class='faq-a'>Feels-like (apparent temperature) accounts for how temperature interacts with humidity and wind. High humidity makes hot temperatures feel hotter (heat index). Wind chill makes cold temperatures feel colder. Feels-like is often more relevant to comfort than the actual air temperature.</p></div></div>
+    </div>
+    
+</div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
   <div class="cookie-banner" id="cookieBanner">

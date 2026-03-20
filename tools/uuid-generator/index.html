@@ -43,6 +43,16 @@
     .tip h2{font-size:1.05rem;margin-bottom:.5rem}
     .tip ul{margin-left:1.2rem;color:#444}
     .tip li{margin-bottom:.35rem}
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.92rem;color:#1a1a2e;font-weight:600;margin-bottom:.35rem}
+    .faq-a{font-size:.9rem;color:#444;line-height:1.6}
     footer{text-align:center;padding:1.5rem;color:#999;font-size:.82rem;border-top:1px solid var(--border)}
     footer a{color:var(--accent);text-decoration:none}
     .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
@@ -65,13 +75,29 @@
             <div class="row"><input id="count" placeholder="Count" value="5" /><button class="btn" onclick="gen()">Generate UUIDs</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>This generator creates Version 4 UUIDs (Universally Unique Identifiers) using the browser's <code>crypto.randomUUID()</code> API (or <code>crypto.getRandomValues()</code> as a fallback). A UUID v4 consists of 128 bits of random data formatted as 32 hexadecimal characters in the pattern <code>xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx</code>, where the <code>4</code> indicates version 4 and <code>y</code> is one of <code>8</code>, <code>9</code>, <code>a</code>, or <code>b</code>.</p>
+        <p>UUIDs are used as unique identifiers for database records, API resources, file names, session tokens, and distributed system entities — anywhere you need a globally unique ID without a central registry.</p>
+    </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps">
+            <li>Enter how many UUIDs you need in the Count field (e.g., 1 for a single ID, 10 for a batch).</li>
+            <li>Click Generate UUIDs. The results appear in the output panel, one UUID per line.</li>
+            <li>Click anywhere in the result to select all, then copy to clipboard.</li>
+            <li>For repeated use, click Generate again — each click produces a fresh set of unique identifiers.</li>
+        </ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item"><h3 class="faq-q">How unique is a UUID v4?</h3><p class="faq-a">The probability of generating two identical UUID v4s is approximately 1 in 5.3×10^36 — astronomically small. In practice, UUID v4 collisions are treated as impossible for all engineering purposes. You can safely use them as primary keys without checking for duplicates.</p></div>
+            <div class="faq-item"><h3 class="faq-q">What is the difference between UUID v1, v4, and v7?</h3><p class="faq-a">UUID v1 is time-based and embeds the MAC address of the generating machine — sortable but privacy-leaking. UUID v4 is purely random — not sortable but maximally private. UUID v7 (a newer standard) is time-ordered random, combining sortability with randomness — ideal for database primary keys. For most use cases, v4 is the safe default.</p></div>
+            <div class="faq-item"><h3 class="faq-q">Are these safe to use as database primary keys?</h3><p class="faq-a">Yes, but with a caveat: UUID v4 values are not sequential, which means random insertion order can cause B-tree index fragmentation in some databases (notably MySQL InnoDB). For high-volume tables, consider UUID v7 or a ULID (Universally Unique Lexicographically Sortable Identifier) instead, which are both random and time-ordered.</p></div>
+        </div>
+    </div>
     </div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>

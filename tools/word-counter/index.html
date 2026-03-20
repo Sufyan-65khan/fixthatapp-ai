@@ -51,7 +51,22 @@
     .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
     .cookie-btn.primary{background:#667eea}
     @media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}
-  </style>
+  
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.95rem;color:#1a1a2e;font-weight:600;margin-bottom:.3rem}
+    .faq-a{font-size:.88rem;color:#555;line-height:1.6}
+    .guide-cta{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;padding:.85rem 1.2rem;margin-top:1rem}
+    .guide-cta a{color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
+    .guide-cta a:hover{text-decoration:underline}
+
+    </style>
 </head>
 <body>
   <header><a href="../../index.html">FixThatApp</a><a href="../">All Tools</a></header>
@@ -65,14 +80,21 @@
             <div class="row"><textarea id="txt" placeholder="Paste text here..."></textarea></div><div class="row"><button class="btn" onclick="countText()">Analyze Text</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>The Word Counter counts words, characters (with and without spaces), sentences, and paragraphs in any text. It also estimates reading time based on an average adult reading speed of 200–250 words per minute. Word counts are used to meet academic submission requirements (essays, dissertations), check article length for SEO targets, comply with platform limits (LinkedIn posts, grant applications), and track writing progress.</p>
     </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps"><li>Paste or type your text in field A.</li><li>Click Run. The result shows word count, character count, sentence count, and estimated reading time.</li><li>Character count with spaces is used for Twitter-style limits; without spaces for some academic requirements.</li><li>Reading time is estimated at 230 words per minute (average adult reading speed for online content).</li></ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list"><div class='faq-item'><h3 class='faq-q'>What is a word for counting purposes?</h3><p class='faq-a'>A word is typically any sequence of characters separated by whitespace. Hyphenated compounds like 'well-known' are usually counted as one word by most tools. Numbers, abbreviations, and contractions (don't, can't) each count as one word.</p></div><div class='faq-item'><h3 class='faq-q'>What is the standard word count for different content types?</h3><p class='faq-a'>Blog post: 1,000–2,500 words. Long-form SEO article: 2,000–4,000 words. Twitter/X post: 280 characters. LinkedIn post: 150–300 words optimal (max 3,000). Academic essay: varies by requirement. Novel chapter: 2,000–5,000 words typically.</p></div><div class='faq-item'><h3 class='faq-q'>How is reading time estimated?</h3><p class='faq-a'>Reading time = word count ÷ average reading speed. Adults read online content at 200–250 words per minute (slower than print due to screen fatigue). A 1,000-word article takes approximately 4–5 minutes to read.</p></div></div>
+    </div>
+    
+</div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
   <div class="cookie-banner" id="cookieBanner">

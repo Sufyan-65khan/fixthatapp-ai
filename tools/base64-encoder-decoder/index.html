@@ -51,7 +51,22 @@
     .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
     .cookie-btn.primary{background:#667eea}
     @media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}
-  </style>
+  
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.95rem;color:#1a1a2e;font-weight:600;margin-bottom:.3rem}
+    .faq-a{font-size:.88rem;color:#555;line-height:1.6}
+    .guide-cta{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;padding:.85rem 1.2rem;margin-top:1rem}
+    .guide-cta a{color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
+    .guide-cta a:hover{text-decoration:underline}
+
+    </style>
 </head>
 <body>
   <header><a href="../../index.html">FixThatApp</a><a href="../">All Tools</a></header>
@@ -65,14 +80,21 @@
             <div class="row"><textarea id="txt" placeholder="Enter text or Base64..."></textarea></div><div class="row"><button class="btn" onclick="enc()">Encode</button><button class="btn" onclick="dec()">Decode</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>The Base64 Encoder/Decoder converts binary data to and from Base64 text encoding. Base64 represents binary bytes using 64 printable ASCII characters (A–Z, a–z, 0–9, +, /), making binary data safe to transmit through text-based protocols like email (MIME), JSON, and URLs. Common uses: embedding small images directly in CSS or HTML as data URIs, transmitting binary API payloads in JSON, encoding authentication credentials in HTTP Basic Auth headers, and storing binary data in text fields.</p>
     </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps"><li>To encode: paste plain text or a data string in field A, click Run — the Base64 encoded output is shown.</li><li>To decode: paste a Base64 string in field A, click Run — the original text is shown.</li><li>Base64 encoded strings always consist of letters, numbers, +, /, and = padding characters.</li><li>Note: Base64 is encoding, not encryption. It provides no security — anyone can decode it.</li></ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list"><div class='faq-item'><h3 class='faq-q'>Is Base64 a form of encryption?</h3><p class='faq-a'>No. Base64 is a reversible encoding scheme, not encryption. It does not require a key and anyone can decode it instantly. Do not use it to 'hide' sensitive information.</p></div><div class='faq-item'><h3 class='faq-q'>Why does Base64 output end with = signs?</h3><p class='faq-a'>= is padding. Base64 encodes every 3 bytes of input as 4 characters. If the input isn't a multiple of 3 bytes, = signs pad the output to make it a multiple of 4 characters. One = means 1 padding byte; == means 2.</p></div><div class='faq-item'><h3 class='faq-q'>What is the difference between standard Base64 and URL-safe Base64?</h3><p class='faq-a'>Standard Base64 uses + and / which are special characters in URLs. URL-safe Base64 replaces + with - and / with _ so the encoded string can be safely included in a URL or filename. JWT tokens use URL-safe Base64.</p></div></div>
+    </div>
+    
+</div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
   <div class="cookie-banner" id="cookieBanner">

@@ -51,7 +51,22 @@
     .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
     .cookie-btn.primary{background:#667eea}
     @media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}
-  </style>
+  
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.95rem;color:#1a1a2e;font-weight:600;margin-bottom:.3rem}
+    .faq-a{font-size:.88rem;color:#555;line-height:1.6}
+    .guide-cta{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;padding:.85rem 1.2rem;margin-top:1rem}
+    .guide-cta a{color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
+    .guide-cta a:hover{text-decoration:underline}
+
+    </style>
 </head>
 <body>
   <header><a href="../../index.html">FixThatApp</a><a href="../">All Tools</a></header>
@@ -65,14 +80,21 @@
             <div class="row"><input id="dob" type="date" /><button class="btn" onclick="ageCalc()">Calculate Age</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>The Age Calculator finds the precise age in years, months, and days from a date of birth to today (or a custom target date). It accounts for varying month lengths and leap years. Common uses: verifying legal age thresholds (18, 21, 65), calculating age for medical forms, checking eligibility criteria with age cutoffs, and determining age for insurance or pension calculations.</p>
     </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps"><li>Enter your date of birth in field A (format: YYYY-MM-DD).</li><li>Click Run. Your age is shown in years, months, and remaining days.</li><li>To calculate age at a specific date (not today): enter that date in field B.</li><li>The result is exact — it accounts for leap years and varying month lengths.</li></ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list"><div class='faq-item'><h3 class='faq-q'>Why do I get different results from different age calculators?</h3><p class='faq-a'>The main source of difference is how the calculator handles months. March 31 to April 30 is 30 days but only 1 month. Some calculators count calendar months; others count 30-day periods. This calculator uses calendar months (counting to the same day number in the next month).</p></div><div class='faq-item'><h3 class='faq-q'>What does 'age in completed years' mean?</h3><p class='faq-a'>Legal and medical age is typically expressed in completed (whole) years. A person is legally 17 until the exact calendar date of their 18th birthday — even if they are only hours away.</p></div><div class='faq-item'><h3 class='faq-q'>How is age calculated across a leap day?</h3><p class='faq-a'>If you were born on February 29, your birthday in non-leap years is typically treated as either February 28 or March 1, depending on jurisdiction. This calculator uses February 28 as the non-leap birthday.</p></div></div>
+    </div>
+    
+</div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
   <div class="cookie-banner" id="cookieBanner">

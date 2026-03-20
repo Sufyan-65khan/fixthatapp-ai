@@ -51,7 +51,22 @@
     .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
     .cookie-btn.primary{background:#667eea}
     @media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}
-  </style>
+  
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.95rem;color:#1a1a2e;font-weight:600;margin-bottom:.3rem}
+    .faq-a{font-size:.88rem;color:#555;line-height:1.6}
+    .guide-cta{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;padding:.85rem 1.2rem;margin-top:1rem}
+    .guide-cta a{color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
+    .guide-cta a:hover{text-decoration:underline}
+
+    </style>
 </head>
 <body>
   <header><a href="../../index.html">FixThatApp</a><a href="../">All Tools</a></header>
@@ -65,14 +80,21 @@
             <div class="row"><input id="bill" placeholder="Bill amount" /><input id="tip" placeholder="Tip %" value="10" /><input id="people" placeholder="People" value="1" /><button class="btn" onclick="tipCalc()">Calculate</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>The Tip Calculator computes the tip amount and total bill given a subtotal and tip percentage, with an option to split the total evenly between multiple people. Tipping customs vary significantly by country: in the US, 15–20% is standard for restaurant service; in the UK, 10–12.5% is typical; in Japan and Australia, tipping is not customary. This calculator handles all these scenarios including bill splits.</p>
     </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps"><li>Enter the bill subtotal (before tax) in field A.</li><li>Enter the tip percentage in field B (e.g. 18 for 18%).</li><li>Click Run. The result shows the tip amount, total, and per-person amount.</li><li>For bill splits: divide the total by the number of people at your table.</li></ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list"><div class='faq-item'><h3 class='faq-q'>Should I tip on the pre-tax or post-tax amount?</h3><p class='faq-a'>Standard etiquette in the US is to tip on the pre-tax subtotal. The difference on a $50 meal is small (tip on $50 vs $54 including tax), but calculating on the subtotal is the traditional convention.</p></div><div class='faq-item'><h3 class='faq-q'>What is a standard tip percentage?</h3><p class='faq-a'>US restaurants: 15% minimal, 18% standard, 20%+ for excellent service. Bars: $1–2 per drink. Hotel housekeeping: $2–5 per night. Rideshare: 15–20%. In the UK: 10–12.5%, often included as a service charge. Australia and Japan: tipping is not customary.</p></div><div class='faq-item'><h3 class='faq-q'>Is a service charge the same as a tip?</h3><p class='faq-a'>No. A service charge is a mandatory fee added by the restaurant — it may or may not go to the staff, depending on the establishment's policy. A gratuity/tip is optional and typically goes directly to the server. If a service charge is already included, an additional tip is at your discretion.</p></div></div>
+    </div>
+    
+</div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
   <div class="cookie-banner" id="cookieBanner">

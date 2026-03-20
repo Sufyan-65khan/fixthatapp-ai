@@ -43,6 +43,16 @@
     .tip h2{font-size:1.05rem;margin-bottom:.5rem}
     .tip ul{margin-left:1.2rem;color:#444}
     .tip li{margin-bottom:.35rem}
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.92rem;color:#1a1a2e;font-weight:600;margin-bottom:.35rem}
+    .faq-a{font-size:.9rem;color:#444;line-height:1.6}
     footer{text-align:center;padding:1.5rem;color:#999;font-size:.82rem;border-top:1px solid var(--border)}
     footer a{color:var(--accent);text-decoration:none}
     .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
@@ -65,13 +75,29 @@
             <div class="row"><input id="imgFile" type="file" accept="image/*" /><input id="w" placeholder="Width" /><input id="h" placeholder="Height" /><button class="btn" onclick="resizeImg()">Resize</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>This image resizer runs entirely in your browser — your image is never uploaded to a server. You select a file from your device, enter target width and height dimensions in pixels, and the tool uses the HTML5 Canvas API to redraw the image at the new size. The result is available to download as a JPEG or PNG.</p>
+        <p>Resizing is useful before uploading images to websites, social media, email, or apps with strict size requirements. Smaller dimensions also reduce file size, which speeds up page loads and reduces storage usage.</p>
+    </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps">
+            <li>Click the file input and select an image from your device (JPEG, PNG, WebP, and GIF are supported).</li>
+            <li>Enter the target width in pixels in the Width field. Enter the target height in the Height field.</li>
+            <li>To maintain the original aspect ratio, calculate the proportional height: new height = (original height / original width) × new width.</li>
+            <li>Click Resize. The resized image preview and download link appear below.</li>
+        </ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item"><h3 class="faq-q">Will resizing reduce image quality?</h3><p class="faq-a">Scaling down (reducing dimensions) generally preserves quality well. Scaling up (enlarging beyond the original size) will make the image appear blurry or pixelated because the tool is creating pixels that didn't exist in the original. For enlargement, dedicated upscaling tools using AI interpolation produce better results.</p></div>
+            <div class="faq-item"><h3 class="faq-q">Is my image uploaded anywhere?</h3><p class="faq-a">No. The entire resize operation happens in your browser using the Canvas API. Your image data never leaves your device. This means the tool also works offline once the page has loaded.</p></div>
+            <div class="faq-item"><h3 class="faq-q">What dimensions should I use for common platforms?</h3><p class="faq-a">Common targets: Twitter/X profile photo 400×400px, Facebook cover 820×312px, Instagram square 1080×1080px, LinkedIn banner 1584×396px, website hero image 1920×1080px, thumbnail 300×200px. Check the platform's current guidelines as these change periodically.</p></div>
+        </div>
+    </div>
     </div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>

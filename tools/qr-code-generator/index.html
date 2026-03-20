@@ -51,7 +51,22 @@
     .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
     .cookie-btn.primary{background:#667eea}
     @media(max-width:700px){.row{flex-direction:column}.btn{width:100%}}
-  </style>
+  
+    .tool-guide{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-top:1rem}
+    .guide-section{margin-bottom:1.5rem}
+    .guide-section h2{font-size:1.05rem;color:#1a1a2e;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:2px solid #f0f0f5}
+    .guide-section p{color:#444;font-size:.92rem;line-height:1.65;margin-bottom:.5rem}
+    .guide-steps{margin-left:1.2rem;color:#444;font-size:.92rem}
+    .guide-steps li{margin-bottom:.4rem;line-height:1.6}
+    .faq-item{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f5}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-q{font-size:.95rem;color:#1a1a2e;font-weight:600;margin-bottom:.3rem}
+    .faq-a{font-size:.88rem;color:#555;line-height:1.6}
+    .guide-cta{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:8px;padding:.85rem 1.2rem;margin-top:1rem}
+    .guide-cta a{color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
+    .guide-cta a:hover{text-decoration:underline}
+
+    </style>
 </head>
 <body>
   <header><a href="../../index.html">FixThatApp</a><a href="../">All Tools</a></header>
@@ -65,14 +80,21 @@
             <div class="row"><input id="qtext" placeholder="Enter text or URL" /><button class="btn" onclick="makeQr()">Generate QR</button></div><div id="result" class="result"></div>
         
     </div>
-    <div class="tip">
-      <h2>Quick Usage Tips</h2>
-      <ul>
-        <li>Use realistic values to get accurate outputs.</li>
-        <li>Retry from another browser if a request-based tool fails.</li>
-        <li>For critical decisions, verify results with official sources.</li>
-      </ul>
+    <div class="tool-guide">
+    <div class="guide-section">
+        <h2>How This Tool Works</h2>
+        <p>The QR Code Generator creates scannable QR codes from any text, URL, phone number, or other data. QR codes (Quick Response codes) are two-dimensional barcodes that any smartphone camera can scan instantly. Common uses: linking printed materials to websites, sharing Wi-Fi credentials, adding contact information (vCard), creating payment links, and tracking marketing campaigns with unique URLs per printed piece.</p>
     </div>
+    <div class="guide-section">
+        <h2>How to Use</h2>
+        <ol class="guide-steps"><li>Enter the URL or text you want to encode in field A.</li><li>Click Run. The QR code image is generated instantly.</li><li>Download or screenshot the QR code for use in print, presentations, or digital content.</li><li>Test the QR code by scanning it with your phone before distributing — ensure the link is correct.</li></ol>
+    </div>
+    <div class="guide-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list"><div class='faq-item'><h3 class='faq-q'>What is the maximum amount of data a QR code can store?</h3><p class='faq-a'>A QR code can store up to 4,296 alphanumeric characters or 7,089 numeric characters. For URLs: keep them as short as possible. Long URLs make denser QR codes that are harder to scan in poor light or at small sizes.</p></div><div class='faq-item'><h3 class='faq-q'>How small can a QR code be printed?</h3><p class='faq-a'>Minimum recommended print size: 1 cm × 1 cm (0.4 inch). At this size, a modern smartphone camera can scan it from about 20 cm away. For business cards: 2 cm × 2 cm minimum. Always test print at the intended size before bulk printing.</p></div><div class='faq-item'><h3 class='faq-q'>Can I customise a QR code with a logo or colors?</h3><p class='faq-a'>QR codes have built-in error correction (up to 30% of the code can be obscured and still scan). This allows embedding a small logo in the center. Custom colors are also possible — but ensure sufficient contrast between the dark modules and light background.</p></div></div>
+    </div>
+    
+</div>
   </div>
   <footer>&copy; 2026 FixThatApp | <a href="../../about.html">About</a> | <a href="../../privacy-policy.html">Privacy Policy</a> | <a href="../../cookie-policy.html">Cookie Policy</a> | <a href="../../contact.html">Contact</a></footer>
   <div class="cookie-banner" id="cookieBanner">
