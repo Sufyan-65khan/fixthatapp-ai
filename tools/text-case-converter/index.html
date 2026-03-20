@@ -95,7 +95,14 @@
         </div>
         <div class="info-section">
             <h2>When to Use Each Case</h2>
-            <p><strong>camelCase</strong> — JavaScript variables and function names. <strong>snake_case</strong> — Python variables and database columns. <strong>PascalCase</strong> — Class names in most languages. <strong>kebab-case</strong> — URLs and CSS class names. <strong>CONSTANT_CASE</strong> — Constants and environment variables.</p>
+            <p><strong>camelCase</strong> — JavaScript variables, function names, and object properties. Example: <code>getUserName()</code>. <strong>snake_case</strong> — Python variables, function names, and SQL column names. Example: <code>user_name</code>. <strong>PascalCase</strong> (also called UpperCamelCase) — class names in most programming languages and React component names. Example: <code>UserProfile</code>. <strong>kebab-case</strong> — HTML/CSS class names, URL slugs, and file names. Example: <code>user-profile.html</code>. <strong>SCREAMING_SNAKE_CASE</strong> — constants and environment variables. Example: <code>DATABASE_URL</code>.</p>
+            <h2>How This Tool Works</h2>
+            <p>Paste any text into the input field and select the target case format. The converter handles all whitespace, punctuation, and mixed-case input correctly. It splits words by spaces, underscores, hyphens, and camelCase boundaries — so you can convert from any format to any other format without intermediate steps. The output copies to clipboard with one click.</p>
+            <h2>Common Use Cases</h2>
+            <p>Converting API response keys from <code>snake_case</code> to <code>camelCase</code> for JavaScript. Normalising CSV column headers before importing to a database. Converting blog post titles to URL slugs in <code>kebab-case</code>. Standardising variable names when refactoring code between languages. Generating CSS class names from design system component names.</p>
+            <h2>Common Questions</h2>
+            <p><strong>Does this preserve acronyms?</strong> When converting to camelCase or PascalCase, acronyms like "URL" or "HTTP" are treated as a single word, outputting <code>url</code> or <code>Http</code>. If you need acronyms fully uppercased, check the output and adjust manually.</p>
+            <p><strong>What happens with numbers?</strong> Numbers are treated as word separators in snake_case and kebab-case. In camelCase, a number starts a new segment: <code>address2Line</code> becomes <code>address-2-line</code> in kebab-case.</p>
             <p><a href="../index.html">Browse more tools</a> | <a href="../json-formatter/">JSON Formatter</a> | <a href="../regex-tester/">Regex Tester</a></p>
         </div>
     </div>

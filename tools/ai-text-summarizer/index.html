@@ -103,10 +103,16 @@
             <button class="copy-btn" onclick="copySummary()">Copy Summary</button>
         </div>
         <div class="info-section">
-            <h2>How It Works</h2>
-            <p>This tool uses extractive summarization — it identifies the most important sentences in your text based on word frequency analysis and sentence scoring. It ranks sentences by relevance and extracts the top ones based on your compression setting.</p>
-            <p>For AI-powered summaries, try <a href="../../pages/chatgpt-not-working.html">ChatGPT</a> or <a href="../../pages/claude-ai-not-loading.html">Claude AI</a>. Having issues? Check our troubleshooting guides.</p>
-            <p><a href="../index.html">Browse more tools</a> | <a href="../text-case-converter/">Text Case Converter</a> | <a href="../markdown-previewer/">Markdown Previewer</a></p>
+            <h2>How Extractive Summarization Works</h2>
+            <p>This tool uses extractive summarization — it identifies and extracts the most important sentences from your text without rewriting them. The algorithm scores each sentence based on word frequency (words that appear often across the text are weighted higher), sentence position (first and last sentences of paragraphs carry more weight), and sentence length (very short or very long sentences are penalized). The top-scoring sentences are returned in their original order.</p>
+            <h2>Extractive vs Abstractive Summarization</h2>
+            <p><strong>Extractive</strong> (this tool) — selects existing sentences directly from the source. Output is always factually accurate because nothing is rewritten. Best for: legal documents, technical articles, news, academic papers.<br>
+            <strong>Abstractive</strong> (used by ChatGPT, Claude) — generates new sentences that paraphrase and condense the content. Can synthesize across paragraphs but may introduce inaccuracies. Best for: casual summaries, meeting notes, creative content.</p>
+            <h2>How to Use</h2>
+            <p>Paste at least 200 words of text (shorter text produces poor summaries). Choose compression level: 25% returns about a quarter of sentences, 50% returns half. Click Summarize. The output is suitable for skimming, notes, or a starting point for your own rewrite. For best results, use clean plain text without bullet points or tables.</p>
+            <h2>What It Cannot Do</h2>
+            <p>This tool cannot understand context, detect irony, or synthesize conclusions. If the source text is poorly structured, the summary will be too. For AI-powered abstractive summaries, use a language model directly.</p>
+            <p><a href="../index.html">Browse more tools</a> | <a href="../text-case-converter/">Text Case Converter</a> | <a href="../word-counter/">Word Counter</a></p>
         </div>
     </div>
     <div class="copied" id="copiedToast">Copied!</div>

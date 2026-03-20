@@ -112,7 +112,18 @@ Visit https://www.fixthatapp.com for more info.</textarea>
         </div>
         <div class="info-section">
             <h2>Regex Quick Reference</h2>
-            <p><code>.</code> any character &bull; <code>\d</code> digit &bull; <code>\w</code> word char &bull; <code>\s</code> whitespace &bull; <code>+</code> one or more &bull; <code>*</code> zero or more &bull; <code>?</code> optional &bull; <code>^</code> start &bull; <code>$</code> end &bull; <code>[abc]</code> character class &bull; <code>(group)</code> capture group</p>
+            <p><code>.</code> any character &bull; <code>\d</code> digit (0-9) &bull; <code>\D</code> non-digit &bull; <code>\w</code> word character (a-z, A-Z, 0-9, _) &bull; <code>\W</code> non-word &bull; <code>\s</code> whitespace &bull; <code>\S</code> non-whitespace &bull; <code>^</code> start of string &bull; <code>$</code> end of string &bull; <code></code> word boundary</p>
+            <p><strong>Quantifiers:</strong> <code>+</code> one or more &bull; <code>*</code> zero or more &bull; <code>?</code> zero or one (optional) &bull; <code>{3}</code> exactly 3 &bull; <code>{2,5}</code> between 2 and 5 &bull; <code>{2,}</code> 2 or more</p>
+            <p><strong>Groups and Alternation:</strong> <code>(abc)</code> capture group &bull; <code>(?:abc)</code> non-capturing group &bull; <code>a|b</code> alternation (a or b) &bull; <code>[abc]</code> character class &bull; <code>[^abc]</code> negated class &bull; <code>[a-z]</code> range</p>
+            <h2>Common Regex Patterns</h2>
+            <p><strong>Email:</strong> <code>^[\w.-]+@[\w.-]+\.\w{2,}$</code><br>
+            <strong>URL:</strong> <code>https?://[\w./?=&amp;%-]+</code><br>
+            <strong>Phone (US):</strong> <code>\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}</code><br>
+            <strong>Date (YYYY-MM-DD):</strong> <code>\d{4}-\d{2}-\d{2}</code><br>
+            <strong>IPv4:</strong> <code>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}</code><br>
+            <strong>Hex color:</strong> <code>#[0-9a-fA-F]{3,6}</code></p>
+            <h2>How to Use This Tester</h2>
+            <p>Enter your regex pattern in the Pattern field and your test string in the Test field. The tool highlights all matches in real time. Use flags to modify behavior: <code>g</code> (global — find all matches), <code>i</code> (case-insensitive), <code>m</code> (multiline — ^ and $ match line boundaries). The match count and captured groups are shown below the test area.</p>
             <p><a href="../index.html">Browse more tools</a> | <a href="../json-formatter/">JSON Formatter</a> | <a href="../text-case-converter/">Text Case Converter</a></p>
         </div>
     </div>

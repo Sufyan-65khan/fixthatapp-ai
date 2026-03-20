@@ -89,10 +89,18 @@
         </div>
         <div class="info-section">
             <h2>What is JSON?</h2>
-            <p>JSON (JavaScript Object Notation) is a lightweight data format used for data exchange between servers and web applications. It's human-readable and easy for machines to parse.</p>
-            <h2>Common JSON Errors</h2>
-            <p>Missing commas, unmatched brackets, trailing commas, and single quotes (JSON requires double quotes) are the most common mistakes. This tool highlights the exact error location.</p>
-            <p><a href="../index.html">Browse more tools</a> | <a href="../../blog/json-formatter-guide.html">Read the full guide</a> | <a href="../regex-tester/">Try our Regex Tester</a></p>
+            <p>JSON (JavaScript Object Notation) is a text-based data interchange format derived from JavaScript object syntax. It uses key-value pairs (<code>{"key": "value"}</code>), arrays (<code>[1, 2, 3]</code>), nested objects, strings, numbers, booleans, and null. It is the standard format for REST APIs, configuration files, and NoSQL databases.</p>
+            <h2>Common JSON Errors and How to Fix Them</h2>
+            <p><strong>Trailing comma:</strong> <code>{"a": 1,}</code> — JSON does not allow trailing commas after the last item. Remove the comma.<br>
+            <strong>Single quotes:</strong> <code>{'key': 'value'}</code> — JSON requires double quotes for all strings and keys.<br>
+            <strong>Unquoted key:</strong> <code>{key: "value"}</code> — All keys must be quoted strings.<br>
+            <strong>Unescaped special characters:</strong> Backslashes (<code>\</code>), quotes (<code>"</code>), and control characters inside strings must be escaped.<br>
+            <strong>Comments:</strong> JSON does not support <code>// comments</code> or <code>/* block comments */</code>. Remove all comments before parsing.</p>
+            <h2>How to Use This Formatter</h2>
+            <p>Paste raw JSON (minified or malformed) into the input and click Format. Valid JSON is indented with 2-space indentation. Invalid JSON shows the error type and position so you can fix it. Use Minify to compress formatted JSON back to a single line for API requests or storage.</p>
+            <h2>JSON vs Other Formats</h2>
+            <p>JSON is more compact than XML and easier to read than CSV for nested data. YAML is more human-friendly but less strict. JSON5 (a superset) allows comments and trailing commas but is not supported natively by most parsers. For most API and configuration use cases, standard JSON is the right choice.</p>
+            <p><a href="../index.html">Browse more tools</a> | <a href="../regex-tester/">Regex Tester</a> | <a href="../text-case-converter/">Text Case Converter</a></p>
         </div>
     </div>
     <div class="copied" id="copiedToast">Copied!</div>

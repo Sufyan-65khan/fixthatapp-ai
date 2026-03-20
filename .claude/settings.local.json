@@ -11,7 +11,16 @@
       "WebFetch(domain:www.fixthatapp.com)",
       "Bash(do sed:*)",
       "Bash(cmd.exe:*)",
-      "Bash(/c/Users/sufya/AppData/Local/Programs/Python/Python*/python.exe:*)"
+      "Bash(/c/Users/sufya/AppData/Local/Programs/Python/Python*/python.exe:*)",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(du:*)",
+      "Bash(grep:*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/sufya/fixthatapp-ai/**)",
+      "Bash(done)",
+      "Bash(python3:*)"
     ]
   }
 }
