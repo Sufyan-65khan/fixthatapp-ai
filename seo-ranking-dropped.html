@@ -28,33 +28,62 @@
     <header><a href="seo-troubleshooting-guides.html">SEO Guides</a></header>
     <div class="container">
         <article class="article">
-            <h1>Organic Rankings Dropped: Technical and Content Recovery Plan</h1>
-            <p>When rankings decline sharply, isolate whether the cause is technical, algorithmic, or competitive.</p>
-            <h2>1. Verify Tracking and Coverage</h2>
+            <h1>Organic Rankings Dropped: How to Diagnose and Recover</h1>
+            <p>A sudden ranking drop is alarming, but most drops have an identifiable cause. The key is to work through the diagnosis systematically — starting with whether the drop is real, then checking technical issues, then evaluating content and algorithm alignment. Guessing and making large simultaneous changes typically makes recovery harder, not easier.</p>
+
+            <h2>Step 1: Confirm the Drop Is Real</h2>
+            <p>Before doing anything, verify you're looking at a genuine ranking change and not a data artifact:</p>
             <ul>
-                <li>Confirm analytics and Search Console are collecting data correctly.</li>
-                <li>Compare affected URLs in Search Console Performance and Pages reports.</li>
+                <li><strong>Check Search Console Performance report</strong> with a 16-week date range. Compare the period before and after the drop. Look at both clicks and impressions — impressions dropping alongside clicks confirms a real ranking change.</li>
+                <li><strong>Filter by page and country</strong> to isolate whether the drop is global or specific to certain regions or pages.</li>
+                <li><strong>Check your analytics platform separately.</strong> If Google Analytics shows organic traffic dropping but Search Console doesn't, you may have a tracking issue, not a ranking issue.</li>
+                <li><strong>Look for seasonality.</strong> Some industries have natural traffic dips that repeat yearly. Compare to the same period last year before concluding the site is penalized.</li>
             </ul>
-            <h2>2. Audit Recent Site Changes</h2>
+
+            <h2>Step 2: Check the Timing Against Known Events</h2>
+            <p>The timing of a drop is the most important clue. Narrow down when clicks/impressions fell and cross-reference with:</p>
             <ul>
-                <li>Template updates, redirects, canonicals, robots rules, and internal linking changes.</li>
-                <li>Page speed regressions and Core Web Vitals degradation.</li>
-                <li>Content pruning or URL removals that impacted topical depth.</li>
+                <li><strong>Google algorithm updates:</strong> Google publishes confirmed core updates and spam updates on its Search Central blog. If your drop coincides within 1–2 days of an update, the update is likely the cause.</li>
+                <li><strong>Your own site changes:</strong> Review your deployment history — did you push a new template, change canonical tags, modify robots.txt, add redirects, or remove content around the same time? Changes to site-wide elements (header, footer, nav) can affect every page simultaneously.</li>
+                <li><strong>Hosting and server issues:</strong> Intermittent 500 errors, unexpected downtime, or slow server responses around the same time can cause Google to reduce crawl frequency and demote rankings.</li>
             </ul>
-            <h2>3. Evaluate Content and Intent Match</h2>
+
+            <h2>Step 3: Audit Technical Issues</h2>
+            <p>Technical problems are the fastest to fix and should be checked first:</p>
             <ul>
-                <li>Refresh outdated content and add missing entities/subtopics.</li>
-                <li>Improve E-E-A-T signals: author info, citations, and first-hand evidence where possible.</li>
-                <li>Re-check search intent alignment against current top results.</li>
+                <li><strong>Indexing coverage:</strong> Check Search Console → Pages report for spikes in "Excluded" pages. A sudden increase in noindex, redirect, or crawl errors explains a ranking drop.</li>
+                <li><strong>Core Web Vitals:</strong> Check Search Console → Core Web Vitals report. If Largest Contentful Paint (LCP) or Cumulative Layout Shift (CLS) scores degraded, it may have triggered a ranking adjustment.</li>
+                <li><strong>Mobile usability:</strong> A template change that breaks mobile layout can tank mobile rankings. Check Search Console → Mobile Usability for new errors.</li>
+                <li><strong>Redirect chains:</strong> Redirects added during a site migration that create chains (A → B → C) dilute link equity and slow crawling. Each redirect in a chain should be direct.</li>
+                <li><strong>Internal link changes:</strong> If a redesign removed links to key pages, those pages lose authority signals and can drop significantly.</li>
             </ul>
-            <h2>4. Recovery Actions</h2>
+
+            <h2>Step 4: Evaluate Content Quality and Search Intent</h2>
+            <p>Core algorithm updates specifically target content quality. If a core update caused your drop, the fix is improving content — there is no technical shortcut:</p>
+            <ul>
+                <li><strong>Re-evaluate search intent:</strong> Search the keywords your page was ranking for and study the current top 10 results. If the format or intent has shifted (e.g., the SERP now favors listicles over in-depth guides, or how-to guides over product pages), your content may no longer match what Google expects for that query.</li>
+                <li><strong>Check for outdated information:</strong> Pages with stale statistics, discontinued products, or outdated advice get demoted as users signal dissatisfaction through high bounce rates and short visit times.</li>
+                <li><strong>Improve E-E-A-T signals:</strong> For YMYL topics (health, finance, legal, safety), Google weights Experience, Expertise, Authoritativeness, and Trustworthiness heavily. Add author credentials, cite authoritative sources, and ensure your content demonstrates genuine expertise.</li>
+                <li><strong>Thin or duplicate content:</strong> If multiple pages on your site cover the same topic with minor variation, consolidate them into one authoritative page and redirect the others.</li>
+            </ul>
+
+            <h2>Step 5: Recovery Actions in Order</h2>
             <ol>
-                <li>Fix technical blockers first (indexability, redirects, crawl issues).</li>
-                <li>Prioritize high-impression pages for content updates.</li>
-                <li>Strengthen internal links to strategic pages.</li>
-                <li>Monitor weekly trend changes before making additional large edits.</li>
+                <li><strong>Fix technical blockers first</strong> — indexability, redirects, crawl errors. These have quick, measurable fixes.</li>
+                <li><strong>Prioritize high-impression, high-drop pages</strong> for content updates. Use the Search Console Performance report filtered by impressions to find pages that lost the most visibility.</li>
+                <li><strong>Make meaningful content improvements</strong> on your top pages — don't just add words, add value. Address gaps, update stats, add new sections answering related questions.</li>
+                <li><strong>Strengthen internal links</strong> to strategic pages. Remove or update internal links pointing to removed/redirected pages.</li>
+                <li><strong>Wait and monitor.</strong> After publishing improvements, allow 4–6 weeks before evaluating recovery. Core update recoveries typically become visible after the next algorithm update cycle, not immediately.</li>
             </ol>
-            <p>Return to <a href="seo-troubleshooting-guides.html">SEO troubleshooting hub</a>.</p>
+
+            <h2>What Not to Do</h2>
+            <ul>
+                <li>Don't make massive changes to many pages simultaneously during recovery — you won't be able to tell what worked.</li>
+                <li>Don't disavow backlinks unless you have confirmed evidence of a manual penalty for unnatural links. Random disavowing can hurt rankings.</li>
+                <li>Don't change URLs or restructure the site while investigating a ranking drop — it adds noise to the diagnosis.</li>
+            </ul>
+
+            <p>Related: <a href="seo-page-not-indexed.html">Page Not Indexed in Google</a> | <a href="seo-crawled-not-indexed.html">Crawled - Currently Not Indexed</a>.</p>
         </article>
     </div>
     <footer>&copy; 2026 FixThatApp</footer>

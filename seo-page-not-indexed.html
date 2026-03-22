@@ -28,33 +28,65 @@
     <header><a href="seo-troubleshooting-guides.html">SEO Guides</a></header>
     <div class="container">
         <article class="article">
-            <h1>Page Not Indexed in Google: SEO Troubleshooting Checklist</h1>
-            <p>When a page is published but never appears in search, validate crawlability, indexability, and quality signals in order.</p>
-            <h2>1. Confirm Indexing Eligibility</h2>
+            <h1>Page Not Indexed in Google: Complete Troubleshooting Guide</h1>
+            <p>Publishing a page doesn't guarantee Google will index it. When a page fails to appear in search results — even after several weeks — there's usually a diagnosable reason. This guide walks through the full checklist, from blocking signals to content quality issues, in the order you should check them.</p>
+
+            <h2>Step 1: Check for Explicit Blocking Signals</h2>
+            <p>The first thing to rule out is that you've accidentally told Google not to index the page. These mistakes are common after template changes or CMS migrations:</p>
             <ul>
-                <li>Verify no <code>noindex</code> meta tag or HTTP <code>X-Robots-Tag</code>.</li>
-                <li>Check <code>robots.txt</code> does not block the page path.</li>
-                <li>Confirm canonical points to itself (or intentional target).</li>
+                <li><strong>noindex meta tag:</strong> Search the page's HTML for <code>&lt;meta name="robots" content="noindex"&gt;</code>. This directly instructs search engines to skip the page.</li>
+                <li><strong>X-Robots-Tag HTTP header:</strong> Some server configurations add a <code>X-Robots-Tag: noindex</code> HTTP header. Check this with browser dev tools → Network tab, or use a tool like curl: <code>curl -I https://yourdomain.com/your-page</code>.</li>
+                <li><strong>robots.txt disallow:</strong> If your robots.txt contains a <code>Disallow: /your-path/</code> rule matching the page, Google can crawl it but the path block may affect indexing signals. Check at <code>yourdomain.com/robots.txt</code>.</li>
+                <li><strong>Password protection or login wall:</strong> Pages behind authentication cannot be crawled or indexed. Even a soft paywall may prevent indexing if content isn't accessible to Googlebot.</li>
             </ul>
-            <h2>2. Test in Google Search Console</h2>
+
+            <h2>Step 2: Use the URL Inspection Tool in Search Console</h2>
+            <p>Google Search Console's URL Inspection tool is the most direct way to see exactly how Google views your page. Go to Search Console → URL Inspection → paste your full URL and press Enter.</p>
             <ul>
-                <li>Use URL Inspection and test live URL.</li>
-                <li>Request indexing after fixes are published.</li>
-                <li>Check whether Google-selected canonical differs from your declared canonical.</li>
+                <li><strong>Coverage status:</strong> Look at the "Coverage" section. It will show you the indexing status, when Google last crawled the page, and the crawled-as reason.</li>
+                <li><strong>Google-selected canonical:</strong> If the tool shows a different canonical than what you declared, Google has chosen a different version to represent the page. You need to reconcile the conflict.</li>
+                <li><strong>Test Live URL:</strong> Click "Test Live URL" to fetch the current version of the page as Googlebot. This confirms whether the page is currently accessible and whether Google can render it properly.</li>
+                <li><strong>Request Indexing:</strong> Only use this after you've made fixes. Requesting indexing on an unchanged page rarely helps, and Google throttles requests from pages submitted too frequently without changes.</li>
             </ul>
-            <h2>3. Improve Content Quality Signals</h2>
+
+            <h2>Step 3: Verify the Canonical Tag</h2>
+            <p>A misconfigured canonical tag is one of the most common reasons a page isn't indexed. The page may be consolidating into a different URL than you intended.</p>
             <ul>
-                <li>Add unique value beyond manufacturer/vendor copy.</li>
-                <li>Use descriptive title and meta description.</li>
-                <li>Ensure helpful internal links point to the page.</li>
+                <li>Each page should have a self-referential canonical: <code>&lt;link rel="canonical" href="https://yourdomain.com/exact-page-url"&gt;</code></li>
+                <li>If the canonical points to a different page, Google will index that other page — not this one.</li>
+                <li>Watch for trailing slash mismatches: <code>/page/</code> vs <code>/page</code> treated as separate URLs when canonical isn't set.</li>
+                <li>Ensure the canonical URL in the tag matches exactly what's in your sitemap and what you're requesting indexing for.</li>
             </ul>
-            <h2>4. Validate Technical Accessibility</h2>
+
+            <h2>Step 4: Assess Content Quality</h2>
+            <p>Google's indexing decision is partly a quality judgment. If the page provides little unique value, Google may choose not to include it. Common quality issues:</p>
             <ul>
-                <li>Page should return HTTP <code>200</code> quickly and consistently.</li>
-                <li>Avoid JavaScript-only content that fails without full rendering.</li>
-                <li>Add the URL to your sitemap.xml and resubmit sitemap.</li>
+                <li><strong>Thin content:</strong> Pages with fewer than 300 words of substantive text are regularly skipped. Navigation, footers, and boilerplate don't count toward useful content.</li>
+                <li><strong>Duplicate or near-duplicate content:</strong> If 70%+ of your page's content matches another page on your site or elsewhere on the web, Google will pick only the "best" version to index.</li>
+                <li><strong>Copied manufacturer/vendor descriptions:</strong> E-commerce pages using default supplier copy are flagged as duplicate content across thousands of sites selling the same product.</li>
+                <li><strong>No clear search intent match:</strong> A page with no obvious search query it's answering gives Google no reason to include it in results.</li>
             </ul>
-            <p>Next guide: <a href="seo-crawled-not-indexed.html">Crawled - Currently Not Indexed</a>.</p>
+
+            <h2>Step 5: Fix Internal Linking and Discovery</h2>
+            <p>Google discovers and evaluates pages partly through internal links. Orphan pages — those with no inbound internal links from other pages on your site — are deprioritized:</p>
+            <ul>
+                <li>Add at least 2–3 links to the page from relevant, high-traffic pages on your site.</li>
+                <li>Include the page in your main navigation or a relevant category page if appropriate.</li>
+                <li>Add the URL to your sitemap.xml and resubmit the sitemap in Search Console under Sitemaps.</li>
+            </ul>
+
+            <h2>Step 6: Check Technical Accessibility</h2>
+            <ul>
+                <li>The page should return an HTTP <code>200</code> status consistently — not intermittent <code>500</code> or <code>503</code> errors.</li>
+                <li>Page load time matters: pages that take more than 10 seconds to load may not be fully crawled.</li>
+                <li>If the page's main content is rendered by JavaScript, confirm Googlebot can execute it. Use the URL Inspection tool's Live Test rendering view to check what Google actually sees.</li>
+                <li>Do not block CSS or JS files in robots.txt — Googlebot needs to render the page to assess quality.</li>
+            </ul>
+
+            <h2>How Long Until a New Page Gets Indexed?</h2>
+            <p>For established sites with good crawl history, new pages typically appear in Google within 1–2 weeks of being submitted. For newer sites or pages with weak signals, it can take 4–8 weeks. Consistently publishing high-quality content, maintaining a clean sitemap, and having strong internal links all accelerate the process.</p>
+
+            <p>Related: <a href="seo-crawled-not-indexed.html">Crawled - Currently Not Indexed</a> | <a href="seo-ranking-dropped.html">Organic Rankings Dropped</a>.</p>
         </article>
     </div>
     <footer>&copy; 2026 FixThatApp</footer>

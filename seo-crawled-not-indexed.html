@@ -29,29 +29,40 @@
     <div class="container">
         <article class="article">
             <h1>Crawled - Currently Not Indexed: How to Resolve It</h1>
-            <p>This Search Console status means Google can access the page but is not convinced it should be indexed yet.</p>
-            <h2>Common Causes</h2>
+            <p>The "Crawled - currently not indexed" status in Google Search Console means Googlebot visited and downloaded your page, but Google chose not to add it to its search index. This is distinct from pages that haven't been crawled at all. Google actively decided this page isn't worth indexing — which means you need to address why.</p>
+
+            <h2>Why Google Chooses Not to Index a Crawled Page</h2>
+            <p>Google's indexing decision is based on whether it believes the page adds unique value to its index. The most common reasons it opts out:</p>
             <ul>
-                <li>Thin or low-differentiation content.</li>
-                <li>Near-duplicate pages with weak canonical signals.</li>
-                <li>Orphan URLs with no internal links.</li>
-                <li>Large low-quality sections draining crawl budget.</li>
+                <li><strong>Thin content:</strong> Pages with very little text, mostly navigation, or fewer than 300 words of substantive content are routinely skipped.</li>
+                <li><strong>Near-duplicate content:</strong> If your page is very similar to another page on your site or on the web, Google will typically index only the "best" version.</li>
+                <li><strong>Weak canonical signals:</strong> If canonical tags conflict, or if you don't have a canonical at all and the page appears on multiple URLs, Google may pick a different canonical than you intended.</li>
+                <li><strong>Orphan pages:</strong> Pages with no internal links pointing to them are harder for Google to assess authority and relevance — they get deprioritized.</li>
+                <li><strong>Low E-E-A-T signals:</strong> Pages lacking author information, references, or demonstrable expertise on their topic may be skipped for YMYL (Your Money Your Life) content areas.</li>
+                <li><strong>Crawl budget exhaustion:</strong> Large sites with many low-quality pages can cause Google to deprioritize crawling and indexing less important sections.</li>
             </ul>
-            <h2>Fix Sequence</h2>
+
+            <h2>Step-by-Step Fix Sequence</h2>
             <ol>
-                <li>Merge or improve pages with overlapping intent.</li>
-                <li>Add stronger internal links from high-authority pages.</li>
-                <li>Consolidate duplicates and enforce canonical consistency.</li>
-                <li>Submit only high-value URLs in sitemap.xml.</li>
-                <li>Request indexing after substantial updates.</li>
+                <li><strong>Run the URL Inspection Tool</strong> in Search Console on the affected URL. Check whether Google's selected canonical matches your declared canonical. If they differ, that's the root problem.</li>
+                <li><strong>Audit content quality.</strong> Read the page as a user. Does it answer a specific question fully? Does it have more than 400 words of original, useful text? If not, expand it or merge it with a related page.</li>
+                <li><strong>Add internal links</strong> from high-authority pages on your site pointing to the affected URL. A page with no inbound internal links looks like an orphan — even one or two strong internal links help significantly.</li>
+                <li><strong>Fix canonical inconsistencies.</strong> Ensure the page has a self-referential canonical tag: <code>&lt;link rel="canonical" href="https://yourdomain.com/page-url"&gt;</code>. Check that no other page canonicalises to a different version of this URL.</li>
+                <li><strong>Submit only high-value URLs in your sitemap.</strong> Remove thin, near-duplicate, or low-value pages from sitemap.xml. Submitting weak pages signals to Google that you consider everything equally important.</li>
+                <li><strong>Make a meaningful content update,</strong> then request indexing via the URL Inspection Tool. Requesting indexing on an unchanged page rarely helps.</li>
             </ol>
+
+            <h2>How Long Does It Take After Fixing?</h2>
+            <p>After making substantial improvements and requesting indexing, most pages are re-evaluated within 2–4 weeks for small sites. For larger sites or pages with historically weak signals, it can take 4–8 weeks. Consistent internal linking and inclusion in the sitemap speeds up recrawling.</p>
+
             <h2>What to Avoid</h2>
             <ul>
-                <li>Repeatedly requesting indexing without meaningful changes.</li>
-                <li>Programmatically generating many near-identical pages.</li>
-                <li>Blocking resources required for rendering main content.</li>
+                <li>Repeatedly requesting indexing without making meaningful changes — Google throttles requests from sites that spam the tool.</li>
+                <li>Programmatically generating large numbers of near-identical pages with minor variations (different city names, product sizes, etc.) without unique content for each.</li>
+                <li>Blocking CSS, JavaScript, or image resources in robots.txt that are needed for rendering the page's main content — Googlebot needs to render the page to assess its quality.</li>
+                <li>Using noindex accidentally — double-check that the affected page doesn't have a <code>meta name="robots" content="noindex"</code> tag.</li>
             </ul>
-            <p>Related: <a href="seo-ranking-dropped.html">Organic Rankings Dropped</a>.</p>
+            <p>Related: <a href="seo-ranking-dropped.html">Organic Rankings Dropped</a> | <a href="seo-page-not-indexed.html">Page Not Indexed in Google</a>.</p>
         </article>
     </div>
     <footer>&copy; 2026 FixThatApp</footer>
