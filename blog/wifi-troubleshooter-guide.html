@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi Troubleshooter Guide: Fix Connection Problems on Any Device | FixThatApp</title>
+    <meta name="description" content="Step-by-step guide to diagnosing and fixing Wi-Fi problems including no internet access, slow speeds, drops, and devices that won't connect. Covers Windows, Mac, Android, and iPhone.">
+    <meta name="keywords" content="wifi troubleshooter, fix wifi connection, no internet access, wifi slow, wifi keeps dropping, wifi not connecting, wifi diagnostics">
+    <link rel="canonical" href="https://www.fixthatapp.com/blog/wifi-troubleshooter-guide.html">
+    <meta property="og:title" content="Wi-Fi Troubleshooter Guide: Fix Connection Problems on Any Device | FixThatApp">
+    <meta property="og:description" content="Step-by-step guide to diagnosing and fixing Wi-Fi problems including no internet access, slow speeds, and drops on Windows, Mac, Android, and iPhone.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/blog/wifi-troubleshooter-guide.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Wi-Fi Troubleshooter Guide: Fix Connection Problems on Any Device",
+      "description": "Step-by-step guide to diagnosing and fixing Wi-Fi problems including no internet access, slow speeds, drops, and devices that won't connect.",
+      "datePublished": "2026-03-22",
+      "dateModified": "2026-03-22",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/blog/wifi-troubleshooter-guide.html"}
+    }
+    </script>
+    <style>
+        :root{--bg:#f5f7fa;--card:#fff;--text:#333;--text-secondary:#444;--muted:#999;--accent:#667eea;--heading:#1a1a2e;--border:#eee;--code-bg:#f0f0f5;--tip-bg:#f0f7ff;--tip-border:#667eea;--cta-bg:linear-gradient(135deg,#667eea,#764ba2)}
+        @media(prefers-color-scheme:dark){:root{--bg:#1a1a2e;--card:#2a2a3e;--text:#e0e0e0;--text-secondary:#ccc;--muted:#888;--heading:#f0f0f0;--border:#3a3a4e;--code-bg:#333350;--tip-bg:#2a2a4e;--tip-border:#667eea}}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+        header a{color:#fff;text-decoration:none;font-size:1.3rem;font-weight:bold}
+        .nav-links{display:flex;gap:.75rem}
+        .nav-links a{font-size:.85rem;padding:.3rem .75rem;border:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+        .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+        .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:1rem}
+        .breadcrumb a{color:var(--accent);text-decoration:none}
+        .article{background:var(--card);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .article h1{font-size:1.8rem;color:var(--heading);margin-bottom:.5rem}
+        .article .updated{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem}
+        .article h2{font-size:1.3rem;color:var(--heading);margin:2rem 0 .75rem;padding-bottom:.3rem;border-bottom:2px solid var(--border)}
+        .article h3{font-size:1.1rem;color:var(--text-secondary);margin:1.5rem 0 .5rem}
+        .article p{margin-bottom:.85rem;color:var(--text-secondary)}
+        .article ol,.article ul{margin:.5rem 0 1rem 1.5rem;color:var(--text-secondary)}
+        .article li{margin-bottom:.4rem}
+        .article strong{color:var(--text)}
+        .article code{background:var(--code-bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em}
+        .article pre{background:var(--code-bg);padding:1rem;border-radius:8px;overflow-x:auto;margin:.75rem 0 1rem;font-size:.85rem;line-height:1.5}
+        .article pre code{background:none;padding:0}
+        .article a{color:var(--accent);text-decoration:none}
+        .article a:hover{text-decoration:underline}
+        .tip-box{background:var(--tip-bg);border-left:4px solid var(--tip-border);border-radius:8px;padding:1rem 1.25rem;margin:1.25rem 0}
+        .tip-box strong{display:block;margin-bottom:.3rem}
+        .diagnosis-box{background:#fffbea;border-left:4px solid #f5a623;border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1.5rem 0}
+        .diagnosis-box strong{display:block;color:#b8730a;margin-bottom:.5rem}
+        .cta-box{background:var(--cta-bg);color:#fff;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center}
+        .cta-box h3{color:#fff;margin-bottom:.5rem;font-size:1.2rem}
+        .cta-box p{color:rgba(255,255,255,.9);margin-bottom:1rem}
+        .cta-box a{display:inline-block;background:#fff;color:#667eea;padding:.6rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none}
+        table{width:100%;border-collapse:collapse;margin:.75rem 0 1.25rem}
+        th,td{text-align:left;padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.9rem}
+        th{background:var(--code-bg);font-weight:600;color:var(--heading)}
+        .faq-item{border-bottom:1px solid var(--border);padding:.75rem 0}
+        .faq-item:last-child{border-bottom:none}
+        .faq-item strong{color:var(--heading);display:block;margin-bottom:.3rem}
+        footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+        footer a{color:var(--accent);text-decoration:none}
+        @media(max-width:600px){.article{padding:1.5rem 1rem}.article h1{font-size:1.4rem}.nav-links{display:none}}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner a{color:#9ec2ff}
+        .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
+        .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
+        .cookie-btn.primary{background:#667eea}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="nav-links">
+            <a href="../index.html">Guides</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Blog</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; Wi-Fi Troubleshooter Guide</nav>
+        <article class="article">
+            <h1>Wi-Fi Troubleshooter Guide: Fix Connection Problems on Any Device</h1>
+            <div class="updated">Published March 22, 2026</div>
+
+            <p>Wi-Fi problems come in more varieties than most people realise. "No internet" and "slow internet" are completely different problems requiring different fixes. A connection that drops only when the laptop goes to sleep points somewhere entirely different than a connection that never worked on a specific device. This guide is structured around diagnosing first, then fixing — so you solve the actual problem rather than trying random steps.</p>
+
+            <div class="diagnosis-box">
+                <strong>Identify your problem first:</strong>
+                <ul>
+                    <li><strong>No Wi-Fi networks visible</strong> → adapter is disabled or driver issue</li>
+                    <li><strong>Connected but "No internet access"</strong> → router or DNS issue</li>
+                    <li><strong>Only one device can't connect</strong> → device-specific problem</li>
+                    <li><strong>All devices slow or dropping</strong> → router or ISP issue</li>
+                    <li><strong>Drops after a few minutes idle</strong> → power management turning off adapter</li>
+                </ul>
+            </div>
+
+            <h2>Step 1: The Fastest First Check</h2>
+
+            <p>Before anything else, check one question: <strong>do other devices on the same network have the same problem?</strong></p>
+
+            <ul>
+                <li>If yes — the problem is in the router or ISP. Restart your router (unplug for 30 seconds), then the modem. If still no internet after restart, call your ISP.</li>
+                <li>If no (only your device) — the problem is on your specific device. Continue with the device-specific steps below.</li>
+            </ul>
+
+            <h2>Step 2: Fix "No Internet Access" on Windows</h2>
+
+            <p>The yellow triangle with "No internet access" or "No internet, secured" means your PC connected to the router but the router can't reach the internet — or there's a local network stack issue.</p>
+
+            <p>Open <strong>Command Prompt as Administrator</strong> (search "cmd", right-click, Run as administrator) and run these five commands in order:</p>
+
+            <pre><code>netsh winsock reset
+netsh int ip reset
+ipconfig /release
+ipconfig /renew
+ipconfig /flushdns</code></pre>
+
+            <p>Restart your PC after all five. This fixes most "connected but no internet" issues caused by corrupted network stack settings or stale IP configurations.</p>
+
+            <h2>Step 3: Fix "Can't Connect to This Network" on Windows</h2>
+
+            <p>This specific error means the saved network profile is corrupted. The fix:</p>
+
+            <ol>
+                <li>Go to <strong>Settings &gt; Network &amp; Internet &gt; Wi-Fi &gt; Manage known networks</strong>.</li>
+                <li>Find the problem network and click <strong>Forget</strong>.</li>
+                <li>Reconnect by clicking the network and entering the password fresh.</li>
+            </ol>
+
+            <h2>Step 4: Fix Wi-Fi Not Connecting on iPhone or Android</h2>
+
+            <h3>iPhone</h3>
+            <ol>
+                <li>Go to <strong>Settings &gt; Wi-Fi</strong>, tap the (i) next to the network name, and tap <strong>Forget This Network</strong>.</li>
+                <li>Reconnect by selecting the network and entering the password.</li>
+                <li>If that doesn't work: <strong>Settings &gt; General &gt; Transfer or Reset iPhone &gt; Reset &gt; Reset Network Settings</strong>. This clears all saved Wi-Fi passwords and VPN settings.</li>
+            </ol>
+
+            <h3>Android</h3>
+            <ol>
+                <li>Go to <strong>Settings &gt; Wi-Fi</strong>, long-press the network, and tap <strong>Forget network</strong>.</li>
+                <li>Reconnect with the password.</li>
+                <li>If still failing: toggle Airplane Mode on for 30 seconds, then off. This resets all radio hardware.</li>
+            </ol>
+
+            <h2>Step 5: Fix Wi-Fi Dropping on Windows (Power Management)</h2>
+
+            <p>If your Wi-Fi disconnects when the screen goes idle, Windows is turning off the adapter to save power.</p>
+
+            <ol>
+                <li>Open <strong>Device Manager</strong> (Win+X &gt; Device Manager).</li>
+                <li>Expand <strong>Network Adapters</strong>, double-click your wireless adapter.</li>
+                <li>Go to the <strong>Power Management</strong> tab.</li>
+                <li>Uncheck <strong>"Allow the computer to turn off this device to save power"</strong>.</li>
+                <li>Click OK and restart.</li>
+            </ol>
+
+            <h2>Step 6: Fix Slow Wi-Fi Speed</h2>
+
+            <p>Slow Wi-Fi despite a fast internet plan is usually one of these:</p>
+
+            <table>
+                <tr><th>Symptom</th><th>Likely cause</th><th>Fix</th></tr>
+                <tr><td>Slow only on Wi-Fi, fast on ethernet</td><td>Wi-Fi interference or weak signal</td><td>Move closer to router or switch to 5 GHz band</td></tr>
+                <tr><td>Slow on all devices</td><td>ISP throttling or router overload</td><td>Reboot router; run ISP speed test</td></tr>
+                <tr><td>Slow on one device only</td><td>Background downloads or DNS issue</td><td>Check Task Manager for bandwidth use; change DNS to 8.8.8.8</td></tr>
+                <tr><td>Slow in evenings only</td><td>Network congestion from neighbors</td><td>Switch Wi-Fi channel on router; use 5 GHz</td></tr>
+            </table>
+
+            <div class="tip-box">
+                <strong>2.4 GHz vs 5 GHz — which should you use?</strong>
+                <p>5 GHz is faster but shorter range. 2.4 GHz travels further but is shared with microwaves, baby monitors, and your neighbors' routers. If you're within 10 metres of the router, always use 5 GHz. If the device is far away or through thick walls, use 2.4 GHz. Many modern routers show these as separate networks (e.g., "HomeNet" and "HomeNet_5G").</p>
+            </div>
+
+            <h2>Step 7: Fix Wi-Fi on Mac</h2>
+
+            <ol>
+                <li>Hold <strong>Option and click the Wi-Fi icon</strong> in the menu bar to see your connection details and signal strength.</li>
+                <li>Go to <strong>System Settings &gt; Network &gt; Wi-Fi</strong>, click the three dots next to the network, and select <strong>Forget This Network</strong>. Reconnect fresh.</li>
+                <li>If still failing, try <strong>System Settings &gt; Network &gt; Wi-Fi &gt; Advanced &gt; DNS</strong> and add Google's DNS: 8.8.8.8 and 8.8.4.4.</li>
+                <li>As a last resort, delete Wi-Fi network preferences: go to <code>/Library/Preferences/SystemConfiguration/</code> and delete <code>com.apple.network.identification.plist</code> and <code>com.apple.wifi.message-tracer.plist</code>. Restart and reconnect.</li>
+            </ol>
+
+            <h2>Real-World Scenarios</h2>
+
+            <h3>Scenario 1: New router, everything worked before</h3>
+            <p>Your old devices have saved the old router's settings. Forget the network on all devices and reconnect with the new router's credentials. Also check if the new router is using the same network name (SSID) — if so, devices may be trying to connect with the old password.</p>
+
+            <h3>Scenario 2: Works on phone, not on laptop</h3>
+            <p>This is a device-specific issue. Check if your laptop has a physical Wi-Fi toggle switch (common on older laptops). Run the Windows network troubleshooter (Settings &gt; Troubleshoot &gt; Other troubleshooters &gt; Internet Connections). Update Wi-Fi drivers from Device Manager.</p>
+
+            <h3>Scenario 3: Wi-Fi works in the morning but drops in evenings</h3>
+            <p>Channel congestion from neighbors. Log into your router admin panel (usually 192.168.1.1 or 192.168.0.1) and change the Wi-Fi channel to one less used in your area. For 2.4 GHz, channels 1, 6, and 11 are non-overlapping — test each one.</p>
+
+            <h3>Scenario 4: One room in the house has no signal</h3>
+            <p>Physical obstructions, especially concrete walls and metal appliances, block Wi-Fi significantly. Solutions: move the router to a more central location, add a Wi-Fi extender or mesh node, or run a powerline ethernet adapter to create a wired connection point in the weak area.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <strong>Q: Why does my Wi-Fi say "Connected, no internet" after restarting?</strong>
+                <p>This usually means the router didn't fully re-establish its connection to the ISP after reboot. Wait 2–3 minutes after restarting the router before testing. If it persists, restart the modem separately (not just the router) or contact your ISP — the issue may be on their end.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q: How do I know if my internet is slow or my Wi-Fi is slow?</strong>
+                <p>Connect a device directly to the router with an ethernet cable and run a speed test. If speed is fine on ethernet but slow on Wi-Fi, the issue is Wi-Fi signal strength or interference. If speed is also slow on ethernet, the problem is the ISP or the router's WAN connection.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q: Why can't my new device connect but all others can?</strong>
+                <p>The new device might have the wrong password saved, or the router may have a MAC address whitelist that blocks unknown devices. Check the router admin panel for access control settings. Also make sure the new device is trying to connect to the correct network name.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q: Does changing DNS to 8.8.8.8 really help?</strong>
+                <p>Yes, in some cases. Your ISP's default DNS servers can be slow or have outages. Google's (8.8.8.8) and Cloudflare's (1.1.1.1) DNS servers are faster and more reliable for most users. Changing DNS won't fix packet loss or speed issues, but it can fix "some websites load, others don't" problems.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q: My Wi-Fi works but is very slow on video calls only. Why?</strong>
+                <p>Video calls are sensitive to both bandwidth and latency. Check if background apps are running downloads or backups during your call (Dropbox, OneDrive, Windows Update). Also, video call apps perform better on 5 GHz Wi-Fi or wired ethernet because of lower latency. Check your router's QoS (Quality of Service) settings to prioritize video call traffic.</p>
+            </div>
+
+            <div class="cta-box">
+                <h3>More Specific Wi-Fi Fixes</h3>
+                <p>Read our dedicated guide for Windows Wi-Fi connection errors including "Can't connect to this network" and missing Wi-Fi icon troubleshooting.</p>
+                <a href="../pages/windows-wifi-not-connecting.html">Windows Wi-Fi Fixes</a>
+            </div>
+
+        </article>
+    </div>
+    <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) banner.style.display = 'flex';
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
+</body>
+</html>
