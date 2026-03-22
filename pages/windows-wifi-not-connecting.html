@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Guide: Windows Wi-Fi Not Connecting - FixThatApp</title>
-    <meta name="description" content="Your Windows PC or laptop may fail to connect to Wi-Fi networks. You might see &quot;Can&#x27;t connect to this network&quot;, &quot;No internet access&quot;, or the Wi-Fi option m">
-    <meta name="keywords" content="windows wi-fi not connecting, fix, troubleshooting, how to fix, not working, error, solution">
+    <title>Windows Wi-Fi Not Connecting: 8 Fixes for "Can't Connect to This Network" | FixThatApp</title>
+    <meta name="description" content="Windows showing 'Can't connect to this network', 'No internet access', or Wi-Fi missing from taskbar? These 8 fixes solve the most common Windows Wi-Fi problems step by step.">
+    <meta name="keywords" content="windows wifi not connecting, can't connect to this network, windows no internet access, wifi missing taskbar windows, fix windows wifi">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/windows-wifi-not-connecting.html">
-    <meta property="og:title" content="Troubleshooting Guide: Windows Wi-Fi Not Connecting - FixThatApp">
-    <meta property="og:description" content="Your Windows PC or laptop may fail to connect to Wi-Fi networks. You might see &quot;Can&#x27;t connect to this network&quot;, &quot;No internet access&quot;, or the Wi-Fi option m">
+    <meta property="og:title" content="Windows Wi-Fi Not Connecting: 8 Fixes for 'Can't Connect to This Network' | FixThatApp">
+    <meta property="og:description" content="Windows showing 'Can't connect to this network', 'No internet access', or Wi-Fi missing from taskbar? These 8 fixes solve the most common Windows Wi-Fi problems step by step.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/windows-wifi-not-connecting.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Troubleshooting Guide: Windows Wi-Fi Not Connecting - FixThatApp">
-    <meta name="twitter:description" content="Your Windows PC or laptop may fail to connect to Wi-Fi networks. You might see &quot;Can&#x27;t connect to this network&quot;, &quot;No internet access&quot;, or the Wi-Fi option m">
+    <meta name="twitter:title" content="Windows Wi-Fi Not Connecting: 8 Fixes for 'Can't Connect to This Network' | FixThatApp">
+    <meta name="twitter:description" content="Windows showing 'Can't connect to this network', 'No internet access', or Wi-Fi missing from taskbar? These 8 fixes solve the most common Windows Wi-Fi problems step by step.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script>
     (function() {
@@ -33,9 +33,9 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "Troubleshooting Guide: Windows Wi-Fi Not Connecting",
-      "description": "Your Windows PC or laptop may fail to connect to Wi-Fi networks. You might see &quot;Can&#x27;t connect to this network&quot;, &quot;No internet access&quot;, or the Wi-Fi option m",
-      "dateModified": "2026-03-05",
+      "headline": "Windows Wi-Fi Not Connecting: 8 Fixes for 'Can't Connect to This Network'",
+      "description": "Windows showing 'Can't connect to this network', 'No internet access', or Wi-Fi missing from taskbar? These 8 fixes solve the most common Windows Wi-Fi problems step by step.",
+      "dateModified": "2026-03-22",
       "author": {
         "@type": "Organization",
         "name": "FixThatApp",
@@ -59,34 +59,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Why does my Windows PC say &quot;No Internet Access&quot; when connected to Wi-Fi?",
+          "name": "What does 'Can't connect to this network' mean on Windows?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "This means you&#x27;re connected to the router but the router doesn&#x27;t have internet. Try restarting your router, or contact your internet service provider."
+            "text": "This error means Windows has a corrupted saved profile for that Wi-Fi network. The stored password, security settings, or IP configuration no longer matches what the router expects. The fix is to forget the network and reconnect from scratch: go to Settings > Network & Internet > Wi-Fi > Manage Known Networks, find the network, click Forget, then reconnect by entering the password again."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Why is the Wi-Fi option missing from my taskbar?",
+          "name": "Why does Windows show 'No Internet Access' even though Wi-Fi is connected?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Your Wi-Fi adapter may be disabled. Open Device Manager &gt; Network Adapters &gt; right-click your Wi-Fi adapter &gt; Enable Device. Also check for a physical Wi-Fi switch on your laptop."
+            "text": "A yellow triangle with 'No internet access' or 'No internet, secured' means Windows connected to your router successfully but the router itself can't reach the internet. Try restarting your router and modem. If other devices on the same network also have no internet, the problem is with your ISP or router, not your PC. If only your PC is affected, run ipconfig /release, ipconfig /renew, and ipconfig /flushdns in Command Prompt as Administrator."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Can I use my phone&#x27;s internet on my PC?",
+          "name": "The Wi-Fi icon is missing from my Windows taskbar — how do I get it back?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, enable &quot;Hotspot&quot; on your phone and connect your PC to it via Wi-Fi. You can also use USB tethering by connecting your phone with a USB cable."
+            "text": "First check if your Wi-Fi adapter is disabled: open Device Manager (Win+X > Device Manager), expand Network Adapters, right-click your wireless adapter, and select Enable Device. Also check for a physical Wi-Fi toggle key on your laptop (often Fn+F2 or similar). If the adapter shows as enabled but the icon is still missing, try restarting Windows Explorer via Task Manager."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "How do I find my Wi-Fi password?",
+          "name": "Why does my Windows PC keep dropping Wi-Fi every few minutes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On a device already connected, go to Settings &gt; Network &amp; Internet &gt; Wi-Fi &gt; your network &gt; Properties &gt; View Wi-Fi Security Key. You can also find it on the back of your router."
+            "text": "Intermittent drops are usually caused by Windows Power Management turning off the Wi-Fi adapter to save power. Open Device Manager > Network Adapters > right-click your Wi-Fi adapter > Properties > Power Management tab > uncheck 'Allow the computer to turn off this device to save power'. Also update your Wi-Fi adapter drivers from the manufacturer's website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do the TCP/IP reset commands actually do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "These commands fix corrupted network stack settings. 'netsh winsock reset' fixes the Winsock catalog which handles socket communications. 'netsh int ip reset' rebuilds IP configuration entries. 'ipconfig /release' and '/renew' request a fresh IP address from your router. 'ipconfig /flushdns' clears cached DNS entries that may be pointing to wrong addresses. Together they clean up most software-level network issues."
           }
         }
       ]
@@ -164,6 +172,21 @@
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
         .faq .a { color: #555; }
+        .diagnosis-box {
+            background: #fffbea;
+            border-left: 4px solid #f5a623;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        .diagnosis-box h3 { margin-top: 0; color: #b8730a; }
+        .still-stuck {
+            background: #eef2ff;
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin-top: 2rem;
+        }
+        .still-stuck h3 { color: #3730a3; margin-top: 0; }
         footer {
             text-align: center;
             padding: 2rem 1rem;
@@ -230,64 +253,135 @@
             <a href="../index.html">Home</a> &rsaquo; Windows Wi-Fi Not Connecting
         </nav>
         <div class="article">
-            <h1>Troubleshooting Guide: Windows Wi-Fi Not Connecting</h1>
-            <p class="updated">Last updated: March 5, 2026</p>
-            <h2>Problem Description</h2>
-            <p>Your Windows PC or laptop may fail to connect to Wi-Fi networks. You might see "Can't connect to this network", "No internet access", or the Wi-Fi option may be missing entirely from the taskbar.</p>
-            <h2>Possible Causes</h2>
-            <p><strong>Wi-Fi adapter disabled</strong>: The wireless adapter may be turned off in settings or by a physical switch.</p>
-            <p><strong>Incorrect password</strong>: The saved Wi-Fi password may be wrong or outdated.</p>
-            <p><strong>Network driver issues</strong>: Outdated or corrupted Wi-Fi drivers can prevent connections.</p>
-            <p><strong>IP address conflicts</strong>: Multiple devices may have conflicting IP addresses on the network.</p>
-            <p><strong>Router issues</strong>: The router itself may need restarting or reconfiguring.</p>
-            <p><strong>Airplane mode enabled</strong>: Airplane mode disables all wireless connections.</p>
-            <h2>Step-by-Step Fixes</h2>
-            <h3>Fix 1: Toggle Wi-Fi and Airplane Mode</h3>
-            <p>&bull; Click the Wi-Fi icon in the taskbar.</p>
-            <p>&bull; Make sure Wi-Fi is turned On and Airplane Mode is Off.</p>
-            <p>&bull; If Wi-Fi was on, turn it off, wait 10 seconds, and turn it back on.</p>
-            <h3>Fix 2: Forget and Reconnect to the Network</h3>
-            <p>&bull; Go to Settings > Network & Internet > Wi-Fi > Manage Known Networks.</p>
-            <p>&bull; Find your network and click "Forget".</p>
-            <p>&bull; Scan for networks again and reconnect by entering the password.</p>
-            <h3>Fix 3: Run the Network Troubleshooter</h3>
-            <p>&bull; Go to Settings > System > Troubleshoot > Other Troubleshooters.</p>
-            <p>&bull; Click "Run" next to "Network and Internet".</p>
-            <p>&bull; Follow the prompts and let Windows diagnose and fix the issue.</p>
-            <h3>Fix 4: Reset TCP/IP and DNS</h3>
-            <p>&bull; Open Command Prompt as Administrator (search "cmd", right-click, Run as Administrator).</p>
-            <p>&bull; Type these commands one at a time, pressing Enter after each:</p>
-            <p>&bull; <code>netsh winsock reset</code></p>
-            <p>&bull; <code>netsh int ip reset</code></p>
-            <p>&bull; <code>ipconfig /release</code></p>
-            <p>&bull; <code>ipconfig /renew</code></p>
-            <p>&bull; <code>ipconfig /flushdns</code></p>
-            <p>&bull; Restart your computer.</p>
-            <h3>Fix 5: Update Wi-Fi Drivers</h3>
-            <p>&bull; Open Device Manager (right-click Start button > Device Manager).</p>
-            <p>&bull; Expand "Network Adapters".</p>
-            <p>&bull; Right-click your Wi-Fi adapter and select "Update Driver".</p>
-            <p>&bull; Choose "Search automatically for drivers".</p>
-            <p>&bull; Restart your computer after updating.</p>
-            <h3>Fix 6: Reset Network Settings</h3>
-            <p>&bull; Go to Settings > Network & Internet > Advanced Network Settings > Network Reset.</p>
-            <p>&bull; Click "Reset Now".</p>
-            <p>&bull; Your computer will restart and all network settings will be reset to default.</p>
-            <p>&bull; You'll need to reconnect to all Wi-Fi networks.</p>
-            <h2>When to Contact Support</h2>
-            <p>If Wi-Fi still doesn't work, the issue may be hardware-related. Contact your laptop manufacturer's support or visit a repair center to check if the Wi-Fi adapter is functioning properly.</p>
-            <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: Why does my Windows PC say &quot;No Internet Access&quot; when connected to Wi-Fi?</p>
-            <p class="a">A: This means you&#x27;re connected to the router but the router doesn&#x27;t have internet. Try restarting your router, or contact your internet service provider.</p>
+            <h1>Windows Wi-Fi Not Connecting: 8 Fixes for "Can't Connect to This Network"</h1>
+            <p class="updated">Last updated: March 22, 2026</p>
+
+            <p>Windows Wi-Fi issues fall into a few distinct categories: the dreaded "Can't connect to this network" error (a corrupted saved profile), "No internet access" while connected (a router or DNS problem), the Wi-Fi icon missing entirely from the taskbar (a disabled adapter), or Wi-Fi dropping every few minutes (a power management issue). Each has a specific fix — here's how to identify and solve yours.</p>
+
+            <div class="diagnosis-box">
+                <h3>Which error are you getting?</h3>
+                <ul>
+                    <li><strong>"Can't connect to this network"</strong> — corrupted saved profile. Go to Fix 1.</li>
+                    <li><strong>"No internet access" / yellow triangle</strong> — connected to router but router has no internet. Go to Fix 2.</li>
+                    <li><strong>Wi-Fi icon missing from taskbar</strong> — adapter disabled or driver issue. Go to Fix 5.</li>
+                    <li><strong>Wi-Fi keeps dropping every few minutes</strong> — power management throttling. Go to Fix 6.</li>
+                    <li><strong>Broke after a Windows Update</strong> — driver rollback needed. Go to Fix 7.</li>
+                </ul>
             </div>
-            <div class="faq"><p class="q">Q: Why is the Wi-Fi option missing from my taskbar?</p>
-            <p class="a">A: Your Wi-Fi adapter may be disabled. Open Device Manager &gt; Network Adapters &gt; right-click your Wi-Fi adapter &gt; Enable Device. Also check for a physical Wi-Fi switch on your laptop.</p>
+
+            <h2>Fix 1: Forget the Network and Reconnect (Fixes "Can't Connect to This Network")</h2>
+            <p>The "Can't connect to this network" error is almost always a corrupted saved network profile — Windows is trying to use stale security settings or a wrong password. The fix is to delete the saved profile and start fresh.</p>
+            <ol>
+                <li>Go to <strong>Settings &gt; Network &amp; Internet &gt; Wi-Fi</strong>.</li>
+                <li>Click <strong>Manage known networks</strong>.</li>
+                <li>Find the network giving the error and click <strong>Forget</strong>.</li>
+                <li>Click the Wi-Fi icon in the taskbar, select your network, and enter the password again.</li>
+            </ol>
+            <p>If you don't know your Wi-Fi password, check the back or bottom of your router — it's usually printed there. Alternatively, on a device that's already connected (like your phone), look in the Wi-Fi settings for a "Share" or QR code option.</p>
+
+            <h2>Fix 2: Restart Your Router and Run TCP/IP Reset Commands</h2>
+            <p>"No internet access" while connected to Wi-Fi means Windows reached your router but your router can't reach the internet. First check if other devices (phone, tablet) on the same network also have no internet. If they do, the problem is your router or ISP — restart the router by unplugging it for 30 seconds. If only your Windows PC is affected, the problem is local network configuration.</p>
+            <p>Open <strong>Command Prompt as Administrator</strong> (search "cmd" in the Start menu, right-click, select "Run as administrator"), then run these commands one by one:</p>
+            <ol>
+                <li><code>netsh winsock reset</code> — fixes corrupted socket entries</li>
+                <li><code>netsh int ip reset</code> — rebuilds IP configuration</li>
+                <li><code>ipconfig /release</code> — releases your current IP address</li>
+                <li><code>ipconfig /renew</code> — requests a fresh IP from the router</li>
+                <li><code>ipconfig /flushdns</code> — clears stale DNS cache</li>
+            </ol>
+            <p>Restart your PC after running all five commands. This fixes most "connected but no internet" issues on Windows.</p>
+
+            <h2>Fix 3: Change Your DNS Servers</h2>
+            <p>If you can connect to Wi-Fi but some websites won't load or load slowly, your ISP's DNS servers may be having issues. Switching to Google or Cloudflare's DNS servers is fast, free, and often speeds up browsing significantly.</p>
+            <ol>
+                <li>Go to <strong>Settings &gt; Network &amp; Internet &gt; Wi-Fi</strong>, then click your connected network name.</li>
+                <li>Under "DNS server assignment," click <strong>Edit</strong>.</li>
+                <li>Change from Automatic to <strong>Manual</strong>.</li>
+                <li>Enable IPv4 and enter: Preferred DNS <code>8.8.8.8</code>, Alternate DNS <code>8.8.4.4</code> (Google), or Preferred <code>1.1.1.1</code>, Alternate <code>1.0.0.1</code> (Cloudflare).</li>
+                <li>Click Save.</li>
+            </ol>
+
+            <h2>Fix 4: Run the Windows Network Troubleshooter</h2>
+            <p>Windows has a built-in diagnostic tool that catches and automatically fixes several common Wi-Fi issues — it's worth running before going deeper.</p>
+            <ol>
+                <li>Go to <strong>Settings &gt; System &gt; Troubleshoot &gt; Other troubleshooters</strong>.</li>
+                <li>Find <strong>Network and Internet</strong> and click <strong>Run</strong>.</li>
+                <li>Follow the prompts. Windows will test your adapter, check for IP conflicts, and attempt automatic repairs.</li>
+            </ol>
+            <p>On Windows 10, the path is <strong>Settings &gt; Update &amp; Security &gt; Troubleshoot &gt; Additional troubleshooters &gt; Internet Connections</strong>.</p>
+
+            <h2>Fix 5: Enable Your Wi-Fi Adapter (Fixes Missing Wi-Fi Icon)</h2>
+            <p>If the Wi-Fi icon is gone from your taskbar, or you can't see any Wi-Fi networks, the adapter may be disabled — either through Device Manager or a physical key on your laptop.</p>
+            <ol>
+                <li>Press <strong>Win + X</strong> and select <strong>Device Manager</strong>.</li>
+                <li>Expand <strong>Network Adapters</strong>.</li>
+                <li>Look for your wireless adapter (names vary — Intel Wireless, Realtek Wi-Fi, Qualcomm Atheros, etc.).</li>
+                <li>If there's a down arrow on the adapter icon, it's disabled. Right-click it and select <strong>Enable device</strong>.</li>
+                <li>Also check for a physical Wi-Fi key on your laptop keyboard — often labeled with a wireless icon and accessed via <strong>Fn + F2</strong> or similar key.</li>
+            </ol>
+
+            <h2>Fix 6: Disable Wi-Fi Power Management (Fixes Dropping Wi-Fi)</h2>
+            <p>If Windows keeps disconnecting from Wi-Fi every few minutes, especially when the screen is idle, power management is turning off the wireless adapter to save battery. This is a known Windows "feature" that causes a lot of frustration.</p>
+            <ol>
+                <li>Open <strong>Device Manager</strong> (Win+X &gt; Device Manager).</li>
+                <li>Expand Network Adapters and double-click your Wi-Fi adapter.</li>
+                <li>Go to the <strong>Power Management</strong> tab.</li>
+                <li>Uncheck <strong>"Allow the computer to turn off this device to save power"</strong>.</li>
+                <li>Click OK and restart.</li>
+            </ol>
+            <p>Also go to <strong>Control Panel &gt; Power Options &gt; Change plan settings &gt; Change advanced power settings &gt; Wireless Adapter Settings &gt; Power Saving Mode</strong> and set it to <strong>Maximum Performance</strong>.</p>
+
+            <h2>Fix 7: Update or Roll Back Wi-Fi Drivers</h2>
+            <p>Outdated drivers cause connection failures. But sometimes a new driver that Windows Update pushed is actually worse than the previous one. You can do both.</p>
+            <p><strong>To update:</strong></p>
+            <ol>
+                <li>In Device Manager, right-click your Wi-Fi adapter and select <strong>Update driver</strong>.</li>
+                <li>Choose "Search automatically" — if Windows finds a newer driver, let it install.</li>
+                <li>Better yet, visit your laptop manufacturer's website (Dell, HP, Lenovo, ASUS) and download the latest Wi-Fi driver for your specific model.</li>
+            </ol>
+            <p><strong>To roll back after a bad update:</strong></p>
+            <ol>
+                <li>In Device Manager, right-click your Wi-Fi adapter &gt; <strong>Properties</strong>.</li>
+                <li>Go to the <strong>Driver</strong> tab.</li>
+                <li>If <strong>Roll Back Driver</strong> is available (not greyed out), click it. This restores the previous driver version.</li>
+            </ol>
+
+            <h2>Fix 8: Reset Network Settings (Last Resort)</h2>
+            <p>If nothing else has worked, a full network reset reinstalls all network adapters and resets all network components. You'll lose saved Wi-Fi passwords, VPN settings, and custom firewall rules, so be prepared to reconfigure those.</p>
+            <ol>
+                <li>Go to <strong>Settings &gt; Network &amp; Internet</strong>.</li>
+                <li>Scroll to the bottom and click <strong>Advanced network settings</strong>.</li>
+                <li>Click <strong>Network reset</strong>, then click <strong>Reset now</strong>.</li>
+                <li>Your PC will restart automatically. After restart, reconnect to your Wi-Fi network.</li>
+            </ol>
+            <p>On Windows 10, this is at <strong>Settings &gt; Network &amp; Internet &gt; Status &gt; Network reset</strong>.</p>
+
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <p class="q">Q: What does "Can't connect to this network" mean on Windows?</p>
+                <p class="a">A: This error means Windows has a corrupted saved profile for that Wi-Fi network. The stored password, security settings, or IP configuration no longer matches what the router expects. Fix it by forgetting the network (Settings &gt; Network &amp; Internet &gt; Wi-Fi &gt; Manage Known Networks &gt; Forget) and reconnecting fresh.</p>
             </div>
-            <div class="faq"><p class="q">Q: Can I use my phone&#x27;s internet on my PC?</p>
-            <p class="a">A: Yes, enable &quot;Hotspot&quot; on your phone and connect your PC to it via Wi-Fi. You can also use USB tethering by connecting your phone with a USB cable.</p>
+            <div class="faq">
+                <p class="q">Q: Why does Windows show "No Internet Access" even though Wi-Fi is connected?</p>
+                <p class="a">A: A yellow triangle means Windows connected to your router but the router can't reach the internet. Try restarting your router. If other devices are fine and only your PC is affected, run the five TCP/IP reset commands in Command Prompt as Administrator (netsh winsock reset, netsh int ip reset, ipconfig /release, /renew, /flushdns).</p>
             </div>
-            <div class="faq"><p class="q">Q: How do I find my Wi-Fi password?</p>
-            <p class="a">A: On a device already connected, go to Settings &gt; Network &amp; Internet &gt; Wi-Fi &gt; your network &gt; Properties &gt; View Wi-Fi Security Key. You can also find it on the back of your router.</p>
+            <div class="faq">
+                <p class="q">Q: The Wi-Fi icon is missing from my Windows taskbar — how do I get it back?</p>
+                <p class="a">A: Check if your Wi-Fi adapter is disabled: open Device Manager (Win+X), expand Network Adapters, right-click your wireless adapter, and select Enable Device. Also check for a physical Wi-Fi toggle key on your laptop keyboard (often Fn+F2).</p>
+            </div>
+            <div class="faq">
+                <p class="q">Q: Why does my Windows PC keep dropping Wi-Fi every few minutes?</p>
+                <p class="a">A: Windows Power Management is turning off the adapter to save power. Fix it in Device Manager: right-click your Wi-Fi adapter &gt; Properties &gt; Power Management tab &gt; uncheck "Allow the computer to turn off this device to save power." Also set Wireless Adapter Settings to Maximum Performance in Power Options.</p>
+            </div>
+            <div class="faq">
+                <p class="q">Q: What do the TCP/IP reset commands actually do?</p>
+                <p class="a">A: netsh winsock reset fixes the Winsock catalog which handles socket communications. netsh int ip reset rebuilds IP configuration entries. ipconfig /release and /renew request a fresh IP address from your router. ipconfig /flushdns clears cached DNS entries. Together they clean up most software-level network issues without affecting your files or settings.</p>
+            </div>
+
+            <div class="still-stuck">
+                <h3>Still not connecting?</h3>
+                <p>If you've tried all 8 fixes and Wi-Fi still doesn't work, the Wi-Fi adapter hardware may be failing — this is especially common on older laptops. A USB Wi-Fi adapter (around $15-20) is a quick workaround that bypasses the built-in adapter entirely. If this is a new PC under warranty, contact the manufacturer for a hardware replacement.</p>
+                <p>Related guides: <a href="wifi-connected-but-no-internet.html">Wi-Fi Connected But No Internet</a> | <a href="google-chrome-crashing.html">Google Chrome Crashing</a> | <a href="zoom-microphone-not-working.html">Zoom Microphone Not Working</a></p>
             </div>
         </div>
     </div>

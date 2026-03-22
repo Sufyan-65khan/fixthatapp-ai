@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Guide: GitHub Pages Not Loading - FixThatApp</title>
-    <meta name="description" content="Your GitHub Pages website may fail to load, show a 404 error, display a blank page, or not update when you push new code. Custom domains may also stop work">
-    <meta name="keywords" content="github pages not loading, fix, troubleshooting, how to fix, not working, error, solution">
+    <title>GitHub Pages Not Loading: 7 Fixes for Deployment Issues | FixThatApp</title>
+    <meta name="description" content="GitHub Pages site not loading, showing 404, deployment failed, or custom domain broken? This guide covers every common GitHub Pages problem from DNS propagation to Jekyll build errors.">
+    <meta name="keywords" content="github pages not loading, github pages 404, github pages custom domain not working, github pages deployment failed, jekyll build error">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/github-pages-not-loading.html">
-    <meta property="og:title" content="Troubleshooting Guide: GitHub Pages Not Loading - FixThatApp">
-    <meta property="og:description" content="Your GitHub Pages website may fail to load, show a 404 error, display a blank page, or not update when you push new code. Custom domains may also stop work">
+    <meta property="og:title" content="GitHub Pages Not Loading: 7 Fixes for Deployment Issues | FixThatApp">
+    <meta property="og:description" content="GitHub Pages site not loading, showing 404, deployment failed, or custom domain broken? This guide covers every common GitHub Pages problem from DNS propagation to Jekyll build errors.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/github-pages-not-loading.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Troubleshooting Guide: GitHub Pages Not Loading - FixThatApp">
-    <meta name="twitter:description" content="Your GitHub Pages website may fail to load, show a 404 error, display a blank page, or not update when you push new code. Custom domains may also stop work">
+    <meta name="twitter:title" content="GitHub Pages Not Loading: 7 Fixes for Deployment Issues | FixThatApp">
+    <meta name="twitter:description" content="GitHub Pages site not loading, showing 404, deployment failed, or custom domain broken? This guide covers every common GitHub Pages problem from DNS propagation to Jekyll build errors.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script>
     (function() {
@@ -33,9 +33,9 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "Troubleshooting Guide: GitHub Pages Not Loading",
-      "description": "Your GitHub Pages website may fail to load, show a 404 error, display a blank page, or not update when you push new code. Custom domains may also stop work",
-      "dateModified": "2026-03-05",
+      "headline": "GitHub Pages Not Loading: 7 Fixes for Deployment Issues",
+      "description": "GitHub Pages site not loading, showing 404, deployment failed, or custom domain broken? This guide covers every common GitHub Pages problem from DNS propagation to Jekyll build errors.",
+      "dateModified": "2026-03-22",
       "author": {
         "@type": "Organization",
         "name": "FixThatApp",
@@ -62,31 +62,39 @@
           "name": "How long does GitHub Pages take to deploy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Usually 1-5 minutes. First deployments or those with many files may take longer."
+            "text": "GitHub Pages typically deploys within 1 to 3 minutes for simple static sites. Jekyll builds and custom Actions workflows can take up to 10 minutes. If your deployment has not completed after 20 minutes, check the Actions tab for a failed workflow run. First-time HTTPS certificates for custom domains can take up to 24 hours to issue."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Is GitHub Pages free?",
+          "name": "Can I use a custom domain with GitHub Pages for free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, for public repositories. GitHub Pro users can also use Pages with private repositories."
+            "text": "Yes. Custom domains are supported on free GitHub accounts as long as the repository is public. You provide the domain, configure DNS records to point to GitHub's IP addresses, and add a CNAME file to your repository root. GitHub handles HTTPS provisioning for free through Let's Encrypt."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Can I use a custom domain with GitHub Pages?",
+          "name": "Why is my GitHub Pages site showing old content?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, add a CNAME file to your repository and configure DNS records with your domain registrar."
+            "text": "Old content after a push usually means the deployment succeeded but your browser cached the previous version. Try a hard refresh with Ctrl+Shift+R or Cmd+Shift+R, or open the site in an incognito window. If content is genuinely stale, check the Actions tab to confirm the latest deployment completed successfully."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Why does my site show an old version?",
+          "name": "Does GitHub Pages support HTTPS automatically?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "GitHub Pages caches content. Wait 10 minutes, clear your browser cache, or check the Actions tab to make sure the latest deployment succeeded."
+            "text": "Yes. GitHub Pages provides automatic HTTPS via Let's Encrypt for both github.io subdomains and custom domains. For github.io URLs it is active immediately. For custom domains, the certificate is provisioned automatically once your DNS records have propagated, which can take up to 24 hours after you configure the custom domain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can GitHub Pages run server-side code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. GitHub Pages is a static file host — it serves HTML, CSS, JavaScript, and assets only. There is no support for PHP, Python, Node.js, databases, or any server-side execution. If you need server-side functionality, host a separate backend on a service like Render or Railway and call it from your GitHub Pages site using client-side JavaScript API requests."
           }
         }
       ]
@@ -164,6 +172,10 @@
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
         .faq .a { color: #555; }
+        .diagnosis-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1rem; }
+        .diagnosis-box p { margin-bottom: 0.4rem; }
+        .still-stuck { background: #f0f7ff; border-radius: 8px; padding: 1.25rem; margin-top: 2rem; }
+        .still-stuck a { color: #667eea; }
         footer {
             text-align: center;
             padding: 2rem 1rem;
@@ -230,57 +242,136 @@
             <a href="../index.html">Home</a> &rsaquo; GitHub Pages Not Loading
         </nav>
         <div class="article">
-            <h1>Troubleshooting Guide: GitHub Pages Not Loading</h1>
-            <p class="updated">Last updated: March 5, 2026</p>
-            <h2>Problem Description</h2>
-            <p>Your GitHub Pages website may fail to load, show a 404 error, display a blank page, or not update when you push new code. Custom domains may also stop working.</p>
-            <h2>Possible Causes</h2>
-            <p><strong>Build failed</strong>: Jekyll or other static site generators may have build errors.</p>
-            <p><strong>Wrong branch configured</strong>: GitHub Pages may be pointing to the wrong branch.</p>
-            <p><strong>Missing index.html</strong>: The root directory must have an index.html file.</p>
-            <p><strong>Custom domain DNS issues</strong>: DNS records may be misconfigured.</p>
-            <p><strong>Repository settings</strong>: Pages may not be enabled or is set to private.</p>
-            <h2>Step-by-Step Fixes</h2>
-            <h3>Fix 1: Check GitHub Pages Settings</h3>
-            <p>&bull; Go to your repository > Settings > Pages.</p>
-            <p>&bull; Verify the correct branch and folder are selected.</p>
-            <p>&bull; Make sure the source is set to "Deploy from a branch".</p>
-            <h3>Fix 2: Check Build Status</h3>
-            <p>&bull; Go to your repository > Actions tab.</p>
-            <p>&bull; Look for the "pages build and deployment" workflow.</p>
-            <p>&bull; If it failed, click on it to see the error details.</p>
-            <h3>Fix 3: Verify index.html Exists</h3>
-            <p>&bull; Make sure you have an index.html file in the root of your selected branch/folder.</p>
-            <p>&bull; The file name must be exactly "index.html" (lowercase).</p>
-            <p>&bull; Check that the file isn't empty.</p>
-            <h3>Fix 4: Check Custom Domain</h3>
-            <p>&bull; Verify your CNAME file contains the correct domain.</p>
-            <p>&bull; Check DNS records point to GitHub's servers (185.199.108-111.153).</p>
-            <p>&bull; Wait up to 30 minutes for DNS changes to propagate.</p>
-            <p>&bull; Enable "Enforce HTTPS" in Pages settings.</p>
-            <h3>Fix 5: Clear Browser Cache</h3>
-            <p>&bull; Hard refresh with Ctrl+Shift+R.</p>
-            <p>&bull; Try viewing your site in an incognito window.</p>
-            <p>&bull; GitHub Pages can cache old versions for up to 10 minutes.</p>
-            <h3>Fix 6: Redeploy</h3>
-            <p>&bull; Make a minor change to any file and push a new commit.</p>
-            <p>&bull; This triggers a new build and deployment.</p>
-            <p>&bull; Check the Actions tab to monitor the deployment.</p>
-            <h2>When to Contact Support</h2>
-            <p>If your site still doesn't load, contact GitHub support at support.github.com or check githubstatus.com for outages.</p>
-            <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: How long does GitHub Pages take to deploy?</p>
-            <p class="a">A: Usually 1-5 minutes. First deployments or those with many files may take longer.</p>
+            <h1>GitHub Pages Not Loading: 7 Fixes for Deployment Issues</h1>
+            <p class="updated">Last updated: March 22, 2026</p>
+
+            <p>You push changes to your GitHub repository and navigate to your github.io URL — only to be greeted by a 404 page, a blank white screen, or content that hasn't updated since your last push. Maybe your custom domain suddenly shows "This site can't be reached", or your GitHub Actions workflow shows red and you have no idea why the build failed. GitHub Pages is deceptively simple to set up but has several specific failure points that aren't obvious from the interface.</p>
+
+            <p>The good news is that nearly every GitHub Pages problem falls into one of seven categories, and most are fixable in under five minutes once you know where to look. This guide walks through each scenario in the most likely order you'll encounter them.</p>
+
+            <h2>Quick Diagnosis: What Symptom Do You Have?</h2>
+
+            <div class="diagnosis-box">
+                <p><strong>404 error on your github.io URL</strong> &rarr; Pages is likely not enabled or the source branch is wrong. Start with Fix 1.</p>
+                <p><strong>Custom domain shows "not found" or "can't be reached"</strong> &rarr; DNS misconfiguration or missing CNAME file. See Fix 3 and Fix 4.</p>
+                <p><strong>Site loads but shows old content after a push</strong> &rarr; Deployment may be stuck or failed. Check Fix 2 and try Fix 7.</p>
+                <p><strong>HTTPS shows a certificate warning</strong> &rarr; Certificate not yet provisioned after custom domain setup. Wait up to 24 hours.</p>
+                <p><strong>GitHub Actions shows a red X on deployment</strong> &rarr; Jekyll build error or configuration issue. See Fix 2 and Fix 5.</p>
+                <p><strong>Site works for you but not for others</strong> &rarr; DNS propagation still in progress — normal within 48 hours of domain changes.</p>
             </div>
-            <div class="faq"><p class="q">Q: Is GitHub Pages free?</p>
-            <p class="a">A: Yes, for public repositories. GitHub Pro users can also use Pages with private repositories.</p>
+
+            <h2>7 Fixes for GitHub Pages Not Loading</h2>
+
+            <h3>Fix 1: Check Repository Settings — Is Pages Actually Enabled?</h3>
+            <p><strong>Why this matters:</strong> GitHub Pages is not automatically enabled on new repositories. You must explicitly turn it on and configure which branch to deploy from. If you haven't done this, or if the settings got reset, your site simply won't exist at the github.io URL.</p>
+            <ol>
+                <li>Navigate to your repository on GitHub.com.</li>
+                <li>Click the <strong>Settings</strong> tab at the top of the repository.</li>
+                <li>In the left sidebar, click <strong>Pages</strong> under the "Code and automation" section.</li>
+                <li>Under "Build and deployment", confirm the Source is set to your correct branch (usually <code>main</code> or <code>gh-pages</code>) and folder (usually <code>/ (root)</code> or <code>/docs</code>).</li>
+                <li>If Pages was not enabled, set it up now. GitHub will begin building and display your URL when complete.</li>
+                <li>If it says "Your site is live at..." but still shows 404, confirm the branch contains an <code>index.html</code> at the exact path you selected.</li>
+            </ol>
+            <p>A very common mistake is deploying from the <code>main</code> branch root but having your HTML files inside a subdirectory. GitHub Pages serves exactly what is in the selected folder — your <code>index.html</code> must be directly there, not nested deeper inside another folder.</p>
+
+            <h3>Fix 2: Check GitHub Actions Deployment Logs for Build Errors</h3>
+            <p><strong>Why this matters:</strong> Modern GitHub Pages deployments use GitHub Actions workflows. When a build fails, your old site stays visible (or nothing shows at all for new repos), giving you no obvious indication something went wrong. The failure details are in the Actions tab.</p>
+            <ol>
+                <li>Go to your repository and click the <strong>Actions</strong> tab.</li>
+                <li>Look at the most recent workflow run. A red circle means it failed; yellow means it is in progress; green means success.</li>
+                <li>Click into the failed run and expand the build steps to read the error message.</li>
+                <li>Common errors include: missing Jekyll dependency, YAML syntax error in <code>_config.yml</code>, a Liquid template error in an HTML file, or a missing file referenced in the config.</li>
+                <li>Fix the underlying issue in your repository, push again, and watch the Actions tab for the new run.</li>
+            </ol>
+            <p>If you see no workflow runs at all, your repository may be using the older "Deploy from a branch" method rather than Actions. In that case, look for a build status indicator on the Settings &rsaquo; Pages screen itself.</p>
+
+            <h3>Fix 3: Wait for DNS Propagation After a Custom Domain Change</h3>
+            <p><strong>Why this matters:</strong> DNS records do not update instantly across the internet. When you change or add a custom domain, the old DNS records remain cached at ISPs and resolvers worldwide. Full propagation can take anywhere from a few minutes to 48 hours depending on the previous TTL (time-to-live) of your records.</p>
+            <p>To check propagation status, visit <strong>whatsmydns.net</strong> and enter your domain. It shows which DNS servers around the world have picked up the new records. For a GitHub Pages custom domain, your DNS records should point as follows:</p>
+            <ul>
+                <li>For an apex domain (yourdomain.com): Four A records pointing to <code>185.199.108.153</code>, <code>185.199.109.153</code>, <code>185.199.110.153</code>, and <code>185.199.111.153</code>.</li>
+                <li>For a www subdomain: A CNAME record pointing to <code>yourusername.github.io</code>.</li>
+            </ul>
+            <p>If whatsmydns shows your records are globally updated but the site still fails to load, the problem is configuration rather than timing — move on to Fix 4.</p>
+
+            <h3>Fix 4: Verify the CNAME File Is in Your Repository Root</h3>
+            <p><strong>Why this matters:</strong> When you configure a custom domain in GitHub Pages settings, GitHub automatically creates a file called <code>CNAME</code> in your repository root. This file must exist and contain exactly your custom domain. If it gets deleted — for example by a git push that overwrites it — your custom domain stops working immediately.</p>
+            <ol>
+                <li>Browse your repository's file list on GitHub.com.</li>
+                <li>Look for a file named <code>CNAME</code> (no extension, all caps) at the root level.</li>
+                <li>Click it and confirm it contains your custom domain on a single line — for example: <code>www.yourdomain.com</code>.</li>
+                <li>If the CNAME file is missing, go to Settings &rsaquo; Pages and re-enter your custom domain. GitHub will recreate the file automatically.</li>
+                <li>If your build process deletes the CNAME file on each deploy (common with static site generators outputting to a <code>/dist</code> folder), configure your build to copy the CNAME file as a build artifact before deployment.</li>
+            </ol>
+
+            <h3>Fix 5: Check _config.yml for Syntax Errors</h3>
+            <p><strong>Why this matters:</strong> If your GitHub Pages site uses Jekyll (which it does by default unless you include a <code>.nojekyll</code> file), the <code>_config.yml</code> file is parsed on every deployment. A single YAML syntax error — a misplaced colon, inconsistent indentation, or an unclosed quote — causes the entire build to fail.</p>
+            <ol>
+                <li>Open <code>_config.yml</code> in your repository.</li>
+                <li>Check for: tabs instead of spaces for indentation, missing space after a colon (write <code>key: value</code> not <code>key:value</code>), special characters in strings that need quoting, and an incorrect <code>baseurl</code> setting.</li>
+                <li>If your site is at <code>yourusername.github.io/repo-name</code>, your <code>baseurl</code> must be <code>/repo-name</code>. If it is at <code>yourusername.github.io</code> (user or org site), <code>baseurl</code> should be empty.</li>
+                <li>Validate your YAML at <strong>yamllint.com</strong> before pushing.</li>
+                <li>If you do not need Jekyll processing at all, add an empty file called <code>.nojekyll</code> to your repo root to skip the Jekyll build entirely and serve your files directly.</li>
+            </ol>
+
+            <h3>Fix 6: Make the Repository Public or Check Your GitHub Plan</h3>
+            <p><strong>Why this matters:</strong> GitHub Pages for free accounts only works with public repositories. If your repository is private and you are on a free GitHub plan, Pages will not be available — the option will be grayed out in settings or the site will not load for visitors.</p>
+            <ol>
+                <li>Go to your repository Settings &rsaquo; General and scroll to the "Danger Zone" at the bottom.</li>
+                <li>Check whether the repository is set to Private.</li>
+                <li>If you need to keep it private, you will need GitHub Pro, GitHub Team, or GitHub Enterprise to use Pages with private repositories.</li>
+                <li>If making the repo public is acceptable, click "Change visibility" and set it to Public.</li>
+                <li>After changing to public, re-enable Pages in Settings &rsaquo; Pages if it had been previously unavailable.</li>
+            </ol>
+
+            <h3>Fix 7: Force a Redeploy by Pushing an Empty Commit</h3>
+            <p><strong>Why this matters:</strong> Sometimes GitHub Pages gets stuck and has not run a fresh build despite your pushes completing successfully. This can happen after GitHub infrastructure issues or when the last deployment partially completed. Pushing any commit — even an empty one with no file changes — triggers a fresh build cycle.</p>
+            <ol>
+                <li>Open your terminal and navigate to your local repository folder.</li>
+                <li>Run: <code>git commit --allow-empty -m "Force redeploy"</code></li>
+                <li>Then run: <code>git push origin main</code> (replace <code>main</code> with your branch name if different).</li>
+                <li>Go to the Actions tab on GitHub and watch the deployment progress in real time.</li>
+                <li>Once the workflow shows a green checkmark, wait 1 to 2 minutes and visit your site URL with a hard refresh (Ctrl+Shift+R on Windows, Cmd+Shift+R on Mac).</li>
+            </ol>
+            <p>If you are not using git locally, you can trigger the same effect by making any trivial edit to a file directly on GitHub.com through the web interface and committing it there.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <p class="q">Q: How long does GitHub Pages take to deploy?</p>
+                <p class="a">A: GitHub Pages typically deploys within 1 to 3 minutes for simple static sites. Jekyll builds and custom Actions workflows can take up to 10 minutes. If your deployment has not completed after 20 minutes, check the Actions tab for a failed workflow run. First-time HTTPS certificates for custom domains can take up to 24 hours to issue after DNS propagation completes.</p>
             </div>
-            <div class="faq"><p class="q">Q: Can I use a custom domain with GitHub Pages?</p>
-            <p class="a">A: Yes, add a CNAME file to your repository and configure DNS records with your domain registrar.</p>
+
+            <div class="faq">
+                <p class="q">Q: Can I use a custom domain with GitHub Pages for free?</p>
+                <p class="a">A: Yes. Custom domains are fully supported on free GitHub accounts as long as the repository is public. You need to own the domain, configure DNS records pointing to GitHub's servers, and add a CNAME file to your repository root. GitHub handles HTTPS certificate provisioning automatically at no cost through Let's Encrypt.</p>
             </div>
-            <div class="faq"><p class="q">Q: Why does my site show an old version?</p>
-            <p class="a">A: GitHub Pages caches content. Wait 10 minutes, clear your browser cache, or check the Actions tab to make sure the latest deployment succeeded.</p>
+
+            <div class="faq">
+                <p class="q">Q: Why is my GitHub Pages site showing old content?</p>
+                <p class="a">A: Old content after a push almost always means your browser has cached the previous version. Try a hard refresh (Ctrl+Shift+R or Cmd+Shift+R) or open the site in an incognito window. If content is genuinely stale after that, check the Actions tab to confirm the latest deployment completed successfully — a failed build leaves the old site in place.</p>
             </div>
+
+            <div class="faq">
+                <p class="q">Q: Does GitHub Pages support HTTPS automatically?</p>
+                <p class="a">A: Yes. GitHub Pages provides automatic HTTPS for both github.io subdomains and custom domains. For github.io URLs it is active immediately with no configuration needed. For custom domains, GitHub provisions a free Let's Encrypt certificate automatically once your DNS records have correctly propagated — this can take up to 24 hours after initial custom domain setup.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: Can GitHub Pages run server-side code?</p>
+                <p class="a">A: No. GitHub Pages is a static file hosting service only — it serves HTML, CSS, JavaScript, and static assets. There is no support for PHP, Python, Node.js, databases, or any server-side execution. If your project needs a backend, you must host it separately on a service like Render, Railway, or a VPS, and call it from your GitHub Pages frontend using JavaScript API requests.</p>
+            </div>
+
+            <div class="still-stuck">
+                <h2>Still Stuck?</h2>
+                <p>If you have worked through all seven fixes and your GitHub Pages site still will not load, the official GitHub Pages documentation has detailed troubleshooting for advanced scenarios: <a href="https://docs.github.com/en/pages" target="_blank" rel="noopener">docs.github.com/en/pages</a>. The GitHub Community forums are also a good resource for repository-specific build failures.</p>
+            </div>
+
+            <h2>Related Guides</h2>
+            <ul>
+                <li><a href="shopify-store-not-loading.html">Shopify Store Not Loading</a></li>
+                <li><a href="wifi-connected-but-no-internet.html">Wi-Fi Connected But No Internet Access</a></li>
+            </ul>
         </div>
     </div>
     <footer>

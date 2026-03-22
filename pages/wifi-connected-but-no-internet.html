@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Guide: Wi-Fi Connected But No Internet - FixThatApp</title>
-    <meta name="description" content="Your device shows it&#x27;s connected to Wi-Fi, but you can&#x27;t access any websites or use online apps. You may see &quot;Connected, no internet&quot; or &quot;No internet acces">
-    <meta name="keywords" content="wi-fi connected but no internet, fix, troubleshooting, how to fix, not working, error, solution">
+    <title>Wi-Fi Connected But No Internet: 9 Fixes for Phone, PC, and Mac (2026) | FixThatApp</title>
+    <meta name="description" content="Device shows Wi-Fi connected but nothing loads? This guide walks through every real cause — from DNS failures to router issues to ISP outages — with specific fixes for iPhone, Android, Windows, and Mac.">
+    <meta name="keywords" content="wifi connected but no internet, connected no internet access, wifi not working, no internet access wifi, fix wifi no internet">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/wifi-connected-but-no-internet.html">
-    <meta property="og:title" content="Troubleshooting Guide: Wi-Fi Connected But No Internet - FixThatApp">
-    <meta property="og:description" content="Your device shows it&#x27;s connected to Wi-Fi, but you can&#x27;t access any websites or use online apps. You may see &quot;Connected, no internet&quot; or &quot;No internet acces">
+    <meta property="og:title" content="Wi-Fi Connected But No Internet: 9 Fixes for Phone, PC, and Mac | FixThatApp">
+    <meta property="og:description" content="Device shows Wi-Fi connected but nothing loads? This guide walks through every real cause — from DNS failures to router issues to ISP outages — with specific fixes for iPhone, Android, Windows, and Mac.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/wifi-connected-but-no-internet.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Troubleshooting Guide: Wi-Fi Connected But No Internet - FixThatApp">
-    <meta name="twitter:description" content="Your device shows it&#x27;s connected to Wi-Fi, but you can&#x27;t access any websites or use online apps. You may see &quot;Connected, no internet&quot; or &quot;No internet acces">
+    <meta name="twitter:title" content="Wi-Fi Connected But No Internet: 9 Fixes | FixThatApp">
+    <meta name="twitter:description" content="Device shows Wi-Fi connected but nothing loads? This guide walks through every real cause — from DNS failures to router issues to ISP outages — with specific fixes for iPhone, Android, Windows, and Mac.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script>
     (function() {
@@ -33,9 +33,9 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "Troubleshooting Guide: Wi-Fi Connected But No Internet",
-      "description": "Your device shows it&#x27;s connected to Wi-Fi, but you can&#x27;t access any websites or use online apps. You may see &quot;Connected, no internet&quot; or &quot;No internet acces",
-      "dateModified": "2026-03-05",
+      "headline": "Wi-Fi Connected But No Internet: 9 Fixes for Phone, PC, and Mac",
+      "description": "Device shows Wi-Fi connected but nothing loads? This guide walks through every real cause — from DNS failures to router issues to ISP outages — with specific fixes for iPhone, Android, Windows, and Mac.",
+      "dateModified": "2026-03-22",
       "author": {
         "@type": "Organization",
         "name": "FixThatApp",
@@ -59,34 +59,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Why does my phone say &quot;Connected, no internet&quot;?",
+          "name": "Why does my phone say 'Connected, no internet' even though the router is on?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Your phone is connected to the router, but the router doesn&#x27;t have internet. This is usually an ISP issue or a router configuration problem."
+            "text": "Your phone is successfully connected to the router, but the router itself has lost its connection to your ISP (internet service provider). The Wi-Fi signal is working fine — it's the link between your router and the outside internet that's broken. Restarting your router and modem is the first thing to try. If that doesn't work, check whether other devices in your home have the same problem, and if so, contact your ISP."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Can a router work without internet?",
+          "name": "Why does only one device have no internet while others work fine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, a router can create a local Wi-Fi network without internet. Devices can connect to each other but can&#x27;t access websites."
+            "text": "If other devices on the same Wi-Fi work fine, the problem is specific to your device — not the router or ISP. Common causes are a corrupted IP address assignment (DHCP lease), stale DNS cache, or a device-level network configuration issue. Try forgetting the Wi-Fi network and reconnecting, or use the 'Renew Lease' option on iPhone (Settings > Wi-Fi > tap your network > Renew Lease)."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Why does only one device have no internet?",
+          "name": "What does 'No internet, secured' mean on Windows?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "If other devices work fine, the issue is with that specific device. Try forgetting the network, restarting the device, or resetting network settings."
+            "text": "'No internet, secured' in Windows means your device is connected to the router with a valid password (hence 'secured'), but Windows' Network Connectivity Status Indicator (NCSI) can't reach Microsoft's test server to confirm internet access. This can mean actual no internet, or it can be a false alarm caused by a VPN, firewall, or DNS issue. Try opening a browser and navigating to google.com to confirm whether internet is actually broken."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Does restarting the router fix internet issues?",
+          "name": "Can changing DNS settings really fix no-internet issues?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, in most cases. Restarting clears temporary errors and forces the router to establish a fresh connection with your ISP."
+            "text": "Yes, quite often. DNS (Domain Name System) is the service that translates website names like google.com into IP addresses. If your ISP's DNS server is slow or down, your device can connect to the router but fail to resolve any websites, which looks exactly like 'no internet.' Switching to Google (8.8.8.8) or Cloudflare (1.1.1.1) DNS is fast, free, and often resolves this immediately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do I get no internet on public Wi-Fi like a hotel or coffee shop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Public Wi-Fi networks often use a 'captive portal' — a login page you must interact with before getting internet access. Your device connects to the Wi-Fi but gets stuck before the portal. Try opening a browser and going to any HTTP website (not HTTPS) like http://neverssl.com, which forces the captive portal to appear. Once you accept terms or log in, internet should work normally."
           }
         }
       ]
@@ -164,6 +172,10 @@
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
         .faq .a { color: #555; }
+        .diagnosis-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1rem; }
+        .diagnosis-box p { margin-bottom: 0.4rem; }
+        .still-stuck { background: #f0f7ff; border-radius: 8px; padding: 1.25rem; margin-top: 2rem; }
+        .still-stuck a { color: #667eea; }
         footer {
             text-align: center;
             padding: 2rem 1rem;
@@ -230,60 +242,151 @@
             <a href="../index.html">Home</a> &rsaquo; Wi-Fi Connected But No Internet
         </nav>
         <div class="article">
-            <h1>Troubleshooting Guide: Wi-Fi Connected But No Internet</h1>
-            <p class="updated">Last updated: March 5, 2026</p>
-            <h2>Problem Description</h2>
-            <p>Your device shows it's connected to Wi-Fi, but you can't access any websites or use online apps. You may see "Connected, no internet" or "No internet access" messages on your phone, laptop, or tablet.</p>
-            <h2>Possible Causes</h2>
-            <p><strong>Router not connected to ISP</strong>: Your router may have lost its internet connection.</p>
-            <p><strong>DNS issues</strong>: Your device may not be able to resolve domain names.</p>
-            <p><strong>IP address conflict</strong>: Multiple devices may have the same IP address.</p>
-            <p><strong>ISP outage</strong>: Your internet service provider may be experiencing problems.</p>
-            <p><strong>Captive portal</strong>: You may need to sign in on a public Wi-Fi network.</p>
-            <p><strong>Firewall or VPN blocking</strong>: Security software may be blocking connections.</p>
-            <h2>Step-by-Step Fixes</h2>
-            <h3>Fix 1: Restart Your Router and Modem</h3>
-            <p>&bull; Unplug both your router and modem from power.</p>
-            <p>&bull; Wait 30 seconds.</p>
-            <p>&bull; Plug in the modem first, wait until all lights are stable.</p>
-            <p>&bull; Then plug in the router and wait for it to fully start.</p>
-            <p>&bull; Try connecting again.</p>
-            <h3>Fix 2: Forget and Reconnect to Wi-Fi</h3>
-            <p>&bull; Go to your device's Wi-Fi settings.</p>
-            <p>&bull; Tap the network name > Forget Network.</p>
-            <p>&bull; Reconnect by selecting the network and entering the password.</p>
-            <h3>Fix 3: Change DNS Settings</h3>
-            <p>&bull; Change to Google DNS (8.8.8.8 / 8.8.4.4) or Cloudflare DNS (1.1.1.1 / 1.0.0.1).</p>
-            <p>&bull; On Windows: Network Settings > Change Adapter Options > Properties > IPv4 > Use the following DNS.</p>
-            <p>&bull; On iPhone: Wi-Fi > tap network > Configure DNS > Manual > add servers.</p>
-            <p>&bull; On Android: Wi-Fi > tap network > Advanced > change DNS.</p>
-            <h3>Fix 4: Renew IP Address</h3>
-            <p>&bull; On Windows: Open Command Prompt as admin, type <code>ipconfig /release</code> then <code>ipconfig /renew</code>.</p>
-            <p>&bull; On Mac: System Preferences > Network > Advanced > TCP/IP > Renew DHCP Lease.</p>
-            <p>&bull; On iPhone: Wi-Fi > tap (i) next to network > Renew Lease.</p>
-            <h3>Fix 5: Check for ISP Outage</h3>
-            <p>&bull; Call your ISP or check their website/app for outage reports.</p>
-            <p>&bull; Check downdetector.com for your ISP.</p>
-            <p>&bull; If there's an outage, wait for the ISP to fix it.</p>
-            <h3>Fix 6: Disable VPN or Proxy</h3>
-            <p>&bull; If using a VPN, disconnect it temporarily.</p>
-            <p>&bull; Check for proxy settings: Settings > Network > Proxy > make sure it's off.</p>
-            <p>&bull; Try accessing the internet without VPN/proxy.</p>
-            <h2>When to Contact Support</h2>
-            <p>If none of the fixes work, contact your ISP. The issue may be with your internet connection or router hardware.</p>
-            <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: Why does my phone say &quot;Connected, no internet&quot;?</p>
-            <p class="a">A: Your phone is connected to the router, but the router doesn&#x27;t have internet. This is usually an ISP issue or a router configuration problem.</p>
+            <h1>Wi-Fi Connected But No Internet: 9 Fixes for Phone, PC, and Mac</h1>
+            <p class="updated">Last updated: March 22, 2026</p>
+
+            <p>Your phone, laptop, or tablet shows it's connected to Wi-Fi — the signal bars are there, the network name appears, the password was accepted — but when you try to open a webpage or use an app, nothing works. You might see "Connected, no internet" on Android, a yellow exclamation mark on your Wi-Fi icon on Windows, or simply nothing loading on iPhone despite a solid Wi-Fi connection.</p>
+
+            <p>This is one of the most confusing tech problems people encounter because the symptom (connected to Wi-Fi) and the problem (no internet access) seem contradictory. But they're actually measuring different things. Being "connected to Wi-Fi" only means your device reached your router. Getting internet means your router successfully reached your ISP (internet provider), and everything in between is working. There are about eight different places that chain can break. Here's how to find and fix yours.</p>
+
+            <h2>Quick Diagnosis: Is It Your Device or Your Network?</h2>
+
+            <div class="diagnosis-box">
+                <p><strong>All devices in your home have no internet</strong> → Router or ISP issue. Start with Fix 1 (restart router).</p>
+                <p><strong>Only one device has no internet, others work fine</strong> → Device-specific issue. Start with Fix 3 (forget and reconnect) or Fix 4 (renew IP address).</p>
+                <p><strong>Problem started after installing new software or VPN</strong> → Software or VPN interference. See Fix 7.</p>
+                <p><strong>On public Wi-Fi (hotel, coffee shop, airport)</strong> → Captive portal. See Fix 6.</p>
+                <p><strong>Internet was working, then stopped suddenly</strong> → ISP outage or router crash. See Fix 1 and Fix 5.</p>
+                <p><strong>Some websites work but others don't</strong> → DNS issue. See Fix 2.</p>
             </div>
-            <div class="faq"><p class="q">Q: Can a router work without internet?</p>
-            <p class="a">A: Yes, a router can create a local Wi-Fi network without internet. Devices can connect to each other but can&#x27;t access websites.</p>
+
+            <h2>9 Fixes for Wi-Fi Connected But No Internet</h2>
+
+            <h3>Fix 1: Restart Your Router and Modem (Do This First)</h3>
+            <p><strong>Why this works:</strong> Routers maintain connection state tables and IP leases that can become corrupted over days or weeks of continuous operation. A power cycle clears all of this and forces the router to re-establish a fresh connection with your ISP. This fixes a surprising number of "no internet" problems — including cases where the router's public IP address has expired and the router hasn't automatically renewed it.</p>
+            <ol>
+                <li>If you have a separate modem and router: unplug <em>both</em> from power.</li>
+                <li>If you have a combined modem/router unit: unplug it.</li>
+                <li>Wait a full <strong>60 seconds</strong> (not 10 — the modem needs time to fully reset).</li>
+                <li>Plug in the modem first. Wait until all lights are stable (usually 1 minute).</li>
+                <li>Then plug in the router. Wait for it to fully start (another 1-2 minutes).</li>
+                <li>Check the internet LED on your router — it should turn solid, not blinking or off.</li>
+                <li>Test internet access on your device.</li>
+            </ol>
+
+            <h3>Fix 2: Change Your DNS Servers</h3>
+            <p><strong>Why this works:</strong> DNS (Domain Name System) translates website names into IP addresses. If your ISP's DNS server is slow or down, your device can reach the router and even the internet backbone, but it can't look up any website addresses — which looks exactly like "no internet." Switching to Google's (8.8.8.8) or Cloudflare's (1.1.1.1) DNS servers bypasses your ISP's DNS entirely.</p>
+            <p><strong>On iPhone:</strong></p>
+            <ol>
+                <li>Go to <strong>Settings</strong> → <strong>Wi-Fi</strong> → tap the (i) next to your network.</li>
+                <li>Scroll down to <strong>DNS</strong> → tap <strong>Configure DNS</strong> → select <strong>Manual</strong>.</li>
+                <li>Delete existing servers, tap <strong>Add Server</strong>, enter <code>8.8.8.8</code>, add another: <code>8.8.4.4</code>.</li>
+                <li>Tap <strong>Save</strong>.</li>
+            </ol>
+            <p><strong>On Android:</strong></p>
+            <ol>
+                <li>Go to <strong>Settings</strong> → <strong>Network &amp; internet</strong> → <strong>Private DNS</strong>.</li>
+                <li>Select <strong>Private DNS provider hostname</strong>.</li>
+                <li>Enter <code>dns.google</code> or <code>one.one.one.one</code> (Cloudflare).</li>
+                <li>Tap <strong>Save</strong>.</li>
+            </ol>
+            <p><strong>On Windows:</strong></p>
+            <ol>
+                <li>Open <strong>Settings</strong> → <strong>Network &amp; Internet</strong> → <strong>Change Adapter Options</strong>.</li>
+                <li>Right-click your Wi-Fi adapter → <strong>Properties</strong>.</li>
+                <li>Select <strong>Internet Protocol Version 4 (TCP/IPv4)</strong> → <strong>Properties</strong>.</li>
+                <li>Select "Use the following DNS server addresses." Enter <code>8.8.8.8</code> and <code>8.8.4.4</code>.</li>
+            </ol>
+
+            <h3>Fix 3: Forget the Wi-Fi Network and Reconnect</h3>
+            <p><strong>Why this works:</strong> Saved Wi-Fi profiles can become corrupted — storing an outdated security certificate, a stale IP address, or authentication tokens that no longer match the router's state. Forgetting the network clears all of this and forces a completely fresh connection.</p>
+            <p><strong>On iPhone:</strong> Settings → Wi-Fi → tap (i) next to your network → <strong>Forget This Network</strong>. Then tap the network name to reconnect and enter the password.</p>
+            <p><strong>On Android:</strong> Settings → Wi-Fi → long-press or tap the gear icon on your network → <strong>Forget</strong>. Then reconnect by selecting the network and entering the password.</p>
+            <p><strong>On Windows:</strong> Click the Wi-Fi icon in the taskbar → right-click your network → <strong>Forget</strong>. Reconnect normally.</p>
+
+            <h3>Fix 4: Renew Your IP Address (DHCP Lease)</h3>
+            <p><strong>Why this works:</strong> Your router assigns a unique IP address to each device on your network using DHCP. If two devices get the same IP (IP conflict), or if your device's IP lease has expired and the router hasn't refreshed it, you'll be connected to Wi-Fi but unable to route any traffic. Renewing the lease gets you a fresh IP assignment.</p>
+            <p><strong>On iPhone:</strong> Settings → Wi-Fi → tap (i) next to your network → scroll down → tap <strong>Renew Lease</strong> → confirm.</p>
+            <p><strong>On Android:</strong> Forget the network and reconnect — Android automatically gets a new DHCP lease on reconnect.</p>
+            <p><strong>On Windows:</strong> Open Command Prompt as Administrator. Type <code>ipconfig /release</code> and press Enter. Wait, then type <code>ipconfig /renew</code> and press Enter. Also try <code>ipconfig /flushdns</code> to clear the DNS cache.</p>
+            <p><strong>On Mac:</strong> System Settings → Network → Wi-Fi → Details → TCP/IP tab → click <strong>Renew DHCP Lease</strong>.</p>
+
+            <h3>Fix 5: Check for an ISP Outage</h3>
+            <p><strong>Why this works:</strong> If your ISP is experiencing a local outage, no amount of troubleshooting on your end will restore internet — the problem is upstream of your equipment. Identifying an outage immediately saves you time and tells you whether to just wait or call your provider.</p>
+            <ol>
+                <li>Use your mobile data to check <strong>downdetector.com</strong> — search for your ISP's name.</li>
+                <li>Check your ISP's official app or website for service status pages.</li>
+                <li>Look at the lights on your modem: if the internet/WAN light is red or off (not the Wi-Fi indicator), the modem isn't reaching your ISP.</li>
+                <li>Call your ISP's support line and ask if there are outages in your area. Most have automated outage messages before you reach a human.</li>
+            </ol>
+
+            <h3>Fix 6: Handle Captive Portal Login (Public Wi-Fi)</h3>
+            <p><strong>Why this works:</strong> Most public Wi-Fi networks — hotels, airports, coffee shops, universities — require you to interact with a login or terms-acceptance page before granting internet access. Your device connects to the Wi-Fi normally, but all internet traffic gets redirected to this portal. If the portal doesn't pop up automatically, you need to trigger it manually.</p>
+            <ol>
+                <li>Open a web browser on your device.</li>
+                <li>Navigate to <code>http://neverssl.com</code> — this plain HTTP site is designed to trigger captive portals since HTTPS sites won't redirect.</li>
+                <li>The login or terms page should appear. Accept terms, log in, or pay as required.</li>
+                <li>Alternatively, on iPhone, a captive portal popup usually appears automatically when you join the network. If it disappeared, go to Settings → Wi-Fi → tap (i) next to the network → tap the domain shown to reopen it.</li>
+            </ol>
+
+            <h3>Fix 7: Disable VPN and Check Proxy Settings</h3>
+            <p><strong>Why this works:</strong> A VPN or proxy server misconfiguration can prevent all internet traffic from routing correctly while still showing your device as "connected to Wi-Fi." The device connects to Wi-Fi fine, but then tries to send all traffic through a VPN server that's unreachable or misconfigured.</p>
+            <p>If you have any VPN apps (ExpressVPN, NordVPN, Mullvad, corporate VPN clients), disconnect them completely and test internet access. If it works without the VPN, the VPN is the issue — try a different server or contact VPN support.</p>
+            <p>On iPhone: Settings → General → VPN &amp; Device Management → ensure no active VPN profiles are connected. On Windows: Settings → Network &amp; Internet → VPN → disconnect any active connections. Also check: Settings → Network &amp; Internet → Proxy → make sure "Use a proxy server" is off.</p>
+
+            <h3>Fix 8: Reset Network Settings on Your Device</h3>
+            <p><strong>Why this works:</strong> This is a more aggressive approach that resets all network configuration on your device to factory defaults — Wi-Fi passwords, cellular settings, Bluetooth pairings, VPN profiles, and custom DNS settings. It's effective when a specific network configuration setting got corrupted and you can't identify which one.</p>
+            <p><strong>On iPhone:</strong> Settings → General → Transfer or Reset iPhone → Reset → <strong>Reset Network Settings</strong>. Note: you'll need to re-enter all Wi-Fi passwords after this.</p>
+            <p><strong>On Android:</strong> Settings → System → Reset options → <strong>Reset Wi-Fi, mobile &amp; Bluetooth</strong>.</p>
+            <p><strong>On Windows:</strong> Open Command Prompt as Administrator and run these commands in order: <code>netsh winsock reset</code>, then <code>netsh int ip reset</code>, then restart your computer.</p>
+
+            <h3>Fix 9: Check Router Security Settings (MAC Filtering)</h3>
+            <p><strong>Why this works:</strong> Some routers have MAC address filtering enabled — a security feature that only allows devices with pre-approved hardware addresses to access the internet. If your device's MAC address isn't on the approved list (or if your device has a randomized MAC address, which is the default on modern iPhones and Android phones), it can connect to Wi-Fi but be blocked from internet access.</p>
+            <ol>
+                <li>Log into your router's admin panel — typically at <code>192.168.1.1</code> or <code>192.168.0.1</code> in your browser.</li>
+                <li>Look for "MAC Filtering," "Access Control," or "Wireless Security" settings.</li>
+                <li>If filtering is enabled, either disable it or add your device's MAC address to the allowed list.</li>
+                <li>On iPhone: if your router uses MAC filtering and your iPhone uses a randomized MAC, go to Settings → Wi-Fi → tap (i) next to your network → toggle off <strong>Private Wi-Fi Address</strong> for this network specifically.</li>
+            </ol>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <p class="q">Q: Why does my phone say "Connected, no internet" even though the router is on?</p>
+                <p class="a">A: Your phone is successfully connected to the router, but the router has lost its connection to your ISP. The Wi-Fi signal between phone and router is working fine — it's the link between your router and the outside internet that's broken. Restarting your router and modem is the first thing to try. If other devices also have no internet, it's definitely a router/ISP issue rather than a device issue.</p>
             </div>
-            <div class="faq"><p class="q">Q: Why does only one device have no internet?</p>
-            <p class="a">A: If other devices work fine, the issue is with that specific device. Try forgetting the network, restarting the device, or resetting network settings.</p>
+
+            <div class="faq">
+                <p class="q">Q: Why does only one device have no internet while others work fine?</p>
+                <p class="a">A: If other devices on the same Wi-Fi work fine, the problem is entirely specific to your device. Common causes are a corrupted IP address assignment, stale DNS cache, or a network profile issue. Try forgetting the Wi-Fi network and reconnecting fresh, or use the Renew Lease option on iPhone (Settings &rarr; Wi-Fi &rarr; tap your network &rarr; Renew Lease).</p>
             </div>
-            <div class="faq"><p class="q">Q: Does restarting the router fix internet issues?</p>
-            <p class="a">A: Yes, in most cases. Restarting clears temporary errors and forces the router to establish a fresh connection with your ISP.</p>
+
+            <div class="faq">
+                <p class="q">Q: What does "No internet, secured" mean on Windows?</p>
+                <p class="a">A: "No internet, secured" means Windows is connected to your router (hence "secured" — the password was accepted) but Windows' connectivity test can't reach Microsoft's server to confirm internet access. This can be actual no internet, or a false positive caused by a VPN, firewall, or DNS issue. Try opening Chrome or Edge and navigating to google.com to confirm whether the internet is actually broken, rather than trusting the Windows indicator.</p>
             </div>
+
+            <div class="faq">
+                <p class="q">Q: Can changing DNS settings really fix no-internet issues?</p>
+                <p class="a">A: Yes, surprisingly often. If your ISP's DNS server is slow or down, your device can connect to the router and the internet backbone but fail to resolve any website names — which looks identical to "no internet." Switching to Google DNS (8.8.8.8) or Cloudflare DNS (1.1.1.1) is fast, free, and frequently resolves this within seconds.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: Why do I get no internet on hotel or coffee shop Wi-Fi?</p>
+                <p class="a">A: Public Wi-Fi networks use a "captive portal" — a login or terms-acceptance page you must interact with before getting real internet access. Your device connects to the Wi-Fi network but all traffic is redirected to this portal. If the portal doesn't appear automatically, open a browser and navigate to http://neverssl.com — that plain HTTP site forces the captive portal redirect to appear.</p>
+            </div>
+
+            <div class="still-stuck">
+                <h2>Still Stuck?</h2>
+                <p>If you've worked through all nine fixes and still have no internet access, it's time to call your ISP directly. Their support line can run remote diagnostics on your connection and determine whether the problem is with your modem, the line coming into your home, or their infrastructure. If you rent your modem/router from the ISP, they may also be able to remotely reset it. Most ISPs have 24/7 tech support lines.</p>
+            </div>
+
+            <h2>Related Guides</h2>
+            <ul>
+                <li><a href="bluetooth-not-working-android.html">Bluetooth Not Working on Android</a></li>
+                <li><a href="youtube-app-buffering.html">YouTube App Keeps Buffering</a></li>
+                <li><a href="chatgpt-not-working.html">ChatGPT Not Working</a></li>
+            </ul>
         </div>
     </div>
     <footer>

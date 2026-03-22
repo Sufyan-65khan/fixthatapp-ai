@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Guide: Shopify Store Not Loading - FixThatApp</title>
-    <meta name="description" content="Your Shopify store may fail to load for customers, show error pages, have extremely slow loading times, or display broken layouts. This directly impacts yo">
-    <meta name="keywords" content="shopify store not loading, fix, troubleshooting, how to fix, not working, error, solution">
+    <title>Shopify Store Not Loading: 7 Fixes for Store and Admin Issues | FixThatApp</title>
+    <meta name="description" content="Shopify storefront slow or down, admin panel not loading, or customers getting 404 errors? This guide covers Shopify outages, custom domain issues, and checkout problems with specific fixes.">
+    <meta name="keywords" content="shopify store not loading, shopify admin not loading, shopify down, shopify 404 error, shopify checkout not working">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/shopify-store-not-loading.html">
-    <meta property="og:title" content="Troubleshooting Guide: Shopify Store Not Loading - FixThatApp">
-    <meta property="og:description" content="Your Shopify store may fail to load for customers, show error pages, have extremely slow loading times, or display broken layouts. This directly impacts yo">
+    <meta property="og:title" content="Shopify Store Not Loading: 7 Fixes for Store and Admin Issues | FixThatApp">
+    <meta property="og:description" content="Shopify storefront slow or down, admin panel not loading, or customers getting 404 errors? This guide covers Shopify outages, custom domain issues, and checkout problems with specific fixes.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/shopify-store-not-loading.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Troubleshooting Guide: Shopify Store Not Loading - FixThatApp">
-    <meta name="twitter:description" content="Your Shopify store may fail to load for customers, show error pages, have extremely slow loading times, or display broken layouts. This directly impacts yo">
+    <meta name="twitter:title" content="Shopify Store Not Loading: 7 Fixes for Store and Admin Issues | FixThatApp">
+    <meta name="twitter:description" content="Shopify storefront slow or down, admin panel not loading, or customers getting 404 errors? This guide covers Shopify outages, custom domain issues, and checkout problems with specific fixes.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script>
     (function() {
@@ -33,9 +33,9 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "Troubleshooting Guide: Shopify Store Not Loading",
-      "description": "Your Shopify store may fail to load for customers, show error pages, have extremely slow loading times, or display broken layouts. This directly impacts yo",
-      "dateModified": "2026-03-05",
+      "headline": "Shopify Store Not Loading: 7 Fixes for Store and Admin Issues",
+      "description": "Shopify storefront slow or down, admin panel not loading, or customers getting 404 errors? This guide covers Shopify outages, custom domain issues, and checkout problems with specific fixes.",
+      "dateModified": "2026-03-22",
       "author": {
         "@type": "Organization",
         "name": "FixThatApp",
@@ -59,34 +59,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Does Shopify go down often?",
+          "name": "Why is my Shopify store down but my admin still works?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Shopify has excellent uptime (99.99%+). Major outages are very rare, but brief degradations can occur during high-traffic events like Black Friday."
+            "text": "Your admin panel loads from admin.shopify.com while your storefront loads through your custom domain or myshopify.com subdomain. If your custom domain DNS is misconfigured, the store appears down to customers while admin continues to function. Check your domain DNS records to confirm the A record points to 23.227.38.65 and the CNAME for www points to shops.myshopify.com."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Will I lose sales if my Shopify store goes down?",
+          "name": "How do I know if Shopify itself is down?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "During Shopify outages, orders cannot be processed. However, once the service is restored, all your store data remains intact."
+            "text": "Visit status.shopify.com for the official Shopify status page. It shows real-time status for the storefront, admin, checkout, and Shopify Payments separately. You can also check downdetector.com/status/shopify for crowd-sourced merchant reports. If the status page shows degraded performance or an incident, the only option is to wait for Shopify to resolve it."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "How can I make my Shopify store load faster?",
+          "name": "My customers are getting 404 errors on my Shopify store — what happened?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Optimize images, minimize apps, use a lightweight theme, enable lazy loading for images, and minimize custom scripts."
+            "text": "A 404 on a Shopify store usually means a product, collection, or page URL handle was changed or deleted. Go to Admin > Online Store > Navigation > URL Redirects to create redirects from old URLs to the new ones. If the 404 is on your homepage, your domain DNS may have lost the Shopify connection."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Can I host Shopify on my own server?",
+          "name": "Why is my Shopify checkout not working?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, Shopify is a fully hosted platform. You cannot self-host a Shopify store. Consider alternatives like WooCommerce if you want self-hosting."
+            "text": "Shopify checkout failures typically come from an expired SSL certificate on a custom domain, a third-party app conflicting with checkout scripts, or Shopify Payments being temporarily unavailable. Verify your SSL is active in Settings > Domains, and disable checkout-modifying apps one at a time to identify the conflict."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a difference between Shopify Plus and basic Shopify when stores go down?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shopify Plus merchants get priority support and a dedicated Merchant Success Manager. If you are on Shopify Plus and your store is down, contact your dedicated support contact directly rather than using standard support channels. Shopify Plus offers better SLA guarantees and faster incident response compared to standard Shopify plans."
           }
         }
       ]
@@ -94,63 +102,19 @@
     </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f7fa;
-            color: #333;
-            line-height: 1.7;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #333; line-height: 1.7; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
         header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
-        .header-search {
-            position: relative;
-            max-width: 260px;
-        }
-        .header-search input {
-            width: 100%;
-            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            outline: none;
-            background: rgba(255,255,255,0.2);
-            color: white;
-        }
+        .header-search { position: relative; max-width: 260px; }
+        .header-search input { width: 100%; padding: 0.45rem 0.8rem 0.45rem 2.2rem; border: none; border-radius: 50px; font-size: 0.85rem; outline: none; background: rgba(255,255,255,0.2); color: white; }
         .header-search input::placeholder { color: rgba(255,255,255,0.7); }
         .header-search input:focus { background: rgba(255,255,255,0.3); }
-        .header-search-icon {
-            position: absolute;
-            left: 0.7rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.85rem;
-            pointer-events: none;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-        .breadcrumb {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 1rem;
-        }
+        .header-search-icon { position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); font-size: 0.85rem; pointer-events: none; }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
         .breadcrumb a { color: #667eea; text-decoration: none; }
         .breadcrumb a:hover { text-decoration: underline; }
-        .article {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+        .article { background: white; border-radius: 12px; padding: 2.5rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
         .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
         .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
         .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
@@ -164,57 +128,19 @@
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
         .faq .a { color: #555; }
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: #999;
-            font-size: 0.85rem;
-            border-top: 1px solid #eee;
-        }
+        .diagnosis-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1rem; }
+        .diagnosis-box p { margin-bottom: 0.4rem; }
+        .still-stuck { background: #f0f7ff; border-radius: 8px; padding: 1.25rem; margin-top: 2rem; }
+        .still-stuck a { color: #667eea; }
+        footer { text-align: center; padding: 2rem 1rem; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; }
         footer a { color: #667eea; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
-        .cookie-banner {
-            position: fixed;
-            left: 1rem;
-            right: 1rem;
-            bottom: 1rem;
-            background: #1a1a2e;
-            color: #fff;
-            padding: 0.85rem 1rem;
-            border-radius: 10px;
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.8rem;
-            z-index: 2000;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-            font-size: 0.85rem;
-        }
+        .cookie-banner { position: fixed; left: 1rem; right: 1rem; bottom: 1rem; background: #1a1a2e; color: #fff; padding: 0.85rem 1rem; border-radius: 10px; display: none; align-items: center; justify-content: space-between; gap: 0.8rem; z-index: 2000; box-shadow: 0 8px 24px rgba(0,0,0,0.25); font-size: 0.85rem; }
         .cookie-banner a { color: #9ec2ff; }
-        .cookie-actions {
-            display: flex;
-            gap: 0.5rem;
-            flex-shrink: 0;
-        }
-        .cookie-btn {
-            border: 1px solid #667eea;
-            background: transparent;
-            color: #fff;
-            padding: 0.35rem 0.65rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
+        .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+        .cookie-btn { border: 1px solid #667eea; background: transparent; color: #fff; padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
         .cookie-btn.primary { background: #667eea; }
-        @media (max-width: 600px) {
-            .article { padding: 1.5rem 1rem; }
-            .article h1 { font-size: 1.4rem; }
-            .header-search { display: none; }
-            .cookie-banner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
+        @media (max-width: 600px) { .article { padding: 1.5rem 1rem; } .article h1 { font-size: 1.4rem; } .header-search { display: none; } .cookie-banner { flex-direction: column; align-items: flex-start; } }
     </style>
 </head>
 <body>
@@ -222,7 +148,7 @@
         <a href="../index.html">FixThatApp</a>
         <div class="header-search">
             <span class="header-search-icon">&#128269;</span>
-            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value">
         </div>
     </header>
     <div class="container">
@@ -230,57 +156,137 @@
             <a href="../index.html">Home</a> &rsaquo; Shopify Store Not Loading
         </nav>
         <div class="article">
-            <h1>Troubleshooting Guide: Shopify Store Not Loading</h1>
-            <p class="updated">Last updated: March 5, 2026</p>
-            <h2>Problem Description</h2>
-            <p>Your Shopify store may fail to load for customers, show error pages, have extremely slow loading times, or display broken layouts. This directly impacts your sales and customer experience.</p>
-            <h2>Possible Causes</h2>
-            <p><strong>Shopify platform outage</strong>: Shopify's servers may be experiencing issues.</p>
-            <p><strong>Theme issues</strong>: A broken or incompatible theme can prevent loading.</p>
-            <p><strong>App conflicts</strong>: Third-party Shopify apps may cause problems.</p>
-            <p><strong>Heavy images</strong>: Large, unoptimized images slow down page loading.</p>
-            <p><strong>DNS issues</strong>: Domain configuration problems can prevent access.</p>
-            <p><strong>Custom code errors</strong>: JavaScript or Liquid template errors.</p>
-            <h2>Step-by-Step Fixes</h2>
-            <h3>Fix 1: Check Shopify Status</h3>
-            <p>&bull; Visit status.shopify.com to check for platform issues.</p>
-            <p>&bull; If Shopify is down, wait for them to resolve it.</p>
-            <p>&bull; Your store data is safe during outages.</p>
-            <h3>Fix 2: Preview Without Apps</h3>
-            <p>&bull; Temporarily disable third-party apps one by one.</p>
-            <p>&bull; Check if the store loads after each disable.</p>
-            <p>&bull; This helps identify which app is causing the problem.</p>
-            <h3>Fix 3: Switch to Default Theme</h3>
-            <p>&bull; Go to Online Store > Themes.</p>
-            <p>&bull; Activate a default Shopify theme (like Dawn) temporarily.</p>
-            <p>&bull; If the store loads with the default theme, your custom theme has issues.</p>
-            <h3>Fix 4: Optimize Images</h3>
-            <p>&bull; Compress images using tools like TinyPNG before uploading.</p>
-            <p>&bull; Use WebP format for better compression.</p>
-            <p>&bull; Keep product images under 500KB each.</p>
-            <h3>Fix 5: Check Custom Code</h3>
-            <p>&bull; Review any custom JavaScript or Liquid code you've added.</p>
-            <p>&bull; Check the browser console (F12 > Console) for error messages.</p>
-            <p>&bull; Temporarily remove custom code to see if the issue resolves.</p>
-            <h3>Fix 6: Verify Domain Settings</h3>
-            <p>&bull; Go to Settings > Domains in Shopify admin.</p>
-            <p>&bull; Make sure your domain is properly connected.</p>
-            <p>&bull; If using a custom domain, verify DNS records are correct.</p>
-            <h2>When to Contact Support</h2>
-            <p>If your store still doesn't load, contact Shopify support through the admin panel: Settings > Support. You can also visit help.shopify.com.</p>
-            <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: Does Shopify go down often?</p>
-            <p class="a">A: Shopify has excellent uptime (99.99%+). Major outages are very rare, but brief degradations can occur during high-traffic events like Black Friday.</p>
+            <h1>Shopify Store Not Loading: 7 Fixes for Store and Admin Issues</h1>
+            <p class="updated">Last updated: March 22, 2026</p>
+
+            <p>Your Shopify store is down and you're losing sales by the minute. Maybe customers are reporting 404 errors, your storefront is returning a blank page, or your admin panel won't load at all. These problems can hit at the worst times — during a product launch, a sale, or a high-traffic period. Shopify store issues fall into a few distinct categories: platform-wide outages, custom domain DNS failures, theme rendering errors, checkout breakdowns, and app conflicts. This guide walks through each cause with specific fixes so you can diagnose and resolve the problem fast.</p>
+
+            <h2>Quick Diagnosis: What Kind of Problem Do You Have?</h2>
+            <div class="diagnosis-box">
+                <p><strong>Store shows blank page or generic error</strong> → Check Shopify status first (Fix 1), then theme issues (Fix 4).</p>
+                <p><strong>Custom domain shows "can't reach this page"</strong> → DNS misconfiguration. Go to Fix 2 immediately.</p>
+                <p><strong>Admin panel not loading</strong> → Browser issue or Shopify admin outage. See Fix 3.</p>
+                <p><strong>Customers getting 404 on specific products/pages</strong> → URL handle was changed. Fix with URL redirects (Fix 5).</p>
+                <p><strong>Checkout errors or payment failures</strong> → SSL or app conflict. See Fix 6.</p>
+                <p><strong>Store slow but loading</strong> → Heavy theme or app scripts. See Fix 7.</p>
             </div>
-            <div class="faq"><p class="q">Q: Will I lose sales if my Shopify store goes down?</p>
-            <p class="a">A: During Shopify outages, orders cannot be processed. However, once the service is restored, all your store data remains intact.</p>
+
+            <h2>7 Fixes for Shopify Store Not Loading</h2>
+
+            <h3>Fix 1: Check the Shopify Status Page</h3>
+            <p><strong>Why this works:</strong> Shopify hosts hundreds of thousands of stores on shared infrastructure. When their platform has an incident, it can affect storefront loading, admin access, checkout, and Shopify Payments simultaneously. Shopify maintains a live status page updated in real time during incidents.</p>
+            <ol>
+                <li>Navigate to <strong>status.shopify.com</strong> in your browser.</li>
+                <li>Check each component: Storefront, Admin, Checkout, Shopify Payments, and APIs.</li>
+                <li>If any component shows "Degraded Performance" or "Partial Outage," your issue is on Shopify's end.</li>
+                <li>Subscribe to status updates via email or SMS on the status page to receive notifications when the incident resolves.</li>
+                <li>Also check <strong>downdetector.com/status/shopify</strong> for merchant-reported issues not yet on the official page.</li>
+            </ol>
+            <p>If it's a Shopify platform incident, there is nothing you can do except wait. Most Shopify incidents resolve within 30 to 90 minutes.</p>
+
+            <h3>Fix 2: Verify Your Custom Domain DNS Settings</h3>
+            <p><strong>Why this works:</strong> When you connect a custom domain to Shopify, you need specific DNS records — an A record pointing to Shopify's IP address and a CNAME for www. If these are wrong, expired, or accidentally deleted, your domain stops resolving to Shopify entirely while your admin continues to function normally.</p>
+            <ol>
+                <li>Log into your domain registrar (GoDaddy, Namecheap, Cloudflare, etc.).</li>
+                <li>Go to DNS management for your domain.</li>
+                <li>Confirm there is an <strong>A record</strong> for the root domain (@) pointing to <code>23.227.38.65</code>.</li>
+                <li>Confirm there is a <strong>CNAME record</strong> for <code>www</code> pointing to <code>shops.myshopify.com</code>.</li>
+                <li>If using Cloudflare, disable the orange cloud proxy for Shopify — Shopify handles its own CDN and Cloudflare proxying can conflict.</li>
+                <li>DNS changes take up to 48 hours to propagate fully, but usually update within 1 to 2 hours.</li>
+            </ol>
+            <p>In Shopify Admin, go to <strong>Settings &rarr; Domains</strong> to see if Shopify reports any domain connection errors.</p>
+
+            <h3>Fix 3: Troubleshoot the Shopify Admin Panel</h3>
+            <p><strong>Why this works:</strong> The Shopify admin is a web application sensitive to browser extensions, cached data, and session issues. A blank white screen, freezing, or failed login in admin is almost always browser-related rather than a Shopify platform problem.</p>
+            <ol>
+                <li>Try opening admin in an <strong>incognito/private window</strong> — this disables extensions and uses no cached data.</li>
+                <li>If admin works in incognito, a browser extension (ad blocker, VPN, or privacy extension) is blocking it. Disable extensions one at a time to find the culprit.</li>
+                <li>Clear your browser cache and cookies for shopify.com: in Chrome, go to Settings &rarr; Privacy and Security &rarr; Cookies and site data &rarr; See all site data and search for "shopify" &rarr; delete all.</li>
+                <li>Try a different browser entirely.</li>
+                <li>Access admin at <strong>admin.shopify.com</strong> directly rather than through your custom domain admin URL.</li>
+            </ol>
+
+            <h3>Fix 4: Fix Theme Rendering Issues</h3>
+            <p><strong>Why this works:</strong> Shopify themes are built on Liquid templates, and a syntax error or broken app integration can cause the entire storefront to return a blank page. If your store suddenly broke after a theme customization or app install, the theme is almost certainly the cause.</p>
+            <ol>
+                <li>In Shopify Admin, go to <strong>Online Store &rarr; Themes</strong>.</li>
+                <li>If you recently edited theme code, click <strong>Edit code</strong> on your theme and review Files changed recently for errors.</li>
+                <li>Switch to the default <strong>Dawn theme</strong> temporarily to confirm whether your current theme is the problem.</li>
+                <li>Check the <strong>Preview</strong> link — if preview works but the live store doesn't, a recently installed app is likely modifying theme files incorrectly.</li>
+                <li>Go to <strong>Apps</strong> and disable recently installed apps one at a time, refreshing your storefront after each deactivation.</li>
+            </ol>
+
+            <h3>Fix 5: Fix 404 Errors with URL Redirects</h3>
+            <p><strong>Why this works:</strong> Every Shopify product, collection, and page has a URL handle. When you rename a product or change a URL handle, the old URL breaks immediately. Customers from bookmarks, Google search results, or social media posts will land on a 404. Shopify provides a built-in redirect tool to fix this.</p>
+            <ol>
+                <li>In Shopify Admin, go to <strong>Online Store &rarr; Navigation</strong>.</li>
+                <li>Click <strong>View URL Redirects</strong>.</li>
+                <li>Click <strong>Add URL redirect</strong>.</li>
+                <li>In "Redirect from," enter the old URL path (e.g., <code>/products/old-name</code>).</li>
+                <li>In "Redirect to," enter the new URL path (e.g., <code>/products/new-name</code>).</li>
+                <li>Save the redirect.</li>
+            </ol>
+            <p>For bulk 404 fixes, use Shopify's bulk import CSV format to upload many redirects at once.</p>
+
+            <h3>Fix 6: Resolve Checkout and Payment Errors</h3>
+            <p><strong>Why this works:</strong> Shopify checkout failures often stem from SSL certificate issues on custom domains, third-party scripts injected by apps conflicting with the checkout process, or Shopify Payments being temporarily unavailable. Checkout issues affecting only mobile usually indicate a JavaScript conflict.</p>
+            <ol>
+                <li>Verify your SSL certificate is active: In Shopify Admin, go to <strong>Settings &rarr; Domains</strong> and confirm your domain shows a valid SSL certificate. Shopify provisions SSL automatically but they can occasionally fail to renew.</li>
+                <li>Test checkout in an incognito browser window to rule out extension conflicts.</li>
+                <li>Go to <strong>Settings &rarr; Checkout</strong> and review any custom scripts you've added.</li>
+                <li>If using Shopify Payments, confirm it's active and not suspended under <strong>Settings &rarr; Payments</strong>.</li>
+                <li>Temporarily disable checkout-modifying apps (upsell apps, discount apps) and test checkout after each removal.</li>
+                <li>For Shopify Plus merchants: check your custom checkout.liquid file for syntax errors.</li>
+            </ol>
+
+            <h3>Fix 7: Address Store Speed and Performance</h3>
+            <p><strong>Why this works:</strong> A Shopify store that loads but is extremely slow loses customers who leave before it finishes. Heavy themes, too many installed apps injecting JavaScript, and large unoptimized images are the most common causes. Shopify provides a built-in speed report to identify the bottleneck.</p>
+            <ol>
+                <li>In Shopify Admin, go to <strong>Online Store &rarr; Themes</strong> and check the <strong>Speed score</strong> next to your theme. Below 20 is a serious issue; 20–50 is acceptable; above 50 is good.</li>
+                <li>Go to <strong>Apps</strong> and uninstall apps you no longer actively use — even deactivated apps can leave behind performance-impacting scripts.</li>
+                <li>Disable auto-playing video on the homepage in your theme settings.</li>
+                <li>Compress product images to under 500KB before uploading using tools like TinyPNG.</li>
+                <li>Use Google PageSpeed Insights at pagespeed.web.dev to get specific improvement recommendations for your store URL.</li>
+            </ol>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <p class="q">Q: Why is my Shopify store down but my admin still works?</p>
+                <p class="a">A: Your admin panel loads from admin.shopify.com while your storefront loads through your custom domain. If your custom domain DNS is misconfigured, the store appears down to customers while admin continues to function. Check that your A record points to 23.227.38.65 and your CNAME for www points to shops.myshopify.com.</p>
             </div>
-            <div class="faq"><p class="q">Q: How can I make my Shopify store load faster?</p>
-            <p class="a">A: Optimize images, minimize apps, use a lightweight theme, enable lazy loading for images, and minimize custom scripts.</p>
+
+            <div class="faq">
+                <p class="q">Q: How do I know if Shopify itself is down?</p>
+                <p class="a">A: Visit status.shopify.com for real-time status of the storefront, admin, checkout, and Shopify Payments. Also check downdetector.com/status/shopify for crowd-sourced merchant reports. If the status page shows an incident, the only option is to wait for Shopify to resolve it.</p>
             </div>
-            <div class="faq"><p class="q">Q: Can I host Shopify on my own server?</p>
-            <p class="a">A: No, Shopify is a fully hosted platform. You cannot self-host a Shopify store. Consider alternatives like WooCommerce if you want self-hosting.</p>
+
+            <div class="faq">
+                <p class="q">Q: My customers are getting 404 errors on my Shopify store — what happened?</p>
+                <p class="a">A: A 404 on Shopify usually means a product, collection, or page URL handle was changed or deleted. Go to Admin &rarr; Online Store &rarr; Navigation &rarr; URL Redirects to create redirects from old URLs to new ones. If the 404 is on your homepage, your domain DNS may have lost its Shopify connection.</p>
             </div>
+
+            <div class="faq">
+                <p class="q">Q: Why is my Shopify checkout not working?</p>
+                <p class="a">A: Shopify checkout failures typically come from an expired SSL certificate on a custom domain, a third-party app conflicting with checkout scripts, or Shopify Payments being temporarily unavailable. Verify your SSL is active in Settings &rarr; Domains, and disable checkout-modifying apps one at a time to identify the conflict.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: Is there a difference between Shopify Plus and basic Shopify when stores go down?</p>
+                <p class="a">A: Shopify Plus merchants get priority support and a dedicated Merchant Success Manager. If you are on Shopify Plus and your store is down, contact your dedicated support contact directly rather than using standard support channels. Shopify Plus also has better SLA guarantees and faster incident response compared to standard Shopify plans.</p>
+            </div>
+
+            <div class="still-stuck">
+                <h2>Still Stuck?</h2>
+                <p>If you've worked through all seven fixes and your Shopify store still isn't loading correctly, contact Shopify Support directly. For standard plans, visit <a href="https://help.shopify.com" target="_blank" rel="noopener">help.shopify.com</a> and use the live chat option. When contacting support, have your store URL, the specific error message, and the time the problem started ready to share.</p>
+            </div>
+
+            <h2>Related Guides</h2>
+            <ul>
+                <li><a href="cloudflare-outage.html">Cloudflare Outage: What to Do When Sites Go Down</a></li>
+                <li><a href="windows-wifi-not-connecting.html">Windows Wi-Fi Not Connecting: 8 Fixes</a></li>
+                <li><a href="vpn-not-connecting.html">VPN Not Connecting: 8 Fixes for Every Protocol</a></li>
+            </ul>
         </div>
     </div>
     <footer>
@@ -309,9 +315,7 @@
       if (!banner || !acceptBtn || !rejectBtn) return;
       var saved = null;
       try { saved = localStorage.getItem(key); } catch (e) {}
-      if (!saved) {
-        banner.style.display = 'flex';
-      }
+      if (!saved) { banner.style.display = 'flex'; }
       acceptBtn.addEventListener('click', function() {
         try { localStorage.setItem(key, 'accepted'); } catch (e) {}
         banner.style.display = 'none';

@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Guide: Outlook Not Sending Emails - FixThatApp</title>
-    <meta name="description" content="Microsoft Outlook may fail to send emails, showing errors like &quot;Send/Receive Error&quot;, keeping emails stuck in the Outbox, or displaying server connection er">
-    <meta name="keywords" content="outlook not sending emails, fix, troubleshooting, how to fix, not working, error, solution">
+    <title>Outlook Not Sending Emails: 8 Fixes for Stuck Messages in Outbox | FixThatApp</title>
+    <meta name="description" content="Outlook emails stuck in Outbox, showing not responding, or getting delivery failure notices? This guide fixes every Outlook sending problem for desktop, web, and mobile — including Office 365 and Exchange.">
+    <meta name="keywords" content="outlook not sending emails, outlook stuck in outbox, outlook emails not sending, outlook offline mode, outlook delivery failure, office 365 email not sending">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/outlook-not-sending-emails.html">
-    <meta property="og:title" content="Troubleshooting Guide: Outlook Not Sending Emails - FixThatApp">
-    <meta property="og:description" content="Microsoft Outlook may fail to send emails, showing errors like &quot;Send/Receive Error&quot;, keeping emails stuck in the Outbox, or displaying server connection er">
+    <meta property="og:title" content="Outlook Not Sending Emails: 8 Fixes for Stuck Messages in Outbox | FixThatApp">
+    <meta property="og:description" content="Outlook emails stuck in Outbox, showing not responding, or getting delivery failure notices? This guide fixes every Outlook sending problem for desktop, web, and mobile.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/outlook-not-sending-emails.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Troubleshooting Guide: Outlook Not Sending Emails - FixThatApp">
-    <meta name="twitter:description" content="Microsoft Outlook may fail to send emails, showing errors like &quot;Send/Receive Error&quot;, keeping emails stuck in the Outbox, or displaying server connection er">
+    <meta name="twitter:title" content="Outlook Not Sending Emails: 8 Fixes for Stuck Messages in Outbox | FixThatApp">
+    <meta name="twitter:description" content="Outlook emails stuck in Outbox, showing not responding, or getting delivery failure notices? This guide fixes every Outlook sending problem for desktop, web, and mobile.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script>
     (function() {
@@ -33,9 +33,9 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "Troubleshooting Guide: Outlook Not Sending Emails",
-      "description": "Microsoft Outlook may fail to send emails, showing errors like &quot;Send/Receive Error&quot;, keeping emails stuck in the Outbox, or displaying server connection er",
-      "dateModified": "2026-03-05",
+      "headline": "Outlook Not Sending Emails: 8 Fixes for Stuck Messages in Outbox",
+      "description": "Outlook emails stuck in Outbox, showing not responding, or getting delivery failure notices? This guide fixes every Outlook sending problem for desktop, web, and mobile including Office 365 and Exchange.",
+      "dateModified": "2026-03-22",
       "author": {
         "@type": "Organization",
         "name": "FixThatApp",
@@ -59,34 +59,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Why are my emails stuck in the Outbox?",
+          "name": "Why do Outlook emails get stuck in the Outbox?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Usually due to large attachments, lost internet connection, or authentication issues. Open the stuck email, reduce its size, and try again."
+            "text": "Emails get stuck in the Outbox for several reasons: Outlook is in offline mode (most common), an attachment exceeds the server size limit, the SMTP server credentials have changed, or an add-in is interfering with the send process. Check the status bar at the bottom of Outlook for 'Working Offline' text — if you see it, that is almost certainly the cause."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "What&#x27;s the maximum attachment size in Outlook?",
+          "name": "How do I delete an email that is stuck in the Outbox?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "25MB for Outlook.com and most Exchange accounts. For larger files, use OneDrive and share a link instead."
+            "text": "Outlook locks stuck emails while it is attempting to send them, which makes them hard to delete. To delete a stuck Outbox email: first go offline (Send/Receive tab > Work Offline), then open the Outbox folder, right-click the stuck message and choose Delete. The message should now delete. Then toggle Work Offline off again."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Can I recall a sent email in Outlook?",
+          "name": "What does 'Your message did not reach some or all of the intended recipients' mean?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In the desktop app with Exchange, go to Sent Items &gt; open the email &gt; Message tab &gt; Actions &gt; Recall This Message. This only works if the recipient hasn&#x27;t read it yet."
+            "text": "This Non-Delivery Report (NDR) means your email was rejected after leaving Outlook but before being delivered. The NDR usually contains a specific error code. Common causes: the recipient's address does not exist, their mailbox is full, your IP is on a blocklist, or the recipient's server rejected your message due to content filtering."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Why does Outlook keep asking for my password?",
+          "name": "Outlook sends emails fine from webmail but not the desktop app — why?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Your password may have changed, or your authentication token expired. Re-enter your credentials or enable modern authentication."
+            "text": "If webmail (outlook.com or office.com) sends fine but the desktop Outlook cannot, the issue is with your local Outlook installation, not your email account or server. Focus on Fix 6 (disable add-ins) and Fix 7 (repair Office). A corrupted Outlook profile is another possibility — create a new Outlook profile via Control Panel > Mail > Show Profiles > Add."
           }
         }
       ]
@@ -164,6 +164,10 @@
         .faq p { margin-bottom: 0.25rem; }
         .faq .q { font-weight: 600; color: #333; }
         .faq .a { color: #555; }
+        .diagnosis-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1rem; }
+        .diagnosis-box p { margin-bottom: 0.4rem; }
+        .still-stuck { background: #f0f7ff; border-radius: 8px; padding: 1.25rem; margin-top: 2rem; }
+        .still-stuck a { color: #667eea; }
         footer {
             text-align: center;
             padding: 2rem 1rem;
@@ -230,56 +234,137 @@
             <a href="../index.html">Home</a> &rsaquo; Outlook Not Sending Emails
         </nav>
         <div class="article">
-            <h1>Troubleshooting Guide: Outlook Not Sending Emails</h1>
-            <p class="updated">Last updated: March 5, 2026</p>
-            <h2>Problem Description</h2>
-            <p>Microsoft Outlook may fail to send emails, showing errors like "Send/Receive Error", keeping emails stuck in the Outbox, or displaying server connection errors. This affects both desktop and web versions of Outlook.</p>
-            <h2>Possible Causes</h2>
-            <p><strong>Internet connection</strong>: Outlook needs stable internet to send emails.</p>
-            <p><strong>Large attachments</strong>: Files exceeding the size limit (25MB for most accounts) block sending.</p>
-            <p><strong>Outbox stuck</strong>: Emails may get stuck in the Outbox due to formatting or size issues.</p>
-            <p><strong>Account authentication</strong>: Your password may have changed or expired.</p>
-            <p><strong>Server settings wrong</strong>: Incorrect SMTP settings prevent sending.</p>
-            <h2>Step-by-Step Fixes</h2>
-            <h3>Fix 1: Check Internet Connection</h3>
-            <p>&bull; Make sure you're connected to the internet.</p>
-            <p>&bull; Check if you can browse websites normally.</p>
-            <p>&bull; Try sending from Outlook on the web (outlook.live.com) to isolate the issue.</p>
-            <h3>Fix 2: Check the Outbox</h3>
-            <p>&bull; Go to the Outbox folder and open any stuck emails.</p>
-            <p>&bull; Check if attachments are too large (over 25MB).</p>
-            <p>&bull; Delete the stuck email, reduce attachment size, and try again.</p>
-            <h3>Fix 3: Re-enter Your Password</h3>
-            <p>&bull; Go to File > Account Settings > Account Settings.</p>
-            <p>&bull; Select your email account and click "Repair".</p>
-            <p>&bull; Re-enter your password when prompted.</p>
-            <h3>Fix 4: Work Offline Toggle</h3>
-            <p>&bull; Check if "Work Offline" is enabled in the Send/Receive tab.</p>
-            <p>&bull; If it's highlighted, click it to go back online.</p>
-            <p>&bull; Outlook won't send emails while in offline mode.</p>
-            <h3>Fix 5: Create a New Outlook Profile</h3>
-            <p>&bull; Go to Control Panel > Mail > Show Profiles > Add.</p>
-            <p>&bull; Create a new profile and set up your email account.</p>
-            <p>&bull; Set the new profile as default and restart Outlook.</p>
-            <h3>Fix 6: Repair Office Installation</h3>
-            <p>&bull; Go to Settings > Apps > Microsoft Office > Modify > Repair.</p>
-            <p>&bull; Choose "Online Repair" for a thorough fix.</p>
-            <p>&bull; Restart your computer after the repair completes.</p>
-            <h2>When to Contact Support</h2>
-            <p>If emails still won't send, contact Microsoft support at support.microsoft.com or your IT administrator for work accounts.</p>
-            <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: Why are my emails stuck in the Outbox?</p>
-            <p class="a">A: Usually due to large attachments, lost internet connection, or authentication issues. Open the stuck email, reduce its size, and try again.</p>
+            <h1>Outlook Not Sending Emails: 8 Fixes for Stuck Messages in Outbox</h1>
+            <p class="updated">Last updated: March 22, 2026</p>
+
+            <p>You hit Send, watch the email disappear from Drafts — and then nothing. It is sitting in the Outbox, the progress bar spins but never completes, or you eventually get a delivery failure notice in your inbox. Meanwhile you are wondering whether the recipient got your message, whether you should resend it and risk duplicates, and what is actually wrong with Outlook.</p>
+
+            <p>Outlook email sending failures have a handful of well-defined causes. The most common by a wide margin is Outlook silently switching to offline mode. After that, oversized attachments, SMTP configuration issues, and add-in conflicts account for nearly all remaining cases. This guide covers every scenario with specific step-by-step fixes for Outlook desktop, Outlook on the web, and the mobile app.</p>
+
+            <h2>Quick Diagnosis: Identify Your Specific Symptom</h2>
+
+            <div class="diagnosis-box">
+                <p><strong>Email sits in Outbox and never sends</strong> &rarr; Almost certainly Offline Mode. Check the status bar at the bottom of Outlook for "Working Offline" text. Fix 1 covers this.</p>
+                <p><strong>You get a bounce-back / NDR email</strong> &rarr; The email left your Outbox but was rejected by a server. Check the error code in the NDR. Fix 5 and Fix 8 apply.</p>
+                <p><strong>Outlook says "Not Responding" when sending</strong> &rarr; An add-in is likely hanging the send process. Fix 6 (disable add-ins) is your first step.</p>
+                <p><strong>Email disappears but recipient never got it</strong> &rarr; Check Sent Items. If it is there, the issue is with the recipient's mail server or spam filtering. If it is not in Sent Items, check the Outbox.</p>
+                <p><strong>Large attachment causes the send to fail</strong> &rarr; Attachment over the server size limit. See Fix 4.</p>
+                <p><strong>Sends fine on webmail but not desktop Outlook</strong> &rarr; Local installation issue. See Fix 6 and Fix 7.</p>
             </div>
-            <div class="faq"><p class="q">Q: What&#x27;s the maximum attachment size in Outlook?</p>
-            <p class="a">A: 25MB for Outlook.com and most Exchange accounts. For larger files, use OneDrive and share a link instead.</p>
+
+            <h2>Fix 1: Check if Outlook is in Offline Mode</h2>
+            <p><strong>Why this works:</strong> Outlook has a "Work Offline" toggle that disconnects it from the mail server while keeping the application open. When this is active, emails queue in the Outbox indefinitely. The status bar at the bottom of the Outlook window shows "Working Offline" in plain text, but many people overlook it entirely.</p>
+            <ol>
+                <li>Look at the bottom status bar of the Outlook window. If you see <strong>"Working Offline"</strong> displayed, offline mode is the cause.</li>
+                <li>Click the <strong>Send / Receive</strong> tab in the ribbon at the top.</li>
+                <li>Click <strong>Work Offline</strong> — if it appears highlighted or pressed, clicking it will toggle online mode back on.</li>
+                <li>The status bar should change to "Connected" or disappear entirely.</li>
+                <li>Outlook will automatically attempt to send any queued Outbox messages within a few seconds.</li>
+            </ol>
+            <p>If Outlook keeps switching back to offline mode on its own, check your internet connection and verify that your Exchange or Microsoft 365 server is reachable. A dropped VPN connection or network change can trigger automatic offline switching.</p>
+
+            <h2>Fix 2: Check and Clear the Outbox Manually</h2>
+            <p><strong>Why this works:</strong> A single stuck email can block the entire Outbox queue. Outlook processes the Outbox sequentially, so if one message is locked, nothing behind it will send. You need to address the stuck message first.</p>
+            <ol>
+                <li>Click <strong>Send / Receive</strong> tab &rarr; click <strong>Work Offline</strong> to go offline (this prevents Outlook from locking the email while you try to delete it).</li>
+                <li>Navigate to the <strong>Outbox</strong> folder in your folder list.</li>
+                <li>Right-click the stuck message and choose <strong>Delete</strong> to remove it, or double-click it to open and edit it.</li>
+                <li>Once dealt with, click <strong>Work Offline</strong> again to toggle back to online mode.</li>
+                <li>Click <strong>Send All</strong> in the Send / Receive tab to flush any remaining queued messages.</li>
+            </ol>
+            <p>Note: You must go offline before trying to delete a stuck email, otherwise Outlook will prevent deletion because it is "in use" during the send attempt.</p>
+
+            <h2>Fix 3: Verify Your SMTP Server Settings</h2>
+            <p><strong>Why this works:</strong> If your email provider changed their SMTP server address, port, or authentication requirements, your existing Outlook settings become wrong and no emails will send. This often happens silently — everything looks normal in Outlook but sending fails at the server level.</p>
+            <ol>
+                <li>Go to <strong>File</strong> &rarr; <strong>Account Settings</strong> &rarr; <strong>Account Settings</strong>.</li>
+                <li>Select your email account and click <strong>Change</strong>.</li>
+                <li>Click <strong>More Settings</strong> &rarr; <strong>Outgoing Server</strong> tab. Confirm "My outgoing server (SMTP) requires authentication" is checked.</li>
+                <li>Go to the <strong>Advanced</strong> tab. Verify the SMTP port: port 587 with STARTTLS is standard for most providers. Port 465 with SSL is also common. Port 25 is typically blocked by ISPs.</li>
+                <li>Compare your settings against your email provider's official documentation (look for their SMTP configuration page).</li>
+                <li>Click <strong>Test Account Settings</strong> to verify the connection works before closing.</li>
+            </ol>
+
+            <h2>Fix 4: Check Email and Attachment Size Limits</h2>
+            <p><strong>Why this works:</strong> Every email server enforces a maximum message size. Microsoft 365 defaults to 25 MB for outbound messages. Exchange Server limits vary by organization. If your email with attachments exceeds the limit, it will sit in the Outbox permanently with no obvious error message displayed to the user.</p>
+            <ol>
+                <li>Open the stuck message in the Outbox (go offline first as described in Fix 2).</li>
+                <li>Check the total size of all attachments. If they total more than 20 MB, the message may be hitting the limit.</li>
+                <li>Remove large attachments from the email.</li>
+                <li>Upload files to OneDrive, Google Drive, or Dropbox and share a link in the email body instead. This is best practice regardless of size limits.</li>
+                <li>If you need to confirm your organization's specific limit: check with your IT administrator or look at the Microsoft 365 admin portal under Exchange settings.</li>
+            </ol>
+
+            <h2>Fix 5: Check Microsoft 365 Service Health</h2>
+            <p><strong>Why this works:</strong> Microsoft 365 Exchange Online has periodic outages that prevent emails from being sent or received. If the problem started suddenly and affects multiple users in your organization, the cause is likely a service incident rather than a local configuration issue.</p>
+            <ol>
+                <li>If you are an IT administrator, go to <strong>admin.microsoft.com</strong> &rarr; <strong>Health</strong> &rarr; <strong>Service health</strong>. Active incidents are listed here.</li>
+                <li>If you are not an admin, visit <strong>downdetector.com/status/office-365</strong> or check the Microsoft 365 Status Twitter/X account (<strong>@MSFT365Status</strong>) for real-time incident reports.</li>
+                <li>You can also try sending from <strong>outlook.office.com</strong> (web version) — if webmail also fails to send, the issue is with Microsoft's servers. If webmail sends fine, the issue is your desktop Outlook installation.</li>
+            </ol>
+
+            <h2>Fix 6: Disable Outlook Add-ins Temporarily</h2>
+            <p><strong>Why this works:</strong> Third-party add-ins (Grammarly, Zoom, Adobe, antivirus email scanners, CRM plugins) plug into Outlook's send process. A buggy or outdated add-in can intercept and halt the send operation entirely, causing Outlook to freeze or become "not responding" when you try to send.</p>
+            <ol>
+                <li>Go to <strong>File</strong> &rarr; <strong>Options</strong> &rarr; <strong>Add-ins</strong>.</li>
+                <li>At the bottom, next to "Manage:", ensure <strong>COM Add-ins</strong> is selected and click <strong>Go</strong>.</li>
+                <li>Uncheck all add-ins to disable them all at once.</li>
+                <li>Close and reopen Outlook, then try sending a test email.</li>
+                <li>If sending works with add-ins disabled, re-enable them one at a time to identify which one is the culprit. Update or remove the problematic add-in.</li>
+            </ol>
+
+            <h2>Fix 7: Repair Your Office Installation</h2>
+            <p><strong>Why this works:</strong> Office application files can become corrupted, particularly after Windows updates, failed Office updates, or disk errors. Microsoft provides a built-in repair tool that fixes corrupted installation files without uninstalling Office or affecting your documents.</p>
+            <ol>
+                <li>Close Outlook completely.</li>
+                <li>Open <strong>Settings</strong> &rarr; <strong>Apps</strong> &rarr; <strong>Installed apps</strong> (Windows 11) or <strong>Control Panel</strong> &rarr; <strong>Programs</strong> &rarr; <strong>Programs and Features</strong> (Windows 10).</li>
+                <li>Find <strong>Microsoft Office</strong> or <strong>Microsoft 365</strong> in the list.</li>
+                <li>Click it and select <strong>Modify</strong>.</li>
+                <li>Choose <strong>Quick Repair</strong> first — this runs entirely offline and takes a few minutes. If the problem persists, run <strong>Online Repair</strong>, which downloads fresh files and takes longer but is more thorough.</li>
+                <li>Reopen Outlook and test sending after the repair completes.</li>
+            </ol>
+
+            <h2>Fix 8: Review Email Block Lists and Sending Rules</h2>
+            <p><strong>Why this works:</strong> If you are getting Non-Delivery Reports (NDRs) for specific recipients, the issue may not be with Outlook itself but with rules or blocks affecting specific email addresses or domains. This is particularly common in corporate Exchange environments.</p>
+            <ul>
+                <li>Check whether the NDR contains a specific error code. Codes like 550 5.1.1 mean the recipient address does not exist. Codes like 550 5.7.1 mean your IP or domain is blocked by the recipient's server.</li>
+                <li>In Outlook, check <strong>Home</strong> &rarr; <strong>Rules</strong> &rarr; <strong>Manage Rules and Alerts</strong> for any rules that might be redirecting or deleting outgoing messages.</li>
+                <li>Check if the recipient's address is in your Blocked Senders list: <strong>Home</strong> &rarr; <strong>Junk</strong> &rarr; <strong>Junk Email Options</strong> &rarr; <strong>Blocked Senders</strong> tab.</li>
+                <li>If your domain has been flagged as a spam source, contact your email administrator to investigate SPF, DKIM, and DMARC records.</li>
+            </ul>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <p class="q">Q: Why do Outlook emails get stuck in the Outbox?</p>
+                <p class="a">A: Emails get stuck in the Outbox for several reasons: Outlook is in offline mode (most common), an attachment exceeds the server size limit, SMTP server credentials have changed, or an add-in is interfering with the send process. Check the status bar at the bottom of Outlook for "Working Offline" — if you see it, that is almost certainly the cause.</p>
             </div>
-            <div class="faq"><p class="q">Q: Can I recall a sent email in Outlook?</p>
-            <p class="a">A: In the desktop app with Exchange, go to Sent Items &gt; open the email &gt; Message tab &gt; Actions &gt; Recall This Message. This only works if the recipient hasn&#x27;t read it yet.</p>
+
+            <div class="faq">
+                <p class="q">Q: How do I delete an email that is stuck in the Outbox?</p>
+                <p class="a">A: Outlook locks stuck emails while attempting to send them. To delete a stuck Outbox email: first go offline via Send/Receive tab &rarr; Work Offline, then open the Outbox folder, right-click the stuck message and choose Delete. Then toggle Work Offline off again to reconnect.</p>
             </div>
-            <div class="faq"><p class="q">Q: Why does Outlook keep asking for my password?</p>
-            <p class="a">A: Your password may have changed, or your authentication token expired. Re-enter your credentials or enable modern authentication.</p>
+
+            <div class="faq">
+                <p class="q">Q: What does "Your message did not reach some or all of the intended recipients" mean?</p>
+                <p class="a">A: This Non-Delivery Report means your email was rejected after leaving Outlook but before being delivered. Common causes: the recipient's address does not exist, their mailbox is full, your IP is on a block list, or the recipient's server rejected your message due to content filtering. The NDR usually includes a specific error code that reveals the exact cause.</p>
             </div>
+
+            <div class="faq">
+                <p class="q">Q: Outlook sends emails fine from webmail but not the desktop app — why?</p>
+                <p class="a">A: If webmail sends fine but the desktop Outlook cannot, the issue is with your local Outlook installation, not your email account or server. Focus on Fix 6 (disable add-ins) and Fix 7 (repair Office). A corrupted Outlook profile is another possibility — create a new profile via Control Panel &rarr; Mail &rarr; Show Profiles &rarr; Add.</p>
+            </div>
+
+            <div class="still-stuck">
+                <h2>Still Stuck?</h2>
+                <p>If none of the fixes above resolve the issue, create a new Outlook profile as a test: go to <strong>Control Panel &rarr; Mail &rarr; Show Profiles &rarr; Add</strong> and configure your account fresh. If the new profile sends fine, your original profile is corrupted and should be rebuilt. For Microsoft 365 business accounts, contact your IT administrator or open a support ticket at <a href="https://admin.microsoft.com" target="_blank" rel="noopener">admin.microsoft.com</a>. For personal accounts, visit <a href="https://support.microsoft.com" target="_blank" rel="noopener">support.microsoft.com</a>.</p>
+            </div>
+
+            <h2>Related Guides</h2>
+            <ul>
+                <li><a href="gmail-not-receiving-emails.html">Gmail Not Receiving Emails: What to Check</a></li>
+                <li><a href="microsoft-365-not-loading.html">Microsoft 365 Not Loading: Fixes for Every App</a></li>
+            </ul>
         </div>
     </div>
     <footer>
