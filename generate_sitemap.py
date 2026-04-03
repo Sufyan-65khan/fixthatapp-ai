@@ -74,11 +74,16 @@ for filename in sorted(os.listdir(blog_dir)):
     <priority>0.7</priority>
   </url>""")
 
-# All article pages
+# All article pages — skip noindexed (thin) pages
 pages_dir = "pages"
 for filename in sorted(os.listdir(pages_dir)):
-    if filename.endswith('.html'):
-        urls.append(f"""  <url>
+    if not filename.endswith('.html'):
+        continue
+    with open(os.path.join(pages_dir, filename), encoding='utf-8') as _f:
+        _html = _f.read()
+    if 'content="noindex' in _html:
+        continue
+    urls.append(f"""  <url>
     <loc>{DOMAIN}/pages/{filename}</loc>
     <lastmod>{TODAY}</lastmod>
     <changefreq>weekly</changefreq>
