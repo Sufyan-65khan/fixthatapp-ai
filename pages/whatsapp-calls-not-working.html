@@ -3,219 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Guide: WhatsApp Calls Not Working - FixThatApp</title>
-    <meta name="description" content="WhatsApp calls not working? Fix calls that fail to connect, drop frequently, or show Call Failed. Step-by-step troubleshooting for voice and video calls.">
-    <meta name="keywords" content="whatsapp calls not working, fix, troubleshooting, how to fix, not working, error, solution">
+    <title>WhatsApp Calls Not Working: One-Way Audio, Drops & Connection Failures Fixed | FixThatApp</title>
+    <meta name="description" content="WhatsApp call connects but no audio? Drops after 2 seconds? Can't call a specific contact? Each symptom points to a different cause — find yours and fix it.">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/whatsapp-calls-not-working.html">
-    <meta name="robots" content="noindex, follow">
-    <meta property="og:title" content="Troubleshooting Guide: WhatsApp Calls Not Working - FixThatApp">
-    <meta property="og:description" content="WhatsApp voice and video calls may fail to connect, drop frequently, have poor audio/video quality, show &quot;Calling...&quot; without connecting, or give a &quot;Call F">
+    <meta property="og:title" content="WhatsApp Calls Not Working: One-Way Audio, Drops & Connection Failures Fixed | FixThatApp">
+    <meta property="og:description" content="WhatsApp call connects but no audio? Drops after 2 seconds? Can't call a specific contact? Each symptom has a different cause — find yours here.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/whatsapp-calls-not-working.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Troubleshooting Guide: WhatsApp Calls Not Working - FixThatApp">
-    <meta name="twitter:description" content="WhatsApp voice and video calls may fail to connect, drop frequently, have poor audio/video quality, show &quot;Calling...&quot; without connecting, or give a &quot;Call F">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script>
     (function() {
       try {
         var consent = localStorage.getItem('fta_cookie_consent');
-        if (consent === 'rejected') {
-          window.adsbygoogle = window.adsbygoogle || [];
-          window.adsbygoogle.requestNonPersonalizedAds = 1;
-        }
+        if (consent === 'rejected') { window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.requestNonPersonalizedAds = 1; }
       } catch (e) {}
     })();
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "Troubleshooting Guide: WhatsApp Calls Not Working",
-      "description": "WhatsApp voice and video calls may fail to connect, drop frequently, have poor audio/video quality, show &quot;Calling...&quot; without connecting, or give a &quot;Call F",
-      "dateModified": "2026-03-05",
-      "author": {
-        "@type": "Organization",
-        "name": "FixThatApp",
-        "url": "https://www.fixthatapp.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "FixThatApp",
-        "url": "https://www.fixthatapp.com"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.fixthatapp.com/pages/whatsapp-calls-not-working.html"
-      }
+      "@context": "https://schema.org", "@type": "TechArticle",
+      "headline": "WhatsApp Calls Not Working: One-Way Audio, Drops and Connection Failures Fixed",
+      "description": "WhatsApp call connects but no audio, drops immediately, or can't call specific contacts. Complete situation-based guide covering VoIP ports, battery optimization, audio routing, and network blocks.",
+      "dateModified": "2026-04-03",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/pages/whatsapp-calls-not-working.html"}
     }
     </script>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
+      "@context": "https://schema.org", "@type": "FAQPage",
       "mainEntity": [
         {
-          "@type": "Question",
-          "name": "Why do WhatsApp calls work on Wi-Fi but not mobile data?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Your carrier may be blocking VoIP calls, or your mobile data is too slow. Check with your carrier and ensure WhatsApp has mobile data access."
-          }
+          "@type": "Question", "name": "WhatsApp call connects but I can't hear the other person — they can hear me fine",
+          "acceptedAnswer": {"@type": "Answer", "text": "One-way audio where they hear you but you hear nothing is almost always audio routing. Your phone may be sending audio to a Bluetooth device not nearby. During the call, tap the audio icon and explicitly choose iPhone or phone speaker. Also check media volume — press volume buttons during the call. Ringer volume and call volume are separate."}
         },
-    {
-          "@type": "Question",
-          "name": "Can I make WhatsApp calls in countries where it&#x27;s blocked?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Some countries block WhatsApp calling. Using a VPN may help, but check local laws regarding VPN usage first."
-          }
+        {
+          "@type": "Question", "name": "WhatsApp calls drop exactly after 2-3 seconds every time — why?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Calls that drop at the same point are being cut when WhatsApp switches from relay server to peer-to-peer audio. Your router is blocking the UDP ports needed for this handoff. Test on mobile data — if the call holds, enable UPnP on your router. On corporate or school networks, mobile data is the only reliable workaround."}
         },
-    {
-          "@type": "Question",
-          "name": "Why is my WhatsApp call quality poor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usually caused by slow internet on either end. Use Wi-Fi instead of mobile data, close other apps using bandwidth, and make sure &quot;Use less data for calls&quot; is disabled."
-          }
+        {
+          "@type": "Question", "name": "I can't call one specific contact but calls work for everyone else",
+          "acceptedAnswer": {"@type": "Answer", "text": "That contact likely has call privacy settings restricting who can reach them, or they've blocked your number for calls specifically. You won't see a clear error. Ask them to check Settings > Privacy > Calls in WhatsApp. There's no way to verify this from your side."}
         },
-    {
-          "@type": "Question",
-          "name": "How many people can be on a WhatsApp group call?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "WhatsApp supports up to 32 people on a group voice or video call. Performance depends on everyone&#x27;s internet connection."
-          }
+        {
+          "@type": "Question", "name": "WhatsApp calls work on Wi-Fi but fail on mobile data",
+          "acceptedAnswer": {"@type": "Answer", "text": "Some carriers restrict VoIP on cheaper data plans. Check your carrier's terms for VoIP policy. Also confirm WhatsApp has cellular data permission: iPhone: Settings > Cellular > WhatsApp (on); Android: Settings > Apps > WhatsApp > Data usage > Background data enabled."}
+        },
+        {
+          "@type": "Question", "name": "WhatsApp video calls work but audio-only calls don't",
+          "acceptedAnswer": {"@type": "Answer", "text": "Check whether your regular phone earpiece works in the system dialer. If the earpiece is broken, audio calls fail but video calls (which default to speaker) still work. If the earpiece works elsewhere, force-close WhatsApp and reopen — the audio-only codec can hit a session error that a restart clears."}
         }
       ]
     }
     </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f7fa;
-            color: #333;
-            line-height: 1.7;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #333; line-height: 1.7; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
         header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
-        .header-search {
-            position: relative;
-            max-width: 260px;
-        }
-        .header-search input {
-            width: 100%;
-            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            outline: none;
-            background: rgba(255,255,255,0.2);
-            color: white;
-        }
+        .header-search { position: relative; max-width: 260px; }
+        .header-search input { width: 100%; padding: 0.45rem 0.8rem 0.45rem 2.2rem; border: none; border-radius: 50px; font-size: 0.85rem; outline: none; background: rgba(255,255,255,0.2); color: white; }
         .header-search input::placeholder { color: rgba(255,255,255,0.7); }
-        .header-search input:focus { background: rgba(255,255,255,0.3); }
-        .header-search-icon {
-            position: absolute;
-            left: 0.7rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.85rem;
-            pointer-events: none;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-        .breadcrumb {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 1rem;
-        }
+        .header-search-icon { position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); font-size: 0.85rem; pointer-events: none; }
+        .container { max-width: 820px; margin: 0 auto; padding: 2rem 1rem; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
         .breadcrumb a { color: #667eea; text-decoration: none; }
-        .breadcrumb a:hover { text-decoration: underline; }
-        .article {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article { background: white; border-radius: 12px; padding: 2.5rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .article h1 { font-size: 1.85rem; color: #1a1a2e; margin-bottom: 0.4rem; line-height: 1.3; }
         .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
         .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
-        .article p { margin-bottom: 0.85rem; color: #444; }
+        .article h3 { font-size: 1.05rem; color: #2c2c54; margin: 1.5rem 0 0.5rem; font-weight: 600; }
+        .article p { margin-bottom: 0.9rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.4rem; }
-        .article strong { color: #333; }
-        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
-        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
-        .faq p { margin-bottom: 0.25rem; }
-        .faq .q { font-weight: 600; color: #333; }
-        .faq .a { color: #555; }
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: #999;
-            font-size: 0.85rem;
-            border-top: 1px solid #eee;
-        }
+        .article li { margin-bottom: 0.5rem; }
+        .article strong { color: #222; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.88em; }
+        .symptom-box { border-left: 4px solid #667eea; background: #f0f4ff; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .symptom-box p { margin-bottom: 0.35rem; color: #333; }
+        .symptom-box p:last-child { margin-bottom: 0; }
+        .tip { background: #e8f5e9; border-left: 4px solid #43a047; padding: 0.85rem 1.1rem; border-radius: 0 8px 8px 0; margin: 1rem 0; font-size: 0.92rem; color: #1b5e20; }
+        .warning { background: #fff3e0; border-left: 4px solid #fb8c00; padding: 0.85rem 1.1rem; border-radius: 0 8px 8px 0; margin: 1rem 0; font-size: 0.92rem; color: #4a3000; }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.2rem 1.3rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.3rem; }
+        .faq .q { font-weight: 600; color: #222; font-size: 0.97rem; }
+        .faq .a { color: #555; font-size: 0.95rem; }
+        .related-links { margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #f0f0f0; }
+        .related-links h2 { margin-top: 0; border-bottom: none; padding-bottom: 0; }
+        .related-links ul { list-style: none; margin-left: 0; padding: 0; }
+        .related-links ul li { margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; }
+        .related-links ul li::before { content: "→"; position: absolute; left: 0; color: #667eea; }
+        .related-links a { color: #667eea; text-decoration: none; }
+        footer { text-align: center; padding: 2rem 1rem; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; }
         footer a { color: #667eea; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        .cookie-banner {
-            position: fixed;
-            left: 1rem;
-            right: 1rem;
-            bottom: 1rem;
-            background: #1a1a2e;
-            color: #fff;
-            padding: 0.85rem 1rem;
-            border-radius: 10px;
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.8rem;
-            z-index: 2000;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-            font-size: 0.85rem;
-        }
+        .cookie-banner { position: fixed; left: 1rem; right: 1rem; bottom: 1rem; background: #1a1a2e; color: #fff; padding: 0.85rem 1rem; border-radius: 10px; display: none; align-items: center; justify-content: space-between; gap: 0.8rem; z-index: 2000; box-shadow: 0 8px 24px rgba(0,0,0,0.25); font-size: 0.85rem; }
         .cookie-banner a { color: #9ec2ff; }
-        .cookie-actions {
-            display: flex;
-            gap: 0.5rem;
-            flex-shrink: 0;
-        }
-        .cookie-btn {
-            border: 1px solid #667eea;
-            background: transparent;
-            color: #fff;
-            padding: 0.35rem 0.65rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
+        .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+        .cookie-btn { border: 1px solid #667eea; background: transparent; color: #fff; padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
         .cookie-btn.primary { background: #667eea; }
-        @media (max-width: 600px) {
-            .article { padding: 1.5rem 1rem; }
-            .article h1 { font-size: 1.4rem; }
-            .header-search { display: none; }
-            .cookie-banner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
+        @media (max-width: 600px) { .article { padding: 1.5rem 1rem; } .article h1 { font-size: 1.4rem; } .header-search { display: none; } .cookie-banner { flex-direction: column; align-items: flex-start; } }
     </style>
 </head>
 <body>
@@ -223,76 +112,142 @@
         <a href="../index.html">FixThatApp</a>
         <div class="header-search">
             <span class="header-search-icon">&#128269;</span>
-            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value">
         </div>
     </header>
     <div class="container">
-        <nav class="breadcrumb">
-            <a href="../index.html">Home</a> &rsaquo; WhatsApp Calls Not Working
-        </nav>
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; WhatsApp Calls Not Working</nav>
         <div class="article">
-            <h1>Troubleshooting Guide: WhatsApp Calls Not Working</h1>
-            <p class="updated">Last updated: March 5, 2026</p>
-            <h2>Problem Description</h2>
-            <p>WhatsApp voice and video calls may fail to connect, drop frequently, have poor audio/video quality, show "Calling..." without connecting, or give a "Call Failed" error. This prevents you from making free calls over the internet.</p>
-            <h2>Possible Causes</h2>
-            <p><strong>Poor internet connection</strong>: WhatsApp calls need stable internet.</p>
-            <p><strong>Microphone/camera permissions denied</strong>: The app can't access your hardware.</p>
-            <p><strong>WhatsApp outdated</strong>: Old versions may have calling bugs.</p>
-            <p><strong>Battery optimization killing the app</strong>: Background restrictions prevent calls from connecting.</p>
-            <p><strong>VPN or firewall blocking</strong>: Network restrictions may block WhatsApp's calling servers.</p>
-            <p><strong>Low data mode enabled</strong>: Data saver settings may restrict call quality.</p>
-            <h2>Step-by-Step Fixes</h2>
-            <h3>Fix 1: Check Internet Connection</h3>
-            <p>&bull; WhatsApp calls need at least 1 Mbps for voice and 3 Mbps for video.</p>
-            <p>&bull; Switch between Wi-Fi and mobile data to test which works better.</p>
-            <p>&bull; Move closer to your Wi-Fi router for a stronger signal.</p>
-            <h3>Fix 2: Grant Microphone and Camera Permissions</h3>
-            <p>&bull; On iPhone: Settings > WhatsApp > enable Microphone and Camera.</p>
-            <p>&bull; On Android: Settings > Apps > WhatsApp > Permissions > allow Microphone and Camera.</p>
-            <p>&bull; Without these permissions, calls will fail.</p>
-            <h3>Fix 3: Disable Battery Optimization</h3>
-            <p>&bull; On Android: Settings > Apps > WhatsApp > Battery > Don't optimize (or Unrestricted).</p>
-            <p>&bull; On iPhone: Settings > General > Background App Refresh > enable for WhatsApp.</p>
-            <p>&bull; Battery optimization can kill WhatsApp in the background, preventing incoming calls.</p>
-            <h3>Fix 4: Update WhatsApp</h3>
-            <p>&bull; Go to App Store or Play Store and update WhatsApp.</p>
-            <p>&bull; Both caller and receiver should be on updated versions.</p>
-            <p>&bull; Restart the app after updating.</p>
-            <h3>Fix 5: Disable Low Data Mode</h3>
-            <p>&bull; In WhatsApp: Settings > Storage and Data > turn off "Use less data for calls".</p>
-            <p>&bull; On iPhone: Settings > Wi-Fi > tap your network > turn off Low Data Mode.</p>
-            <p>&bull; Low data mode can reduce call quality and cause drops.</p>
-            <h3>Fix 6: Restart Phone and Try Again</h3>
-            <p>&bull; Restart your phone to clear network and app issues.</p>
-            <p>&bull; Open WhatsApp and try the call again.</p>
-            <p>&bull; If calls work on mobile data but not Wi-Fi (or vice versa), the issue is with that specific network.</p>
-            <h2>When to Contact Support</h2>
-            <p>If calls don't work on any network or device, contact WhatsApp support: Settings > Help > Contact Us. The issue may be account-related.</p>
-            <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: Why do WhatsApp calls work on Wi-Fi but not mobile data?</p>
-            <p class="a">A: Your carrier may be blocking VoIP calls, or your mobile data is too slow. Check with your carrier and ensure WhatsApp has mobile data access.</p>
+            <h1>WhatsApp Calls Not Working — Every Symptom Explained</h1>
+            <p class="updated">Last updated: April 3, 2026</p>
+
+            <p>WhatsApp calls fail in several distinct ways, and which way it fails matters enormously — because the cause is completely different for each one. A call that connects but has no audio is a different problem from a call that drops after 2 seconds, which is different again from not being able to reach one specific person at all. Most guides treat these as the same issue. They're not.</p>
+
+            <div class="symptom-box">
+                <p><strong>Call connects but one or both sides can't hear anything</strong> &rarr; audio routing or permissions problem</p>
+                <p><strong>Call drops after exactly 2&ndash;3 seconds, every time</strong> &rarr; network NAT/firewall blocking peer-to-peer handoff</p>
+                <p><strong>Can't call one specific contact but calls work otherwise</strong> &rarr; their privacy settings or call-block</p>
+                <p><strong>Call rings but never connects after they pick up</strong> &rarr; battery optimization on their phone, or both connections weak</p>
+                <p><strong>Calls work on Wi-Fi but fail on mobile data (or opposite)</strong> &rarr; carrier VoIP restriction or data permissions</p>
             </div>
-            <div class="faq"><p class="q">Q: Can I make WhatsApp calls in countries where it&#x27;s blocked?</p>
-            <p class="a">A: Some countries block WhatsApp calling. Using a VPN may help, but check local laws regarding VPN usage first.</p>
+
+            <h2>How WhatsApp Calls Work — The Part That Explains Most Problems</h2>
+
+            <p>WhatsApp calls are VoIP — Voice over IP — routed through the internet, not the cellular network. When you place a call, WhatsApp connects both phones to one of its relay servers to establish the call. Then it attempts to switch to a direct peer-to-peer connection between your two phones for lower latency.</p>
+
+            <p>This two-step handoff is why calls dropping at the exact same point every time is a specific, diagnosable problem. The relay works — both phones connect — but the switch to peer-to-peer fails because your router or network is blocking the UDP ports WhatsApp needs for direct audio. The call holds for 2–3 seconds during the handoff attempt, then drops when it fails.</p>
+
+            <p>It also explains why some problems are one-sided. If the other person is on a restrictive corporate network, even a perfect connection on your end won't save the call — their network is killing the peer-to-peer handoff on their side.</p>
+
+            <h2>One-Way Audio: You Can Hear Them But They Can't Hear You (Or Opposite)</h2>
+
+            <h3>You can hear them but they can't hear you</h3>
+            <p>Microphone permissions. This is almost always the cause. Go to your phone settings and check:</p>
+            <ul>
+                <li><strong>iPhone:</strong> Settings &gt; Privacy &amp; Security &gt; Microphone &gt; confirm WhatsApp is toggled on</li>
+                <li><strong>Android:</strong> Settings &gt; Apps &gt; WhatsApp &gt; Permissions &gt; Microphone &gt; Allow</li>
+            </ul>
+            <p>If permissions are set correctly: test the microphone in Voice Memos (iPhone) or any recording app. If it records fine elsewhere but not in WhatsApp calls, another app may have a microphone lock that WhatsApp can't acquire. Force-close all apps and try the call again.</p>
+            <div class="tip">
+                On iPhone, iOS sometimes silently resets microphone permissions during a system update. Even if it shows "on," toggle it off, wait 5 seconds, toggle back on — this re-registers the permission properly.
             </div>
-            <div class="faq"><p class="q">Q: Why is my WhatsApp call quality poor?</p>
-            <p class="a">A: Usually caused by slow internet on either end. Use Wi-Fi instead of mobile data, close other apps using bandwidth, and make sure &quot;Use less data for calls&quot; is disabled.</p>
+
+            <h3>They can hear you but you can't hear them</h3>
+            <p>Audio is routing to the wrong output. Your phone is probably sending call audio to a Bluetooth device that's nearby but not actively connected — earbuds in your bag, a car system that's in range, wireless headphones on the desk. The phone found a Bluetooth device, connected silently, and routed the call there.</p>
+            <p>During an active call: on iPhone, tap the audio icon (looks like a speaker or wave) and explicitly choose "iPhone" for earpiece or "Speaker" for speakerphone. On Android, tap the speaker button to cycle through outputs, or open Bluetooth settings and disconnect any devices you're not using for this call.</p>
+            <p>Also check call volume specifically. Press the volume buttons during the call — on Android these control call volume, not ringer volume. They're separate sliders. Someone with call volume at zero will hear nothing even with everything else working perfectly.</p>
+
+            <h2>Calls That Drop After 2–3 Seconds</h2>
+
+            <p>The timing is the diagnostic clue. Random drops happen at random times — these happen at an almost exact point. That consistency means something is failing the peer-to-peer handoff, every time, in the same way.</p>
+
+            <h3>First test: switch to mobile data</h3>
+            <p>Turn off Wi-Fi and retry the call on mobile data only. If the call holds, your router or home network is the problem. If it also drops on data, the issue is either carrier-level VoIP filtering or a device-level problem.</p>
+
+            <h3>If your router is the problem</h3>
+            <p>WhatsApp uses UDP on ports 3478, 3479, and a range of high ports (roughly 45395–65535) for peer-to-peer audio. Routers with strict NAT or SPI (Stateful Packet Inspection) firewalls block these. The fix: enable <strong>UPnP (Universal Plug and Play)</strong> in your router admin panel — usually at <code>192.168.1.1</code> or <code>192.168.0.1</code>, under Advanced or NAT settings. UPnP lets WhatsApp automatically open the ports it needs.</p>
+            <p>If you can't change router settings (work router, ISP-locked equipment): WhatsApp falls back to routing calls entirely through its relay servers. This uses more bandwidth and adds latency but works on restrictive networks. There's no user toggle — WhatsApp falls back automatically if peer-to-peer consistently fails. If calls still drop even on relay-only mode, the relay itself is being blocked.</p>
+
+            <h3>Corporate, school, or hotel networks</h3>
+            <p>These frequently block all VoIP as policy. Use mobile data. There's no workaround that doesn't involve getting the network administrator to open specific ports — and most won't. Mobile data is the practical solution.</p>
+
+            <h2>Can't Call One Specific Contact</h2>
+
+            <p>When calls fail to one person but work for everyone else, the problem is almost certainly not on your end.</p>
+
+            <h3>Their call privacy settings</h3>
+            <p>WhatsApp lets users restrict who can call them: everyone, contacts only, or contacts except specific people. If they've restricted calls and you're not in the allowed group, your call sends but their phone never rings. You won't get a "call blocked" message — the call just never connects. There's no way to test this from your side other than asking them to check their settings: <strong>WhatsApp &gt; Settings &gt; Privacy &gt; Calls</strong>.</p>
+
+            <h3>They've blocked your number for calls specifically</h3>
+            <p>Messaging blocks and call blocks in WhatsApp are separate. Someone can block your calls while still receiving your messages. The symptom is identical — calls just don't go through. If you can send messages but can't call, and you've confirmed it's not a network issue on your end, this or the privacy setting above is the explanation.</p>
+
+            <h3>They're on a network that blocks incoming VoIP</h3>
+            <p>Ask them to try calling you instead. If they can call out and you can answer, the problem is incoming VoIP being filtered by their network — not a block or privacy setting. Their network allows outbound calls but not inbound ones.</p>
+
+            <h2>Call Rings But Never Connects After They Answer</h2>
+
+            <p>Both phones ring. They answer. Your screen shows "connecting..." but nothing happens. Or it briefly says connected, then disconnects immediately.</p>
+
+            <h3>Battery optimization on their phone (Android)</h3>
+            <p>When someone's Android phone is locked and WhatsApp is sleeping in the background, an incoming call notification wakes it up — but if battery optimization is very aggressive, WhatsApp may not fully wake in time to establish the audio channel. The call appears to connect but audio never starts.</p>
+            <p>Ask them to go to <strong>Settings &gt; Battery &gt; Battery Optimization &gt; WhatsApp &gt; Not optimized</strong>. Samsung devices also need WhatsApp removed from the "Sleeping apps" list under Device Care &gt; Battery. This is exactly the same issue that causes WhatsApp Web to drop — the background process gets killed.</p>
+
+            <h3>Both phones weak connection at connection moment</h3>
+            <p>If both phones are in marginal signal areas, the call can ring successfully (which uses very little bandwidth) but the audio stream can't establish because neither phone can sustain the connection. Retry the call — transient connection issues usually resolve on a second attempt.</p>
+
+            <h2>Calls Fail Only on Mobile Data</h2>
+
+            <p>Some carriers — particularly prepaid and budget MVNO carriers — block or throttle third-party VoIP on certain plans. This protects their revenue from regular voice calls. If WhatsApp calls fail consistently on data but work on Wi-Fi, check your carrier's plan terms for "VoIP" or "third-party calling apps."</p>
+            <p>Also check data permissions before assuming it's carrier-level:</p>
+            <ul>
+                <li><strong>iPhone:</strong> Settings &gt; Cellular &gt; scroll down to WhatsApp &gt; make sure it's enabled</li>
+                <li><strong>Android:</strong> Settings &gt; Apps &gt; WhatsApp &gt; Data usage &gt; confirm Background data is on and WhatsApp isn't restricted in Data Saver</li>
+            </ul>
+            <p>A VPN sometimes bypasses carrier VoIP blocking, but many carriers also block VPN traffic on restricted plans. Check your specific plan before spending time on this.</p>
+
+            <h2>Video Calls Work But Audio-Only Calls Don't</h2>
+
+            <p>This seems backwards — video calls use more data. But audio calls use the phone's earpiece by default, while video calls default to speakerphone. If your earpiece hardware is damaged or the software routing for it has a bug, audio calls fail while video calls still work through the speaker.</p>
+            <p>Test: open your phone's regular dialer, call a friend, hold it to your ear. If the earpiece is dead in the system dialer too, it's hardware. If the earpiece works elsewhere but not in WhatsApp audio calls: force-close WhatsApp completely, reopen, and retry. The audio codec can get into a broken state that a full restart resolves.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <p class="q">WhatsApp call connects but I can't hear the other person — they can hear me fine</p>
+                <p class="a">Audio is routing to the wrong output device. During the call, tap the audio icon and explicitly choose your phone's speaker or earpiece. Also check media/call volume by pressing volume buttons during the call — this controls call volume, which is separate from ringer volume. Disconnect any nearby Bluetooth devices.</p>
             </div>
-            <div class="faq"><p class="q">Q: How many people can be on a WhatsApp group call?</p>
-            <p class="a">A: WhatsApp supports up to 32 people on a group voice or video call. Performance depends on everyone&#x27;s internet connection.</p>
+            <div class="faq">
+                <p class="q">WhatsApp calls drop exactly after 2-3 seconds every time</p>
+                <p class="a">The call is being cut during the relay-to-peer-to-peer handoff. Test on mobile data — if calls hold there, enable UPnP on your router to let WhatsApp negotiate the ports it needs. On corporate or school networks, mobile data is the practical workaround.</p>
+            </div>
+            <div class="faq">
+                <p class="q">I can't call one specific contact but all other calls work</p>
+                <p class="a">That contact likely has call privacy settings restricting who can call them, or has your number call-blocked specifically. Ask them to check WhatsApp &gt; Settings &gt; Privacy &gt; Calls. There's no error message on your end — calls just won't go through.</p>
+            </div>
+            <div class="faq">
+                <p class="q">WhatsApp calls work on Wi-Fi but fail on mobile data</p>
+                <p class="a">Check cellular data permissions first: iPhone: Settings &gt; Cellular &gt; WhatsApp (enabled); Android: Settings &gt; Apps &gt; WhatsApp &gt; Data usage &gt; Background data on. If permissions are fine, your carrier may be blocking third-party VoIP on your plan — check their terms for VoIP policy.</p>
+            </div>
+            <div class="faq">
+                <p class="q">WhatsApp video calls work but audio-only calls don't</p>
+                <p class="a">Test whether your phone's earpiece works in the regular system dialer. If dead there too, it's hardware. If the earpiece works elsewhere, force-close WhatsApp and reopen — the audio-only codec sometimes hits a session error that a restart fixes.</p>
+            </div>
+
+            <div class="related-links">
+                <h2>Related Guides</h2>
+                <ul>
+                    <li><a href="whatsapp-not-sending-messages.html">WhatsApp Not Sending Messages</a></li>
+                    <li><a href="whatsapp-web-not-connecting.html">WhatsApp Web Not Connecting</a></li>
+                    <li><a href="whatsapp-notifications-not-working.html">WhatsApp Notifications Not Working</a></li>
+                </ul>
             </div>
         </div>
     </div>
     <footer>
         &copy; 2026 FixThatApp. All rights reserved.
-        | <a href="../about.html">About</a>
-        | <a href="../privacy-policy.html">Privacy Policy</a>
-        | <a href="../cookie-policy.html">Cookie Policy</a>
-        | <a href="../terms.html">Terms</a>
-        | <a href="../contact.html">Contact</a>
-        | <a href="../seo-troubleshooting-guides.html">SEO Guides</a>
-        | <a href="../index.html">All Guides</a>
+        | <a href="../about.html">About</a> | <a href="../privacy-policy.html">Privacy Policy</a>
+        | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../terms.html">Terms</a>
+        | <a href="../contact.html">Contact</a> | <a href="../index.html">All Guides</a>
     </footer>
     <div class="cookie-banner" id="cookieBanner">
         <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
@@ -303,26 +258,13 @@
     </div>
     <script>
     (function() {
-      var key = 'fta_cookie_consent';
-      var banner = document.getElementById('cookieBanner');
-      var acceptBtn = document.getElementById('cookieAccept');
-      var rejectBtn = document.getElementById('cookieReject');
+      var key = 'fta_cookie_consent'; var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept'); var rejectBtn = document.getElementById('cookieReject');
       if (!banner || !acceptBtn || !rejectBtn) return;
-      var saved = null;
-      try { saved = localStorage.getItem(key); } catch (e) {}
-      if (!saved) {
-        banner.style.display = 'flex';
-      }
-      acceptBtn.addEventListener('click', function() {
-        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
-        banner.style.display = 'none';
-      });
-      rejectBtn.addEventListener('click', function() {
-        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
-        window.adsbygoogle = window.adsbygoogle || [];
-        window.adsbygoogle.requestNonPersonalizedAds = 1;
-        banner.style.display = 'none';
-      });
+      var saved = null; try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) { banner.style.display = 'flex'; }
+      acceptBtn.addEventListener('click', function() { try { localStorage.setItem(key, 'accepted'); } catch (e) {} banner.style.display = 'none'; });
+      rejectBtn.addEventListener('click', function() { try { localStorage.setItem(key, 'rejected'); } catch (e) {} window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.requestNonPersonalizedAds = 1; banner.style.display = 'none'; });
     })();
     </script>
 </body>

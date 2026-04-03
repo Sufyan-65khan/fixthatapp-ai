@@ -3,211 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Guide: Discord Not Loading - FixThatApp</title>
-    <meta name="description" content="Discord not loading is usually caused by account state, outdated app versions, network instability, or backend service issues. Use this guide to isolate th">
-    <meta name="keywords" content="discord not loading, fix, troubleshooting, how to fix, not working, error, solution">
+    <title>Discord Not Loading: Stuck on Connecting Screen, Gray Screen & WebSocket Failures | FixThatApp</title>
+    <meta name="description" content="Discord stuck on the connecting screen, showing a gray screen, or failing to load servers? The cause is almost always a specific network or DNS issue — here's how to find and fix it fast.">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/discord-not-loading.html">
-    <meta name="robots" content="noindex, follow">
-    <meta property="og:title" content="Troubleshooting Guide: Discord Not Loading - FixThatApp">
-    <meta property="og:description" content="Discord not loading is usually caused by account state, outdated app versions, network instability, or backend service issues. Use this guide to isolate th">
+    <meta property="og:title" content="Discord Not Loading: Stuck on Connecting Screen, Gray Screen & WebSocket Failures | FixThatApp">
+    <meta property="og:description" content="Discord stuck connecting, gray screen, or servers won't load? Almost always a network or DNS issue — find and fix it here.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/discord-not-loading.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Troubleshooting Guide: Discord Not Loading - FixThatApp">
-    <meta name="twitter:description" content="Discord not loading is usually caused by account state, outdated app versions, network instability, or backend service issues. Use this guide to isolate th">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script>
     (function() {
       try {
         var consent = localStorage.getItem('fta_cookie_consent');
-        if (consent === 'rejected') {
-          window.adsbygoogle = window.adsbygoogle || [];
-          window.adsbygoogle.requestNonPersonalizedAds = 1;
-        }
+        if (consent === 'rejected') { window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.requestNonPersonalizedAds = 1; }
       } catch (e) {}
     })();
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "Troubleshooting Guide: Discord Not Loading",
-      "description": "Discord not loading is usually caused by account state, outdated app versions, network instability, or backend service issues. Use this guide to isolate th",
-      "dateModified": "2026-03-05",
-      "author": {
-        "@type": "Organization",
-        "name": "FixThatApp",
-        "url": "https://www.fixthatapp.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "FixThatApp",
-        "url": "https://www.fixthatapp.com"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.fixthatapp.com/pages/discord-not-loading.html"
-      }
+      "@context": "https://schema.org", "@type": "TechArticle",
+      "headline": "Discord Not Loading: Stuck on Connecting Screen, Gray Screen and WebSocket Failures",
+      "description": "Discord stuck on connecting, gray screen, or servers won't load. Complete guide covering Cloudflare CDN routing issues, DNS configuration, WebSocket blocks, and app cache fixes.",
+      "dateModified": "2026-04-03",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/pages/discord-not-loading.html"}
     }
     </script>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
+      "@context": "https://schema.org", "@type": "FAQPage",
       "mainEntity": [
         {
-          "@type": "Question",
-          "name": "Why did Discord suddenly start showing not loading today?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sudden behavior usually maps to outages, silent app updates, expired sessions, or local network path changes."
-          }
+          "@type": "Question", "name": "Discord is stuck on the connecting screen forever — what's blocking it?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Discord's connecting screen stalling indefinitely means the WebSocket connection to Discord's gateway servers is being blocked or timing out. The most common causes: your ISP has a routing issue to Cloudflare (which hosts Discord's CDN), a DNS problem is preventing resolution of Discord's servers, or a security tool on your network is blocking the WebSocket upgrade request. Try flushing DNS (ipconfig /flushdns on Windows, dscacheutil -flushcache on Mac) and switching to Google DNS (8.8.8.8) as a test."}
         },
-    {
-          "@type": "Question",
-          "name": "Should I reinstall Discord immediately?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Reinstall only after status checks, update checks, and cache/session resets fail."
-          }
+        {
+          "@type": "Question", "name": "Discord loads on my phone but not on my computer — why?",
+          "acceptedAnswer": {"@type": "Answer", "text": "When Discord works on mobile but not desktop, the issue is almost always specific to the desktop environment: a Windows Firewall rule, antivirus blocking Discord's WebSocket traffic, a browser extension interfering (if using Discord web), or a corrupted desktop app installation. Check Windows Security > Firewall > Allow an app through firewall and ensure Discord is listed. On Mac, check System Settings > Privacy & Security > Firewall > confirm Discord is allowed."}
         },
-    {
-          "@type": "Question",
-          "name": "How long should I wait before escalating to support?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If no outage is reported and guided checks fail within 20-30 minutes, escalate with exact error text, timestamp, device model, and app version."
-          }
+        {
+          "@type": "Question", "name": "Discord servers load but channels won't open — infinite loading circle",
+          "acceptedAnswer": {"@type": "Answer", "text": "Servers loading but channels stuck in a loading loop is a different problem from Discord not loading at all. This usually means the channel content (messages, media) can't be fetched — often because Discord's media CDN (hosted on Cloudflare) is having a routing issue from your location, or your app cache has a corrupted channel state. Clear Discord cache: on Windows, press Win+R, type %appdata%/Discord and delete the Cache folder. On Mac, it's ~/Library/Application Support/discord/Cache."}
+        },
+        {
+          "@type": "Question", "name": "Discord was working fine, then suddenly stopped loading — no changes made",
+          "acceptedAnswer": {"@type": "Answer", "text": "A sudden failure with no changes on your end is almost always either a Discord outage or an ISP routing change that affects your path to Discord's servers. Check discordstatus.com first. If Discord's status is all green but you still can't connect, run a traceroute to discord.com (tracert discord.com on Windows, traceroute discord.com on Mac/Linux) and look for where packets stop — that tells you where the routing break is."}
+        },
+        {
+          "@type": "Question", "name": "Discord not loading on school or work network — is it blocked?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes, school and corporate networks very commonly block Discord specifically. Discord is categorized as a gaming/social platform and is on default blocklists for many network filtering products. If Discord loads fine on mobile data but not the school/work Wi-Fi, it's blocked. Mobile data is the only workaround without getting IT to whitelist it. Using a VPN may work but likely violates network policy."}
         }
       ]
     }
     </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f7fa;
-            color: #333;
-            line-height: 1.7;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #333; line-height: 1.7; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
         header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
-        .header-search {
-            position: relative;
-            max-width: 260px;
-        }
-        .header-search input {
-            width: 100%;
-            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            outline: none;
-            background: rgba(255,255,255,0.2);
-            color: white;
-        }
+        .header-search { position: relative; max-width: 260px; }
+        .header-search input { width: 100%; padding: 0.45rem 0.8rem 0.45rem 2.2rem; border: none; border-radius: 50px; font-size: 0.85rem; outline: none; background: rgba(255,255,255,0.2); color: white; }
         .header-search input::placeholder { color: rgba(255,255,255,0.7); }
-        .header-search input:focus { background: rgba(255,255,255,0.3); }
-        .header-search-icon {
-            position: absolute;
-            left: 0.7rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.85rem;
-            pointer-events: none;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-        .breadcrumb {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 1rem;
-        }
+        .header-search-icon { position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); font-size: 0.85rem; pointer-events: none; }
+        .container { max-width: 820px; margin: 0 auto; padding: 2rem 1rem; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
         .breadcrumb a { color: #667eea; text-decoration: none; }
-        .breadcrumb a:hover { text-decoration: underline; }
-        .article {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article { background: white; border-radius: 12px; padding: 2.5rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .article h1 { font-size: 1.85rem; color: #1a1a2e; margin-bottom: 0.4rem; line-height: 1.3; }
         .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
         .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
-        .article p { margin-bottom: 0.85rem; color: #444; }
+        .article h3 { font-size: 1.05rem; color: #2c2c54; margin: 1.5rem 0 0.5rem; font-weight: 600; }
+        .article p { margin-bottom: 0.9rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.4rem; }
-        .article strong { color: #333; }
-        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
-        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
-        .faq p { margin-bottom: 0.25rem; }
-        .faq .q { font-weight: 600; color: #333; }
-        .faq .a { color: #555; }
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: #999;
-            font-size: 0.85rem;
-            border-top: 1px solid #eee;
-        }
+        .article li { margin-bottom: 0.5rem; }
+        .article strong { color: #222; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.88em; font-family: 'Courier New', monospace; }
+        .firstcheck { background: #e8f5e9; border-left: 4px solid #43a047; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .firstcheck p { margin-bottom: 0.3rem; color: #1b5e20; }
+        .cmd-block { background: #1a1a2e; color: #a8d8a8; padding: 0.8rem 1rem; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.88rem; margin: 0.8rem 0; }
+        .platform-row { display: flex; gap: 1rem; margin: 0.8rem 0; }
+        .platform-card { flex: 1; border: 1px solid #e0e0ef; border-radius: 8px; padding: 0.9rem 1rem; }
+        .platform-card .plat-name { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #667eea; margin-bottom: 0.4rem; }
+        .platform-card p { margin-bottom: 0; font-size: 0.9rem; color: #444; }
+        .warning { background: #fff3e0; border-left: 4px solid #fb8c00; padding: 0.85rem 1.1rem; border-radius: 0 8px 8px 0; margin: 1rem 0; font-size: 0.92rem; color: #4a3000; }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.2rem 1.3rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.3rem; }
+        .faq .q { font-weight: 600; color: #222; font-size: 0.97rem; }
+        .faq .a { color: #555; font-size: 0.95rem; }
+        .related-links { margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #f0f0f0; }
+        .related-links h2 { margin-top: 0; border-bottom: none; padding-bottom: 0; }
+        .related-links ul { list-style: none; margin-left: 0; padding: 0; }
+        .related-links ul li { margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; }
+        .related-links ul li::before { content: "→"; position: absolute; left: 0; color: #667eea; }
+        .related-links a { color: #667eea; text-decoration: none; }
+        footer { text-align: center; padding: 2rem 1rem; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; }
         footer a { color: #667eea; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        .cookie-banner {
-            position: fixed;
-            left: 1rem;
-            right: 1rem;
-            bottom: 1rem;
-            background: #1a1a2e;
-            color: #fff;
-            padding: 0.85rem 1rem;
-            border-radius: 10px;
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.8rem;
-            z-index: 2000;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-            font-size: 0.85rem;
-        }
+        .cookie-banner { position: fixed; left: 1rem; right: 1rem; bottom: 1rem; background: #1a1a2e; color: #fff; padding: 0.85rem 1rem; border-radius: 10px; display: none; align-items: center; justify-content: space-between; gap: 0.8rem; z-index: 2000; box-shadow: 0 8px 24px rgba(0,0,0,0.25); font-size: 0.85rem; }
         .cookie-banner a { color: #9ec2ff; }
-        .cookie-actions {
-            display: flex;
-            gap: 0.5rem;
-            flex-shrink: 0;
-        }
-        .cookie-btn {
-            border: 1px solid #667eea;
-            background: transparent;
-            color: #fff;
-            padding: 0.35rem 0.65rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
+        .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+        .cookie-btn { border: 1px solid #667eea; background: transparent; color: #fff; padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
         .cookie-btn.primary { background: #667eea; }
-        @media (max-width: 600px) {
-            .article { padding: 1.5rem 1rem; }
-            .article h1 { font-size: 1.4rem; }
-            .header-search { display: none; }
-            .cookie-banner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
+        @media (max-width: 600px) { .article { padding: 1.5rem 1rem; } .article h1 { font-size: 1.4rem; } .header-search { display: none; } .cookie-banner { flex-direction: column; align-items: flex-start; } .platform-row { flex-direction: column; } }
     </style>
 </head>
 <body>
@@ -215,60 +115,150 @@
         <a href="../index.html">FixThatApp</a>
         <div class="header-search">
             <span class="header-search-icon">&#128269;</span>
-            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value">
         </div>
     </header>
     <div class="container">
-        <nav class="breadcrumb">
-            <a href="../index.html">Home</a> &rsaquo; Discord Not Loading
-        </nav>
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; Discord Not Loading</nav>
         <div class="article">
-            <h1>Troubleshooting Guide: Discord Not Loading</h1>
-            <p class="updated">Last updated: March 5, 2026</p>
-            <p>Discord not loading is usually caused by account state, outdated app versions, network instability, or backend service issues. Use this guide to isolate the root cause quickly.</p>
-            <h2>Quick Fix Sequence</h2>
-            <p>Confirm whether the issue affects only your device or multiple devices/accounts.</p>
-            <p>Check official status updates and live outage reports for Discord.</p>
-            <p>Update the app and device OS to the latest stable versions.</p>
-            <p>Sign out, restart device, and sign back in.</p>
-            <p>Retry on another network (Wi-Fi vs mobile data).</p>
-            <h2>Detailed Troubleshooting Steps</h2>
-            <h3>Verify Service Status First</h3>
-            <p>Before changing settings, confirm whether Discord is currently down. If there is a confirmed outage, local fixes will not resolve the problem until service recovers.</p>
-            <h3>Check Version and Compatibility</h3>
-            <p>Outdated app builds can trigger not loading behavior after backend protocol updates. Install the latest app version and confirm OS compatibility.</p>
-            <h3>Reset Session and Cached State</h3>
-            <p>Stale sessions and corrupted cache data are common causes. Clear app cache where available, then sign in again.</p>
-            <h3>Test Network Path</h3>
-            <p>Switch between Wi-Fi and mobile data. If behavior changes, troubleshoot DNS, VPN, router, or ISP path issues.</p>
-            <h3>Validate Account or Billing State</h3>
-            <p>If this issue involves account access, purchases, or subscriptions, verify account standing, payment method validity, and region restrictions.</p>
-            <h2>Prevention Checklist</h2>
-            <p>&bull; Keep app and OS updated automatically.</p>
-            <p>&bull; Enable account recovery options and multi-factor authentication.</p>
-            <p>&bull; Avoid unstable VPN/proxy setups unless required.</p>
-            <p>&bull; Keep enough device storage free for app updates and cache operations.</p>
-            <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: Why did Discord suddenly start showing not loading today?</p>
-            <p class="a">A: Sudden behavior usually maps to outages, silent app updates, expired sessions, or local network path changes.</p>
+            <h1>Discord Not Loading — What's Actually Blocking the Connection</h1>
+            <p class="updated">Last updated: April 3, 2026</p>
+
+            <p>You open Discord and it either sits on the connecting screen indefinitely, shows a white or gray blank screen, or loads the sidebar but channels never open. Meanwhile everything else on your internet works fine. There's a reason for that: Discord's connection relies on WebSocket technology and Cloudflare's CDN for asset delivery — two things that can be blocked or broken in ways that don't affect regular web browsing at all.</p>
+
+            <div class="firstcheck">
+                <p><strong>Check Discord's status before troubleshooting anything local.</strong></p>
+                <p>Go to <strong>discordstatus.com</strong> — if there's an active incident or degraded performance listed, local fixes won't help. Discord has partial outages several times a month, often affecting specific regions or features. If the status page is all green but you still can't connect, proceed below.</p>
             </div>
-            <div class="faq"><p class="q">Q: Should I reinstall Discord immediately?</p>
-            <p class="a">A: Reinstall only after status checks, update checks, and cache/session resets fail.</p>
+
+            <h2>Why Discord Gets Stuck on "Connecting" When Everything Else Works</h2>
+
+            <p>Discord's desktop and web app use WebSocket connections — persistent two-way connections to Discord's gateway servers — to receive messages and events in real time. This is different from regular HTTPS requests. Some networks, antivirus tools, and ISP routing configurations block WebSocket connections or the specific domains Discord uses, while passing normal web traffic through just fine. That's exactly why you can browse the internet, watch YouTube, and use other apps while Discord sits stuck at "connecting."</p>
+
+            <p>Discord's media assets (images, avatars, file attachments) are delivered through Cloudflare's CDN. Some ISPs have suboptimal routing to Cloudflare's network, causing asset loading to fail even when the gateway connection works. This shows up as Discord connecting and showing the server list, but channels loading infinitely or images never appearing.</p>
+
+            <h2>Start Here: The 3-Minute Fix That Resolves Most Cases</h2>
+
+            <p>In order, try these before going deeper:</p>
+            <ol>
+                <li><strong>Flush your DNS cache.</strong> Stale DNS entries that point to old Discord server IPs cause connection timeouts.</li>
+                <li><strong>Change your DNS to a public resolver</strong> (Google or Cloudflare) — especially if your ISP's DNS is slow or has known issues.</li>
+                <li><strong>Clear Discord's app cache.</strong> Corrupted cached data from a previous session or update can prevent loading.</li>
+            </ol>
+
+            <h3>Flush DNS — Windows</h3>
+            <div class="cmd-block">ipconfig /flushdns</div>
+            <p>Open Command Prompt as administrator and run the above. You should see "Successfully flushed the DNS Resolver Cache."</p>
+
+            <h3>Flush DNS — macOS</h3>
+            <div class="cmd-block">sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder</div>
+
+            <h3>Change DNS</h3>
+            <p>Temporarily switch to Google's public DNS to test whether your ISP's DNS is the problem:</p>
+            <ul>
+                <li><strong>Windows:</strong> Control Panel &gt; Network and Internet &gt; Network Connections &gt; right-click your adapter &gt; Properties &gt; IPv4 &gt; set DNS to <code>8.8.8.8</code> (primary) and <code>8.8.4.4</code> (secondary)</li>
+                <li><strong>Mac:</strong> System Settings &gt; Network &gt; your connection &gt; Details &gt; DNS &gt; add <code>8.8.8.8</code></li>
+                <li><strong>Phone:</strong> Android: Settings &gt; Network &gt; Private DNS &gt; enter <code>dns.google</code>. iPhone: requires changing in router or using a DNS app</li>
+            </ul>
+
+            <h3>Clear Discord Cache</h3>
+            <div class="platform-row">
+                <div class="platform-card">
+                    <div class="plat-name">Windows</div>
+                    <p>Press <strong>Win+R</strong>, type <code>%appdata%\Discord</code>, press Enter. Delete the <strong>Cache</strong> folder and the <strong>Code Cache</strong> folder. Restart Discord.</p>
+                </div>
+                <div class="platform-card">
+                    <div class="plat-name">macOS</div>
+                    <p>Open Finder, press <strong>Cmd+Shift+G</strong>, navigate to <code>~/Library/Application Support/discord</code>. Delete the <strong>Cache</strong> folder. Restart Discord.</p>
+                </div>
             </div>
-            <div class="faq"><p class="q">Q: How long should I wait before escalating to support?</p>
-            <p class="a">A: If no outage is reported and guided checks fail within 20-30 minutes, escalate with exact error text, timestamp, device model, and app version.</p>
+
+            <h2>Desktop-Only Issue: Works on Phone, Not on PC</h2>
+
+            <p>When Discord works fine on your mobile but won't load on the desktop, the issue is specific to the desktop environment rather than the network. The most common culprits:</p>
+
+            <h3>Windows Firewall or antivirus blocking Discord</h3>
+            <p>Windows Defender Firewall and third-party antivirus programs sometimes block Discord's WebSocket connections without notifying you — the block is silent. Open <strong>Windows Security &gt; Firewall &amp; Network Protection &gt; Allow an app through firewall</strong> and make sure Discord is in the list with both Private and Public checkboxes ticked. If it's not listed, click "Change settings &gt; Allow another app" and add the Discord executable manually.</p>
+            <p>If you use a third-party antivirus (Kaspersky, Bitdefender, ESET, Avast): check that app's application control or web filtering settings. Some of these intercept HTTPS connections by certificate injection, which breaks Discord's certificate validation and causes connection failures.</p>
+
+            <h3>Corrupted Discord installation</h3>
+            <p>Unlike most apps, Discord updates itself frequently in the background and these updates can occasionally leave the app in a partially updated state. A full uninstall and reinstall is cleaner than trying to fix it in place:</p>
+            <ol>
+                <li>Uninstall Discord through Windows Settings &gt; Apps</li>
+                <li>Press Win+R, type <code>%appdata%</code> — delete the Discord folder</li>
+                <li>Press Win+R, type <code>%localappdata%</code> — delete the Discord folder there too</li>
+                <li>Reinstall from discord.com/download</li>
+            </ol>
+            <p>Skipping the manual folder deletion is why many people reinstall Discord and still have the same problem — the old corrupted data persists even after a standard uninstall.</p>
+
+            <h3>Discord web version as a quick test</h3>
+            <p>Open a browser in incognito mode (extensions disabled) and go to <strong>discord.com/app</strong>. If Discord loads there but not in the desktop app, the problem is definitely the desktop installation or a firewall rule. If it also fails in the browser, the issue is at the network level.</p>
+
+            <h2>Servers Load But Channels Won't Open</h2>
+
+            <p>If you can see your server list and member sidebars but clicking channels causes infinite loading, the message content delivery is failing independently of the gateway connection. This is usually Cloudflare CDN routing.</p>
+
+            <p>Run a quick check: open a browser and try loading <code>cdn.discordapp.com</code> directly. If that times out or returns an error, Cloudflare CDN is the bottleneck from your network. Switching DNS to <code>1.1.1.1</code> (Cloudflare's own DNS) sometimes improves routing to Cloudflare endpoints from your ISP because it uses Cloudflare's anycast network to find the nearest endpoint.</p>
+
+            <p>Also try: clear the app cache as described above. A corrupted channel state cache can cause specific channels to load infinitely while others work fine.</p>
+
+            <h2>Discord Not Loading on School or Work Network</h2>
+
+            <p>Discord is categorized as a gaming and social communication platform by most commercial network filtering systems, and it sits on the default blocklist for products like Cisco Umbrella, Fortinet, and Palo Alto Prisma. If Discord loads on mobile data but not the school or office Wi-Fi, it's blocked.</p>
+
+            <div class="warning">
+                Using a VPN on a managed school or corporate network to bypass content filtering likely violates your acceptable use policy. Check before you try. If Discord is needed for legitimate work or study purposes, the correct path is to ask the network administrator to whitelist the Discord domain.
+            </div>
+
+            <h2>Discord Keeps Saying "No Route" in Voice Channels</h2>
+
+            <p>The "No Route" error in voice channels is different from Discord not loading entirely. It means the app loaded and connected, but can't establish a UDP connection to the voice server in your selected region. This is a specific network issue:</p>
+            <ul>
+                <li>Your router's NAT is too strict for UDP audio (same issue as WhatsApp calls dropping)</li>
+                <li>A VPN is routing you away from the voice server region you're trying to connect to</li>
+                <li>The selected server region is having issues — switch the region in Voice Channel settings (right-click the channel, Edit Channel, Region Override)</li>
+            </ul>
+            <p>Enabling QoS High Packet Priority in Discord Settings &gt; Voice &amp; Video can also help on networks that deprioritize gaming/VoIP traffic.</p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <p class="q">Discord is stuck on the connecting screen forever — what's blocking it?</p>
+                <p class="a">Discord's WebSocket connection to its gateway servers is being blocked or timing out. Flush your DNS cache (ipconfig /flushdns on Windows), switch to public DNS like 8.8.8.8, and clear Discord's cache folder. If this started suddenly, check discordstatus.com for an ongoing incident first.</p>
+            </div>
+            <div class="faq">
+                <p class="q">Discord loads on my phone but not on my computer</p>
+                <p class="a">A desktop-only failure points to Windows Firewall, antivirus blocking Discord's connections, or a corrupted installation. Check that Discord is allowed through Windows Firewall. Test the browser at discord.com/app in incognito — if it works there, reinstall the desktop app after manually deleting the %appdata%\Discord folder.</p>
+            </div>
+            <div class="faq">
+                <p class="q">Discord servers load but channels won't open — infinite loading</p>
+                <p class="a">Servers loading but channels spinning means the message content CDN is failing. Try loading cdn.discordapp.com in a browser — if it times out, switch DNS to 1.1.1.1. Also clear the Discord cache folder to remove corrupted channel state data.</p>
+            </div>
+            <div class="faq">
+                <p class="q">Discord was working, then suddenly stopped loading with no changes made</p>
+                <p class="a">Check discordstatus.com for incidents. If status is clean, run tracert discord.com (Windows) to see where the connection breaks. A sudden failure usually means either a Discord outage in your region or an ISP routing change affecting your path to Discord's servers.</p>
+            </div>
+            <div class="faq">
+                <p class="q">Discord not loading on school or work network</p>
+                <p class="a">Discord is on the default blocklist of most commercial network filtering products. If it works on mobile data but not the school/work Wi-Fi, it's blocked. Ask the network admin to whitelist discord.com if you need it for legitimate purposes. Using a personal VPN on a managed network may violate your acceptable use policy.</p>
+            </div>
+
+            <div class="related-links">
+                <h2>Related Guides</h2>
+                <ul>
+                    <li><a href="discord-keeps-crashing.html">Discord Keeps Crashing</a></li>
+                    <li><a href="discord-notifications-not-working.html">Discord Notifications Not Working</a></li>
+                    <li><a href="discord-login-not-working.html">Discord Login Not Working</a></li>
+                    <li><a href="google-chrome-crashing.html">Google Chrome Crashing</a></li>
+                </ul>
             </div>
         </div>
     </div>
     <footer>
         &copy; 2026 FixThatApp. All rights reserved.
-        | <a href="../about.html">About</a>
-        | <a href="../privacy-policy.html">Privacy Policy</a>
-        | <a href="../cookie-policy.html">Cookie Policy</a>
-        | <a href="../terms.html">Terms</a>
-        | <a href="../contact.html">Contact</a>
-        | <a href="../seo-troubleshooting-guides.html">SEO Guides</a>
-        | <a href="../index.html">All Guides</a>
+        | <a href="../about.html">About</a> | <a href="../privacy-policy.html">Privacy Policy</a>
+        | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../terms.html">Terms</a>
+        | <a href="../contact.html">Contact</a> | <a href="../index.html">All Guides</a>
     </footer>
     <div class="cookie-banner" id="cookieBanner">
         <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
@@ -279,26 +269,13 @@
     </div>
     <script>
     (function() {
-      var key = 'fta_cookie_consent';
-      var banner = document.getElementById('cookieBanner');
-      var acceptBtn = document.getElementById('cookieAccept');
-      var rejectBtn = document.getElementById('cookieReject');
+      var key = 'fta_cookie_consent'; var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept'); var rejectBtn = document.getElementById('cookieReject');
       if (!banner || !acceptBtn || !rejectBtn) return;
-      var saved = null;
-      try { saved = localStorage.getItem(key); } catch (e) {}
-      if (!saved) {
-        banner.style.display = 'flex';
-      }
-      acceptBtn.addEventListener('click', function() {
-        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
-        banner.style.display = 'none';
-      });
-      rejectBtn.addEventListener('click', function() {
-        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
-        window.adsbygoogle = window.adsbygoogle || [];
-        window.adsbygoogle.requestNonPersonalizedAds = 1;
-        banner.style.display = 'none';
-      });
+      var saved = null; try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) { banner.style.display = 'flex'; }
+      acceptBtn.addEventListener('click', function() { try { localStorage.setItem(key, 'accepted'); } catch (e) {} banner.style.display = 'none'; });
+      rejectBtn.addEventListener('click', function() { try { localStorage.setItem(key, 'rejected'); } catch (e) {} window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.requestNonPersonalizedAds = 1; banner.style.display = 'none'; });
     })();
     </script>
 </body>
