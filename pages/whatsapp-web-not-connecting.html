@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Guide: WhatsApp Web Not Connecting - FixThatApp</title>
-    <meta name="description" content="WhatsApp Web may fail to connect, get stuck on the QR code screen, show &quot;Phone not connected&quot; errors, or keep disconnecting. This prevents you from using W">
-    <meta name="keywords" content="whatsapp web not connecting, fix, troubleshooting, how to fix, not working, error, solution">
+    <title>WhatsApp Web Not Connecting: Diagnose and Fix Every Scenario | FixThatApp</title>
+    <meta name="description" content="WhatsApp Web stuck on QR code, showing 'Phone not connected', or keeps dropping? Find your exact situation and fix it — covers phone sleep, battery optimization, corporate networks, and more.">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/whatsapp-web-not-connecting.html">
-    <meta name="robots" content="noindex, follow">
-    <meta property="og:title" content="Troubleshooting Guide: WhatsApp Web Not Connecting - FixThatApp">
-    <meta property="og:description" content="WhatsApp Web may fail to connect, get stuck on the QR code screen, show &quot;Phone not connected&quot; errors, or keep disconnecting. This prevents you from using W">
+    <meta property="og:title" content="WhatsApp Web Not Connecting: Diagnose and Fix Every Scenario | FixThatApp">
+    <meta property="og:description" content="WhatsApp Web stuck on QR code, showing 'Phone not connected', or keeps dropping? Find your exact situation and fix it.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/whatsapp-web-not-connecting.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Troubleshooting Guide: WhatsApp Web Not Connecting - FixThatApp">
-    <meta name="twitter:description" content="WhatsApp Web may fail to connect, get stuck on the QR code screen, show &quot;Phone not connected&quot; errors, or keep disconnecting. This prevents you from using W">
+    <meta name="twitter:title" content="WhatsApp Web Not Connecting: Diagnose and Fix Every Scenario | FixThatApp">
+    <meta name="twitter:description" content="WhatsApp Web stuck on QR code, showing 'Phone not connected', or keeps dropping? Find your exact situation and fix it.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script>
     (function() {
@@ -28,15 +26,14 @@
       } catch (e) {}
     })();
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "Troubleshooting Guide: WhatsApp Web Not Connecting",
-      "description": "WhatsApp Web may fail to connect, get stuck on the QR code screen, show &quot;Phone not connected&quot; errors, or keep disconnecting. This prevents you from using W",
-      "dateModified": "2026-03-05",
+      "headline": "WhatsApp Web Not Connecting: Diagnose and Fix Every Scenario",
+      "description": "WhatsApp Web stuck on QR code, showing Phone not connected, or keeps dropping? Complete diagnosis and fix guide covering every real-world scenario.",
+      "dateModified": "2026-04-03",
       "author": {
         "@type": "Organization",
         "name": "FixThatApp",
@@ -60,34 +57,50 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Does WhatsApp Web work without my phone being online?",
+          "name": "Why does WhatsApp Web say 'Phone not connected' even though my phone has internet?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "With multi-device support, WhatsApp Web can work for a limited time without your phone. However, initial linking requires your phone."
+            "text": "The most common cause is that WhatsApp on your phone was killed by the OS — either through battery optimization on Android or Low Power Mode on iPhone. The app needs to be running in the background to maintain the bridge. Open WhatsApp on your phone and leave it open, then check if the web session reconnects within 30 seconds."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Can I use WhatsApp Web on multiple computers?",
+          "name": "WhatsApp Web QR code keeps spinning and never loads — what's blocking it?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, you can link up to 4 devices to your WhatsApp account simultaneously."
+            "text": "A QR code that spins indefinitely almost always means a browser extension is interfering (ad blockers, privacy tools like uBlock Origin or Privacy Badger commonly block WhatsApp's WebSocket connections) or a corporate proxy is filtering the traffic. Test in an incognito window first — extensions are disabled there by default. If it loads in incognito, the issue is a browser extension."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Why does WhatsApp Web keep logging me out?",
+          "name": "Can I use WhatsApp Web without my phone nearby?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "This can happen if you log in on a new device, clear your browser data, or if your session expires after 14 days of inactivity."
+            "text": "Yes, if your account has multi-device mode enabled. Once linked, you can use WhatsApp Web independently for up to 14 days before it requires your phone to come online briefly to refresh the session. To check: open WhatsApp on your phone, go to Settings > Linked Devices — if you see a 'Multi-device beta' label, it's enabled."
           }
         },
-    {
+        {
           "@type": "Question",
-          "name": "Is WhatsApp Web safe to use on shared computers?",
+          "name": "I scanned the QR code successfully but it just resets and asks me to scan again — why?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Log out after each session on shared computers. Go to WhatsApp on your phone &gt; Linked Devices and remove any devices you don&#x27;t recognize."
+            "text": "This usually means you've hit the 4-device limit. WhatsApp allows a maximum of 4 linked devices per account. Go to Linked Devices on your phone and log out of any sessions you don't recognize or no longer use, then try linking again. Also check if the time on your phone and computer are in sync — a time mismatch causes authentication failures that look exactly like this."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "WhatsApp Web works fine for a few minutes then disconnects — what's happening?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Short sessions that cut off after a few minutes almost always point to Android battery optimization killing the WhatsApp background process on your phone. Go to Settings > Battery > Battery Optimization (varies by manufacturer), find WhatsApp, and set it to 'Not optimized' or 'Unrestricted'. On Samsung devices specifically, also check the 'Sleeping apps' list and remove WhatsApp from it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "WhatsApp Web is blocked at work — how do I use it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Corporate networks typically block WebSocket connections on non-standard ports, which WhatsApp Web relies on. The official path is to use your phone's mobile hotspot instead of the office Wi-Fi. The WhatsApp desktop app sometimes works when the web version doesn't because it uses a slightly different connection method. Using a personal VPN may work but may violate your company's acceptable use policy."
           }
         }
       ]
@@ -135,7 +148,7 @@
             pointer-events: none;
         }
         .container {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
@@ -152,19 +165,95 @@
             padding: 2.5rem 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article h1 { font-size: 1.85rem; color: #1a1a2e; margin-bottom: 0.4rem; line-height: 1.3; }
         .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
         .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
-        .article p { margin-bottom: 0.85rem; color: #444; }
+        .article h3 { font-size: 1.05rem; color: #2c2c54; margin: 1.5rem 0 0.5rem; font-weight: 600; }
+        .article p { margin-bottom: 0.9rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.4rem; }
-        .article strong { color: #333; }
-        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
-        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
-        .faq p { margin-bottom: 0.25rem; }
-        .faq .q { font-weight: 600; color: #333; }
-        .faq .a { color: #555; }
+        .article li { margin-bottom: 0.5rem; }
+        .article strong { color: #222; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.88em; font-family: 'Courier New', monospace; }
+        .diagnose-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            border-radius: 0 8px 8px 0;
+            padding: 1.1rem 1.3rem;
+            margin: 1.2rem 0;
+        }
+        .diagnose-box p { margin-bottom: 0.4rem; color: #333; }
+        .diagnose-box p:last-child { margin-bottom: 0; }
+        .scenario-block {
+            border: 1px solid #e8e8f0;
+            border-radius: 10px;
+            padding: 1.3rem 1.5rem;
+            margin: 1.2rem 0;
+            background: #fafafa;
+        }
+        .scenario-block .scenario-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: #667eea;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+        .scenario-block h3 {
+            margin-top: 0;
+            color: #1a1a2e;
+            font-size: 1.05rem;
+        }
+        .warning-note {
+            background: #fff8e6;
+            border-left: 4px solid #f5a623;
+            padding: 0.9rem 1.1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            font-size: 0.92rem;
+            color: #555;
+        }
+        .steps-list {
+            counter-reset: step-counter;
+            list-style: none;
+            margin-left: 0;
+            padding: 0;
+        }
+        .steps-list li {
+            counter-increment: step-counter;
+            padding: 0.55rem 0 0.55rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid #f2f2f2;
+            color: #444;
+        }
+        .steps-list li:last-child { border-bottom: none; }
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0.55rem;
+            background: #667eea;
+            color: white;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.2rem 1.3rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.3rem; }
+        .faq .q { font-weight: 600; color: #222; font-size: 0.97rem; }
+        .faq .a { color: #555; font-size: 0.95rem; }
+        .related-links { margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #f0f0f0; }
+        .related-links h2 { margin-top: 0; border-bottom: none; padding-bottom: 0; }
+        .related-links ul { list-style: none; margin-left: 0; padding: 0; }
+        .related-links ul li { margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; }
+        .related-links ul li::before { content: "→"; position: absolute; left: 0; color: #667eea; }
+        .related-links a { color: #667eea; text-decoration: none; }
+        .related-links a:hover { text-decoration: underline; }
         footer {
             text-align: center;
             padding: 2rem 1rem;
@@ -192,11 +281,7 @@
             font-size: 0.85rem;
         }
         .cookie-banner a { color: #9ec2ff; }
-        .cookie-actions {
-            display: flex;
-            gap: 0.5rem;
-            flex-shrink: 0;
-        }
+        .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
         .cookie-btn {
             border: 1px solid #667eea;
             background: transparent;
@@ -209,12 +294,9 @@
         .cookie-btn.primary { background: #667eea; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
-            .article h1 { font-size: 1.4rem; }
+            .article h1 { font-size: 1.45rem; }
             .header-search { display: none; }
-            .cookie-banner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+            .cookie-banner { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -223,7 +305,7 @@
         <a href="../index.html">FixThatApp</a>
         <div class="header-search">
             <span class="header-search-icon">&#128269;</span>
-            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value">
         </div>
     </header>
     <div class="container">
@@ -231,56 +313,173 @@
             <a href="../index.html">Home</a> &rsaquo; WhatsApp Web Not Connecting
         </nav>
         <div class="article">
-            <h1>Troubleshooting Guide: WhatsApp Web Not Connecting</h1>
-            <p class="updated">Last updated: March 5, 2026</p>
-            <h2>Problem Description</h2>
-            <p>WhatsApp Web may fail to connect, get stuck on the QR code screen, show "Phone not connected" errors, or keep disconnecting. This prevents you from using WhatsApp on your computer.</p>
-            <h2>Possible Causes</h2>
-            <p><strong>Phone not connected to internet</strong>: WhatsApp Web requires your phone to be online.</p>
-            <p><strong>Browser issues</strong>: Outdated browser or corrupted cache.</p>
-            <p><strong>QR code expired</strong>: The QR code refreshes periodically and may expire.</p>
-            <p><strong>Multiple devices</strong>: WhatsApp Web session may have been logged out from another device.</p>
-            <p><strong>Firewall blocking</strong>: Network firewall may block WhatsApp Web connections.</p>
-            <h2>Step-by-Step Fixes</h2>
-            <h3>Fix 1: Check Phone&#x27;s Internet</h3>
-            <p>&bull; Make sure your phone is connected to Wi-Fi or mobile data.</p>
-            <p>&bull; Open WhatsApp on your phone to verify it's working.</p>
-            <p>&bull; WhatsApp Web needs your phone to be online for initial connection.</p>
-            <h3>Fix 2: Refresh QR Code</h3>
-            <p>&bull; Click "Reload QR Code" if available on the WhatsApp Web page.</p>
-            <p>&bull; Or refresh the entire page and scan the new QR code.</p>
-            <p>&bull; Make sure you scan quickly before it expires.</p>
-            <h3>Fix 3: Clear Browser Cache</h3>
-            <p>&bull; Clear cookies and cache for web.whatsapp.com.</p>
-            <p>&bull; Try opening WhatsApp Web in an incognito window.</p>
-            <p>&bull; Use Chrome for the best compatibility.</p>
-            <h3>Fix 4: Log Out and Reconnect</h3>
-            <p>&bull; On your phone: WhatsApp > Settings > Linked Devices.</p>
-            <p>&bull; Log out of all web sessions.</p>
-            <p>&bull; Scan the QR code again from web.whatsapp.com.</p>
-            <h3>Fix 5: Use WhatsApp Desktop App</h3>
-            <p>&bull; Download the WhatsApp desktop app from whatsapp.com/download.</p>
-            <p>&bull; The desktop app often works better than the web version.</p>
-            <p>&bull; It also supports multi-device mode without needing your phone online.</p>
-            <h3>Fix 6: Check Firewall and Network</h3>
-            <p>&bull; If on a work or school network, WhatsApp Web may be blocked.</p>
-            <p>&bull; Try using mobile data instead of Wi-Fi.</p>
-            <p>&bull; Ask your network admin to allow web.whatsapp.com.</p>
-            <h2>When to Contact Support</h2>
-            <p>If WhatsApp Web still won't connect, visit faq.whatsapp.com for help or contact WhatsApp support through the app.</p>
+            <h1>WhatsApp Web Not Connecting: Find Your Exact Problem and Fix It</h1>
+            <p class="updated">Last updated: April 3, 2026</p>
+
+            <p>WhatsApp Web connection problems are almost never random. The error you're seeing — whether it's a blank QR screen, a "Phone not connected" banner, or a session that drops every few minutes — points to a specific cause. This guide works through each scenario separately so you're not wasting time on fixes that don't apply to your situation.</p>
+
+            <div class="diagnose-box">
+                <p><strong>Before anything else: identify what you're actually seeing.</strong></p>
+                <p>The QR code never loads at all &rarr; jump to <a href="#qr-never-loads">Section 1</a></p>
+                <p>QR code loads but scanning does nothing &rarr; jump to <a href="#scan-fails">Section 2</a></p>
+                <p>"Phone not connected" message after it was working &rarr; jump to <a href="#phone-not-connected">Section 3</a></p>
+                <p>Connects fine but drops every few minutes &rarr; jump to <a href="#keeps-disconnecting">Section 4</a></p>
+                <p>Blocked on a work or school network &rarr; jump to <a href="#network-blocked">Section 5</a></p>
+            </div>
+
+            <h2 id="qr-never-loads">Section 1 — QR Code Won't Load (Just Spinning)</h2>
+
+            <p>If you go to <strong>web.whatsapp.com</strong> and see a loading spinner that never resolves into a QR code, something is actively blocking the connection before it starts. This is almost always one of three things.</p>
+
+            <h3>The most likely cause: a browser extension</h3>
+            <p>Ad blockers and privacy tools like uBlock Origin, Privacy Badger, Ghostery, and even some VPN browser extensions intercept the WebSocket connection WhatsApp Web needs to generate the QR code. The page loads because it's HTML, but the real-time connection — which is what generates that QR — gets killed silently.</p>
+
+            <p>The fastest test: open a new <strong>incognito/private window</strong> in the same browser. Incognito disables most extensions by default. If the QR code loads there, you've confirmed an extension is the problem. Go back to your normal window, disable extensions one at a time, and reload to find the culprit. uBlock Origin is responsible more often than not.</p>
+
+            <h3>Second cause: DNS or proxy settings</h3>
+            <p>If incognito also fails, the block is at the network level — not the browser. Check if you're on a custom DNS server (like 1.1.1.1 or 8.8.8.8) or if any proxy is configured in your system settings. Temporarily switch back to your ISP's default DNS and test again. On Windows, this is under <strong>Network &amp; Internet Settings &gt; Change adapter options &gt; TCP/IPv4 properties</strong>.</p>
+
+            <h3>Third cause: wrong URL</h3>
+            <p>A surprisingly common one. Make sure you're going to <code>web.whatsapp.com</code>, not <code>www.whatsapp.com/web</code> or any third-party site. Bookmark the correct URL after you confirm it's working.</p>
+
+            <div class="warning-note">
+                If you're on Firefox and the QR loads in Chrome but not Firefox, it's almost always a Firefox-specific privacy setting under <strong>about:config</strong> — specifically <code>privacy.resistFingerprinting</code> set to <code>true</code>. This breaks WhatsApp Web's session detection. Chrome or Edge are more reliable for WhatsApp Web.
+            </div>
+
+            <h2 id="scan-fails">Section 2 — QR Code Loads but Scanning Does Nothing</h2>
+
+            <p>You see the QR code, you open WhatsApp on your phone, you scan it — and then either nothing happens, the code resets immediately, or you get a brief "connecting" message that then fails. This is a different problem entirely.</p>
+
+            <h3>Check your linked devices limit first</h3>
+            <p>WhatsApp allows a maximum of <strong>4 linked devices</strong> per account (not counting your primary phone). If you've linked this browser before plus a desktop app plus a tablet, you may be at the limit. On your phone, open WhatsApp, tap <strong>Settings &gt; Linked Devices</strong>. You'll see every active session listed with device name and approximate last active time. Log out of any sessions you don't recognize or no longer need, then try scanning again.</p>
+
+            <h3>Time sync problem — causes more issues than people realize</h3>
+            <p>WhatsApp's authentication is time-sensitive. If your phone's clock is off by more than a couple of minutes — because you manually set it or your timezone auto-detection misfired — the QR code handshake will silently fail, and the code will just reset. On iPhone, go to <strong>Settings &gt; General &gt; Date &amp; Time</strong> and turn on "Set Automatically." On Android it's under <strong>Settings &gt; General Management &gt; Date and Time</strong>. After fixing the time, force-close WhatsApp and try scanning again.</p>
+
+            <h3>WhatsApp app update required</h3>
+            <p>If your WhatsApp version is significantly out of date, it may no longer be able to authenticate with WhatsApp Web's current protocol. Check your app store for pending updates. WhatsApp pushes protocol changes periodically, and old versions stop working with the web interface without any clear error message.</p>
+
+            <h3>Camera permission on phone</h3>
+            <p>Less common but real: if WhatsApp doesn't have camera permission on your phone, the QR scanner will open but can't actually read the code. You might see it scanning visually but it never triggers. Check <strong>Settings &gt; Privacy &gt; Camera</strong> (iOS) or <strong>Settings &gt; Apps &gt; WhatsApp &gt; Permissions</strong> (Android) and make sure camera access is granted.</p>
+
+            <h2 id="phone-not-connected">Section 3 — "Phone Not Connected" After It Was Working</h2>
+
+            <p>This is the most frequently reported WhatsApp Web issue, and also the most misdiagnosed. People assume it's a browser problem or a network problem, but nine times out of ten the issue is on the phone side — specifically, the phone's operating system has suspended or killed the WhatsApp background process.</p>
+
+            <h3>What's actually happening</h3>
+            <p>In WhatsApp's legacy mode (the older version, still used by some accounts), the web session runs through your phone as a relay. The phone must have WhatsApp running in the background and connected to the internet at all times. When the phone's OS aggressively manages battery by freezing background apps — which both Android and iOS do under certain conditions — the relay breaks and WhatsApp Web loses its connection.</p>
+
+            <p>Multi-device mode changed this. If your account has multi-device enabled, WhatsApp Web operates independently of your phone after the initial linking. But even in multi-device mode, sessions still need the phone to come online periodically — usually within 14 days.</p>
+
+            <div class="scenario-block">
+                <div class="scenario-label">iPhone Users</div>
+                <h3>Low Power Mode kills the WhatsApp relay</h3>
+                <p>When Low Power Mode is active on iPhone, iOS severely restricts background activity for most apps, including WhatsApp. This means the moment your iPhone screen turns off, WhatsApp stops maintaining its connection to WhatsApp Web. The fix isn't just to turn off Low Power Mode — you should also go to <strong>Settings &gt; WhatsApp &gt; Background App Refresh</strong> and make sure it's turned on. Without Background App Refresh, iOS won't let WhatsApp maintain a connection when the app isn't in the foreground.</p>
+                <p>Also check: if you have Focus modes active (like Do Not Disturb or Sleep Focus), some of these configurations restrict background activity as a side effect. Go to <strong>Settings &gt; Focus</strong> and check whether your current Focus mode has app restrictions.</p>
+            </div>
+
+            <div class="scenario-block">
+                <div class="scenario-label">Android Users</div>
+                <h3>Battery optimization — the hidden WhatsApp Web killer</h3>
+                <p>Android's battery optimization features, especially on Samsung, Xiaomi, OnePlus, and Huawei devices, are extremely aggressive. The OS learns that WhatsApp hasn't been opened manually for a few minutes and suspends its background processes to save battery. From WhatsApp Web's perspective, the phone has gone offline.</p>
+                <p>The path varies by manufacturer, but the general approach:</p>
+                <ol class="steps-list">
+                    <li>Open <strong>Settings &gt; Battery</strong> on your phone</li>
+                    <li>Find <strong>Battery Optimization</strong> or <strong>App Power Management</strong></li>
+                    <li>Find WhatsApp in the list</li>
+                    <li>Set it to <strong>"Not optimized"</strong> or <strong>"Unrestricted"</strong> (wording differs by device)</li>
+                </ol>
+                <p><strong>Samsung-specific:</strong> Also go to <strong>Settings &gt; Device Care &gt; Battery &gt; Background Usage Limits</strong> and check the "Sleeping apps" list. Samsung silently moves apps into this list after periods of inactivity. If WhatsApp is listed there, remove it.</p>
+                <p><strong>Xiaomi/MIUI-specific:</strong> Go to <strong>Settings &gt; Apps &gt; Manage Apps &gt; WhatsApp &gt; Battery Saver</strong>, and set it to "No restrictions." MIUI's battery management is the most aggressive of any Android skin and will cause WhatsApp Web to drop without this setting.</p>
+            </div>
+
+            <h3>If you're on Wi-Fi that goes to sleep</h3>
+            <p>Some routers have client isolation or Wi-Fi sleep settings that disconnect idle devices. Also, Android has a "Keep Wi-Fi on during sleep" setting that may be set to "Only when charging" — meaning when you put your phone down, it drops Wi-Fi and switches to mobile data, which can briefly interrupt the WhatsApp connection. Find this under <strong>Settings &gt; Wi-Fi &gt; Advanced &gt; Keep Wi-Fi on during sleep</strong> and set it to "Always."</p>
+
+            <h2 id="keeps-disconnecting">Section 4 — Connects Fine but Drops Every Few Minutes</h2>
+
+            <p>A session that works initially but drops on a regular cycle — say, every 5 to 15 minutes — is almost always the Android battery optimization issue described in Section 3. But if you've already addressed that and the problem continues, there are a few other causes worth checking.</p>
+
+            <h3>Browser tab inactive or throttled</h3>
+            <p>Modern browsers throttle or suspend background tabs to save resources. If you have WhatsApp Web open in a tab behind other tabs, and you don't interact with it for a while, the browser may throttle its WebSocket connection. The fix is simple: keep the WhatsApp Web tab active or use the <strong>WhatsApp Desktop app</strong> instead, which doesn't have this limitation.</p>
+
+            <p>In Chrome specifically, you can test whether tab throttling is the cause by going to <code>chrome://flags</code> and searching for "throttle." However, permanently disabling tab throttling affects battery and performance. The desktop app is a better long-term solution if you use WhatsApp Web regularly for work.</p>
+
+            <h3>Session expiry on multi-device accounts</h3>
+            <p>WhatsApp multi-device sessions expire after <strong>14 days of inactivity</strong> on that specific browser. This isn't a 14-day timer from first linking — it resets each time you actively use the session. If you come back after two weeks away, you'll need to re-scan the QR code. This is by design and isn't a bug you can fix.</p>
+
+            <h3>Conflicting sessions across devices</h3>
+            <p>If you're logged into WhatsApp Web on both your work computer and a personal laptop, and your phone is in legacy mode (not multi-device), only one web session was supported historically. WhatsApp has largely moved past this with multi-device, but if your account is still on the older mode, logging in from a second computer will kill the first session. Check your Linked Devices list to see what's active.</p>
+
+            <h2 id="network-blocked">Section 5 — WhatsApp Web Blocked on Corporate or School Network</h2>
+
+            <p>Workplace and university networks commonly block WhatsApp Web specifically. It's not always blanket "no messaging apps" — some networks block the WebSocket connections WhatsApp Web relies on while leaving regular web traffic alone. Signs you're dealing with this: the page loads, you can see the WhatsApp Web interface, but the QR code never appears or the session never fully establishes.</p>
+
+            <h3>How to confirm it's a network block</h3>
+            <p>The simplest test: enable your phone's mobile hotspot and connect your laptop to it. If WhatsApp Web works immediately on mobile data but not on the office Wi-Fi, the network is filtering it. You don't need to troubleshoot further — it's a policy enforcement, not a technical problem you can solve from your device.</p>
+
+            <h3>The WhatsApp Desktop app sometimes bypasses this</h3>
+            <p>The WhatsApp Desktop application (available at whatsapp.com/download) uses a different connection method than the browser-based version and sometimes works on networks that block the web version. This isn't guaranteed — heavily filtered networks block both — but it's worth trying before you give up.</p>
+
+            <h3>If you need it for work legitimately</h3>
+            <p>Ask your IT department to whitelist <code>web.whatsapp.com</code> and <code>*.whatsapp.net</code>. WhatsApp Web uses ports 443 (HTTPS) and 5222 for its WebSocket connections. Some enterprise networks block WebSocket upgrades on port 443 as a matter of policy, so specific domain whitelisting is what's needed — not just unblocking a port.</p>
+
+            <div class="warning-note">
+                Using a personal VPN on a work network to get around content filtering may violate your employer's acceptable use policy. Check before you use one.
+            </div>
+
+            <h2>One Thing to Try Before Anything Else</h2>
+
+            <p>If you haven't done this already and you're not sure which section applies to you: on your phone, <strong>open WhatsApp, leave it open on-screen</strong>, and then reload WhatsApp Web in your browser. Don't lock your phone or switch apps on it — keep WhatsApp visibly open. If the session connects now but drops when you lock the phone, you have confirmed the battery optimization issue from Section 3 and can go fix that specifically.</p>
+
+            <p>This one test eliminates about 60% of the cases I see, because most people troubleshoot the browser while the actual problem is sitting in their phone's power settings.</p>
+
+            <h2>Switching to the WhatsApp Desktop App</h2>
+
+            <p>If you're using WhatsApp Web daily for work and you keep running into these issues, the desktop app is genuinely better. It maintains a more stable WebSocket connection, doesn't get throttled like a browser tab, and works with multi-device mode. Download it from <strong>whatsapp.com/download</strong> — it's available for Windows and macOS. Setup is the same: scan the QR code from your phone's Linked Devices menu, and you're done. You won't need to re-scan every time unless you're inactive for 14 days.</p>
+
             <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: Does WhatsApp Web work without my phone being online?</p>
-            <p class="a">A: With multi-device support, WhatsApp Web can work for a limited time without your phone. However, initial linking requires your phone.</p>
+
+            <div class="faq">
+                <p class="q">Why does WhatsApp Web say "Phone not connected" even though my phone has internet?</p>
+                <p class="a">The most common cause is that WhatsApp on your phone was killed by the OS — either through battery optimization on Android or Low Power Mode on iPhone. The app needs to be running in the background to maintain the bridge. Open WhatsApp on your phone and leave it open, then check if the web session reconnects within 30 seconds.</p>
             </div>
-            <div class="faq"><p class="q">Q: Can I use WhatsApp Web on multiple computers?</p>
-            <p class="a">A: Yes, you can link up to 4 devices to your WhatsApp account simultaneously.</p>
+
+            <div class="faq">
+                <p class="q">WhatsApp Web QR code keeps spinning and never loads — what's blocking it?</p>
+                <p class="a">A QR code that spins indefinitely almost always means a browser extension is interfering. Ad blockers and privacy tools like uBlock Origin or Privacy Badger commonly block WhatsApp's WebSocket connections. Test in an incognito window first — extensions are disabled there by default. If it loads in incognito, the issue is a browser extension.</p>
             </div>
-            <div class="faq"><p class="q">Q: Why does WhatsApp Web keep logging me out?</p>
-            <p class="a">A: This can happen if you log in on a new device, clear your browser data, or if your session expires after 14 days of inactivity.</p>
+
+            <div class="faq">
+                <p class="q">Can I use WhatsApp Web without my phone nearby?</p>
+                <p class="a">Yes, if your account has multi-device mode enabled. Once linked, WhatsApp Web operates independently for up to 14 days before the session needs your phone online to refresh. To check: open WhatsApp on your phone, go to Settings &gt; Linked Devices — multi-device shows your browser session without requiring the phone to be active.</p>
             </div>
-            <div class="faq"><p class="q">Q: Is WhatsApp Web safe to use on shared computers?</p>
-            <p class="a">A: Log out after each session on shared computers. Go to WhatsApp on your phone &gt; Linked Devices and remove any devices you don&#x27;t recognize.</p>
+
+            <div class="faq">
+                <p class="q">I scanned the QR code successfully but it just resets and asks me to scan again — why?</p>
+                <p class="a">This usually means you've hit the 4-device limit, or your phone's clock is out of sync. Check Linked Devices and remove old sessions first. Then verify your phone's date and time is set to automatic. A clock that's off by even a few minutes causes the QR authentication to silently fail.</p>
             </div>
+
+            <div class="faq">
+                <p class="q">WhatsApp Web works fine for a few minutes then disconnects — what's happening?</p>
+                <p class="a">Short sessions that cut off after a few minutes almost always point to Android battery optimization killing the WhatsApp background process on your phone. Go to Settings &gt; Battery &gt; Battery Optimization, find WhatsApp, and set it to "Not optimized." On Samsung, also check the Sleeping apps list under Device Care &gt; Battery and remove WhatsApp from it.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">WhatsApp Web is blocked at work — how do I use it?</p>
+                <p class="a">Corporate networks block the WebSocket connections WhatsApp Web uses. Use your phone's mobile hotspot to bypass the office Wi-Fi, or try the WhatsApp Desktop app which sometimes uses a different path. Ask IT to whitelist web.whatsapp.com and *.whatsapp.net if you need it for legitimate work purposes.</p>
+            </div>
+
+            <div class="related-links">
+                <h2>Related Guides</h2>
+                <ul>
+                    <li><a href="whatsapp-not-sending-messages.html">WhatsApp Not Sending Messages</a></li>
+                    <li><a href="whatsapp-calls-not-working.html">WhatsApp Calls Not Working</a></li>
+                    <li><a href="whatsapp-notifications-not-working.html">WhatsApp Notifications Not Working</a></li>
+                    <li><a href="whatsapp-not-loading.html">WhatsApp Not Loading</a></li>
+                </ul>
+            </div>
+
         </div>
     </div>
     <footer>
