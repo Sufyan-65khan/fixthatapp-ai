@@ -901,6 +901,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.fixthatapp.com/pages/instagram-not-working.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.fixthatapp.com/pages/instagram-reels-not-working.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -1004,6 +1010,12 @@
   </url>
   <url>
     <loc>https://www.fixthatapp.com/pages/youtube-app-buffering.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.fixthatapp.com/pages/youtube-tv-buffering.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
