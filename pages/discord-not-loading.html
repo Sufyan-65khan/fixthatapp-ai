@@ -107,6 +107,8 @@
         .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
         .cookie-btn { border: 1px solid #667eea; background: transparent; color: #fff; padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) { .article { padding: 1.5rem 1rem; } .article h1 { font-size: 1.4rem; } .header-search { display: none; } .cookie-banner { flex-direction: column; align-items: flex-start; } .platform-row { flex-direction: column; } }
     </style>
 </head>
@@ -219,6 +221,17 @@
                 <li>The selected server region is having issues — switch the region in Voice Channel settings (right-click the channel, Edit Channel, Region Override)</li>
             </ul>
             <p>Enabling QoS High Packet Priority in Discord Settings &gt; Voice &amp; Video can also help on networks that deprioritize gaming/VoIP traffic.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't uninstall and reinstall the Discord desktop app before clearing the cache.</strong> Most Discord loading failures are caused by corrupted cache files in AppData, not corrupted app installation files. Reinstalling replaces the app binaries but leaves the cache folder untouched — meaning the same corrupted files cause the same problem after reinstall. Clear the cache first; reinstall only if that doesn't work.</li>
+        <li><strong>Don't assume Discord is down every time it fails to load.</strong> Discord's status page (discordstatus.com) shows real-time outages. Most Discord loading failures are local — browser cache, DNS, or network-level issues — not server-side. Checking the status page takes 10 seconds and tells you immediately whether local troubleshooting will help at all.</li>
+        <li><strong>Don't use Discord on a browser with hardware acceleration disabled if you're experiencing gray screens.</strong> The Discord web app and Electron desktop app both use hardware acceleration for rendering. Disabling it (which some users do to fix other issues) can cause exactly the gray screen and infinite loading symptoms that seem like a server problem.</li>
+        <li><strong>Don't try to open Discord on mobile data if you're troubleshooting a desktop loading issue.</strong> Testing Discord on mobile confirms whether it's a Discord outage, but doesn't tell you anything about what's wrong with your desktop setup. If Discord works on mobile but not desktop, the issue is 100% local to your computer — network, cache, or app config.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

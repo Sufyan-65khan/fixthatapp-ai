@@ -229,6 +229,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -345,6 +347,17 @@
                 <li>Download a fresh installer from google.com/chrome and install.</li>
             </ol>
             <p>When you log in to your Google account in the fresh Chrome, your bookmarks and passwords will sync back automatically.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't keep all your Chrome tabs open while troubleshooting crashes.</strong> Each open tab is its own process consuming RAM. On machines with 8 GB of RAM or less, having 30+ tabs open will reliably cause Chrome to crash — especially if heavy pages like video streaming or complex web apps are among them. Close all tabs to a minimum, then test stability before reopening anything.</li>
+        <li><strong>Don't disable hardware acceleration as an automatic first step.</strong> Hardware acceleration offloads rendering work to your GPU, which speeds things up on most systems. Disabling it forces Chrome to run all rendering on the CPU, which can make the experience slower and less stable on integrated graphics. Only disable it if you've confirmed a GPU-related crash via Chrome's crash report.</li>
+        <li><strong>Don't install antivirus "Chrome extension" tools from unknown publishers.</strong> Many antivirus programs push browser extensions that claim to offer "safe browsing" or "web protection." These extensions frequently conflict with Chrome's own sandbox architecture and cause crashes on specific sites. Check chrome://extensions and remove anything you didn't intentionally install.</li>
+        <li><strong>Don't ignore Windows or macOS memory errors as unrelated to Chrome crashes.</strong> If Chrome crashes alongside other apps or you see system-level instability, the root cause may be failing RAM or overheating hardware — not Chrome itself. Run Windows Memory Diagnostic or Apple Diagnostics to rule out hardware before spending more time on browser-specific fixes.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
             <div class="faq">

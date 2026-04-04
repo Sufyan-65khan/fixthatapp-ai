@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -309,6 +311,17 @@
             <h3>Fix 7: Check Copilot Service Status</h3>
             <p><strong>Why this matters:</strong> Microsoft's Copilot service is cloud-based and occasionally experiences outages. If Copilot was working before and suddenly stopped with no changes on your end, a service disruption is the most likely cause.</p>
             <p>Check the Microsoft 365 service health dashboard at <strong>admin.microsoft.com/AdminPortal/Home#/servicehealth</strong> (requires admin login) for live incident information. Alternatively, search "Copilot not working" on X (Twitter) or check downdetector.com for real-time user reports. If there's a widespread incident, Microsoft typically posts updates on their status pages and resolves them within a few hours.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't confuse Copilot for Microsoft 365 (the paid enterprise version) with free Copilot.</strong> These are different products with different login requirements, licensing, and support contacts. Troubleshooting steps for one don't always apply to the other. If Copilot in Word or Teams stopped working, the issue is almost certainly a Microsoft 365 license change, not a browser or account problem.</li>
+        <li><strong>Don't try to access Microsoft Copilot through a personal Microsoft account if your organization uses work accounts.</strong> Copilot for Microsoft 365 integrates with work data (emails, files, meetings) and requires sign-in with your organizational account. Logging in with a personal Outlook or Hotmail account will show a different, limited version of Copilot that has no access to your work documents.</li>
+        <li><strong>Don't skip checking Windows Update when Copilot in Windows 11 isn't working.</strong> The Copilot sidebar in Windows 11 is delivered as a Windows component, not a standalone app. It updates through Windows Update, not the Microsoft Store. If the sidebar is missing or broken, installing pending Windows updates is the most likely fix.</li>
+        <li><strong>Don't ignore browser console errors when Copilot.microsoft.com won't load.</strong> If the Copilot website shows a blank page or loading spinner that never resolves, open your browser's developer console (F12 &rarr; Console tab). A CORS error or blocked script domain will be visible immediately, pointing to a browser extension or network policy that's preventing the site from loading.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

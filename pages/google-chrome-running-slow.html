@@ -103,6 +103,8 @@
         .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
         .cookie-btn { border: 1px solid #667eea; background: transparent; color: #fff; padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) { .article { padding: 1.5rem 1rem; } .article h1 { font-size: 1.4rem; } .header-search { display: none; } .cookie-banner { flex-direction: column; align-items: flex-start; } }
     </style>
 </head>
@@ -200,6 +202,17 @@
             <p>If Chrome is slow and nothing else works, a profile reset returns it to factory defaults while keeping your bookmarks and passwords (which sync to your Google account). Go to <strong>Chrome Settings &gt; Reset settings &gt; Restore settings to their original defaults</strong>. This disables all extensions, clears startup settings, resets shortcuts, and clears pinned tabs. It doesn't delete bookmarks, history, or saved passwords.</p>
 
             <p>This fixes issues caused by settings being modified by malware, aggressive browser-modifying software (toolbars, "search enhancers"), or a browser extension that changed core settings. If you've had an adware infection at any point, this is worth doing.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't install "browser speed booster" extensions to fix a slow Chrome.</strong> Speed booster extensions are themselves processes running inside Chrome, consuming the same RAM and CPU they claim to save. Many are adware or spyware in disguise. The correct approach to a slow browser is removing extensions, not adding one. These extensions make things worse without exception.</li>
+        <li><strong>Don't clear browsing history thinking it speeds up Chrome.</strong> Browsing history is just a text index and takes up almost no meaningful space or processing power. Clearing it does nothing for performance. If you want to speed up Chrome, clear the cache (which is large and does affect page load speed) — not the history.</li>
+        <li><strong>Don't use Chrome's built-in task manager to kill processes randomly.</strong> Chrome runs subprocesses for each tab, extension, and GPU task. Killing a process that belongs to a background service worker or renderer without understanding what it is can cause data loss (unsaved form data, partially uploaded files) and doesn't address why Chrome is slow. Use it to identify which tab or extension is using excessive resources, then close that specific tab or disable that extension.</li>
+        <li><strong>Don't run Chrome and another Chromium-based browser simultaneously on a low-RAM machine.</strong> Chrome, Edge, Brave, and Opera all share the Chromium rendering engine and use similar amounts of RAM. Running two at once effectively doubles memory usage. Pick one browser to run at a time on machines with less than 16 GB RAM.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -334,6 +336,17 @@
                 <li>Once the workflow shows a green checkmark, wait 1 to 2 minutes and visit your site URL with a hard refresh (Ctrl+Shift+R on Windows, Cmd+Shift+R on Mac).</li>
             </ol>
             <p>If you are not using git locally, you can trigger the same effect by making any trivial edit to a file directly on GitHub.com through the web interface and committing it there.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't push fixes and check the live site within 30 seconds.</strong> GitHub Pages deployments take 1-5 minutes to build and propagate after a push. Checking immediately after a commit will almost always show the old version. Wait for the Actions workflow to show a green checkmark before concluding your change didn't work.</li>
+        <li><strong>Don't assume a 404 error means your files are missing.</strong> The most common cause of a 404 on GitHub Pages is that the publishing source branch or folder is misconfigured in repository settings. Check Settings &rarr; Pages to confirm GitHub Pages is pointing at the correct branch (main or gh-pages) and the correct folder (root or /docs) before assuming you need to re-upload files.</li>
+        <li><strong>Don't name your main HTML file anything other than index.html at the root.</strong> GitHub Pages serves index.html as the default document for a directory. If your main file is named home.html, landing.html, or anything else, visiting your site's root URL returns a 404 even when the file is correctly present in the repository. The file must be named index.html exactly.</li>
+        <li><strong>Don't use absolute paths for internal links and assets in a project subdirectory site.</strong> If your GitHub Pages site is at username.github.io/reponame, absolute paths like /style.css will fail — they resolve to username.github.io/style.css instead of the correct subdirectory path. Use relative paths or the Jekyll baseurl setting to handle this correctly.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

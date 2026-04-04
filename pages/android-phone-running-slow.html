@@ -206,6 +206,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         .diagnosis-box {
             background: #fffbea;
             border-left: 4px solid #f5a623;
@@ -351,6 +353,17 @@
                 <li>App data: note which apps you have and any important in-app data.</li>
             </ul>
             <p>Then: <strong>Settings &gt; System &gt; Reset &gt; Factory Data Reset</strong>. The phone will erase everything and restart fresh. Only do this if the other fixes haven't worked — it's the nuclear option.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't use RAM cleaner or "booster" apps.</strong> These apps force-close background processes that Android's memory manager would have handled more efficiently on its own. Android is designed to use RAM — a full RAM is normal and healthy. Killing apps with a cleaner actually makes things slower because apps have to fully reload from scratch the next time you open them.</li>
+        <li><strong>Don't clear app data for every app trying to free up space.</strong> Clearing app data removes your saved settings, logins, and offline content — it's not just cache. It also doesn't free up much storage compared to just deleting apps you don't use. Use "Clear Cache" for specific problem apps; use "Clear Data" only as a last resort for a specific broken app.</li>
+        <li><strong>Don't charge your phone to 100% and keep it there if it's also heating up.</strong> An Android phone that runs hot while charging and feels slow is often being throttled to protect the battery. Unplug it and let the temperature drop before testing performance — heat-based throttling makes every troubleshooting attempt unreliable.</li>
+        <li><strong>Don't do a factory reset before backing up your WhatsApp messages and app data.</strong> A factory reset erases everything on the device. WhatsApp chats do not back up automatically to Google Drive by default — you need to manually trigger the backup before resetting or those messages are gone permanently.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

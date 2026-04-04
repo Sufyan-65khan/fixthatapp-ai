@@ -210,6 +210,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -322,6 +324,17 @@
                 <li>When contacting support, have ready: the exact error message, the date and amount of the failed transaction, and the payment method you were trying to use.</li>
                 <li>PayPal support can manually review and clear transactions that are being blocked by their automated fraud system, though this is done on a case-by-case basis.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't retry a failed payment multiple times rapidly.</strong> Each failed attempt is logged by your bank and PayPal's fraud system. Too many rapid failures can trigger a temporary block that takes 24-48 hours to clear automatically.</li>
+        <li><strong>Don't assume a declined payment means your card is cancelled.</strong> Most PayPal failures are authorization issues. Your bank may be blocking PayPal as an unfamiliar merchant, or PayPal's risk system flagged the transaction. Check status.paypal.com and the Resolution Center before calling your bank.</li>
+        <li><strong>Don't add a new card before removing the failed one.</strong> If a card has repeated failed charges, PayPal may flag your account. Remove the problematic card, wait 10 minutes, then add the new one.</li>
+        <li><strong>Don't ignore the specific error code PayPal shows.</strong> 'Insufficient funds', 'Card declined by issuer', and 'PayPal temporarily restricted' all require different fixes. The error message tells you exactly where the block is.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

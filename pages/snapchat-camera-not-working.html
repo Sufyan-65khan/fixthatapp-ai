@@ -105,6 +105,8 @@
         .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
         .cookie-btn { border: 1px solid #667eea; background: transparent; color: #fff; padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) { .article { padding: 1.5rem 1rem; } .article h1 { font-size: 1.4rem; } .header-search { display: none; } .cookie-banner { flex-direction: column; align-items: flex-start; } }
     </style>
 </head>
@@ -204,6 +206,17 @@
             <h2>After Updating iOS — Snapchat Camera Broken</h2>
 
             <p>Major iOS updates occasionally break Snapchat's camera because they change underlying camera API behavior. Snapchat usually releases a fix within a few days. The workaround in the meantime: use Snapchat's in-app camera for snaps but use the native camera for anything that needs to work reliably, then import from camera roll into Snapchat. This bypasses Snapchat's camera stack entirely.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't reinstall Snapchat immediately when the camera is black.</strong> Reinstalling deletes all locally saved Memories (if not backed up) and logs you out. A camera permission toggle or app restart fixes this in most cases without losing anything.</li>
+        <li><strong>Don't grant Snapchat 'Always On' location permission just to fix camera issues.</strong> Camera problems and location permissions are unrelated. Snapchat may prompt for location during troubleshooting — this is a separate permission request, not a camera fix.</li>
+        <li><strong>Don't test only in Snapchat to diagnose camera issues.</strong> If Snapchat's camera is broken, test the native Camera app. If that's also broken, the issue is OS-level, not Snapchat-specific — and the fix is completely different.</li>
+        <li><strong>Don't keep the Snapchat app open in the background while troubleshooting.</strong> If Snapchat is running in the background, it may hold the camera resource. Other apps (including your native Camera app) will show a black screen as a result. Force-close all camera-using apps before testing.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

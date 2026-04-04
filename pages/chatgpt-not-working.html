@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -336,6 +338,17 @@
             <p><strong>Download on iPhone:</strong> Open the App Store and search "ChatGPT" — install the official app by OpenAI, Inc. (the developer name, not just "OpenAI").</p>
             <p><strong>Download on Android:</strong> Open Google Play Store and search "ChatGPT" — install the app from OpenAI. Be careful of copycat apps; the official publisher is "OpenAI."</p>
             <p>Once installed, log in with the same account you use on the web. Your conversation history syncs automatically between the app and web versions.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't keep refreshing the page during a known OpenAI outage.</strong> If status.openai.com shows an active incident, refreshing ChatGPT every 30 seconds won't help and can actually pile additional failed requests onto already overloaded servers. Check the status page, and come back once the incident is marked resolved.</li>
+        <li><strong>Don't troubleshoot in a browser with extensions enabled.</strong> Ad blockers, privacy extensions, and script blockers routinely break ChatGPT's interface by blocking requests to OpenAI's API endpoints. Always test in an Incognito/Private window first — if it works there, an extension is your problem, not ChatGPT itself.</li>
+        <li><strong>Don't clear all browser cookies site-wide when troubleshooting ChatGPT.</strong> Clearing all cookies logs you out of every site simultaneously and can cause issues on unrelated services. Instead, clear cookies specifically for openai.com via your browser's settings under Privacy &rarr; Cookies &rarr; Manage. This surgically fixes corrupted sessions without blowing up everything else.</li>
+        <li><strong>Don't assume a billing issue is a technical bug.</strong> If ChatGPT Plus suddenly stops working or gives "you've reached your limit" messages, check your subscription status at platform.openai.com/account/billing. A failed payment or expired card silently downgrades your account without a clear error message in the chat interface.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

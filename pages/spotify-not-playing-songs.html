@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -345,6 +347,17 @@
                 <li>Reopen the Spotify app on your phone and sign back in.</li>
                 <li>Try playing a song — this resolves most persistent playback failures that survived cache clearing.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't log out and back in as a first step.</strong> Logging out of Spotify removes all downloaded songs (Offline mode) and resets your listening session. Clear the cache first — it resolves most playback failures without losing your downloads.</li>
+        <li><strong>Don't download songs over mobile data if you're near your data cap.</strong> Spotify downloads are 30-300 MB per album depending on quality. Downloading over a throttled or near-cap connection can appear to succeed but produces corrupt files that won't play offline.</li>
+        <li><strong>Don't assume a grey song title means the song is unavailable in your country.</strong> Grey tracks in Spotify can mean the song is unavailable in your region, OR that your local cache is corrupted. Try toggling Offline Mode off and on — if the track becomes playable, it was a cache issue, not a regional restriction.</li>
+        <li><strong>Don't run Spotify and a VPN simultaneously without configuring them correctly.</strong> Spotify checks your region against your account country. If your VPN routes traffic through a country where a song is restricted, Spotify greyes it out even if it was available before. Disable the VPN to test playback.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

@@ -229,6 +229,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -331,6 +333,17 @@
                 <li>If your camera broke <em>after</em> an iOS update, check sites like Reddit or MacRumors to see if others on the same update are reporting the same problem. Sometimes the fix is simply waiting for Apple's next patch.</li>
                 <li>While waiting, try using a third-party camera app (Halide, ProCamera, or even the built-in camera within Instagram) to see if the issue is specific to Apple's Camera app or the hardware itself.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't cover the lens while troubleshooting.</strong> A smudge, fingerprint, or case edge blocking the lens causes blurry or dark shots that look like a hardware fault. Clean the lens with a soft cloth before anything else.</li>
+        <li><strong>Don't force-quit the Camera app repeatedly during a freeze.</strong> If Camera is frozen, one force-quit and reopen is fine. Rapidly force-quitting stresses the camera pipeline and can trigger a permission reset, requiring you to re-grant camera access to all apps.</li>
+        <li><strong>Don't assume a black screen means hardware failure.</strong> A black Camera preview is almost always a software glitch — another app holding the camera resource, a permission conflict, or a crashed camera daemon. Restart the phone before concluding the hardware is broken.</li>
+        <li><strong>Don't ignore third-party app conflicts.</strong> If the Camera app works but Instagram or Snapchat show a black screen, the fix is those apps' permissions — not the Camera app. Go to Settings &rarr; Privacy &rarr; Camera, toggle the app off and back on.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
             <div class="faq">

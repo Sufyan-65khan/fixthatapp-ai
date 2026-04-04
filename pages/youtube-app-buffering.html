@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -325,6 +327,17 @@
                 <li>Downloaded videos are available in Library → Downloads, with no internet needed.</li>
             </ol>
             <p>YouTube Premium costs $13.99/month and also removes ads, which can further improve perceived playback speed since ads don't interrupt loading.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't lower video quality to 144p as a permanent fix.</strong> Continuous buffering at high quality is usually a temporary network issue or a CDN routing problem, not a permanent bandwidth limitation. Try 480p first, and check again after 10 minutes — the issue often clears on its own.</li>
+        <li><strong>Don't clear YouTube data (as opposed to cache) on Android.</strong> Clearing app data resets your YouTube account preferences, playback history, downloads, and login session. Clearing the cache achieves the buffering fix without touching any of that.</li>
+        <li><strong>Don't blame your internet speed immediately.</strong> YouTube uses adaptive bitrate streaming — if your connection can handle 10 Mbps on a speed test but YouTube still buffers, the issue is likely CDN routing or YouTube's servers, not your bandwidth. Use fast.com (YouTube's own speed test tool) for a more accurate test.</li>
+        <li><strong>Don't leave YouTube open in multiple tabs or apps simultaneously.</strong> Each YouTube instance streams independently. Two streams on the same connection share bandwidth and can each buffer even when one stream alone would be fine.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

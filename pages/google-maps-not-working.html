@@ -210,6 +210,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -332,6 +334,17 @@
                 <li>If Maps shows a clearly wrong road: tap and hold on the incorrect area &gt; tap the information bar at the bottom &gt; <strong>Suggest an edit</strong> to report the problem to Google.</li>
                 <li>For persistent wrong routing, try tapping <strong>Route Options</strong> and switching between fastest route and alternate routes — sometimes an alternate is more accurate for your area.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't rely on Google Maps offline mode for detailed turn-by-turn navigation in areas you haven't pre-downloaded.</strong> Offline maps only work for areas you've explicitly downloaded in advance. If you're in a dead zone and haven't pre-downloaded the region, Maps will fail silently or show a blank tile. Download the offline map for your destination before you leave home, not once you've lost signal.</li>
+        <li><strong>Don't set Location Mode to "Device Only" (GPS only) and expect Maps to load quickly.</strong> GPS alone is slow to acquire a fix — it can take 1-3 minutes with no Wi-Fi or cell tower data to assist it. The "High Accuracy" mode (using GPS + Wi-Fi + cell data) gives you a location fix in seconds. Using GPS-only mode doesn't improve battery life enough to justify the broken Maps experience.</li>
+        <li><strong>Don't keep Maps running in the background 24/7 and wonder why it seems slow when you open it.</strong> Maps' background activity can cause the app to accumulate stale location cache and cached tile data that takes time to refresh when you open it for active navigation. Force-closing Maps when you're not using it keeps it fresh for the next time you need it.</li>
+        <li><strong>Don't report traffic conditions as incorrect when your device's time zone is wrong.</strong> Google Maps uses your device's clock for live traffic data. If your device time zone is set incorrectly, Maps shows you traffic for the wrong time of day — rush hour traffic at 3am, for example. Make sure "Set Automatically" is enabled in your date and time settings.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

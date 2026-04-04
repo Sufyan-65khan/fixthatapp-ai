@@ -210,6 +210,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -347,6 +349,17 @@
                 <li>Then open Zoom and join the meeting — it should now have clear access to the microphone.</li>
                 <li>Going forward, consider disabling startup programs for competing audio apps: Task Manager → Startup apps → disable Discord, Teams, or Skype from auto-starting.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't grant Zoom microphone access and then wonder why it still doesn't work.</strong> On macOS, after granting microphone permission in System Preferences, Zoom must be fully quit and relaunched — not just closed and reopened. The permission change doesn't take effect on a running instance.</li>
+        <li><strong>Don't test your microphone only in Zoom.</strong> If your mic works in Voice Memos or your system's Sound settings but not in Zoom, the issue is Zoom-specific (permissions or audio device selection). If it doesn't work anywhere, the issue is hardware or OS-level.</li>
+        <li><strong>Don't mute and unmute repeatedly during a meeting when the host has muted everyone.</strong> If a host mutes you, you cannot unmute yourself unless the host allows it. Rapid mute/unmute attempts do nothing and can confuse your audio routing, causing your mic to stay off even after the restriction is lifted.</li>
+        <li><strong>Don't use Bluetooth headphones and expect stable mic input in Zoom.</strong> Bluetooth audio devices in HFP (hands-free) mode — the mode used for mic input — drop audio quality significantly. If call quality is critical, a wired headset or the device's built-in microphone will be more reliable.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

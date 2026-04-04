@@ -292,6 +292,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.45rem; }
@@ -437,6 +439,17 @@
             <h2>Switching to the WhatsApp Desktop App</h2>
 
             <p>If you're using WhatsApp Web daily for work and you keep running into these issues, the desktop app is genuinely better. It maintains a more stable WebSocket connection, doesn't get throttled like a browser tab, and works with multi-device mode. Download it from <strong>whatsapp.com/download</strong> — it's available for Windows and macOS. Setup is the same: scan the QR code from your phone's Linked Devices menu, and you're done. You won't need to re-scan every time unless you're inactive for 14 days.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't scan the QR code multiple times if the first scan fails.</strong> Each QR code is single-use and expires quickly. If the first scan fails, wait for the QR code to refresh (it auto-refreshes every ~20 seconds) and scan the new one — don't scan an expired code multiple times.</li>
+        <li><strong>Don't keep WhatsApp Web open in multiple browser tabs.</strong> WhatsApp Web only supports one active session per browser profile. Opening it in multiple tabs causes connection conflicts where each tab competes for the same session, resulting in disconnects.</li>
+        <li><strong>Don't clear all browser cookies when WhatsApp Web disconnects.</strong> Clearing cookies logs you out of WhatsApp Web and all other sites. To fix WhatsApp Web specifically, log out via the app's Linked Devices menu and back in — don't nuke your entire browser session.</li>
+        <li><strong>Don't expect WhatsApp Web to work if your phone has no internet.</strong> WhatsApp Web mirrors your phone — it is not an independent client. If your phone is offline, in airplane mode, or has mobile data off, WhatsApp Web will disconnect regardless of your computer's connection.</li>
+    </ul>
+</div>
 
             <h2>FAQ</h2>
 

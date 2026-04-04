@@ -210,6 +210,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -349,6 +351,17 @@
                 <li><strong>Set a timed reminder:</strong> Most Google outages resolve within 30 to 90 minutes. Set a 30-minute timer and check status.google.com when it goes off rather than refreshing continuously.</li>
                 <li><strong>Browser tab test:</strong> Leave a Google service tab open and refresh it every few minutes. The moment it loads successfully, the outage has resolved in your region.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't spend time clearing caches and reinstalling apps when a Google-wide outage is confirmed.</strong> If workspace.google.com/status shows an active incident, local fixes are completely irrelevant. No amount of cache clearing or reinstalling will restore Google services that are down at the infrastructure level. Wait for the incident to be resolved, then resume work.</li>
+        <li><strong>Don't assume an outage is global when only one Google service is down for you.</strong> Google operates dozens of independent services on separate infrastructure. Gmail being down doesn't mean Google Drive is also down, and a Google Cloud region failure may only affect specific apps. Check the status page for the specific service — partial outages are common and often resolve faster than full ones.</li>
+        <li><strong>Don't log out of your Google account trying to fix an outage.</strong> Logging out during an active outage means you can't log back in (since authentication itself may be affected) and locks you out of any locally cached data. If Google is down, stay logged in — cached data in Gmail, Drive, and Docs may still be accessible even when the service is degraded.</li>
+        <li><strong>Don't send the same email multiple times thinking it failed to deliver during an outage.</strong> Gmail queues outbound messages and delivers them when service is restored — the message doesn't disappear. Sending it repeatedly during an outage results in the recipient receiving duplicates when everything comes back online.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

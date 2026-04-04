@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -338,6 +340,17 @@
                 <li>If there is an active Gmail incident affecting mail delivery, there is nothing to do except wait — Google's engineering team will be working to resolve it. Check back in an hour.</li>
                 <li>You can also check <strong>downdetector.com/status/gmail</strong> to see user reports of problems in your region.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't only check your inbox — always check Spam and All Mail first.</strong> Gmail's filters are aggressive and frequently send legitimate emails straight to Spam without notifying you. A missing email is in Spam far more often than it failed to arrive at all. Check Spam, then search All Mail with the sender's address before concluding the email was never received.</li>
+        <li><strong>Don't set up Gmail filters or label rules if you don't understand how they cascade.</strong> Multiple overlapping filters can create situations where emails are automatically archived, skipped, or sent to obscure labels and appear to vanish. If you've set up filters in the past, check Settings &rarr; Filters and Blocked Addresses and audit every rule — one misconfigured filter can silently hide entire categories of email.</li>
+        <li><strong>Don't ignore the 15 GB Google Account storage limit.</strong> When your Google Account storage is full (shared across Gmail, Drive, and Photos), Gmail stops receiving new emails entirely and silently bounces them back to the sender. The sender gets a bounce; you see nothing. Check your storage at one.google.com/storage — if it's at 100%, free space before trying anything else.</li>
+        <li><strong>Don't use an aggressive third-party email client filter or forwarding rule and wonder why Gmail looks empty.</strong> If you've set up Gmail to forward all emails to another service, or configured an IMAP client with "delete after fetch" enabled, your Gmail inbox will appear empty even though emails are arriving and being immediately pulled away. Check Settings &rarr; Forwarding and POP/IMAP for any active forwarding rules.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

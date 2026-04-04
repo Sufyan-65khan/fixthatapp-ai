@@ -104,6 +104,8 @@
         .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
         .cookie-btn { border: 1px solid #667eea; background: transparent; color: #fff; padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) { .article { padding: 1.5rem 1rem; } .article h1 { font-size: 1.4rem; } .header-search { display: none; } .cookie-banner { flex-direction: column; align-items: flex-start; } }
     </style>
 </head>
@@ -209,6 +211,17 @@
 
             <p>This seems backwards — video calls use more data. But audio calls use the phone's earpiece by default, while video calls default to speakerphone. If your earpiece hardware is damaged or the software routing for it has a bug, audio calls fail while video calls still work through the speaker.</p>
             <p>Test: open your phone's regular dialer, call a friend, hold it to your ear. If the earpiece is dead in the system dialer too, it's hardware. If the earpiece works elsewhere but not in WhatsApp audio calls: force-close WhatsApp completely, reopen, and retry. The audio codec can get into a broken state that a full restart resolves.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't switch between Wi-Fi and mobile data repeatedly during a call.</strong> WhatsApp calls do not seamlessly hand off between network types. Switching mid-call drops the connection. Decide on one stable connection before calling.</li>
+        <li><strong>Don't uninstall WhatsApp to fix call quality issues.</strong> Reinstalling resets all your local settings and clears your chat backup if not saved. For call problems, clearing the cache or checking microphone/speaker permissions fixes the issue without touching your messages.</li>
+        <li><strong>Don't assume poor call quality means the other person has a bad connection.</strong> WhatsApp call quality depends on both ends. Before blaming the other person's network, test a call with someone on a known-good connection to isolate whether the problem is on your end.</li>
+        <li><strong>Don't leave WhatsApp running in the background with battery optimization enabled.</strong> Android battery optimization kills WhatsApp's microphone access mid-call on many devices. Go to Settings &rarr; Battery &rarr; WhatsApp and set it to 'Unrestricted' to prevent this.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

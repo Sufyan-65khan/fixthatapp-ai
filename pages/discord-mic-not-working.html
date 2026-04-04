@@ -210,6 +210,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -334,6 +336,17 @@
                 <li>Restart your computer after updating.</li>
             </ol>
             <p>For Realtek audio (most common on Windows PCs): download the latest driver directly from realtek.com or your motherboard manufacturer's support page, as the Windows Update version is often months behind.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't grant microphone permission to Discord and assume everything is configured correctly.</strong> OS-level microphone permission is just the first requirement. Discord also needs the correct input device selected in its own Voice Settings, and the input volume set above zero. Many people grant the permission and never check Discord's internal audio settings — both layers need to be right.</li>
+        <li><strong>Don't toggle "Push to Talk" mode without understanding what it does.</strong> Switching to Push to Talk in Discord's Voice Settings means your mic will never transmit unless you physically hold the assigned key. If you later forget PTT is active and wonder why nobody can hear you, this is exactly why. Stick with Voice Activity mode during troubleshooting so you can test naturally.</li>
+        <li><strong>Don't update your audio drivers through Windows Update alone.</strong> Windows Update frequently installs generic or older audio driver versions. For Discord mic issues caused by driver conflicts, download the driver directly from your motherboard manufacturer's support page or Realtek's website — these are almost always newer and more stable than what Windows Update provides.</li>
+        <li><strong>Don't use the mic in voice channels while also having it open in a game or another app.</strong> When two applications both try to hold exclusive control of a microphone, one of them will fail silently. Close any other application using your mic (game voice chat, Zoom, OBS) before testing in Discord to isolate whether the problem is Discord-specific or a device conflict.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

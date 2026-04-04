@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -348,6 +350,17 @@
                 <li>If filtering is enabled, either disable it or add your device's MAC address to the allowed list.</li>
                 <li>On iPhone: if your router uses MAC filtering and your iPhone uses a randomized MAC, go to Settings → Wi-Fi → tap (i) next to your network → toggle off <strong>Private Wi-Fi Address</strong> for this network specifically.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't restart your router immediately without checking if others are affected.</strong> Ask another person on the same network if they can browse. If they can, the issue is device-specific and a router restart won't help. If no one can browse, then the router is the right place to start.</li>
+        <li><strong>Don't 'forget' and rejoin your Wi-Fi network as a first fix.</strong> Forgetting the network deletes your saved password and any static IP configuration. For most 'connected but no internet' issues, an IP renewal (ipconfig /release then /renew on Windows, or toggling Wi-Fi off and on) achieves the same result without losing credentials.</li>
+        <li><strong>Don't assume the problem is your ISP before checking your router.</strong> 'No internet access' on the device doesn't mean the ISP connection is down. Your router may have gotten a bad IP from DHCP, or the DNS server may be unresponsive. These are router-side fixes, not ISP issues.</li>
+        <li><strong>Don't change your DNS to 8.8.8.8 permanently without understanding the implications.</strong> Switching to Google DNS may fix a DNS issue but bypasses your ISP's local DNS caching, can affect geo-targeted services, and may have privacy implications. Use it as a test first, then decide whether to keep it.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

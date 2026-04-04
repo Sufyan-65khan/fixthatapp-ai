@@ -210,6 +210,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -319,6 +321,17 @@
                 <li>Facebook Lite has most core features: feed, messaging (basic), groups, and Marketplace.</li>
             </ol>
             <p>Facebook Lite is Android-only. iPhone users who need a lighter option can use <strong>m.facebook.com</strong> in Safari — add it to your home screen as a shortcut for an app-like experience without the weight of the full app.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't delete and reinstall Facebook every week as your regular fix.</strong> Reinstalling clears the local cache and app files, but if the root cause is a Facebook server-side bug or a pending OS update that creates a compatibility conflict, the crash will return quickly. Reinstalling is a short-term fix that masks the actual problem rather than solving it.</li>
+        <li><strong>Don't ignore low storage warnings on your phone.</strong> Facebook is one of the most storage-hungry apps and needs space to write cache files as you scroll. When device storage drops below about 10%, Facebook becomes increasingly likely to crash mid-session because it can't write temporary data. Free up storage first before any other troubleshooting step.</li>
+        <li><strong>Don't disable background app refresh or data access and then report the app as broken.</strong> Facebook requires background access to load notifications and pre-cache content. Aggressively restricting its background permissions in iOS or Android battery settings causes partial functionality failures that look like crashes but are actually intentional restrictions you applied.</li>
+        <li><strong>Don't use the Facebook app on Android devices that are 3+ years behind on Android OS updates.</strong> Facebook drops support for older Android versions with each major app release. Running Facebook on Android 8 or earlier while the app has moved on to require Android 10+ creates instability that no amount of cache clearing or reinstalling will fix. The long-term fix is updating your OS or switching to m.facebook.com in Chrome.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

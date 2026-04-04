@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -318,6 +320,17 @@
             <p><strong>On iPhone:</strong> Press and hold the Amazon app icon &rarr; tap Remove App &rarr; Delete App. Then reinstall from the App Store.</p>
             <p><strong>On Android:</strong> Press and hold the Amazon app icon &rarr; tap Uninstall &rarr; confirm. Then reinstall from Google Play Store.</p>
             <p>After reinstalling, sign back into your Amazon account. All your data will be exactly as you left it.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't uninstall the app without clearing data first on Android.</strong> If the app is crashing due to corrupted cached data, uninstalling without clearing data first can leave behind cached files that get pulled back in when you reinstall, causing the same crash. On Android, go to Settings &rarr; Apps &rarr; Amazon &rarr; Storage &rarr; Clear Data before uninstalling.</li>
+        <li><strong>Don't ignore app update notifications thinking the old version is fine.</strong> Amazon actively deprecates old app versions — if your version falls below their minimum supported build, entire sections of the app will silently fail to load without any error message. Update the app first before any other troubleshooting step.</li>
+        <li><strong>Don't use a VPN and assume it's not causing the loading issue.</strong> Amazon blocks many commercial VPN IP ranges specifically because of regional pricing and payment fraud concerns. Even if your VPN worked fine with Amazon last week, IP blocks are updated continuously. Disable the VPN and test immediately — this single step fixes loading issues far more often than people expect.</li>
+        <li><strong>Don't manually set your device date and time.</strong> Amazon's servers use SSL certificate validation that is time-sensitive. If your device clock is even a few minutes off, connections fail silently. Make sure "Set Automatically" is enabled in your date and time settings — never manually override it while troubleshooting.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

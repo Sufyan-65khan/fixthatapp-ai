@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -298,6 +300,17 @@
             <h3>Fix 6: Use the DALL-E API Directly if ChatGPT Web Is Having Issues</h3>
             <p><strong>Why this matters:</strong> DALL-E is accessible both through ChatGPT's web interface and directly via the OpenAI API. These are different infrastructure pathways. When ChatGPT's web frontend is having issues, the API often remains functional. If you have an OpenAI API key, you can call DALL-E 3 directly and bypass any frontend problems.</p>
             <p>For non-developers, a simpler option is to try OpenAI's image generation through a third-party app or tool that uses the OpenAI API, such as the DALL-E feature in Bing Image Creator (which uses OpenAI models), or other OpenAI-integrated apps. These alternative frontends can bypass whatever is causing failures on the main ChatGPT interface.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't keep resubmitting a rejected prompt with minor word changes.</strong> DALL-E's safety filters pattern-match on intent, not just individual words. If your prompt is rejected, making small edits like replacing one word usually triggers the same rejection. Instead, rethink the concept entirely and describe it from a different creative angle — abstract, artistic, or metaphorical framing often works where literal descriptions fail.</li>
+        <li><strong>Don't assume a generation failure during peak hours is a permanent policy block.</strong> DALL-E rate limiting and server timeouts produce vague error messages that look identical to content policy rejections. If you hit an error on an innocuous prompt you've used successfully before, wait 15-30 minutes and try during off-peak hours before concluding your account is restricted.</li>
+        <li><strong>Don't use your entire free monthly DALL-E credit allowance on low-resolution test images.</strong> ChatGPT Plus accounts get a finite number of DALL-E generations per month. Every failed generation that was caused by a vague prompt still consumes a credit. Write your prompt carefully and fully before generating — don't treat DALL-E like an iterative free tool.</li>
+        <li><strong>Don't request photorealistic images of real people by name.</strong> DALL-E explicitly blocks generation of realistic images of real, named individuals to prevent misuse. Requests that name specific living or recently deceased people will fail without exception. If you need a similar aesthetic, describe physical traits, style, or era rather than naming a real person.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

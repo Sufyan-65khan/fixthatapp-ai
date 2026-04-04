@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -335,6 +337,17 @@
                 <li>After the factory reset completes, open the Google Home app and set the device up again from scratch.</li>
                 <li>Test Hey Google once setup is complete — most factory resets resolve persistent response failures on smart speakers.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't re-train your voice model every time Assistant mishears you.</strong> Repeatedly retraining "Hey Google" can create a confused voice model with conflicting samples, making recognition worse over time. Retrain once with clear, calm pronunciation in a quiet room, then leave it. If it's still unreliable, the issue is more likely a mic hardware problem or background noise than the model itself.</li>
+        <li><strong>Don't disable "Hey Google" detection and re-enable it as a fix for non-response issues.</strong> Toggling voice activation off and back on doesn't reset the underlying issue if the Google app is in a bad state. You need to clear the Google app's cache or force-stop it — toggling the setting alone just burns time.</li>
+        <li><strong>Don't give Google Assistant microphone permission but deny location access and then expect full functionality.</strong> Many core Assistant features — navigation, local search, weather for your current location, and smart home routines — require both microphone and location permissions. Denying location gives you a partially broken Assistant that returns wrong or generic results with no error message explaining why.</li>
+        <li><strong>Don't try to use Google Assistant on a device with Do Not Disturb mode fully enabled.</strong> DND on Android can suppress Assistant's audio output even when voice commands are recognized. If you're speaking the wake word and the screen activates but there's no audio response, check that DND is not blocking media or system sounds.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

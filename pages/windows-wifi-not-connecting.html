@@ -229,6 +229,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -355,6 +357,17 @@
                 <li>Your PC will restart automatically. After restart, reconnect to your Wi-Fi network.</li>
             </ol>
             <p>On Windows 10, this is at <strong>Settings &gt; Network &amp; Internet &gt; Status &gt; Network reset</strong>.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't delete your network adapter drivers without a backup plan.</strong> Uninstalling Wi-Fi drivers without having an ethernet connection or a driver backup means you may be unable to reconnect to the internet to redownload them. Only remove drivers if you have an alternative connection method.</li>
+        <li><strong>Don't run Windows Network Diagnostics expecting a complete fix.</strong> The built-in network troubleshooter diagnoses and fixes basic issues (IP conflicts, DNS problems), but it cannot fix corrupted driver files, router configuration issues, or ISP outages. Use it as a starting point, not a complete solution.</li>
+        <li><strong>Don't connect to open public Wi-Fi to test if 'Windows' is the problem.</strong> Open networks behave differently than secured WPA2/3 networks and don't require the same authentication flow. A successful open Wi-Fi connection doesn't prove your Windows Wi-Fi stack is working correctly.</li>
+        <li><strong>Don't reset your entire network stack (netsh winsock reset) for a basic connection problem.</strong> A Winsock reset fixes deep TCP/IP corruption but also resets firewall rules and proxy settings, which can break other network applications. Try targeted fixes first — IP renewal, DNS flush, adapter disable/enable.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
             <div class="faq">

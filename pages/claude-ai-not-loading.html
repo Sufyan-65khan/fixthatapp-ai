@@ -218,6 +218,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -306,6 +308,17 @@
             <h3>Fix 7: Use the Claude Mobile App on iOS or Android</h3>
             <p><strong>Why this matters:</strong> If Claude.ai is broken in your browser but you need it urgently, the Claude mobile app (available on both iOS App Store and Google Play) is a completely separate client. It connects to the same Anthropic backend but doesn't share browser state, cookies, or extensions. Browser issues that prevent claude.ai from loading don't affect the mobile app.</p>
             <p>Download the official Claude app from Anthropic (search "Claude by Anthropic" to find the correct app). Log in with the same account credentials. Your conversation history syncs between the web and mobile clients, so you won't lose anything by switching temporarily.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't keep submitting the same message repeatedly when Claude stops mid-response.</strong> Mid-response cutoffs are usually a server-side timeout. Submitting again immediately queues another request on an already busy server. Wait 30-60 seconds and try once, or break your prompt into a shorter request that requires less output to complete.</li>
+        <li><strong>Don't try to fix Claude Pro billing issues through the chat interface.</strong> If Claude.ai suddenly starts giving "usage limit" errors, the issue is your subscription status, not a bug. The chat interface won't tell you your card failed — go directly to claude.ai/settings/billing to check your payment method and subscription status.</li>
+        <li><strong>Don't use browser extensions that modify requests or inject scripts on AI chat sites.</strong> Extensions like Grammarly, certain ad blockers, and privacy shields can intercept and modify the JavaScript that handles streaming responses. This causes Claude's responses to stop loading mid-stream. Test in a clean Incognito window before blaming Claude's servers.</li>
+        <li><strong>Don't upload very large files and then immediately expect a response.</strong> Uploading documents, PDFs, or images to Claude requires the file to be processed server-side before Claude can respond. On large files during peak hours, this processing takes longer and can appear as if Claude has frozen. Wait for the upload indicator to fully complete before sending your message.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

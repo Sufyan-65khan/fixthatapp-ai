@@ -198,6 +198,8 @@
             padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -327,6 +329,17 @@
             <p>To rule out the phone side: go to your phone's notification settings for Instagram and confirm notifications are enabled at the system level. On iPhone: <strong>Settings &gt; Notifications &gt; Instagram</strong>. On Android: <strong>Settings &gt; Apps &gt; Instagram &gt; Notifications</strong>. If they're enabled there but still not arriving, check within Instagram itself: Profile → Settings → Notifications → and make sure the notification types you want are turned on.</p>
 
             <p>The tricky one on Android: MIUI (Xiaomi) and One UI (Samsung) both have aggressive notification management that can block Instagram notifications even if the system settings say they're enabled. On Samsung, check <strong>Settings &gt; Notifications &gt; Advanced settings &gt; Show notification icons</strong> and ensure Instagram is in the active list, not the sleeping apps list. On Xiaomi/MIUI, go to Security app → Autostart and make sure Instagram has autostart permission — without it, MIUI prevents Instagram from receiving push notifications when it's not actively running.</p>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't log out of Instagram and back in as a first troubleshooting step.</strong> Logging out doesn't clear corrupted cache — it just adds an extra login step and can trigger Instagram's suspicious login detection, which may require additional email or phone verification and slow you down further. Clear the cache through your device's app settings instead.</li>
+        <li><strong>Don't use third-party Instagram viewer apps or web scrapers when the official app is down.</strong> Third-party tools that access Instagram data without authorization violate Instagram's Terms of Service and using them during troubleshooting can trigger automated security flags on your account, potentially resulting in a temporary restriction separate from whatever the original issue was.</li>
+        <li><strong>Don't keep force-stopping and reopening Instagram rapidly.</strong> Force-stopping the app repeatedly while Instagram is in the middle of syncing data can corrupt the local database. If the app is unresponsive, force-stop it once, wait 10-15 seconds, then reopen. Give it a full 30 seconds to load before concluding it's broken.</li>
+        <li><strong>Don't disable Instagram's access to mobile data and then report it as broken.</strong> Instagram on mobile data requires explicit permission in Android's data saver settings and iOS's mobile data settings. If someone enabled data restrictions for Instagram thinking it would save data, the app will silently fail to load anything on cellular — it looks broken but is intentionally restricted.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

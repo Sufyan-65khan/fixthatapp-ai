@@ -210,6 +210,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -332,6 +334,17 @@
                 <li>Check if the recipient's address is in your Blocked Senders list: <strong>Home</strong> &rarr; <strong>Junk</strong> &rarr; <strong>Junk Email Options</strong> &rarr; <strong>Blocked Senders</strong> tab.</li>
                 <li>If your domain has been flagged as a spam source, contact your email administrator to investigate SPF, DKIM, and DMARC records.</li>
             </ul>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't repeatedly click Send when an email is stuck in Outbox.</strong> Each click queues another attempt and can create duplicate drafts. Open the Outbox, delete the stuck message, fix the underlying issue, then resend.</li>
+        <li><strong>Don't ignore the difference between SMTP and IMAP errors.</strong> 'Cannot connect to server' means IMAP (incoming) is down. 'Message could not be sent' means SMTP (outgoing) has a problem. These require different fixes.</li>
+        <li><strong>Don't remove and re-add your account as a first step.</strong> Removing an account deletes all locally cached emails and forces a full re-sync. For most sending failures there is a targeted fix in Account Settings that doesn't wipe local data.</li>
+        <li><strong>Don't test by sending email to yourself.</strong> Outlook often delivers internally even when external SMTP is broken. Send to a different domain (Gmail, etc.) to get an accurate test.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

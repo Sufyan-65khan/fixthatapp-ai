@@ -210,6 +210,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -331,6 +333,17 @@
                 <li><strong>Latency monitoring:</strong> Track average response time. OpenAI p99 latency degrading significantly is often an early warning sign before a full outage. Alert when average response time doubles from baseline.</li>
                 <li><strong>Status page webhook:</strong> OpenAI's status page supports webhook notifications. Subscribe so your monitoring system receives immediate notification when an incident is posted or updated.</li>
             </ul>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't retry API calls in a tight loop during an outage.</strong> Hammering the API with rapid retries doesn't speed recovery. It can trigger rate-limiting or IP throttling that persists after the outage clears, making your service slow to recover.</li>
+        <li><strong>Don't rotate API keys as a first response to errors.</strong> A 503 or 429 error during an outage is not a key issue. Rotating your key wastes time and can break integrations if the old key is hardcoded elsewhere. Always check status.openai.com first.</li>
+        <li><strong>Don't assume your code is broken when the API returns unusual errors.</strong> During degraded service, OpenAI can return inconsistent errors even for valid requests. Verify against the status page before debugging your implementation.</li>
+        <li><strong>Don't swallow errors with broad exception handlers during debugging.</strong> Catching all exceptions silently makes it impossible to detect when the API recovers and leaves users with silent failures instead of actionable error messages.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

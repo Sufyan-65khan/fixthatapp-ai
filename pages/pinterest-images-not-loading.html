@@ -210,6 +210,8 @@
             font-size: 0.8rem;
         }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) {
             .article { padding: 1.5rem 1rem; }
             .article h1 { font-size: 1.4rem; }
@@ -322,6 +324,17 @@
                 <li>Search for "Pinterest not loading" on X/Twitter to see if others are reporting the same issue right now.</li>
                 <li>If it is a server-side outage, no local fix will work. Wait 30–60 minutes and try again. Pinterest outages typically resolve within a few hours.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't clear all Pinterest app data as a first step.</strong> Clearing app data on Android deletes saved pins, account cache, and login session. For most image loading failures, clearing just the cache (not data) is sufficient.</li>
+        <li><strong>Don't assume broken images mean your account has a problem.</strong> Image loading failures are almost always CDN or network issues. Your account and saved pins are completely unaffected.</li>
+        <li><strong>Don't blame Pinterest when using a VPN.</strong> VPNs that route through servers with bad reputation scores are often blocked by Pinterest's CDN. If images load after disabling the VPN, the issue is the VPN's exit node.</li>
+        <li><strong>Don't reload the page 10+ times hoping images appear.</strong> Repeated refreshes won't fix a CDN issue and may rate-limit your requests. Wait 5 minutes and try once — or switch networks.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 

@@ -140,6 +140,8 @@
         .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
         .cookie-btn { border: 1px solid #667eea; background: transparent; color: #fff; padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
         .cookie-btn.primary { background: #667eea; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
         @media (max-width: 600px) { .article { padding: 1.5rem 1rem; } .article h1 { font-size: 1.4rem; } .header-search { display: none; } .cookie-banner { flex-direction: column; align-items: flex-start; } }
     </style>
 </head>
@@ -248,6 +250,17 @@
                 <li>Compress product images to under 500KB before uploading using tools like TinyPNG.</li>
                 <li>Use Google PageSpeed Insights at pagespeed.web.dev to get specific improvement recommendations for your store URL.</li>
             </ol>
+
+            <h2>What NOT to Do</h2>
+<div class="dont-do">
+    <div class="dd-title">Common mistakes that make this worse</div>
+    <ul>
+        <li><strong>Don't contact Shopify support before checking their status page.</strong> Most store loading failures during peak periods are infrastructure incidents. Shopify's status page at status.shopify.com will tell you within 5 minutes if it is a platform-wide issue.</li>
+        <li><strong>Don't deactivate your store or change themes during an outage.</strong> Making configuration changes while Shopify is experiencing issues can corrupt your theme settings or trigger additional errors. Wait for the platform to stabilize before making changes.</li>
+        <li><strong>Don't assume your domain is broken when the store won't load.</strong> 'This site can't be reached' often means a Shopify CDN issue, not a DNS problem with your custom domain. Test by trying the default .myshopify.com URL first.</li>
+        <li><strong>Don't clear payment gateway credentials when checkout stops working.</strong> Checkout failures during an outage are usually temporary. Re-entering payment credentials when the gateway is already active can create duplicate payment method records.</li>
+    </ul>
+</div>
 
             <h2>Frequently Asked Questions</h2>
 
