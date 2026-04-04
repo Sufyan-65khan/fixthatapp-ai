@@ -20,7 +20,15 @@
       "Bash(do echo:*)",
       "Read(//c/Users/sufya/fixthatapp-ai/**)",
       "Bash(done)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "mcp__claude_ai_Vercel__deploy_to_vercel",
+      "Bash(vercel deploy:*)",
+      "Bash(do)",
+      "Bash(echo \"=== $f ===\")",
+      "Bash(python -c \":*)",
+      "Bash(curl:*)",
+      "Bash(xargs -I{} git diff-tree --no-commit-id -r --name-only {})"
     ]
   }
 }

@@ -81,66 +81,74 @@
     <div class="container">
         <div class="card">
             <h1>About FixThatApp</h1>
-            <p class="subtitle">Free tools and practical guides — built for real people with real problems.</p>
+            <p class="subtitle">An independent troubleshooting and tools site — built by one person, for real problems.</p>
 
-            <p>FixThatApp is an independent utility website launched in 2025. It was built out of a simple frustration: when something breaks — an app, a calculator, a tool you rely on — finding a clear, no-nonsense answer is harder than it should be. Most results are either too vague, behind a paywall, or written by someone who has clearly never experienced the problem themselves.</p>
+            <p>FixThatApp was built out of a specific frustration. The year was 2024 and I was trying to fix a WhatsApp calling issue for my parents. Every result I found was either a blog post written by someone who clearly hadn't tried the steps themselves, a forum thread that ended without a resolution, or a "top 10 fixes" list where step one was "restart your phone" and step two was "update the app." None of it addressed why the problem was happening or how to tell which fix applied to my situation.</p>
 
-            <p>FixThatApp was created to be different: every guide, every calculator, every tool is designed to get you to a working answer in under two minutes. No accounts. No subscription. No "upgrade to premium." Just working solutions.</p>
+            <p>So I started writing guides the way I wanted to find them: diagnostic first, then targeted fixes in order of likelihood, with an explanation of what's actually causing each failure. No filler. No padding. No "this is a common issue" preamble that wastes three paragraphs before saying anything useful.</p>
+
+            <p>That became FixThatApp — which has since grown to cover 48 in-depth troubleshooting guides across apps, devices, and services, plus 60+ free browser-based tools and a technical blog.</p>
 
             <div class="stat-grid">
                 <div class="stat">
-                    <div class="stat-num">115+</div>
-                    <div class="stat-label">Free online tools</div>
+                    <div class="stat-num">48</div>
+                    <div class="stat-label">In-depth troubleshooting guides</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-num">600+</div>
-                    <div class="stat-label">Troubleshooting guides</div>
+                    <div class="stat-num">60+</div>
+                    <div class="stat-label">Free browser-based tools</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-num">80+</div>
-                    <div class="stat-label">In-depth blog articles</div>
+                    <div class="stat-num">0</div>
+                    <div class="stat-label">Paywalls or signups required</div>
                 </div>
             </div>
 
-            <h2>What We Publish</h2>
-            <p>FixThatApp covers three main areas:</p>
-            <ul>
-                <li><strong>Free online tools</strong> — calculators (GST, SIP, compound interest, loan EMI, tax, profit margin), text utilities (duplicate remover, line sorter, whitespace cleaner, diff checker), developer tools (JWT decoder, hash generator, URL encoder, JSON formatter), and productivity tools (Pomodoro timer, date calculator, timezone planner).</li>
-                <li><strong>Troubleshooting guides</strong> — step-by-step fixes for common problems with apps like WhatsApp, Discord, Netflix, Spotify, Instagram, Gmail, and hundreds more. Each guide walks through likely causes and solutions in order of probability, not in order of what's easiest to write.</li>
-                <li><strong>Tool and reference guides</strong> — in-depth explainers for how calculators and utilities work. Not just "use the tool" — but why the math works, what the formulas mean, what common mistakes to avoid, and when you'd use one approach vs another.</li>
-            </ul>
+            <h2 id="editorial">How Every Guide Is Written</h2>
+            <p>Every troubleshooting guide on FixThatApp follows the same process, in this order:</p>
+            <ol style="margin:.5rem 0 1rem 1.4rem;color:#444">
+                <li style="margin-bottom:.5rem"><strong>Reproduce the problem.</strong> I go through the actual failure scenario before writing a word. If I can't reproduce it, I find someone who has reported it recently with enough detail to understand the cause.</li>
+                <li style="margin-bottom:.5rem"><strong>Identify the root cause, not just the symptom.</strong> "WhatsApp not calling" can be five different problems — a firewall issue, a battery optimization kill, a VoIP block on the carrier, a codec mismatch, or a regional restriction. Each one has a different fix.</li>
+                <li style="margin-bottom:.5rem"><strong>Order fixes by probability, not ease.</strong> Most guides put "restart your phone" first because it's easy to write. I put it where it actually belongs in the diagnostic sequence — which is rarely first.</li>
+                <li style="margin-bottom:.5rem"><strong>Check against current app behaviour.</strong> Apps change. A fix that worked in 2022 may not work in 2026 because the UI moved, the feature was renamed, or the underlying cause was patched. Every guide is reviewed against the current app version before publishing.</li>
+                <li style="margin-bottom:.5rem"><strong>Add the "What NOT to Do" section.</strong> Almost every troubleshooting problem has a common mistake that makes it worse. These are documented specifically — not as generic warnings, but as real scenarios where the wrong step turns a recoverable problem into a harder one.</li>
+            </ol>
 
-            <h2>Who Builds and Maintains This Site</h2>
+            <h2>Who Writes and Maintains This Site</h2>
             <div class="team-card">
                 <strong>Sufyan Khan — Founder &amp; Editor</strong>
-                <p>Sufyan is a developer and digital creator with a background in web development, SEO, and building practical software tools. FixThatApp grew from personal projects — tools and guides built to solve recurring problems — into a full reference website. He writes and reviews content, builds and maintains the tool implementations, and handles technical SEO.</p>
-                <p>Contact: <a href="mailto:sufyankhan65@gmail.com">sufyankhan65@gmail.com</a></p>
+                <p>I'm a web developer based in Pakistan. I've been building websites and tools since 2019 — mostly things I needed that didn't exist yet. FixThatApp is the public-facing version of guides and tools I was keeping for my own use and sharing with friends and family when something broke.</p>
+                <p>My background is in web development and technical SEO. I'm not a certified IT professional, but I've been diagnosing software problems for long enough that I've seen most failure patterns repeat. The guides here are written from that experience, not from reading other guides and paraphrasing them.</p>
+                <p>I write every guide on this site personally. There is no content team, no outsourced writers, and no AI generation pipeline. When a guide has my name on it, I wrote it.</p>
+                <p style="margin-top:.75rem">
+                    <strong>Contact:</strong> <a href="contact.html">contact form</a> or <a href="mailto:sufyankhan65@gmail.com">sufyankhan65@gmail.com</a>
+                </p>
             </div>
-            <p>Content is also reviewed against up-to-date source documentation (official app help centers, RFC specifications for developer tools, government portals for tax and GST content) before publication. When platforms update their behavior, the relevant guides and tools are updated to match.</p>
 
-            <h2>Our Editorial Standards</h2>
-            <ul class="principle-list">
-                <li><strong>No generic advice.</strong> Every guide is written for a specific problem, not adapted from a generic template. "Try restarting your device" is not a guide; it's a guess. We explain what causes the problem and why each step fixes it.</li>
-                <li><strong>No paywalls.</strong> Every tool and guide is free to use without creating an account. The site is supported by display advertising (Google AdSense), which is clearly disclosed in our Privacy Policy and Cookie Policy.</li>
-                <li><strong>Accurate calculations.</strong> All calculators (GST, tax, SIP, compound interest, loan EMI, profit margin, etc.) use standard financial formulas. Complex calculations reference official methodology — for example, India's GST slab structure follows official government schedules.</li>
-                <li><strong>Content is updated.</strong> Troubleshooting guides are reviewed when platform behavior changes. Blog articles are revised when formulas, regulations, or best practices evolve. The "Updated" date on each page reflects the last substantive review.</li>
-                <li><strong>Privacy is respected.</strong> All tools run entirely in your browser. We do not collect, store, or transmit the inputs you enter into any calculator or text tool. See our <a href="privacy-policy.html">Privacy Policy</a> for full details.</li>
-                <li><strong>Transparent advertising.</strong> We display Google AdSense ads. Ads are clearly separate from editorial content. We do not accept sponsored articles or paid-for guide placements.</li>
+            <h2>What the Site Covers</h2>
+            <ul>
+                <li><strong>Troubleshooting guides</strong> — step-by-step diagnostic guides for apps like WhatsApp, Discord, Instagram, Spotify, Gmail, Chrome, and more. Each guide identifies the likely cause first, then gives targeted fixes for each cause. Not a list of things to try.</li>
+                <li><strong>Free browser-based tools</strong> — calculators (GST, SIP, compound interest, loan EMI, tax, profit margin), developer tools (JWT decoder, hash generator, JSON formatter, regex tester), and text utilities (diff checker, duplicate remover, whitespace cleaner). Everything runs in your browser — nothing is sent to a server.</li>
+                <li><strong>Technical blog</strong> — in-depth explainers on the topics behind the tools and guides: how EMI formulas work, what makes a password actually secure, why CSS minification works, how DNS propagation happens. Written for people who want to understand, not just copy-paste.</li>
             </ul>
 
-            <h2>Why Build This?</h2>
-            <p>There are thousands of calculator websites. Most are designed to rank in search results and show ads — not to actually help users understand what they're calculating. A GST calculator that gives you a number but doesn't explain inclusive vs exclusive pricing, or what the reverse calculation means, has half-done its job. FixThatApp tries to give both: the instant answer from the tool, and the explanation that helps you understand and trust the result.</p>
-            <p>The same principle applies to troubleshooting: a guide that lists 12 possible fixes without explaining why any of them work leaves users guessing. FixThatApp guides explain the likely cause, why it happens, and which fix addresses which cause — so you can skip straight to the one that applies to your situation.</p>
+            <h2 id="standards">Editorial Standards</h2>
+            <ul class="principle-list">
+                <li><strong>Every fix is explained, not just listed.</strong> A guide that says "clear your cache" without explaining what cache does and why clearing it helps is not useful. Every step on this site includes a brief explanation of the underlying cause.</li>
+                <li><strong>No paywalls, no accounts, no upsells.</strong> Every tool and guide is free. The site is supported by Google AdSense display advertising, which is disclosed in the <a href="privacy-policy.html">Privacy Policy</a>.</li>
+                <li><strong>Tools don't touch your data.</strong> All calculators and text tools run entirely in your browser. Input values are not sent anywhere. There are no server-side requests when you use any tool on this site.</li>
+                <li><strong>Dates reflect actual last-reviewed dates.</strong> The "Last updated" date on each page is the date I last reviewed and verified the content against current app behaviour — not the original publication date.</li>
+                <li><strong>No sponsored content.</strong> Articles and guides are not paid placements. There is no mechanism to buy a mention on this site.</li>
+            </ul>
 
-            <h2>Content Corrections &amp; Feedback</h2>
-            <p>If you find a calculation error, an outdated troubleshooting step, or a broken tool, please <a href="contact.html">contact us</a>. Include the page URL and a description of the issue. We aim to review and correct reported errors within 2–5 business days.</p>
+            <h2>Content Corrections</h2>
+            <p>If a fix no longer works, a UI path has changed, or a calculator gives you a wrong result — please <a href="contact.html">let me know</a> with the page URL and a description of the issue. I aim to review and correct reported errors within 2–5 business days.</p>
 
             <p class="links-row" style="margin-top:1.5rem">
-                <a href="tools/">All Tools</a>
+                <a href="index.html">All Guides</a>
+                <a href="tools/">Tools</a>
                 <a href="blog/">Blog</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="cookie-policy.html">Cookie Policy</a>
-                <a href="terms.html">Terms</a>
                 <a href="contact.html">Contact</a>
             </p>
         </div>
