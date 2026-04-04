@@ -3,219 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Guide: Twitter (X) App Crashing - FixThatApp</title>
-    <meta name="description" content="The Twitter (now X) app may crash unexpectedly when opening the app, scrolling through the feed, or trying to post a tweet. The app might close immediately">
-    <meta name="keywords" content="twitter (x) app crashing, fix, troubleshooting, how to fix, not working, error, solution">
+    <title>Twitter / X App Crashing: Why It Crashes and How to Stop It | FixThatApp</title>
+    <meta name="description" content="Twitter or X app crashing on open, while scrolling, or when loading media? The crash type tells you exactly what's broken — here's how to read it and fix it.">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/twitter-app-crashing.html">
-    <meta name="robots" content="noindex, follow">
-    <meta property="og:title" content="Troubleshooting Guide: Twitter (X) App Crashing - FixThatApp">
-    <meta property="og:description" content="The Twitter (now X) app may crash unexpectedly when opening the app, scrolling through the feed, or trying to post a tweet. The app might close immediately">
+    <meta property="og:title" content="Twitter / X App Crashing: Why It Crashes and How to Stop It | FixThatApp">
+    <meta property="og:description" content="X app crashing on open, scrolling, or media load? The crash type tells you what's broken. Find yours and fix it.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/twitter-app-crashing.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Troubleshooting Guide: Twitter (X) App Crashing - FixThatApp">
-    <meta name="twitter:description" content="The Twitter (now X) app may crash unexpectedly when opening the app, scrolling through the feed, or trying to post a tweet. The app might close immediately">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script>
     (function() {
       try {
         var consent = localStorage.getItem('fta_cookie_consent');
-        if (consent === 'rejected') {
-          window.adsbygoogle = window.adsbygoogle || [];
-          window.adsbygoogle.requestNonPersonalizedAds = 1;
-        }
+        if (consent === 'rejected') { window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.requestNonPersonalizedAds = 1; }
       } catch (e) {}
     })();
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "Troubleshooting Guide: Twitter (X) App Crashing",
-      "description": "The Twitter (now X) app may crash unexpectedly when opening the app, scrolling through the feed, or trying to post a tweet. The app might close immediately",
-      "dateModified": "2026-03-05",
-      "author": {
-        "@type": "Organization",
-        "name": "FixThatApp",
-        "url": "https://www.fixthatapp.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "FixThatApp",
-        "url": "https://www.fixthatapp.com"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.fixthatapp.com/pages/twitter-app-crashing.html"
-      }
+      "@context": "https://schema.org", "@type": "TechArticle",
+      "headline": "Twitter / X App Crashing: Why It Crashes and How to Stop It",
+      "description": "X app crashing on open, while scrolling, or on media load. Covers crash patterns, corrupt cache, media decoder failures, account session corruption, and OS compatibility issues.",
+      "dateModified": "2026-04-03",
+      "author": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "publisher": {"@type": "Organization", "name": "FixThatApp", "url": "https://www.fixthatapp.com"},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.fixthatapp.com/pages/twitter-app-crashing.html"}
     }
     </script>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
+      "@context": "https://schema.org", "@type": "FAQPage",
       "mainEntity": [
         {
-          "@type": "Question",
-          "name": "Why does the X app crash only when I open a specific feature?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This could be a bug in that specific feature. Make sure you&#x27;re running the latest version. If the issue persists, report it to X support with details about which feature causes the crash."
-          }
+          "@type": "Question", "name": "Twitter / X app crashes immediately on open — how do I fix it?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Immediate crashes on launch are almost always a corrupted session or broken cached data from a failed update. On Android: Settings > Apps > X (Twitter) > Storage > Clear Cache (not Clear Data). On iPhone: offload the app via Settings > General > iPhone Storage > X > Offload App, then reinstall. If it still crashes after clearing cache, do a full uninstall and reinstall — this fixes cases where the update process itself was corrupted."}
         },
-    {
-          "@type": "Question",
-          "name": "Can I use Twitter/X on a web browser instead?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, you can access X at x.com or twitter.com from any mobile or desktop browser as a temporary workaround while troubleshooting the app."
-          }
+        {
+          "@type": "Question", "name": "X crashes when I scroll down my timeline — why?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Scroll crashes usually mean the app hit a piece of media — a video, GIF, or image — that it can't decode. This is different from a general crash. The specific tweet causing the crash is almost always one with an autoplay video or an unusually large image. To work around it: open X's timeline in the browser version (twitter.com or x.com) and scroll past the problematic content, then reopen the app. Also check for a pending app update — crashes on specific media types are often patched in the next release."}
         },
-    {
-          "@type": "Question",
-          "name": "Will reinstalling the app delete my account?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No, your account and all your tweets are stored on X&#x27;s servers. Reinstalling the app only removes the app from your device. Log back in and everything will be there."
-          }
+        {
+          "@type": "Question", "name": "X app crashes only when I tap on images or videos",
+          "acceptedAnswer": {"@type": "Answer", "text": "Media-specific crashes point to the media player or image viewer component failing. On iPhone, this can be a hardware decoder compatibility issue after an iOS update. Try: Settings > X > toggle off any background content settings, then force-close and reopen the app. If crashes on media started after a specific iOS update, check for an X app update that patches compatibility. On Android, clearing the app's cached media (Settings > Apps > X > Storage > Clear Cache) often resolves this."}
         },
-    {
-          "@type": "Question",
-          "name": "Why does X crash after an update?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sometimes new updates have bugs. Check if other users are reporting the same issue on social media. If so, X will likely release a fix soon. You can also try rolling back to a previous version on Android using APK files."
-          }
+        {
+          "@type": "Question", "name": "X crashes after I log in but not on the login screen",
+          "acceptedAnswer": {"@type": "Answer", "text": "Crashes that happen specifically after logging in but not on the login screen mean your account data is causing the crash — usually a corrupted timeline cache, notification backlog, or a piece of content in your feed that the app can't render. Log out (if you can get far enough), clear cache, then log back in. On Android, clearing app data (not just cache) forces a complete fresh session. On iPhone, offload and reinstall achieves the same thing."}
         }
       ]
     }
     </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f7fa;
-            color: #333;
-            line-height: 1.7;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #333; line-height: 1.7; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
         header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
-        .header-search {
-            position: relative;
-            max-width: 260px;
-        }
-        .header-search input {
-            width: 100%;
-            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            outline: none;
-            background: rgba(255,255,255,0.2);
-            color: white;
-        }
+        .header-search { position: relative; max-width: 260px; }
+        .header-search input { width: 100%; padding: 0.45rem 0.8rem 0.45rem 2.2rem; border: none; border-radius: 50px; font-size: 0.85rem; outline: none; background: rgba(255,255,255,0.2); color: white; }
         .header-search input::placeholder { color: rgba(255,255,255,0.7); }
-        .header-search input:focus { background: rgba(255,255,255,0.3); }
-        .header-search-icon {
-            position: absolute;
-            left: 0.7rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.85rem;
-            pointer-events: none;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-        .breadcrumb {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 1rem;
-        }
+        .header-search-icon { position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); font-size: 0.85rem; pointer-events: none; }
+        .container { max-width: 820px; margin: 0 auto; padding: 2rem 1rem; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
         .breadcrumb a { color: #667eea; text-decoration: none; }
-        .breadcrumb a:hover { text-decoration: underline; }
-        .article {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article { background: white; border-radius: 12px; padding: 2.5rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .article h1 { font-size: 1.85rem; color: #1a1a2e; margin-bottom: 0.4rem; line-height: 1.3; }
         .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
         .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
-        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
-        .article p { margin-bottom: 0.85rem; color: #444; }
+        .article h3 { font-size: 1.05rem; color: #2c2c54; margin: 1.5rem 0 0.5rem; font-weight: 600; }
+        .article p { margin-bottom: 0.9rem; color: #444; }
         .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
-        .article li { margin-bottom: 0.4rem; }
-        .article strong { color: #333; }
-        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
-        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
-        .faq p { margin-bottom: 0.25rem; }
-        .faq .q { font-weight: 600; color: #333; }
-        .faq .a { color: #555; }
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: #999;
-            font-size: 0.85rem;
-            border-top: 1px solid #eee;
-        }
+        .article li { margin-bottom: 0.5rem; }
+        .article strong { color: #222; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.88em; }
+        .crash-pattern { border: 1px solid #e0e0ef; border-radius: 10px; padding: 1.2rem 1.4rem; margin: 1rem 0; background: #fafafe; }
+        .crash-pattern .cp-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #667eea; margin-bottom: 0.4rem; }
+        .crash-pattern h3 { margin-top: 0; font-size: 1rem; color: #1a1a2e; }
+        .crash-pattern p { margin-bottom: 0; font-size: 0.93rem; color: #444; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .dont-do ul { margin-bottom: 0; }
+        .dont-do li { color: #555; font-size: 0.93rem; }
+        .insight { background: #fff8e6; border-left: 4px solid #e6a817; padding: 0.85rem 1.1rem; border-radius: 0 8px 8px 0; margin: 1rem 0; font-size: 0.92rem; color: #5a4a00; }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.2rem 1.3rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.3rem; }
+        .faq .q { font-weight: 600; color: #222; font-size: 0.97rem; }
+        .faq .a { color: #555; font-size: 0.95rem; }
+        .related-links { margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #f0f0f0; }
+        .related-links h2 { margin-top: 0; border-bottom: none; padding-bottom: 0; }
+        .related-links ul { list-style: none; margin-left: 0; padding: 0; }
+        .related-links ul li { margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; }
+        .related-links ul li::before { content: "→"; position: absolute; left: 0; color: #667eea; }
+        .related-links a { color: #667eea; text-decoration: none; }
+        footer { text-align: center; padding: 2rem 1rem; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; }
         footer a { color: #667eea; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        .cookie-banner {
-            position: fixed;
-            left: 1rem;
-            right: 1rem;
-            bottom: 1rem;
-            background: #1a1a2e;
-            color: #fff;
-            padding: 0.85rem 1rem;
-            border-radius: 10px;
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.8rem;
-            z-index: 2000;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-            font-size: 0.85rem;
-        }
+        .cookie-banner { position: fixed; left: 1rem; right: 1rem; bottom: 1rem; background: #1a1a2e; color: #fff; padding: 0.85rem 1rem; border-radius: 10px; display: none; align-items: center; justify-content: space-between; gap: 0.8rem; z-index: 2000; box-shadow: 0 8px 24px rgba(0,0,0,0.25); font-size: 0.85rem; }
         .cookie-banner a { color: #9ec2ff; }
-        .cookie-actions {
-            display: flex;
-            gap: 0.5rem;
-            flex-shrink: 0;
-        }
-        .cookie-btn {
-            border: 1px solid #667eea;
-            background: transparent;
-            color: #fff;
-            padding: 0.35rem 0.65rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
+        .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+        .cookie-btn { border: 1px solid #667eea; background: transparent; color: #fff; padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
         .cookie-btn.primary { background: #667eea; }
-        @media (max-width: 600px) {
-            .article { padding: 1.5rem 1rem; }
-            .article h1 { font-size: 1.4rem; }
-            .header-search { display: none; }
-            .cookie-banner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
+        @media (max-width: 600px) { .article { padding: 1.5rem 1rem; } .article h1 { font-size: 1.4rem; } .header-search { display: none; } .cookie-banner { flex-direction: column; align-items: flex-start; } }
     </style>
 </head>
 <body>
@@ -223,76 +112,148 @@
         <a href="../index.html">FixThatApp</a>
         <div class="header-search">
             <span class="header-search-icon">&#128269;</span>
-            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value">
         </div>
     </header>
     <div class="container">
-        <nav class="breadcrumb">
-            <a href="../index.html">Home</a> &rsaquo; Twitter (X) App Crashing
-        </nav>
+        <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; Twitter / X App Crashing</nav>
         <div class="article">
-            <h1>Troubleshooting Guide: Twitter (X) App Crashing</h1>
-            <p class="updated">Last updated: March 5, 2026</p>
-            <h2>Problem Description</h2>
-            <p>The Twitter (now X) app may crash unexpectedly when opening the app, scrolling through the feed, or trying to post a tweet. The app might close immediately on launch or freeze before crashing.</p>
-            <h2>Possible Causes</h2>
-            <p><strong>Outdated app version</strong>: Running an old version of the app may cause stability issues.</p>
-            <p><strong>Corrupted cache</strong>: Accumulated temporary data can cause the app to malfunction.</p>
-            <p><strong>Operating system incompatibility</strong>: Your phone's OS may need updating to support the latest version of X.</p>
-            <p><strong>Low device memory</strong>: If your phone is running low on RAM, apps may crash frequently.</p>
-            <p><strong>Server-side issues</strong>: Twitter/X servers may be experiencing problems.</p>
-            <h2>Step-by-Step Fixes</h2>
-            <h3>Fix 1: Force Close and Restart the App</h3>
-            <p>&bull; On Android: Go to Settings > Apps > X (Twitter) > Force Stop.</p>
-            <p>&bull; On iPhone: Swipe up from the bottom and swipe the X app away.</p>
-            <p>&bull; Wait a few seconds and reopen the app.</p>
-            <h3>Fix 2: Clear App Cache</h3>
-            <p>&bull; On Android: Settings > Apps > X (Twitter) > Storage > Clear Cache.</p>
-            <p>&bull; On iPhone: You'll need to uninstall and reinstall the app to clear the cache.</p>
-            <p>&bull; This removes temporary files without deleting your account data.</p>
-            <h3>Fix 3: Update the App</h3>
-            <p>&bull; Open the App Store (iPhone) or Google Play Store (Android).</p>
-            <p>&bull; Search for "X" or "Twitter" and tap Update if available.</p>
-            <p>&bull; App updates often include bug fixes for crashing issues.</p>
-            <h3>Fix 4: Free Up Device Memory</h3>
-            <p>&bull; Close other apps running in the background.</p>
-            <p>&bull; Delete apps or files you no longer need.</p>
-            <p>&bull; Restart your phone to free up RAM.</p>
-            <h3>Fix 5: Update Your Operating System</h3>
-            <p>&bull; On Android: Settings > System > Software Update.</p>
-            <p>&bull; On iPhone: Settings > General > Software Update.</p>
-            <p>&bull; Install any available updates and try opening the app again.</p>
-            <h3>Fix 6: Reinstall the App</h3>
-            <p>&bull; Uninstall X (Twitter) from your device.</p>
-            <p>&bull; Restart your phone.</p>
-            <p>&bull; Reinstall from the App Store or Google Play Store.</p>
-            <p>&bull; Log back in and check if the crashing issue is resolved.</p>
-            <h2>When to Contact Support</h2>
-            <p>If the app continues to crash after trying all fixes, report the issue at help.twitter.com or through the app (if accessible): Settings > Help Center. Include your device model, OS version, and app version.</p>
-            <h2>FAQ</h2>
-            <div class="faq"><p class="q">Q: Why does the X app crash only when I open a specific feature?</p>
-            <p class="a">A: This could be a bug in that specific feature. Make sure you&#x27;re running the latest version. If the issue persists, report it to X support with details about which feature causes the crash.</p>
+            <h1>Twitter / X App Crashing — Reading the Crash to Find the Fix</h1>
+            <p class="updated">Last updated: April 3, 2026</p>
+
+            <p>The X app (formerly Twitter) crashes in at least four distinct patterns, and each one points to a different problem. A crash that happens immediately when you open the app is not the same problem as a crash that happens only when you scroll to a certain point — and the fix is completely different. Before trying anything, identify which pattern matches what you're experiencing.</p>
+
+            <h2>Identify Your Crash Pattern</h2>
+
+            <div class="crash-pattern">
+                <div class="cp-label">Pattern A</div>
+                <h3>Crashes immediately when you open it — never reaches the timeline</h3>
+                <p>This is a session or cache corruption problem. The app is failing to initialize its stored state before the UI even loads.</p>
             </div>
-            <div class="faq"><p class="q">Q: Can I use Twitter/X on a web browser instead?</p>
-            <p class="a">A: Yes, you can access X at x.com or twitter.com from any mobile or desktop browser as a temporary workaround while troubleshooting the app.</p>
+
+            <div class="crash-pattern">
+                <div class="cp-label">Pattern B</div>
+                <h3>Opens fine, loads the timeline, crashes while scrolling</h3>
+                <p>The app hit a specific piece of content — almost always a video, GIF, or large image — that it can't render. This is a media decoder crash.</p>
             </div>
-            <div class="faq"><p class="q">Q: Will reinstalling the app delete my account?</p>
-            <p class="a">A: No, your account and all your tweets are stored on X&#x27;s servers. Reinstalling the app only removes the app from your device. Log back in and everything will be there.</p>
+
+            <div class="crash-pattern">
+                <div class="cp-label">Pattern C</div>
+                <h3>Crashes specifically when opening images or playing videos</h3>
+                <p>The media viewer component is failing. On iPhone this often follows an iOS update; on Android it's frequently a RAM issue or decoder bug.</p>
             </div>
-            <div class="faq"><p class="q">Q: Why does X crash after an update?</p>
-            <p class="a">A: Sometimes new updates have bugs. Check if other users are reporting the same issue on social media. If so, X will likely release a fix soon. You can also try rolling back to a previous version on Android using APK files.</p>
+
+            <div class="crash-pattern">
+                <div class="cp-label">Pattern D</div>
+                <h3>Works on login screen but crashes after you sign in</h3>
+                <p>Your account data — timeline cache, notification queue, or a specific piece of content in your feed — is causing the crash. The app itself isn't broken; it can't handle what's in your account cache.</p>
+            </div>
+
+            <h2>Pattern A Fix: App Crashes Before Reaching Timeline</h2>
+
+            <p>When X crashes before loading anything, the startup sequence is hitting a corrupted file. This is the most common crash type after an app update that failed partway through.</p>
+
+            <p><strong>On Android:</strong> Go to Settings &gt; Apps &gt; X &gt; Storage. Tap <strong>Clear Cache</strong> first — this preserves your login. Reopen. If it still crashes, tap <strong>Clear Data</strong> (this logs you out) and try again. If the crash persists even after clearing data, the app installation is corrupted. Uninstall completely, then reinstall from Google Play.</p>
+
+            <p><strong>On iPhone:</strong> iOS doesn't expose a direct cache-clearing option. The equivalent is offloading: Settings &gt; General &gt; iPhone Storage &gt; X &gt; Offload App. This removes the app binary while preserving credentials. Tap Reinstall. If offloading doesn't fix it, do a full delete (hold the icon &gt; Remove App &gt; Delete App) and reinstall from the App Store.</p>
+
+            <div class="insight">
+                X has pushed several updates that introduced launch crashes on specific device/OS combinations. If clearing cache doesn't help, check the App Store or Play Store reviews for recent reports — if other users on the same phone model are reporting the same crash, it's a known issue and waiting for the next update (usually within a week) is the practical solution.
+            </div>
+
+            <h2>Pattern B Fix: Crashes While Scrolling</h2>
+
+            <p>Scroll crashes are caused by a specific tweet in your timeline that the app can't render. The app loads the surrounding tweets fine, but when it tries to load that one — which almost always has a video, animated GIF, or high-resolution image attached — the renderer crashes.</p>
+
+            <h3>How to get past it without losing your timeline position</h3>
+            <p>Open X in a browser — either the mobile browser version of x.com or on a desktop. Scroll through your timeline and find the piece of media that's causing the crash. Once you've scrolled past it in the browser, reopen the app — it will usually pick up from further down the timeline and no longer hit the problematic content.</p>
+
+            <p>If this crash happens repeatedly with different content rather than just one specific tweet, the underlying issue is your app's media cache getting too large or containing corrupted entries. Clear the app cache on Android, or offload and reinstall on iPhone. This forces X to rebuild the media cache from scratch.</p>
+
+            <h3>Autoplay video is the most common trigger</h3>
+            <p>X autoplays videos as you scroll. If your connection drops for a moment just as a video starts loading, the decoder can receive incomplete data and crash. You can reduce these crashes by turning off autoplay: X Settings &gt; Accessibility, display, and languages &gt; Data usage &gt; set Video autoplay to "Never." This means you tap to play videos manually, but eliminates the decoder crash completely.</p>
+
+            <h2>Pattern C Fix: Crashes When Tapping Media</h2>
+
+            <p>If the timeline loads fine but the app crashes specifically when you tap on an image to expand it or tap a video to full-screen it, the media viewer is broken — not the main app.</p>
+
+            <p><strong>On iPhone after an iOS update:</strong> This is a known recurring issue. Apple's iOS updates sometimes change how apps are allowed to use hardware video decoders. X hasn't always updated their app before iOS releases. The fix is usually one of:
+            </p>
+            <ol>
+                <li>Check for a pending X update in the App Store — they usually patch within days of major iOS releases</li>
+                <li>Go to Settings &gt; X and toggle off any media-related permissions, then back on, then force-close and reopen</li>
+                <li>If no update is available yet, use x.com in the browser for media viewing until the patch arrives</li>
+            </ol>
+
+            <p><strong>On Android:</strong> Clear the app cache first. If crashes on media continue, check available RAM — if your phone has less than 500MB free RAM, the media player component can't allocate enough memory to decode the video. Close other apps, clear some storage space, and retry. X is memory-hungry, especially with video.</p>
+
+            <h2>Pattern D Fix: Crashes After Login (Works on Login Screen)</h2>
+
+            <p>This is the most confusing pattern because the app technically works — you can see the login screen, enter credentials — but the moment your account data starts loading, it crashes. The bug is in the cached account state, not the app itself.</p>
+
+            <p>The procedure: log out first if you can get far enough. If the app crashes before you can tap Settings, force-stop it (Android: Settings &gt; Apps &gt; X &gt; Force Stop), then clear app data. On iPhone, offload and reinstall.</p>
+
+            <p>When you log back in, X will load fresh timeline data from the server rather than the corrupted local cache. The crash won't happen again unless the same corruption event reoccurs (e.g., another failed update).</p>
+
+            <p>One specific scenario: if someone in your timeline posted something that X's CDN delivered with corrupted metadata, your app may have cached that corrupted entry. Clearing the cache removes it. The post will re-download correctly on the next session.</p>
+
+            <h2>Advanced: X Crashes Only on a Specific Action</h2>
+
+            <h3>Crashes when composing a tweet or adding media</h3>
+            <p>Crashes in the compose screen are almost always a photo library permission issue. If X doesn't have access to your photo library, tapping the media attachment button causes a crash instead of showing a permission request (this is an X bug — it should show a permission dialog, not crash). Check: iPhone: Settings &gt; Privacy &gt; Photos &gt; X &gt; set to "Selected Photos" or "All Photos." Android: Settings &gt; Apps &gt; X &gt; Permissions &gt; Storage/Photos.</p>
+
+            <h3>Crashes when opening DMs</h3>
+            <p>DM crashes in X usually mean the DM inbox has a media attachment that can't be rendered. Accessing DMs through x.com in a browser lets you clear or view the problematic message. Then clear the app cache and reopen — the DM view should load correctly once the problematic cache entry is gone.</p>
+
+            <h3>Crashes on a specific account's profile</h3>
+            <p>Rare but real: opening a profile with a broken header image or banner that X's image decoder can't handle will crash the app. The workaround is viewing that profile in the browser instead of the app until X's servers process the corrupted image correctly.</p>
+
+            <h2>What NOT To Do</h2>
+
+            <div class="dont-do">
+                <div class="dd-title">Avoid these common mistakes when troubleshooting X crashes</div>
+                <ul>
+                    <li><strong>Don't clear data before trying cache first.</strong> Clearing data logs you out and wipes all local settings — clearing cache alone fixes most crashes and preserves your login.</li>
+                    <li><strong>Don't reinstall without first checking for an update.</strong> If a broken update caused the crash, reinstalling downloads the same broken version. Check the app store for a newer version first.</li>
+                    <li><strong>Don't assume it's a server outage.</strong> X has real outages occasionally, but a crash is different from a server problem — server issues cause error messages, not crashes. Check twitterstatus.com only if the app is loading but showing errors, not if it's crashing outright.</li>
+                    <li><strong>Don't factory reset your phone for an app crash.</strong> X crashing doesn't indicate a phone problem. Cache clear or reinstall is always the correct scope of fix.</li>
+                </ul>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <p class="q">Twitter / X app crashes immediately on open</p>
+                <p class="a">Clear cache first: Android: Settings > Apps > X > Storage > Clear Cache. iPhone: Settings > General > iPhone Storage > X > Offload App, then reinstall. If it still crashes after cache clear, do a full uninstall and reinstall to fix a corrupted update.</p>
+            </div>
+            <div class="faq">
+                <p class="q">X crashes when I scroll down the timeline</p>
+                <p class="a">A specific tweet with media is crashing the renderer. Open x.com in your browser, scroll past the problematic content, then reopen the app. Turn off autoplay (Settings > Data usage > Video autoplay > Never) to prevent future scroll crashes from incomplete video loads.</p>
+            </div>
+            <div class="faq">
+                <p class="q">X app crashes only when tapping images or videos</p>
+                <p class="a">The media viewer component is failing — often after an iOS or Android update. Check for a pending X update first. Clear app cache. On iPhone, if this started after an iOS update, use x.com in the browser for media until X patches compatibility.</p>
+            </div>
+            <div class="faq">
+                <p class="q">X crashes after I log in but works on the login screen</p>
+                <p class="a">Your account's local cache is corrupted. Force-stop the app (Android), clear app data, then log in fresh. iPhone: offload and reinstall. The corrupted local state loads immediately on login and crashes the renderer before the timeline appears.</p>
+            </div>
+
+            <div class="related-links">
+                <h2>Related Guides</h2>
+                <ul>
+                    <li><a href="google-chrome-crashing.html">Google Chrome Crashing</a></li>
+                    <li><a href="instagram-not-working.html">Instagram Not Working</a></li>
+                    <li><a href="tiktok-account-banned.html">TikTok Account Banned</a></li>
+                </ul>
             </div>
         </div>
     </div>
     <footer>
         &copy; 2026 FixThatApp. All rights reserved.
-        | <a href="../about.html">About</a>
-        | <a href="../privacy-policy.html">Privacy Policy</a>
-        | <a href="../cookie-policy.html">Cookie Policy</a>
-        | <a href="../terms.html">Terms</a>
-        | <a href="../contact.html">Contact</a>
-        | <a href="../seo-troubleshooting-guides.html">SEO Guides</a>
-        | <a href="../index.html">All Guides</a>
+        | <a href="../about.html">About</a> | <a href="../privacy-policy.html">Privacy Policy</a>
+        | <a href="../cookie-policy.html">Cookie Policy</a> | <a href="../terms.html">Terms</a>
+        | <a href="../contact.html">Contact</a> | <a href="../index.html">All Guides</a>
     </footer>
     <div class="cookie-banner" id="cookieBanner">
         <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
@@ -303,26 +264,13 @@
     </div>
     <script>
     (function() {
-      var key = 'fta_cookie_consent';
-      var banner = document.getElementById('cookieBanner');
-      var acceptBtn = document.getElementById('cookieAccept');
-      var rejectBtn = document.getElementById('cookieReject');
+      var key = 'fta_cookie_consent'; var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept'); var rejectBtn = document.getElementById('cookieReject');
       if (!banner || !acceptBtn || !rejectBtn) return;
-      var saved = null;
-      try { saved = localStorage.getItem(key); } catch (e) {}
-      if (!saved) {
-        banner.style.display = 'flex';
-      }
-      acceptBtn.addEventListener('click', function() {
-        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
-        banner.style.display = 'none';
-      });
-      rejectBtn.addEventListener('click', function() {
-        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
-        window.adsbygoogle = window.adsbygoogle || [];
-        window.adsbygoogle.requestNonPersonalizedAds = 1;
-        banner.style.display = 'none';
-      });
+      var saved = null; try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) { banner.style.display = 'flex'; }
+      acceptBtn.addEventListener('click', function() { try { localStorage.setItem(key, 'accepted'); } catch (e) {} banner.style.display = 'none'; });
+      rejectBtn.addEventListener('click', function() { try { localStorage.setItem(key, 'rejected'); } catch (e) {} window.adsbygoogle = window.adsbygoogle || []; window.adsbygoogle.requestNonPersonalizedAds = 1; banner.style.display = 'none'; });
     })();
     </script>
 </body>
