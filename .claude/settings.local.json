@@ -28,7 +28,9 @@
       "Bash(echo \"=== $f ===\")",
       "Bash(python -c \":*)",
       "Bash(curl:*)",
-      "Bash(xargs -I{} git diff-tree --no-commit-id -r --name-only {})"
+      "Bash(xargs -I{} git diff-tree --no-commit-id -r --name-only {})",
+      "Bash(xargs -I {} basename {})",
+      "Bash(find /c/Users/sufya/fixthatapp-ai/pages -name \"*.html\" -exec grep -l \"noindex\" {} \\\\;)"
     ]
   }
 }
