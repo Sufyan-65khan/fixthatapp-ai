@@ -203,6 +203,14 @@ X = 36 / 0.12 = $300</code></pre>
                 <li>Use the "reverse" toggle to solve for the unknown in the other direction</li>
             </ol>
 
+            <h2>Percentage Mistakes to Avoid</h2>
+
+            <p>Confusing percentage points with percentage change is one of the most common errors in finance and journalism. If an interest rate rises from 2% to 3%, it increased by <strong>1 percentage point</strong> — but the percentage change in the rate itself is 50% ((3−2)/2 × 100). These are two completely different statements. Reporting "rates rose by 1%" when they rose by 1 percentage point understates the actual change dramatically in a low-rate environment. Always specify which you mean.</p>
+
+            <p>The base rate fallacy trips people up with stacked discounts. Two 50% discounts applied in sequence are not equivalent to a 100% discount — you do not get the item free. The first discount takes 50% off the original price. The second takes 50% off the already-reduced price. On a $200 item: $200 × 0.5 = $100, then $100 × 0.5 = $50. The net discount is 75%, not 100%. Similarly, a 20% discount followed by a further 15% off is not a 35% total discount — it is 32% (0.80 × 0.85 = 0.68, meaning you pay 68% of original). Retailers rely on this confusion when advertising layered promotions.</p>
+
+            <p>Rounding errors matter in financial contexts where percentages are applied to large numbers. Rounding a tax rate from 8.375% to 8.4% before multiplying creates a small per-transaction error that, across thousands of transactions, becomes a material discrepancy. The correct approach is to carry full precision through the calculation and round only the final result — never the intermediate percentage. Spreadsheet formulas that hard-code rounded percentages as constants are a common source of these reconciliation headaches.</p>
+
         </article>
     </div>
     <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>

@@ -203,6 +203,14 @@ def remove_dupes_ci(lines):
                 <li><strong>Repeated phrases in text analysis</strong> — a corpus study of language may specifically need to count repetitions</li>
             </ul>
 
+            <h2>Preventing Duplicates at the Source</h2>
+
+            <p>Cleaning duplicates after the fact works, but the more durable fix is stopping them from being created in the first place. In relational databases, a <code>UNIQUE</code> constraint on the relevant column forces the database engine to reject duplicate inserts at write time rather than letting them accumulate silently. For email lists, a <code>UNIQUE</code> index on the email column means you can run <code>INSERT IGNORE</code> (MySQL) or <code>INSERT ... ON CONFLICT DO NOTHING</code> (PostgreSQL) and never worry about duplicates reaching your data layer.</p>
+
+            <p>During CSV or spreadsheet imports, deduplicate before the data enters the system. In Python's pandas, <code>df.drop_duplicates(subset=['email'], keep='first')</code> removes duplicates based on a specific column before you write to the database. In ETL pipelines, add a deduplication step as an explicit stage — either a hash-based filter that tracks seen record IDs, or a windowed aggregation in tools like Apache Flink or dbt that keeps only the most recent record per primary key. Treating deduplication as a pipeline stage rather than a cleanup afterthought means downstream consumers always receive clean data.</p>
+
+            <p>For web scraping specifically, store a set of already-seen URLs or item IDs in Redis or a simple SQLite table as you crawl. Before processing a new item, check whether its identifier is already in that set. This prevents duplicate entries from ever reaching your output file, which is faster than deduplicating a large output file after the fact and avoids re-processing the same pages during incremental crawls.</p>
+
         </article>
     </div>
     <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>

@@ -185,6 +185,14 @@ function greet(name) {
                 <li>The "HTML source" tab shows the exact markup generated, ready to paste into any HTML editor</li>
             </ol>
 
+            <h2>When Not to Use a Converter</h2>
+
+            <p>Markdown converters handle standard prose well, but they are not the right tool for every situation. If your content requires complex layouts — multi-column designs, nested grids, or elements that overlap — the converter's output will be a flat sequence of block elements that you'll have to restructure by hand anyway. Writing the HTML directly from the start is faster in those cases.</p>
+
+            <p>Custom HTML attributes are another limitation. Suppose you need to add <code>data-tracking="hero-cta"</code> to a specific link, or <code>aria-label="Close navigation"</code> to a button for accessibility. Markdown has no syntax for arbitrary attributes, so converters simply cannot produce them. You would need to drop raw HTML into your Markdown file — which works, but at that point you are already writing HTML. Similarly, accessibility requirements like explicit <code>role</code> attributes, <code>aria-describedby</code> associations between form fields and error messages, or <code>tabindex</code> ordering cannot be expressed in Markdown at all. For content that must meet WCAG compliance, write HTML directly so these attributes are never accidentally omitted.</p>
+
+            <p>Finally, avoid converters when the output will be pasted into a rich-text editor that applies its own sanitization. WordPress's block editor, for instance, sometimes strips or transforms HTML it receives from external sources, breaking link classes or injecting wrapper divs. In those workflows, use the platform's native editor rather than pasting converted HTML and fighting its sanitizer.</p>
+
         </article>
     </div>
     <footer>&copy; 2026 FixThatApp | <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../index.html">Guides</a> | <a href="../tools/">Tools</a> | <a href="./">Blog</a></footer>

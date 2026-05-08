@@ -63,6 +63,11 @@
                 <li>Using noindex accidentally — double-check that the affected page doesn't have a <code>meta name="robots" content="noindex"</code> tag.</li>
             </ul>
             <p>Related: <a href="seo-ranking-dropped.html">Organic Rankings Dropped</a> | <a href="seo-page-not-indexed.html">Page Not Indexed in Google</a>.</p>
+
+            <h2>When to Stop Waiting and Take Action</h2>
+            <p>After making improvements and requesting indexing via the URL Inspection Tool, give Google at least 2–3 weeks before concluding that the request failed. Google's crawl queue for small-to-medium sites typically processes submitted URLs within 10–14 days, but the actual indexing decision can lag the crawl by another week. For pages on newer domains or sites with historically weak crawl authority, 4–6 weeks is a more realistic window.</p>
+            <p>If the page still shows "Crawled - currently not indexed" after 6 weeks with no change, stop requesting indexing and audit the page more critically. Repeated indexing requests without real improvements do not help — Google throttles the tool for sites that overuse it, and it signals that you are trying to force a decision rather than addressing the underlying issue. At this point, open the URL Inspection Tool and look at what Google actually rendered: if the rendered screenshot looks blank, stripped of content, or shows a loading spinner, JavaScript rendering is failing and Google cannot assess the content at all. Fix the rendering problem first.</p>
+            <p>Some pages genuinely will not get indexed because the content is not differentiated enough to add value to Google's index alongside stronger competitors. Signs that the page needs more than technical fixes: the content closely mirrors what three or four other pages on your own site already cover, the page answers a question in fewer than 400 substantive words, or the URL Inspection Tool shows that Google's chosen canonical for that content is a different URL on your site. In these cases the right move is to either substantially expand the page — adding original research, more specific examples, or a different angle — or to consolidate it with a related, stronger page via a 301 redirect, rather than continuing to wait.</p>
         </article>
     </div>
     <footer>&copy; 2026 FixThatApp</footer>
