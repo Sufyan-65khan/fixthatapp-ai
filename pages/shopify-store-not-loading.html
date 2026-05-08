@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Shopify Store Not Loading: 7 Fixes for Store and Admin Issues | FixThatApp">
     <meta name="twitter:description" content="Shopify storefront slow or down, admin panel not loading, or customers getting 404 errors? This guide covers Shopify outages, custom domain issues, and checkout problems with specific fixes.">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ðŸ”§</text></svg>">
     <script>
     (function() {
       try {
@@ -75,7 +75,7 @@
         },
         {
           "@type": "Question",
-          "name": "My customers are getting 404 errors on my Shopify store — what happened?",
+          "name": "My customers are getting 404 errors on my Shopify store â€” what happened?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "A 404 on a Shopify store usually means a product, collection, or page URL handle was changed or deleted. Go to Admin > Online Store > Navigation > URL Redirects to create redirects from old URLs to the new ones. If the 404 is on your homepage, your domain DNS may have lost the Shopify connection."
@@ -165,16 +165,16 @@
             <p class="updated">Last updated: March 29, 2026</p>
             <p class="byline">By <a href="../about.html">Sufyan Khan</a> &mdash; Founder, FixThatApp &nbsp;|&nbsp; <a href="../about.html#editorial">Editorial standards</a></p>
 
-            <p>Your Shopify store is down and you're losing sales by the minute. Maybe customers are reporting 404 errors, your storefront is returning a blank page, or your admin panel won't load at all. These problems can hit at the worst times — during a product launch, a sale, or a high-traffic period. Shopify store issues fall into a few distinct categories: platform-wide outages, custom domain DNS failures, theme rendering errors, checkout breakdowns, and app conflicts. This guide walks through each cause with specific fixes so you can diagnose and resolve the problem fast.</p>
+            <p>Your Shopify store is down and you're losing sales by the minute. Maybe customers are reporting 404 errors, your storefront is returning a blank page, or your admin panel won't load at all. These problems can hit at the worst times â€” during a product launch, a sale, or a high-traffic period. Shopify store issues fall into a few distinct categories: platform-wide outages, custom domain DNS failures, theme rendering errors, checkout breakdowns, and app conflicts. This guide walks through each cause with specific fixes so you can diagnose and resolve the problem fast.</p>
 
             <h2>Quick Diagnosis: What Kind of Problem Do You Have?</h2>
             <div class="diagnosis-box">
-                <p><strong>Store shows blank page or generic error</strong> → Check Shopify status first (Fix 1), then theme issues (Fix 4).</p>
-                <p><strong>Custom domain shows "can't reach this page"</strong> → DNS misconfiguration. Go to Fix 2 immediately.</p>
-                <p><strong>Admin panel not loading</strong> → Browser issue or Shopify admin outage. See Fix 3.</p>
-                <p><strong>Customers getting 404 on specific products/pages</strong> → URL handle was changed. Fix with URL redirects (Fix 5).</p>
-                <p><strong>Checkout errors or payment failures</strong> → SSL or app conflict. See Fix 6.</p>
-                <p><strong>Store slow but loading</strong> → Heavy theme or app scripts. See Fix 7.</p>
+                <p><strong>Store shows blank page or generic error</strong> â†’ Check Shopify status first (Fix 1), then theme issues (Fix 4).</p>
+                <p><strong>Custom domain shows "can't reach this page"</strong> â†’ DNS misconfiguration. Go to Fix 2 immediately.</p>
+                <p><strong>Admin panel not loading</strong> â†’ Browser issue or Shopify admin outage. See Fix 3.</p>
+                <p><strong>Customers getting 404 on specific products/pages</strong> â†’ URL handle was changed. Fix with URL redirects (Fix 5).</p>
+                <p><strong>Checkout errors or payment failures</strong> â†’ SSL or app conflict. See Fix 6.</p>
+                <p><strong>Store slow but loading</strong> â†’ Heavy theme or app scripts. See Fix 7.</p>
             </div>
 
             <h2>7 Fixes for Shopify Store Not Loading</h2>
@@ -191,13 +191,13 @@
             <p>If it's a Shopify platform incident, there is nothing you can do except wait. Most Shopify incidents resolve within 30 to 90 minutes.</p>
 
             <h3>Fix 2: Verify Your Custom Domain DNS Settings</h3>
-            <p><strong>Why this works:</strong> When you connect a custom domain to Shopify, you need specific DNS records — an A record pointing to Shopify's IP address and a CNAME for www. If these are wrong, expired, or accidentally deleted, your domain stops resolving to Shopify entirely while your admin continues to function normally.</p>
+            <p><strong>Why this works:</strong> When you connect a custom domain to Shopify, you need specific DNS records â€” an A record pointing to Shopify's IP address and a CNAME for www. If these are wrong, expired, or accidentally deleted, your domain stops resolving to Shopify entirely while your admin continues to function normally.</p>
             <ol>
                 <li>Log into your domain registrar (GoDaddy, Namecheap, Cloudflare, etc.).</li>
                 <li>Go to DNS management for your domain.</li>
                 <li>Confirm there is an <strong>A record</strong> for the root domain (@) pointing to <code>23.227.38.65</code>.</li>
                 <li>Confirm there is a <strong>CNAME record</strong> for <code>www</code> pointing to <code>shops.myshopify.com</code>.</li>
-                <li>If using Cloudflare, disable the orange cloud proxy for Shopify — Shopify handles its own CDN and Cloudflare proxying can conflict.</li>
+                <li>If using Cloudflare, disable the orange cloud proxy for Shopify â€” Shopify handles its own CDN and Cloudflare proxying can conflict.</li>
                 <li>DNS changes take up to 48 hours to propagate fully, but usually update within 1 to 2 hours.</li>
             </ol>
             <p>In Shopify Admin, go to <strong>Settings &rarr; Domains</strong> to see if Shopify reports any domain connection errors.</p>
@@ -205,7 +205,7 @@
             <h3>Fix 3: Troubleshoot the Shopify Admin Panel</h3>
             <p><strong>Why this works:</strong> The Shopify admin is a web application sensitive to browser extensions, cached data, and session issues. A blank white screen, freezing, or failed login in admin is almost always browser-related rather than a Shopify platform problem.</p>
             <ol>
-                <li>Try opening admin in an <strong>incognito/private window</strong> — this disables extensions and uses no cached data.</li>
+                <li>Try opening admin in an <strong>incognito/private window</strong> â€” this disables extensions and uses no cached data.</li>
                 <li>If admin works in incognito, a browser extension (ad blocker, VPN, or privacy extension) is blocking it. Disable extensions one at a time to find the culprit.</li>
                 <li>Clear your browser cache and cookies for shopify.com: in Chrome, go to Settings &rarr; Privacy and Security &rarr; Cookies and site data &rarr; See all site data and search for "shopify" &rarr; delete all.</li>
                 <li>Try a different browser entirely.</li>
@@ -218,7 +218,7 @@
                 <li>In Shopify Admin, go to <strong>Online Store &rarr; Themes</strong>.</li>
                 <li>If you recently edited theme code, click <strong>Edit code</strong> on your theme and review Files changed recently for errors.</li>
                 <li>Switch to the default <strong>Dawn theme</strong> temporarily to confirm whether your current theme is the problem.</li>
-                <li>Check the <strong>Preview</strong> link — if preview works but the live store doesn't, a recently installed app is likely modifying theme files incorrectly.</li>
+                <li>Check the <strong>Preview</strong> link â€” if preview works but the live store doesn't, a recently installed app is likely modifying theme files incorrectly.</li>
                 <li>Go to <strong>Apps</strong> and disable recently installed apps one at a time, refreshing your storefront after each deactivation.</li>
             </ol>
 
@@ -248,8 +248,8 @@
             <h3>Fix 7: Address Store Speed and Performance</h3>
             <p><strong>Why this works:</strong> A Shopify store that loads but is extremely slow loses customers who leave before it finishes. Heavy themes, too many installed apps injecting JavaScript, and large unoptimized images are the most common causes. Shopify provides a built-in speed report to identify the bottleneck.</p>
             <ol>
-                <li>In Shopify Admin, go to <strong>Online Store &rarr; Themes</strong> and check the <strong>Speed score</strong> next to your theme. Below 20 is a serious issue; 20–50 is acceptable; above 50 is good.</li>
-                <li>Go to <strong>Apps</strong> and uninstall apps you no longer actively use — even deactivated apps can leave behind performance-impacting scripts.</li>
+                <li>In Shopify Admin, go to <strong>Online Store &rarr; Themes</strong> and check the <strong>Speed score</strong> next to your theme. Below 20 is a serious issue; 20â€“50 is acceptable; above 50 is good.</li>
+                <li>Go to <strong>Apps</strong> and uninstall apps you no longer actively use â€” even deactivated apps can leave behind performance-impacting scripts.</li>
                 <li>Disable auto-playing video on the homepage in your theme settings.</li>
                 <li>Compress product images to under 500KB before uploading using tools like TinyPNG.</li>
                 <li>Use Google PageSpeed Insights at pagespeed.web.dev to get specific improvement recommendations for your store URL.</li>
@@ -279,7 +279,7 @@
             </div>
 
             <div class="faq">
-                <p class="q">Q: My customers are getting 404 errors on my Shopify store — what happened?</p>
+                <p class="q">Q: My customers are getting 404 errors on my Shopify store â€” what happened?</p>
                 <p class="a">A: A 404 on Shopify usually means a product, collection, or page URL handle was changed or deleted. Go to Admin &rarr; Online Store &rarr; Navigation &rarr; URL Redirects to create redirects from old URLs to new ones. If the 404 is on your homepage, your domain DNS may have lost its Shopify connection.</p>
             </div>
 
@@ -300,9 +300,9 @@
 
             <h2>Related Guides</h2>
             <ul>
-                <li><a href="cloudflare-outage.html">Cloudflare Outage: What to Do When Sites Go Down</a></li>
+                <li><a href="google-services-outage.html">Cloudflare Outage: What to Do When Sites Go Down</a></li>
                 <li><a href="windows-wifi-not-connecting.html">Windows Wi-Fi Not Connecting: 8 Fixes</a></li>
-                <li><a href="vpn-not-connecting.html">VPN Not Connecting: 8 Fixes for Every Protocol</a></li>
+                <li><a href="wifi-connected-but-no-internet.html">VPN Not Connecting: 8 Fixes for Every Protocol</a></li>
             </ul>
         </div>
     </div>

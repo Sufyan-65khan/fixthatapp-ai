@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Not Loading: Stuck on Connecting Screen, Gray Screen & WebSocket Failures | FixThatApp</title>
-    <meta name="description" content="Discord stuck on the connecting screen, showing a gray screen, or failing to load servers? The cause is almost always a specific network or DNS issue — here's how to find and fix it fast.">
+    <meta name="description" content="Discord stuck on the connecting screen, showing a gray screen, or failing to load servers? The cause is almost always a specific network or DNS issue â€” here's how to find and fix it fast.">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/discord-not-loading.html">
     <meta property="og:title" content="Discord Not Loading: Stuck on Connecting Screen, Gray Screen & WebSocket Failures | FixThatApp">
-    <meta property="og:description" content="Discord stuck connecting, gray screen, or servers won't load? Almost always a network or DNS issue — find and fix it here.">
+    <meta property="og:description" content="Discord stuck connecting, gray screen, or servers won't load? Almost always a network or DNS issue â€” find and fix it here.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/discord-not-loading.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ðŸ”§</text></svg>">
     <script>
     (function() {
       try {
@@ -38,23 +38,23 @@
       "@context": "https://schema.org", "@type": "FAQPage",
       "mainEntity": [
         {
-          "@type": "Question", "name": "Discord is stuck on the connecting screen forever — what's blocking it?",
+          "@type": "Question", "name": "Discord is stuck on the connecting screen forever â€” what's blocking it?",
           "acceptedAnswer": {"@type": "Answer", "text": "Discord's connecting screen stalling indefinitely means the WebSocket connection to Discord's gateway servers is being blocked or timing out. The most common causes: your ISP has a routing issue to Cloudflare (which hosts Discord's CDN), a DNS problem is preventing resolution of Discord's servers, or a security tool on your network is blocking the WebSocket upgrade request. Try flushing DNS (ipconfig /flushdns on Windows, dscacheutil -flushcache on Mac) and switching to Google DNS (8.8.8.8) as a test."}
         },
         {
-          "@type": "Question", "name": "Discord loads on my phone but not on my computer — why?",
+          "@type": "Question", "name": "Discord loads on my phone but not on my computer â€” why?",
           "acceptedAnswer": {"@type": "Answer", "text": "When Discord works on mobile but not desktop, the issue is almost always specific to the desktop environment: a Windows Firewall rule, antivirus blocking Discord's WebSocket traffic, a browser extension interfering (if using Discord web), or a corrupted desktop app installation. Check Windows Security > Firewall > Allow an app through firewall and ensure Discord is listed. On Mac, check System Settings > Privacy & Security > Firewall > confirm Discord is allowed."}
         },
         {
-          "@type": "Question", "name": "Discord servers load but channels won't open — infinite loading circle",
-          "acceptedAnswer": {"@type": "Answer", "text": "Servers loading but channels stuck in a loading loop is a different problem from Discord not loading at all. This usually means the channel content (messages, media) can't be fetched — often because Discord's media CDN (hosted on Cloudflare) is having a routing issue from your location, or your app cache has a corrupted channel state. Clear Discord cache: on Windows, press Win+R, type %appdata%/Discord and delete the Cache folder. On Mac, it's ~/Library/Application Support/discord/Cache."}
+          "@type": "Question", "name": "Discord servers load but channels won't open â€” infinite loading circle",
+          "acceptedAnswer": {"@type": "Answer", "text": "Servers loading but channels stuck in a loading loop is a different problem from Discord not loading at all. This usually means the channel content (messages, media) can't be fetched â€” often because Discord's media CDN (hosted on Cloudflare) is having a routing issue from your location, or your app cache has a corrupted channel state. Clear Discord cache: on Windows, press Win+R, type %appdata%/Discord and delete the Cache folder. On Mac, it's ~/Library/Application Support/discord/Cache."}
         },
         {
-          "@type": "Question", "name": "Discord was working fine, then suddenly stopped loading — no changes made",
-          "acceptedAnswer": {"@type": "Answer", "text": "A sudden failure with no changes on your end is almost always either a Discord outage or an ISP routing change that affects your path to Discord's servers. Check discordstatus.com first. If Discord's status is all green but you still can't connect, run a traceroute to discord.com (tracert discord.com on Windows, traceroute discord.com on Mac/Linux) and look for where packets stop — that tells you where the routing break is."}
+          "@type": "Question", "name": "Discord was working fine, then suddenly stopped loading â€” no changes made",
+          "acceptedAnswer": {"@type": "Answer", "text": "A sudden failure with no changes on your end is almost always either a Discord outage or an ISP routing change that affects your path to Discord's servers. Check discordstatus.com first. If Discord's status is all green but you still can't connect, run a traceroute to discord.com (tracert discord.com on Windows, traceroute discord.com on Mac/Linux) and look for where packets stop â€” that tells you where the routing break is."}
         },
         {
-          "@type": "Question", "name": "Discord not loading on school or work network — is it blocked?",
+          "@type": "Question", "name": "Discord not loading on school or work network â€” is it blocked?",
           "acceptedAnswer": {"@type": "Answer", "text": "Yes, school and corporate networks very commonly block Discord specifically. Discord is categorized as a gaming/social platform and is on default blocklists for many network filtering products. If Discord loads fine on mobile data but not the school/work Wi-Fi, it's blocked. Mobile data is the only workaround without getting IT to whitelist it. Using a VPN may work but likely violates network policy."}
         }
       ]
@@ -98,7 +98,7 @@
         .related-links h2 { margin-top: 0; border-bottom: none; padding-bottom: 0; }
         .related-links ul { list-style: none; margin-left: 0; padding: 0; }
         .related-links ul li { margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; }
-        .related-links ul li::before { content: "→"; position: absolute; left: 0; color: #667eea; }
+        .related-links ul li::before { content: "â†’"; position: absolute; left: 0; color: #667eea; }
         .related-links a { color: #667eea; text-decoration: none; }
         footer { text-align: center; padding: 2rem 1rem; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; }
         footer a { color: #667eea; text-decoration: none; }
@@ -126,20 +126,20 @@
     <div class="container">
         <nav class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; Discord Not Loading</nav>
         <div class="article">
-            <h1>Discord Not Loading — What's Actually Blocking the Connection</h1>
+            <h1>Discord Not Loading â€” What's Actually Blocking the Connection</h1>
             <p class="updated">Last updated: November 21, 2025</p>
             <p class="byline">By <a href="../about.html">Sufyan Khan</a> &mdash; Founder, FixThatApp &nbsp;|&nbsp; <a href="../about.html#editorial">Editorial standards</a></p>
 
-            <p>You open Discord and it either sits on the connecting screen indefinitely, shows a white or gray blank screen, or loads the sidebar but channels never open. Meanwhile everything else on your internet works fine. There's a reason for that: Discord's connection relies on WebSocket technology and Cloudflare's CDN for asset delivery — two things that can be blocked or broken in ways that don't affect regular web browsing at all.</p>
+            <p>You open Discord and it either sits on the connecting screen indefinitely, shows a white or gray blank screen, or loads the sidebar but channels never open. Meanwhile everything else on your internet works fine. There's a reason for that: Discord's connection relies on WebSocket technology and Cloudflare's CDN for asset delivery â€” two things that can be blocked or broken in ways that don't affect regular web browsing at all.</p>
 
             <div class="firstcheck">
                 <p><strong>Check Discord's status before troubleshooting anything local.</strong></p>
-                <p>Go to <strong>discordstatus.com</strong> — if there's an active incident or degraded performance listed, local fixes won't help. Discord has partial outages several times a month, often affecting specific regions or features. If the status page is all green but you still can't connect, proceed below.</p>
+                <p>Go to <strong>discordstatus.com</strong> â€” if there's an active incident or degraded performance listed, local fixes won't help. Discord has partial outages several times a month, often affecting specific regions or features. If the status page is all green but you still can't connect, proceed below.</p>
             </div>
 
             <h2>Why Discord Gets Stuck on "Connecting" When Everything Else Works</h2>
 
-            <p>Discord's desktop and web app use WebSocket connections — persistent two-way connections to Discord's gateway servers — to receive messages and events in real time. This is different from regular HTTPS requests. Some networks, antivirus tools, and ISP routing configurations block WebSocket connections or the specific domains Discord uses, while passing normal web traffic through just fine. That's exactly why you can browse the internet, watch YouTube, and use other apps while Discord sits stuck at "connecting."</p>
+            <p>Discord's desktop and web app use WebSocket connections â€” persistent two-way connections to Discord's gateway servers â€” to receive messages and events in real time. This is different from regular HTTPS requests. Some networks, antivirus tools, and ISP routing configurations block WebSocket connections or the specific domains Discord uses, while passing normal web traffic through just fine. That's exactly why you can browse the internet, watch YouTube, and use other apps while Discord sits stuck at "connecting."</p>
 
             <p>Discord's media assets (images, avatars, file attachments) are delivered through Cloudflare's CDN. Some ISPs have suboptimal routing to Cloudflare's network, causing asset loading to fail even when the gateway connection works. This shows up as Discord connecting and showing the server list, but channels loading infinitely or images never appearing.</p>
 
@@ -148,15 +148,15 @@
             <p>In order, try these before going deeper:</p>
             <ol>
                 <li><strong>Flush your DNS cache.</strong> Stale DNS entries that point to old Discord server IPs cause connection timeouts.</li>
-                <li><strong>Change your DNS to a public resolver</strong> (Google or Cloudflare) — especially if your ISP's DNS is slow or has known issues.</li>
+                <li><strong>Change your DNS to a public resolver</strong> (Google or Cloudflare) â€” especially if your ISP's DNS is slow or has known issues.</li>
                 <li><strong>Clear Discord's app cache.</strong> Corrupted cached data from a previous session or update can prevent loading.</li>
             </ol>
 
-            <h3>Flush DNS — Windows</h3>
+            <h3>Flush DNS â€” Windows</h3>
             <div class="cmd-block">ipconfig /flushdns</div>
             <p>Open Command Prompt as administrator and run the above. You should see "Successfully flushed the DNS Resolver Cache."</p>
 
-            <h3>Flush DNS — macOS</h3>
+            <h3>Flush DNS â€” macOS</h3>
             <div class="cmd-block">sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder</div>
 
             <h3>Change DNS</h3>
@@ -184,18 +184,18 @@
             <p>When Discord works fine on your mobile but won't load on the desktop, the issue is specific to the desktop environment rather than the network. The most common culprits:</p>
 
             <h3>Windows Firewall or antivirus blocking Discord</h3>
-            <p>Windows Defender Firewall and third-party antivirus programs sometimes block Discord's WebSocket connections without notifying you — the block is silent. Open <strong>Windows Security &gt; Firewall &amp; Network Protection &gt; Allow an app through firewall</strong> and make sure Discord is in the list with both Private and Public checkboxes ticked. If it's not listed, click "Change settings &gt; Allow another app" and add the Discord executable manually.</p>
+            <p>Windows Defender Firewall and third-party antivirus programs sometimes block Discord's WebSocket connections without notifying you â€” the block is silent. Open <strong>Windows Security &gt; Firewall &amp; Network Protection &gt; Allow an app through firewall</strong> and make sure Discord is in the list with both Private and Public checkboxes ticked. If it's not listed, click "Change settings &gt; Allow another app" and add the Discord executable manually.</p>
             <p>If you use a third-party antivirus (Kaspersky, Bitdefender, ESET, Avast): check that app's application control or web filtering settings. Some of these intercept HTTPS connections by certificate injection, which breaks Discord's certificate validation and causes connection failures.</p>
 
             <h3>Corrupted Discord installation</h3>
             <p>Unlike most apps, Discord updates itself frequently in the background and these updates can occasionally leave the app in a partially updated state. A full uninstall and reinstall is cleaner than trying to fix it in place:</p>
             <ol>
                 <li>Uninstall Discord through Windows Settings &gt; Apps</li>
-                <li>Press Win+R, type <code>%appdata%</code> — delete the Discord folder</li>
-                <li>Press Win+R, type <code>%localappdata%</code> — delete the Discord folder there too</li>
+                <li>Press Win+R, type <code>%appdata%</code> â€” delete the Discord folder</li>
+                <li>Press Win+R, type <code>%localappdata%</code> â€” delete the Discord folder there too</li>
                 <li>Reinstall from discord.com/download</li>
             </ol>
-            <p>Skipping the manual folder deletion is why many people reinstall Discord and still have the same problem — the old corrupted data persists even after a standard uninstall.</p>
+            <p>Skipping the manual folder deletion is why many people reinstall Discord and still have the same problem â€” the old corrupted data persists even after a standard uninstall.</p>
 
             <h3>Discord web version as a quick test</h3>
             <p>Open a browser in incognito mode (extensions disabled) and go to <strong>discord.com/app</strong>. If Discord loads there but not in the desktop app, the problem is definitely the desktop installation or a firewall rule. If it also fails in the browser, the issue is at the network level.</p>
@@ -222,7 +222,7 @@
             <ul>
                 <li>Your router's NAT is too strict for UDP audio (same issue as WhatsApp calls dropping)</li>
                 <li>A VPN is routing you away from the voice server region you're trying to connect to</li>
-                <li>The selected server region is having issues — switch the region in Voice Channel settings (right-click the channel, Edit Channel, Region Override)</li>
+                <li>The selected server region is having issues â€” switch the region in Voice Channel settings (right-click the channel, Edit Channel, Region Override)</li>
             </ul>
             <p>Enabling QoS High Packet Priority in Discord Settings &gt; Voice &amp; Video can also help on networks that deprioritize gaming/VoIP traffic.</p>
 
@@ -230,26 +230,26 @@
 <div class="dont-do">
     <div class="dd-title">Common mistakes that make this worse</div>
     <ul>
-        <li><strong>Don't uninstall and reinstall the Discord desktop app before clearing the cache.</strong> Most Discord loading failures are caused by corrupted cache files in AppData, not corrupted app installation files. Reinstalling replaces the app binaries but leaves the cache folder untouched — meaning the same corrupted files cause the same problem after reinstall. Clear the cache first; reinstall only if that doesn't work.</li>
-        <li><strong>Don't assume Discord is down every time it fails to load.</strong> Discord's status page (discordstatus.com) shows real-time outages. Most Discord loading failures are local — browser cache, DNS, or network-level issues — not server-side. Checking the status page takes 10 seconds and tells you immediately whether local troubleshooting will help at all.</li>
+        <li><strong>Don't uninstall and reinstall the Discord desktop app before clearing the cache.</strong> Most Discord loading failures are caused by corrupted cache files in AppData, not corrupted app installation files. Reinstalling replaces the app binaries but leaves the cache folder untouched â€” meaning the same corrupted files cause the same problem after reinstall. Clear the cache first; reinstall only if that doesn't work.</li>
+        <li><strong>Don't assume Discord is down every time it fails to load.</strong> Discord's status page (discordstatus.com) shows real-time outages. Most Discord loading failures are local â€” browser cache, DNS, or network-level issues â€” not server-side. Checking the status page takes 10 seconds and tells you immediately whether local troubleshooting will help at all.</li>
         <li><strong>Don't use Discord on a browser with hardware acceleration disabled if you're experiencing gray screens.</strong> The Discord web app and Electron desktop app both use hardware acceleration for rendering. Disabling it (which some users do to fix other issues) can cause exactly the gray screen and infinite loading symptoms that seem like a server problem.</li>
-        <li><strong>Don't try to open Discord on mobile data if you're troubleshooting a desktop loading issue.</strong> Testing Discord on mobile confirms whether it's a Discord outage, but doesn't tell you anything about what's wrong with your desktop setup. If Discord works on mobile but not desktop, the issue is 100% local to your computer — network, cache, or app config.</li>
+        <li><strong>Don't try to open Discord on mobile data if you're troubleshooting a desktop loading issue.</strong> Testing Discord on mobile confirms whether it's a Discord outage, but doesn't tell you anything about what's wrong with your desktop setup. If Discord works on mobile but not desktop, the issue is 100% local to your computer â€” network, cache, or app config.</li>
     </ul>
 </div>
 
             <h2>Frequently Asked Questions</h2>
 
             <div class="faq">
-                <p class="q">Discord is stuck on the connecting screen forever — what's blocking it?</p>
+                <p class="q">Discord is stuck on the connecting screen forever â€” what's blocking it?</p>
                 <p class="a">Discord's WebSocket connection to its gateway servers is being blocked or timing out. Flush your DNS cache (ipconfig /flushdns on Windows), switch to public DNS like 8.8.8.8, and clear Discord's cache folder. If this started suddenly, check discordstatus.com for an ongoing incident first.</p>
             </div>
             <div class="faq">
                 <p class="q">Discord loads on my phone but not on my computer</p>
-                <p class="a">A desktop-only failure points to Windows Firewall, antivirus blocking Discord's connections, or a corrupted installation. Check that Discord is allowed through Windows Firewall. Test the browser at discord.com/app in incognito — if it works there, reinstall the desktop app after manually deleting the %appdata%\Discord folder.</p>
+                <p class="a">A desktop-only failure points to Windows Firewall, antivirus blocking Discord's connections, or a corrupted installation. Check that Discord is allowed through Windows Firewall. Test the browser at discord.com/app in incognito â€” if it works there, reinstall the desktop app after manually deleting the %appdata%\Discord folder.</p>
             </div>
             <div class="faq">
-                <p class="q">Discord servers load but channels won't open — infinite loading</p>
-                <p class="a">Servers loading but channels spinning means the message content CDN is failing. Try loading cdn.discordapp.com in a browser — if it times out, switch DNS to 1.1.1.1. Also clear the Discord cache folder to remove corrupted channel state data.</p>
+                <p class="q">Discord servers load but channels won't open â€” infinite loading</p>
+                <p class="a">Servers loading but channels spinning means the message content CDN is failing. Try loading cdn.discordapp.com in a browser â€” if it times out, switch DNS to 1.1.1.1. Also clear the Discord cache folder to remove corrupted channel state data.</p>
             </div>
             <div class="faq">
                 <p class="q">Discord was working, then suddenly stopped loading with no changes made</p>
@@ -263,9 +263,6 @@
             <div class="related-links">
                 <h2>Related Guides</h2>
                 <ul>
-                    <li><a href="discord-keeps-crashing.html">Discord Keeps Crashing</a></li>
-                    <li><a href="discord-notifications-not-working.html">Discord Notifications Not Working</a></li>
-                    <li><a href="discord-login-not-working.html">Discord Login Not Working</a></li>
                     <li><a href="google-chrome-crashing.html">Google Chrome Crashing</a></li>
                 </ul>
             </div>

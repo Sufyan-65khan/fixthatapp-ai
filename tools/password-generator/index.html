@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <meta property="og:title" content="Free Password Generator - FixThatApp">
     <meta property="og:description" content="Generate strong, secure passwords instantly. Customize length and complexity.">
     <meta property="og:type" content="website">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ðŸ”§</text></svg>">
         <script>
     (function() {
       try {
@@ -106,16 +106,30 @@
 
             <div class="strength">
                 <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
-                <span class="strength-label" id="strengthLabel">—</span>
+                <span class="strength-label" id="strengthLabel">â€”</span>
             </div>
         </div>
 
         <div class="info-section">
+            <h2>What Is a Password Generator?</h2>
+            <p>A password generator creates random, cryptographically secure passwords using your chosen character sets — uppercase letters, lowercase letters, numbers, and symbols. This tool uses the Web Crypto API (<code>crypto.getRandomValues</code>) so every password is generated locally in your browser. No password is ever sent to a server.</p>
+
             <h2>What Makes a Strong Password?</h2>
-            <p>A strong password should be at least 12 characters long and include a mix of uppercase letters, lowercase letters, numbers, and symbols. Avoid common words, names, or patterns.</p>
-            <h2>Tips for Password Security</h2>
-            <p>Use a unique password for every account. Consider using a password manager to keep track of them. Enable <a href="../../pages/two-factor-authentication-not-working.html">two-factor authentication</a> for extra security.</p>
-            <p><a href="../index.html">Browse more free tools</a> | <a href="../../blog/password-generator-guide.html">Read the full guide</a></p>
+            <p>A strong password needs at least three things: <strong>length</strong> (12 characters minimum, 16+ recommended), <strong>character variety</strong> (mix of uppercase, lowercase, numbers, and symbols), and <strong>randomness</strong> (not based on real words, names, dates, or keyboard patterns like "qwerty123"). A 16-character random password with all four character types would take millions of years to brute-force with current hardware.</p>
+            <p>Common weak passwords include: names of people or pets, birth years, simple words from the dictionary, repeated characters ("aaaaaa"), keyboard walks ("qwerty", "123456"), and anything under 8 characters. Avoid all of these.</p>
+
+            <h2>How to Use This Tool</h2>
+            <p>Move the <strong>Length</strong> slider to set your desired password length (4–64 characters). Check or uncheck the character type boxes — uppercase, lowercase, numbers, symbols. Click <strong>Generate Password</strong> to get a new random password. Click <strong>Copy</strong> to copy it to your clipboard. The strength bar updates in real time so you can see how password complexity affects security.</p>
+
+            <h2>Password Security Best Practices</h2>
+            <p>Use a <strong>unique password for every account</strong> — if one site is breached and you reuse passwords, attackers get into every account. Use a password manager (Bitwarden, 1Password, or the one built into your browser) to store and autofill passwords. Enable <a href="../../pages/gmail-not-receiving-emails.html">two-factor authentication (2FA)</a> on every service that supports it — this protects you even if your password is leaked.</p>
+
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Is it safe to use an online password generator?</strong><br>Yes, as long as the generator runs entirely in your browser without sending data to a server — which this tool does. All generation happens locally using your browser's secure random number API.</p>
+            <p><strong>How long should my password be?</strong><br>At minimum 12 characters. For high-value accounts (email, banking, work logins), use 16–20 characters. For a password manager master password, use 20+ characters.</p>
+            <p><strong>Should I include symbols in every password?</strong><br>Symbols significantly increase password strength, but some systems don't allow certain characters. If a site rejects the generated password, uncheck one symbol set and regenerate.</p>
+
+            <p><a href="../index.html">Browse more free tools</a> | <a href="../../blog/password-generator-guide.html">Read the full password security guide</a></p>
         </div>
     </div>
     <div class="copied" id="copiedToast">Copied!</div>
