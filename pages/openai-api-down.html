@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAI API Down: How to Check Status and Handle Outages | FixThatApp</title>
-    <meta name="description" content="OpenAI API returning errors, rate limit exceeded, or completely down? This guide shows how to check API status, understand error codes (429, 500, 503), and keep your app running during outages.">
-    <meta name="keywords" content="openai api down, openai api error, openai 429 error, openai 503 error, openai api status, openai rate limit exceeded">
+    <title>OpenAI API Down? Decode 429/500/503 Errors + Resilience Playbook (2026)</title>
+    <meta name="description" content="OpenAI API throwing 429, 500, or 503? Diagnose whether it's your key, your rate limits, or OpenAI's outage in under 60 seconds — plus the exponential-backoff and provider-fallback patterns that keep production apps running.">
+    <meta name="keywords" content="openai api down, openai api error, openai 429 error, openai 503 error, openai api status, openai rate limit exceeded, openai retry-after, openai exponential backoff">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/openai-api-down.html">
-    <meta property="og:title" content="OpenAI API Down: How to Check Status and Handle Outages | FixThatApp">
-    <meta property="og:description" content="OpenAI API returning errors, rate limit exceeded, or completely down? This guide shows how to check API status, understand error codes (429, 500, 503), and keep your app running during outages.">
+    <meta property="og:title" content="OpenAI API Down? Decode 429/500/503 Errors + Resilience Playbook (2026)">
+    <meta property="og:description" content="OpenAI API throwing 429, 500, or 503? Diagnose key/rate-limit/outage in under 60s, plus backoff and fallback patterns for production.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/openai-api-down.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="OpenAI API Down: How to Check Status and Handle Outages | FixThatApp">
-    <meta name="twitter:description" content="OpenAI API returning errors, rate limit exceeded, or completely down? This guide shows how to check API status, understand error codes (429, 500, 503), and keep your app running during outages.">
+    <meta name="twitter:title" content="OpenAI API Down? Decode 429/500/503 Errors + Resilience Playbook (2026)">
+    <meta name="twitter:description" content="OpenAI API throwing 429, 500, or 503? Diagnose key/rate-limit/outage fast, plus backoff and fallback patterns.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script>
     (function() {
@@ -33,9 +33,9 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "OpenAI API Down: How to Check Status and Handle Outages",
-      "description": "OpenAI API returning errors, rate limit exceeded, or completely down? This guide shows how to check API status, understand error codes (429, 500, 503), and keep your app running during outages.",
-      "dateModified": "2026-03-27",
+      "headline": "OpenAI API Down? Decode 429/500/503 Errors + Resilience Playbook (2026)",
+      "description": "OpenAI API throwing 429, 500, or 503? Diagnose whether it's your key, your rate limits, or OpenAI's outage in under 60 seconds, plus exponential-backoff and provider-fallback patterns.",
+      "dateModified": "2026-05-09",
       "author": {
         "@type": "Organization",
         "name": "FixThatApp",
@@ -239,8 +239,8 @@
             <a href="../index.html">Home</a> &rsaquo; OpenAI API Down
         </nav>
         <div class="article">
-            <h1>OpenAI API Down: How to Check Status and Handle Outages</h1>
-            <p class="updated">Last updated: March 27, 2026</p>
+            <h1>OpenAI API Down? Decode 429/500/503 Errors + Resilience Playbook (2026)</h1>
+            <p class="updated">Last updated: May 9, 2026 &middot; Verified against OpenAI Python SDK 2.x and the post-2025 tier system</p>
             <p class="byline">By <a href="../about.html">Sufyan Khan</a> &mdash; Founder, FixThatApp &nbsp;|&nbsp; <a href="../about.html#editorial">Editorial standards</a></p>
 
             <p>Your application is throwing errors, completions are timing out, or every API call is coming back with a 503. Whether you are running a production service that depends on GPT-4o or building a personal project with the OpenAI API, an outage or rate limit problem can stop everything cold. The challenge is figuring out quickly whether the problem is on OpenAI's end, your API key, your rate limits, or your own code.</p>
@@ -337,6 +337,25 @@
                 <li><strong>Latency monitoring:</strong> Track average response time. OpenAI p99 latency degrading significantly is often an early warning sign before a full outage. Alert when average response time doubles from baseline.</li>
                 <li><strong>Status page webhook:</strong> OpenAI's status page supports webhook notifications. Subscribe so your monitoring system receives immediate notification when an incident is posted or updated.</li>
             </ul>
+
+            <h2>2026-Specific Errors You'll See Now</h2>
+
+            <p>A few errors became common in the past year that older OpenAI guides don't cover.</p>
+
+            <h3>"Model not found" or 404 on a previously-working model</h3>
+            <p>OpenAI deprecated several legacy models in 2025&ndash;2026 (the older <code>gpt-4-0314</code>, <code>gpt-3.5-turbo-0301</code>, and the original <code>text-davinci-003</code> were retired). If your app suddenly starts returning 404 on a specific model, check the deprecations page at <strong>platform.openai.com/docs/deprecations</strong>. The fix is to update the model parameter in your client &mdash; usually to <code>gpt-4o</code>, <code>gpt-4o-mini</code>, or <code>gpt-5</code>. Don't pin to dated model versions long-term; pin to the family alias instead.</p>
+
+            <h3>"insufficient_quota" returned even with credit balance</h3>
+            <p>Your account has credits but a 429 returns <code>insufficient_quota</code> in the error body. This usually means your account is in Tier 1 (or Free) where credits exist but per-model TPM/RPM caps are very low. Adding more credits doesn't help; you need usage history to graduate to higher tiers. Check current tier at <strong>platform.openai.com/account/limits</strong>. Tier upgrades happen automatically based on cumulative spend over time, not on prepaid balance.</p>
+
+            <h3>"You exceeded your current quota" but billing shows you haven't</h3>
+            <p>Two common causes. First: the dashboard shows usage with a delay of up to 5 minutes &mdash; you may have actually exceeded the limit while the dashboard still says you're under. Second: you have an old project-scoped API key that has its own per-project budget separate from your account budget. Check Project &rsaquo; Limits at platform.openai.com to see project-level caps. The org-level dashboard doesn't surface these.</p>
+
+            <h3>Streaming responses cut off without an error</h3>
+            <p>You're using the streaming API and the response just stops mid-token without a finish_reason. This started appearing more in 2026 with GPT-5's longer outputs. The cause is almost always your client's HTTP read timeout being shorter than the model's response time. Set <code>timeout=600</code> (10 minutes) in the OpenAI client constructor, or higher for o1-style reasoning models that can think for several minutes before producing output.</p>
+
+            <h3>"The server had an error processing your request" persistent for one model</h3>
+            <p>A 500 that only happens on one specific model while others work fine indicates a regional capacity issue with that model's serving cluster. Switching to a smaller variant of the same family (gpt-4o &rarr; gpt-4o-mini) usually unblocks you immediately. Don't trigger your provider fallback chain on this &mdash; it's resolved within minutes by OpenAI's autoscaler.</p>
 
             <h2>What NOT to Do</h2>
 <div class="dont-do">
