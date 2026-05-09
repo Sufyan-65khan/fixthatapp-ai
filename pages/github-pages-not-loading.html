@@ -33,9 +33,9 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "GitHub Pages Not Loading: 7 Fixes for Deployment Issues",
-      "description": "GitHub Pages site not loading, showing 404, deployment failed, or custom domain broken? This guide covers every common GitHub Pages problem from DNS propagation to Jekyll build errors.",
-      "dateModified": "2026-04-03",
+      "headline": "GitHub Pages Not Loading? 7 Fixes for 404s, DNS & Build Errors (2026)",
+      "description": "GitHub Pages showing 'There isn't a github pages site here', DNS check unsuccessful, NotServedByPagesError, or stuck deployment? 7 fixes plus every error message decoded.",
+      "dateModified": "2026-05-09",
       "author": {
         "@type": "Organization",
         "name": "FixThatApp",
@@ -247,8 +247,8 @@
             <a href="../index.html">Home</a> &rsaquo; GitHub Pages Not Loading
         </nav>
         <div class="article">
-            <h1>GitHub Pages Not Loading: 7 Fixes for Deployment Issues</h1>
-            <p class="updated">Last updated: April 3, 2026</p>
+            <h1>GitHub Pages Not Loading: 7 Fixes for 404s, DNS &amp; Build Errors (2026)</h1>
+            <p class="updated">Last updated: May 9, 2026 &middot; Verified against current GitHub Actions deployment flow</p>
             <p class="byline">By <a href="../about.html">Sufyan Khan</a> &mdash; Founder, FixThatApp &nbsp;|&nbsp; <a href="../about.html#editorial">Editorial standards</a></p>
 
             <p>You push changes to your GitHub repository and navigate to your github.io URL — only to be greeted by a 404 page, a blank white screen, or content that hasn't updated since your last push. Maybe your custom domain suddenly shows "This site can't be reached", or your GitHub Actions workflow shows red and you have no idea why the build failed. GitHub Pages is deceptively simple to set up but has several specific failure points that aren't obvious from the interface.</p>
@@ -340,6 +340,66 @@
                 <li>Once the workflow shows a green checkmark, wait 1 to 2 minutes and visit your site URL with a hard refresh (Ctrl+Shift+R on Windows, Cmd+Shift+R on Mac).</li>
             </ol>
             <p>If you are not using git locally, you can trigger the same effect by making any trivial edit to a file directly on GitHub.com through the web interface and committing it there.</p>
+
+            <h2>Specific GitHub Pages Error Messages Decoded</h2>
+
+            <p>If you're seeing one of GitHub's specific error strings rather than a generic failure, the wording maps directly to the cause. Here's what each one actually means.</p>
+
+            <h3>"There isn't a GitHub Pages site here."</h3>
+            <p>You typed your <code>username.github.io</code> URL and got a 404 page with this exact heading. It means GitHub itself is responding (so DNS is fine), but the repository it expected to serve doesn't have Pages enabled or doesn't exist with that exact name.</p>
+            <p>For a user site, the repo must be named <code>username.github.io</code> precisely. Capitals matter on the URL but the repo name itself must be lowercase. For a project site, you accessed <code>username.github.io/repo</code> but that <code>repo</code> doesn't have Pages turned on. Open the repo's Settings &rsaquo; Pages and pick a source branch.</p>
+
+            <h3>"Your site is live at..." does not appear in Pages settings</h3>
+            <p>You enabled Pages, picked a branch, but the green confirmation banner with your URL never shows up. This is almost always a build failure that GitHub doesn't surface clearly on the Pages settings page itself. Open the Actions tab and look for a red workflow run from the last few minutes. The actual error is in the build logs, not on the Pages screen.</p>
+            <p>The other reason: you picked a branch that doesn't actually contain an <code>index.html</code> at the source path you selected. GitHub will accept the configuration but won't show a live URL until there's something to serve.</p>
+
+            <h3>"DNS check unsuccessful" / "Domain does not resolve to the GitHub Pages server"</h3>
+            <p>You added a custom domain in Pages settings and got one of these red warnings. GitHub is doing a live DNS lookup against your domain and not seeing the records it expects. Three things can be wrong:</p>
+            <ol>
+                <li>You haven't added the DNS records yet at your registrar. For an apex domain, four A records pointing to <code>185.199.108.153</code>, <code>185.199.109.153</code>, <code>185.199.110.153</code>, <code>185.199.111.153</code>. For a www subdomain, one CNAME pointing to <code>username.github.io</code>.</li>
+                <li>You added them but they haven't propagated yet. Run <code>dig yourdomain.com</code> in a terminal or check whatsmydns.net. If your local resolver shows the right IPs but other regions don't, give it 1-24 hours.</li>
+                <li>You have AAAA records (IPv6) pointing to old or wrong addresses. GitHub Pages doesn't currently advertise IPv6, so any AAAA records you have leftover from a previous host can cause the DNS check to fail in some regions while passing in others. Delete them.</li>
+            </ol>
+            <p>Click the <strong>"Check again"</strong> button on the Pages settings after each DNS change rather than waiting for GitHub to retry on its own schedule.</p>
+
+            <h3>"NotServedByPagesError"</h3>
+            <p>This appears in your GitHub Actions deployment logs when the build succeeded but GitHub couldn't actually publish the artifact to its Pages CDN. It usually means your repository is private but you're on a free plan, or your workflow is using <code>actions/deploy-pages</code> without the right permissions block.</p>
+            <p>Open your workflow YAML and confirm it has:</p>
+            <ul>
+                <li><code>permissions:</code> block at the top with <code>pages: write</code> and <code>id-token: write</code></li>
+                <li>An <code>environment:</code> block on the deploy job pointing to <code>github-pages</code></li>
+            </ul>
+            <p>If you copied your workflow from an older example, the deploy step changed in late 2022 to require these. Older Action workflows that pushed directly to a <code>gh-pages</code> branch still work, but the official <code>deploy-pages</code> path needs the explicit permissions.</p>
+
+            <h3>"Page build failure" email from GitHub</h3>
+            <p>GitHub emails the repo owner when a Jekyll build fails. The email subject is usually "Page build failure" and the body lists the offending file and line. Most common causes I've actually seen:</p>
+            <ul>
+                <li>A YAML front matter block with a stray colon or unquoted special character (<code>:</code>, <code>#</code>, <code>@</code> at the start of a value).</li>
+                <li>A Liquid tag that references a missing variable. Jekyll fails the whole build for one bad <code>{{ page.foo }}</code> if <code>foo</code> doesn't exist.</li>
+                <li>A markdown file with a filename that contains a space or unusual character.</li>
+                <li>A theme version mismatch after GitHub upgraded its supported Jekyll dependencies.</li>
+            </ul>
+            <p>If you don't actually use Jekyll and just want plain HTML served, drop a zero-byte file named <code>.nojekyll</code> at the root of your branch. GitHub skips Jekyll entirely and serves your files raw. This eliminates an entire category of build failures.</p>
+
+            <h3>"404 - File not found" on a specific page (but the home page works)</h3>
+            <p>Your site loads but clicking an internal link takes you to GitHub's 404 page. Two common causes:</p>
+            <ul>
+                <li><strong>Case sensitivity.</strong> Your link points to <code>About.html</code> but your file is <code>about.html</code>. GitHub Pages serves from a case-sensitive Linux filesystem, so this fails even though it works on Windows or macOS local previews. Always use lowercase filenames and lowercase links.</li>
+                <li><strong>Trailing slash mismatch.</strong> A link to <code>/blog/</code> needs an <code>index.html</code> inside that folder. A link to <code>/blog</code> without the slash needs a <code>blog.html</code> file at the parent level. Pick one convention and stick to it.</li>
+            </ul>
+            <p>You can ship a custom <code>404.html</code> file at the root to replace GitHub's default 404 page with something on-brand.</p>
+
+            <h3>White screen / blank page (no 404, just nothing)</h3>
+            <p>The page returns 200 OK but renders empty. Open your browser's DevTools console (F12) and check for JavaScript or asset 404s. The usual suspects:</p>
+            <ul>
+                <li>Absolute paths like <code>/style.css</code> on a project site at <code>username.github.io/repo</code>. The browser resolves these to <code>username.github.io/style.css</code>, which doesn't exist. Use relative paths (<code>./style.css</code>) or the <code>baseurl</code> setting.</li>
+                <li>A broken <code>&lt;script&gt;</code> tag that throws and halts page rendering before any visible content paints.</li>
+                <li>A CSS file with <code>display: none</code> on the body or main container, often from an unfinished theme.</li>
+            </ul>
+
+            <h3>HTTPS certificate not provisioning after custom domain</h3>
+            <p>Your site loads on HTTP but you get a certificate warning on HTTPS, or the "Enforce HTTPS" checkbox stays disabled in Pages settings. GitHub uses Let's Encrypt and provisions the cert only after DNS fully resolves. Common gotcha: a Cloudflare proxy in front of your domain blocks the validation. If you use Cloudflare, set the DNS record to "DNS only" (gray cloud, not orange) until the cert issues, then you can re-enable proxying with Cloudflare's own SSL.</p>
+            <p>Provisioning takes anywhere from a few minutes to 24 hours. If "Enforce HTTPS" is still grayed out after 48 hours, remove the custom domain from Pages settings, save, then re-add it. This forces GitHub to retry the certificate request.</p>
 
             <h2>What NOT to Do</h2>
 <div class="dont-do">
