@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook App Crashing: 7 Fixes for Startup Crashes, Freezing & Video Crashes | FixThatApp</title>
-    <meta name="description" content="Facebook crashing on startup, freezing while scrolling, or crashing when you open videos? Here are 7 targeted fixes for every type of Facebook crash on iPhone and Android.">
-    <meta name="keywords" content="facebook app crashing, facebook keeps crashing, facebook freezing, facebook crash fix, facebook not working android, facebook not opening iphone">
+    <title>Facebook App Keeps Crashing? 7 Fixes for iPhone &amp; Android (2026)</title>
+    <meta name="description" content="Facebook crashing on startup, freezing on Reels, or closing when you tap a video? Real fixes for each crash pattern — including the storage threshold most guides ignore and why Marketplace crashes hit Android harder.">
+    <meta name="keywords" content="facebook app crashing, facebook keeps crashing, facebook freezing, facebook crash fix, facebook marketplace crashing, facebook not opening, facebook reels crash">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/facebook-app-crashing.html">
-    <meta property="og:title" content="Facebook App Crashing: 7 Fixes for Startup Crashes, Freezing & Video Crashes | FixThatApp">
-    <meta property="og:description" content="Facebook crashing on startup, freezing while scrolling, or crashing when you open videos? Here are 7 targeted fixes for every type of Facebook crash on iPhone and Android.">
+    <meta property="og:title" content="Facebook App Keeps Crashing? 7 Fixes for iPhone &amp; Android (2026)">
+    <meta property="og:description" content="Facebook crashing on startup, freezing on Reels, or closing on videos? Real fixes for each crash pattern — including the storage threshold most guides ignore.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/facebook-app-crashing.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Facebook App Crashing: 7 Fixes for Startup Crashes, Freezing & Video Crashes | FixThatApp">
-    <meta name="twitter:description" content="Facebook crashing on startup, freezing while scrolling, or crashing when you open videos? Here are 7 targeted fixes for every type of Facebook crash on iPhone and Android.">
+    <meta name="twitter:title" content="Facebook App Keeps Crashing? 7 Fixes for iPhone &amp; Android (2026)">
+    <meta name="twitter:description" content="Facebook crashing on startup, freezing on Reels, or closing on videos? Real fixes for each crash pattern.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ðŸ”§</text></svg>">
     <script>
     (function() {
@@ -33,9 +33,9 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "Facebook App Crashing: 7 Fixes for Startup Crashes, Freezing & Video Crashes",
-      "description": "Facebook crashing on startup, freezing while scrolling, or crashing when you open videos? Here are 7 targeted fixes for every type of Facebook crash on iPhone and Android.",
-      "dateModified": "2026-04-03",
+      "headline": "Facebook App Keeps Crashing? 7 Fixes for iPhone & Android (2026)",
+      "description": "Facebook crashing on startup, freezing on Reels, or closing when you tap a video? Real fixes for each crash pattern, including the storage threshold most guides ignore and Marketplace-specific crashes on Android.",
+      "dateModified": "2026-05-09",
       "author": {
         "@type": "Organization",
         "name": "FixThatApp",
@@ -240,7 +240,7 @@
         </nav>
         <div class="article">
             <h1>Facebook App Crashing: 7 Fixes for Startup Crashes, Freezing &amp; Video Crashes</h1>
-            <p class="updated">Last updated: April 3, 2026</p>
+            <p class="updated">Last updated: May 9, 2026 &middot; Verified on Facebook app v450+ for iOS and Android</p>
             <p class="byline">By <a href="../about.html">Sufyan Khan</a> &mdash; Founder, FixThatApp &nbsp;|&nbsp; <a href="../about.html#editorial">Editorial standards</a></p>
 
             <p>Facebook is one of the heaviest apps on any phone â€” it runs background processes constantly, maintains a large cache, and pushes frequent updates that sometimes introduce new bugs. When it crashes, it matters <em>when</em> and <em>where</em> it crashes: crashing at startup is different from crashing when you open a video, and crashing only on your phone (but not someone else's) points to a device-specific issue.</p>
@@ -325,6 +325,38 @@
                 <li>Facebook Lite has most core features: feed, messaging (basic), groups, and Marketplace.</li>
             </ol>
             <p>Facebook Lite is Android-only. iPhone users who need a lighter option can use <strong>m.facebook.com</strong> in Safari â€” add it to your home screen as a shortcut for an app-like experience without the weight of the full app.</p>
+
+            <h2>Crash Patterns and What They Tell You</h2>
+
+            <p>Different crash patterns point to different causes. Match yours to the closest description below.</p>
+
+            <h3>Crashes immediately on launch (white flash, then home screen)</h3>
+            <p>The app loads its main process, fails on the first server handshake, and bails out. Usually a corrupted login token after a Facebook security event (password change, new login from another device, or a forced session reset on Meta's side). Force-quit, log out via the web at facebook.com if you can, then sign back in on the app. If the crash happens before you can even hit the logout button, uninstall and reinstall &mdash; this clears the bad token.</p>
+
+            <h3>Crashes when you open Marketplace</h3>
+            <p>Marketplace runs a separate webview component inside the Facebook app, and on Android with low free storage (under 2 GB), this webview fails to allocate memory and the entire app crashes. Free up storage first &mdash; below 2 GB free, Facebook on Android is unstable across multiple features, not just Marketplace. iOS handles low storage more gracefully, so this pattern is mostly an Android issue.</p>
+
+            <h3>Crashes when you tap a Reel or video</h3>
+            <p>The video player module is a known weak point. Three causes account for most of these crashes: an unsupported video codec from a recent upload (rare but happens), a corrupted media cache (clear with the cache-clear steps in the fixes above), or hardware acceleration conflicts with your GPU drivers on Android. On Samsung devices specifically, disabling "Enhance video" in Settings &rsaquo; Display sometimes resolves Reels crashes &mdash; the post-processing fights with Facebook's player.</p>
+
+            <h3>Freezes on the news feed but doesn't actually crash</h3>
+            <p>The app appears frozen but isn't &mdash; it's stuck waiting for a slow network response. Pull down to refresh forces a new request and unsticks it. If this happens repeatedly on cellular but not Wi-Fi, your carrier may be throttling Facebook's CDN. If it's the other way around, your home Wi-Fi has a DNS issue with Meta's servers &mdash; switching DNS to 1.1.1.1 (Cloudflare) or 8.8.8.8 (Google) usually fixes it.</p>
+
+            <h3>Crashes after you receive a Messenger notification</h3>
+            <p>The Facebook app and Messenger app share notification handling code, and if Messenger is uninstalled or in a partial install state, Facebook crashes when trying to render Messenger-related notifications. Reinstall Messenger fully (or remove it from notification settings if you don't use it: phone Settings &rsaquo; Notifications &rsaquo; Facebook &rsaquo; disable Messenger category).</p>
+
+            <h3>Crashes only when uploading a photo or video</h3>
+            <p>Photo upload pipeline failure. Almost always a permission issue (Facebook lost photo library access after an OS update) or a HEIC vs JPEG conversion bug. Re-grant photo permissions: iOS Settings &rsaquo; Facebook &rsaquo; Photos &rsaquo; All Photos. On iPhone, in Camera settings switch from HEIF to "Most Compatible" (JPEG) if the crash is specific to recent photos.</p>
+
+            <h2>iPhone vs Android: Different Crash Triggers</h2>
+
+            <p>Facebook crashes look similar across platforms but have different root causes that need different fixes.</p>
+
+            <h3>iPhone</h3>
+            <p>iOS-specific crashes are most often caused by iOS updates that invalidate Facebook's cached data, or by Background App Refresh being aggressively killed by iOS. Updating Facebook within 1&ndash;2 days of an iOS update usually clears most issues &mdash; Facebook ships compatibility patches quickly. If crashes persist post-update, offload the app: Settings &rsaquo; General &rsaquo; iPhone Storage &rsaquo; Facebook &rsaquo; Offload App. This deletes the app data without removing it, then reinstall fresh.</p>
+
+            <h3>Android</h3>
+            <p>Android crashes are predominantly storage-related (the 2 GB threshold mentioned above) or battery-optimization-related. Samsung One UI, Xiaomi MIUI, and OnePlus OxygenOS all aggressively kill Facebook's background processes, which then leaves the app in an inconsistent state on next launch. Set battery to Unrestricted: Settings &rsaquo; Apps &rsaquo; Facebook &rsaquo; Battery &rsaquo; Unrestricted. Also clear cache (not data) regularly &mdash; Facebook's Android cache grows aggressively and over 1 GB of cached data slows the app and triggers crashes on launch.</p>
 
             <h2>What NOT to Do</h2>
 <div class="dont-do">
