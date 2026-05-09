@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Not Loading? Why It Hangs and How to Fix It (2026)</title>
+    <meta name="description" content="Notion stuck on the loading screen, showing 'connect to the internet' while you're online, or workspace won't open? Real fixes for desktop, web, iOS, and Android — including the cache locations Notion's docs don't mention.">
+    <meta name="keywords" content="notion not loading, notion not working, notion stuck on loading screen, notion is down, error loading notion, notion app not opening, notion connect to the internet, why is notion not loading">
+    <link rel="canonical" href="https://www.fixthatapp.com/pages/notion-app-not-loading.html">
+    <meta property="og:title" content="Notion Not Loading? Why It Hangs and How to Fix It (2026)">
+    <meta property="og:description" content="Notion stuck loading, 'connect to the internet' while online, or workspace won't open? Real fixes for desktop, web, iOS, and Android.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/pages/notion-app-not-loading.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Notion Not Loading? Why It Hangs and How to Fix It (2026)">
+    <meta name="twitter:description" content="Notion stuck loading, 'connect to the internet' while online, or workspace won't open? Real fixes for desktop, web, iOS, and Android.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
+     crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Notion Not Loading? Why It Hangs and How to Fix It (2026)",
+      "description": "Notion stuck on the loading screen, showing 'connect to the internet' while you're online, or workspace won't open? Real fixes for desktop, web, iOS, and Android.",
+      "dateModified": "2026-05-09",
+      "author": {
+        "@type": "Organization",
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.fixthatapp.com/pages/notion-app-not-loading.html"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Notion down right now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check status.notion.so for Notion's official status page. It updates within minutes of an incident. You can also check downdetector.com/status/notion-so for community reports, and search 'Notion down' on X — user reports often surface before the status page updates. If both show problems, the only fix is to wait. Notion outages typically resolve in 30–90 minutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does Notion say 'connect to the internet' when I'm online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Notion's connection check is overly cautious. It often misfires on networks with captive portals (hotels, cafes, airports), aggressive corporate firewalls, or DNS-blocking VPNs. Try opening notion.so in your browser first — if a captive portal appears, log in there. If you're on a corporate network, ask IT whether notion.so or msgr.notion.so is whitelisted. Switching to mobile data or a different DNS (Cloudflare's 1.1.1.1 or Google's 8.8.8.8) usually resolves it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Notion stuck on the loading screen on Mac?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On macOS, Notion sometimes hangs because the menu bar helper process gets stuck or because the app's local cache is corrupted. First, force-quit Notion (Cmd+Option+Esc → Notion → Force Quit) and reopen. If it still hangs, delete the local cache at ~/Library/Application Support/Notion (you'll need to sign in again, but no data is lost — everything syncs from the server). On Apple Silicon Macs, also check whether Rosetta is being used unnecessarily — install the native Apple Silicon build from notion.so/desktop."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does Notion show a blank page after I click on it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A blank page that loads but renders nothing usually means the page contains a heavy database, a broken integration, or content too large for Notion's renderer. Try opening that specific page in the web app at notion.so — sometimes web handles it differently than desktop. If it still fails, try going to the page from a parent page rather than directly via URL. As a last resort, ask another workspace member to open the page and tell you what's there — the issue may be a corrupted block that needs to be deleted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I clear Notion's cache?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On Mac: quit Notion, then delete ~/Library/Application Support/Notion. On Windows: quit Notion, then delete %APPDATA%\\Notion. On iOS and Android: there is no cache-clear option — uninstall and reinstall the app. On the web: open notion.so, press F12 → Application tab → Storage → Clear site data. None of these delete your actual content; everything is on Notion's servers."
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search { position: relative; max-width: 260px; }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .article { background: white; border-radius: 12px; padding: 2.5rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
+        .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
+        .article li { margin-bottom: 0.4rem; }
+        .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.25rem; }
+        .faq .q { font-weight: 600; color: #333; }
+        .faq .a { color: #555; }
+        .still-stuck { background: #f0f7ff; border-radius: 8px; padding: 1.25rem; margin-top: 2rem; }
+        .still-stuck a { color: #667eea; }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #999;
+            font-size: 0.85rem;
+            border-top: 1px solid #eee;
+        }
+        footer a { color: #667eea; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .cookie-banner {
+            position: fixed;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 0.85rem 1rem;
+            border-radius: 10px;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.8rem;
+            z-index: 2000;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            font-size: 0.85rem;
+        }
+        .cookie-banner a { color: #9ec2ff; }
+        .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+        .cookie-btn {
+            border: 1px solid #667eea;
+            background: transparent;
+            color: #fff;
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        .cookie-btn.primary { background: #667eea; }
+        .byline { font-size: 0.82rem; color: #888; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .byline a { color: #667eea; text-decoration: none; }
+        .byline a:hover { text-decoration: underline; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .insight { background: #f6fff5; border-left: 4px solid #4caf50; padding: 0.9rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1.1rem 0; font-size: 0.95rem; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+            .cookie-banner { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value" >
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; Notion Not Loading
+        </nav>
+        <div class="article">
+            <h1>Notion Not Loading? Why It Hangs and How to Fix It (2026)</h1>
+            <p class="updated">Last updated: May 9, 2026 &middot; Based on Notion 3.x desktop, iOS, and web</p>
+            <p class="byline">By <a href="../about.html">Sufyan Khan</a> &mdash; Founder, FixThatApp &nbsp;|&nbsp; <a href="../about.html#editorial">Editorial standards</a></p>
+
+            <p>If you've landed here, Notion is doing one of three things: refusing to open at all, opening but stuck on the loading spinner forever, or loading the sidebar but showing a blank page when you click anything. They look similar but have different causes, and the fix depends on which one you're hitting.</p>
+
+            <p>Notion is unusual among productivity apps because it ships three meaningfully different clients: an Electron-based desktop app on Mac and Windows, native iOS and Android apps, and a fully-featured web version at notion.so. They share a backend but their failure modes are surprisingly different. The same workspace might load fine on web and hang on desktop, or load on your phone and refuse to open on your laptop.</p>
+
+            <h2>First: Is Notion Down for Everyone, or Just You?</h2>
+
+            <p>Before touching cache, settings, or reinstalling anything, take 10 seconds to check whether Notion itself is having problems.</p>
+            <ol>
+                <li>Open <strong>status.notion.so</strong> in any browser. Notion's status page is reasonably honest and usually flags ongoing incidents within 5&ndash;15 minutes.</li>
+                <li>Cross-check at <strong>downdetector.com/status/notion-so</strong>. A spike in user reports there will catch outages before Notion's own status page updates.</li>
+                <li>Search <strong>"Notion down"</strong> on X. The first wave of complaints lands here within seconds of an outage starting.</li>
+            </ol>
+            <p>If any of these show a current incident, your fix is to wait. Most Notion outages clear within 30 to 90 minutes. Repeatedly relaunching the app will not help and may extend your sign-in cooldown if Notion's auth service is the part that's degraded.</p>
+
+            <p>If everything looks green and your specific workspace is the only thing failing, keep reading.</p>
+
+            <h2>What the Error Message Is Telling You</h2>
+
+            <p>The exact wording of the error narrows the cause down significantly. Notion has a small handful of distinctive failure messages, and each maps to a different fix.</p>
+
+            <h3>"Connect to the internet to use Notion"</h3>
+            <p>You're online (other sites work) but Notion insists you aren't. Notion's connection check is genuinely flaky. It calls a heartbeat endpoint and if the response is delayed or filtered, it concludes you're offline even when you're not.</p>
+            <p>The most common triggers I see: captive portals on cafe and hotel Wi-Fi (open any HTTPS website first to authenticate), corporate firewalls that block <code>msgr.notion.so</code> (the messaging endpoint Notion uses for live updates), and some VPN setups with strict DNS filtering. Switching to mobile data for 30 seconds will tell you which one it is &mdash; if Notion connects on cellular, your network is the problem.</p>
+
+            <h3>"We hit a snag" / "Something went wrong"</h3>
+            <p>The frustratingly vague error. In practice it means one of: a sync conflict on a block you currently have open, a permission change happened on a parent page while you were viewing a child, or Notion's backend returned a soft error to a specific request.</p>
+            <p>Reload the page (Cmd+R or Ctrl+R). If it persists on a specific page, that page has a corrupted block somewhere. The reliable fix is to open the page in the web app, click into the area where the error appears, and delete the most recent block you added before the error started showing up.</p>
+
+            <h3>"Failed to load page" / blank page after click</h3>
+            <p>The sidebar loads, you click a page, and you get a white screen with no error. This almost always means the page contains content that's choking Notion's renderer. The usual culprits: a database with no filters showing 500+ rows, a synced block referencing a deleted source, or an embedded iframe pointing at a service that's now blocked.</p>
+            <p>Workaround: navigate to the page from its parent rather than directly via URL. If that loads, the parent is fine and the child page itself has the problem. From there, ask someone else with access to open the page and identify what's there &mdash; you may need them to delete the offending block since you can't open it yourself.</p>
+
+            <h3>"Workspace not found" / "You don't have access"</h3>
+            <p>You're logged in but Notion claims your workspace doesn't exist or you've been removed. Two scenarios produce this. Either an admin actually changed your access (rare but check Slack/email for any team announcements), or Notion's workspace switcher cached the wrong workspace ID after you logged into multiple workspaces in sequence.</p>
+            <p>Sign out completely (avatar menu &rsaquo; Log out), close Notion, reopen, and sign in again. If you have multiple workspaces, pick the one you need from the explicit list rather than relying on auto-load.</p>
+
+            <h3>Notion Mac/Windows app stuck on splash screen</h3>
+            <p>The launcher splash appears with the Notion logo and never progresses. This is a local cache problem 90% of the time. The other 10% is an Electron rendering issue specific to your GPU drivers.</p>
+            <p>Fix the cache first (instructions further down in "The Hard Reset"). If that fails, launch Notion with hardware acceleration disabled by passing <code>--disable-gpu</code> as a command-line flag, or by toggling the setting in <strong>Settings &amp; members &rsaquo; My settings &rsaquo; Hardware acceleration</strong>.</p>
+
+            <h2>When Notion Loads but Pages Won't Open</h2>
+
+            <p>This deserves its own section because it's the most common failure mode and the least obvious to fix. Notion's sidebar loads, you can navigate, but every time you click a specific page or database, it spins forever or shows a blank.</p>
+
+            <p>Notion fetches and renders pages on demand. A heavy page can take 30+ seconds to render even on a fast connection. The biggest offenders are databases with thousands of rows and no filter, pages with deeply nested toggles (10+ levels), and pages packed with embeds (Figma, Loom, YouTube, Google Maps).</p>
+
+            <div class="insight">
+                <strong>What to actually try first:</strong> open the same page on web at <code>notion.so</code> in Chrome. The web app uses different rendering paths from the Electron desktop client and frequently loads heavy pages the desktop app gives up on. If web works, you've confirmed it's a desktop-specific render issue, not a server problem.
+            </div>
+
+            <p>If that confirms a desktop render issue, work down this list:</p>
+            <ol>
+                <li><strong>Disable hardware acceleration</strong> in Settings &rsaquo; My settings. Counterintuitively, this often makes heavy pages load <em>faster</em> on machines with weak or driver-flaky GPUs.</li>
+                <li><strong>Add a default filter to the offending database.</strong> A database showing 1,200 rows on open is the most common cause of "page won't load." Filter it down to 50&ndash;100 rows and the page will open instantly.</li>
+                <li><strong>Convert deep toggles to subpages.</strong> Toggles 10+ levels deep render the entire tree even when collapsed. Subpages render lazily.</li>
+                <li><strong>Check for broken sync sources.</strong> If a synced block points to a deleted or moved source, Notion can hang trying to resolve it. Right-click the synced block and unsync it.</li>
+            </ol>
+
+            <h2>Desktop, Web, and Mobile Fail Differently</h2>
+
+            <p>Notion's three clients have separate failure modes. If you've already tried "restart the app," the next step depends on which client is failing.</p>
+
+            <h3>Desktop (Mac &amp; Windows)</h3>
+            <p>The desktop app is Electron, which means it bundles its own Chrome and runs as a heavyweight process. When it hangs, the cause is usually the local SQLite cache, which lives at:</p>
+            <ul>
+                <li><strong>Mac:</strong> <code>~/Library/Application Support/Notion</code></li>
+                <li><strong>Windows:</strong> <code>%APPDATA%\Notion</code></li>
+            </ul>
+            <p>Quit Notion completely (on Mac, Cmd+Q in the app or right-click the dock icon &rsaquo; Quit). Then delete that folder. Relaunch and sign in. None of your content lives in this folder &mdash; it's all cache and pulled from the server on next sync. You will need to re-enable any per-device settings.</p>
+            <p>On Apple Silicon Macs, also confirm you're running the native ARM build, not the Intel build through Rosetta. Activity Monitor &rsaquo; CPU tab &rsaquo; check the "Architecture" column. If it shows "Intel," uninstall and download the universal/Apple Silicon build from <strong>notion.so/desktop</strong>.</p>
+
+            <h3>Web (notion.so in browser)</h3>
+            <p>The web app's failure modes are mostly cookie and extension related. Open Notion in an Incognito window first &mdash; it eliminates extensions and cookies in one step. If Notion works there, the issue is in your normal browser session.</p>
+            <p>If you need to clear web Notion's storage without losing other browser data: open notion.so, press F12 to open DevTools, go to <strong>Application &rsaquo; Storage</strong>, click "Clear site data" while only notion.so is selected. This is surgical and won't affect any other site.</p>
+            <p>Common extensions that break Notion: aggressive ad blockers (uBlock Origin with custom filters), Honey, Grammarly's heavier modes, and anything that injects scripts into pages.</p>
+
+            <h3>iOS</h3>
+            <p>The iOS app's biggest issue is splash-screen hangs after iOS updates. Apple's WebKit changes can invalidate locally cached schema, leaving the app waiting on a sync handshake that never completes. The fix is annoying but reliable: uninstall the Notion app, reinstall from the App Store, sign in fresh. Your content is all on Notion's servers, so nothing is lost.</p>
+            <p>iOS Notion has no in-app cache clear. The "Force Stop" trick from Android does not exist on iOS &mdash; reinstall is the only option short of waiting for the next app update.</p>
+
+            <h3>Android</h3>
+            <p>On Android, "Notion not loading" is more often a battery-optimization issue than a real bug. Aggressive battery management on Samsung One UI, Xiaomi MIUI, and Oppo ColorOS will kill Notion's background sync threads, and when you next open the app it has to rebuild state from scratch &mdash; which can hang.</p>
+            <p>Open <strong>Settings &rsaquo; Apps &rsaquo; Notion &rsaquo; Battery &rsaquo; set to Unrestricted</strong>. Then clear the cache (Settings &rsaquo; Apps &rsaquo; Notion &rsaquo; Storage &rsaquo; Clear cache &mdash; not Clear data, that signs you out). Force-stop and reopen.</p>
+
+            <h2>The Hard Reset: When Nothing Else Works</h2>
+
+            <p>If you've checked Notion's status, your error doesn't match any specific message above, and the platform-specific fixes haven't worked, the hard reset clears every piece of local state and forces Notion to rebuild from scratch. It works ~95% of the time but will sign you out and reset all per-device preferences.</p>
+
+            <ol>
+                <li><strong>Sign out via web first</strong>, not via the desktop app. Open notion.so, click your avatar, choose Log out. This invalidates your session token server-side, which is what you actually want.</li>
+                <li><strong>Quit the desktop app completely.</strong> Force-quit if needed (Mac: Cmd+Option+Esc; Windows: Task Manager &rsaquo; End task on all Notion processes).</li>
+                <li><strong>Delete the local app data folder</strong> (paths above for Mac and Windows).</li>
+                <li><strong>Restart your machine.</strong> Yes, actually do it &mdash; not all OSes release file handles cleanly until the process tree fully exits.</li>
+                <li><strong>Reinstall Notion</strong> from notion.so/desktop. Don't restore from a Time Machine backup or zipped folder &mdash; you want a fresh install.</li>
+                <li><strong>Sign in.</strong> The first sync after a clean install can take 5&ndash;10 minutes depending on workspace size. Don't quit the app during this period.</li>
+            </ol>
+
+            <h2>What NOT to Do</h2>
+            <div class="dont-do">
+                <div class="dd-title">Common mistakes that make this worse</div>
+                <ul>
+                    <li><strong>Don't sign up for a new Notion account thinking your old one is broken.</strong> Loading errors are almost never account-level &mdash; they're cache, network, or workspace-specific. Creating a new account leaves your real workspace orphaned and adds a billing complication if you're on a paid plan.</li>
+                    <li><strong>Don't delete pages or databases trying to "fix" a page that won't open.</strong> If a page won't load, you can't see what's on it &mdash; deleting it permanently destroys content you can't first review. Use the version history feature instead, or have a teammate open the page and tell you what's there.</li>
+                    <li><strong>Don't keep relaunching Notion during an outage.</strong> Notion's auth service rate-limits sign-in attempts. If you hit it 10+ times during an outage, your account may be locked out for 15&ndash;30 minutes after the outage clears, even though your credentials are fine.</li>
+                    <li><strong>Don't run Notion through a VPN to "improve speed."</strong> Notion's CDN routes traffic to the nearest region. Forcing it through a VPN endpoint typically <em>slows</em> page loads and can break the connection-check (triggering the "connect to the internet" error). Disable VPN for Notion specifically if your VPN supports per-app exclusions.</li>
+                </ul>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <p class="q">Q: Is Notion down right now?</p>
+                <p class="a">A: Check status.notion.so for Notion's official status page. Cross-check at downdetector.com/status/notion-so for community reports. If both show problems, the only fix is to wait &mdash; outages typically resolve in 30 to 90 minutes.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: Why does Notion say "connect to the internet" when I'm online?</p>
+                <p class="a">A: Notion's connection check is overly cautious and misfires on networks with captive portals (hotels, cafes), strict corporate firewalls, or DNS-blocking VPNs. Open notion.so in a browser first to clear any captive portal. If you're on a VPN, try briefly without it. Switching to mobile data confirms whether your network is the issue.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: Why is Notion stuck on the loading screen on Mac?</p>
+                <p class="a">A: The most common cause is a corrupted local cache. Quit Notion (Cmd+Q), delete <code>~/Library/Application Support/Notion</code>, and reopen. No content is lost &mdash; it all syncs from the server. If the issue persists on Apple Silicon Macs, confirm you're running the native ARM build via Activity Monitor's Architecture column.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: Why does Notion show a blank page after I click on it?</p>
+                <p class="a">A: A blank page that loads but renders nothing usually means the page contains a heavy database, a broken integration, or content the renderer is choking on. Try opening it on web at notion.so &mdash; the web client uses a different render path from desktop. As a last resort, navigate via the parent page rather than direct URL, or have a teammate open it and tell you what's there.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: How do I clear Notion's cache?</p>
+                <p class="a">A: On Mac, delete <code>~/Library/Application Support/Notion</code>. On Windows, delete <code>%APPDATA%\Notion</code>. On iOS and Android, you must uninstall and reinstall (no in-app cache clear exists). On the web, F12 &rsaquo; Application &rsaquo; Storage &rsaquo; Clear site data. None of these delete content; everything is on Notion's servers.</p>
+            </div>
+
+            <div class="still-stuck">
+                <h2>Still Stuck?</h2>
+                <p>If everything here has failed and Notion's status page is green, the issue is likely workspace- or account-specific. Contact Notion support directly at <a href="https://www.notion.so/help" target="_blank" rel="noopener">notion.so/help</a> &mdash; include your workspace URL, the error message verbatim if any, and which client (desktop, web, mobile) you're hitting it on. Plus, Business, and Enterprise customers get faster response times.</p>
+            </div>
+
+            <h2>Related Guides</h2>
+            <ul>
+                <li><a href="claude-ai-not-loading.html">Claude AI Not Loading or Erroring</a></li>
+                <li><a href="chatgpt-not-working.html">ChatGPT Not Working: 8 Fixes for Every Error</a></li>
+                <li><a href="google-chrome-crashing.html">Google Chrome Crashing</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        &copy; 2026 FixThatApp. All rights reserved.
+        | <a href="../about.html">About</a>
+        | <a href="../privacy-policy.html">Privacy Policy</a>
+        | <a href="../cookie-policy.html">Cookie Policy</a>
+        | <a href="../terms.html">Terms</a>
+        | <a href="../contact.html">Contact</a>
+        | <a href="../seo-troubleshooting-guides.html">SEO Guides</a>
+        | <a href="../index.html">All Guides</a>
+    </footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) {
+        banner.style.display = 'flex';
+      }
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
+</body>
+</html>
