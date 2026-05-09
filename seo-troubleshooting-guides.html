@@ -49,6 +49,25 @@
     <div class="container">
         <section class="intro">
             <p>Use these SEO troubleshooting guides to diagnose indexing and ranking problems. Each guide is structured for practical implementation with checks, common causes, and remediation steps.</p>
+
+            <h2 style="font-size:1.15rem;margin:1.2rem 0 .6rem;color:#1a1a2e">How SEO Troubleshooting Works</h2>
+            <p style="font-size:.95rem;color:#444;margin-bottom:.75rem">Most SEO problems fall into one of three categories: <strong>crawlability</strong> (can Google reach your page?), <strong>indexability</strong> (does Google decide to include it in its index?), and <strong>rankings</strong> (where does it appear in results?). Each category has different root causes and different fixes. Diagnosing which layer the problem is at is the first step — the guides below are organised by category.</p>
+
+            <h2 style="font-size:1.15rem;margin:1.2rem 0 .6rem;color:#1a1a2e">Start Here: Google Search Console</h2>
+            <p style="font-size:.95rem;color:#444;margin-bottom:.75rem">Every SEO investigation starts in <strong>Google Search Console</strong>. The Coverage report shows which pages are indexed, which are excluded, and why. The URL Inspection tool lets you test any specific URL to see how Google last crawled it, what HTTP status it returned, whether it has a canonical issue, and whether the rendered HTML matches your source HTML. If you haven't verified your site in Search Console yet, that should be your first step before any other troubleshooting.</p>
+
+            <h2 style="font-size:1.15rem;margin:1.2rem 0 .6rem;color:#1a1a2e">Common Causes of Indexing Problems</h2>
+            <p style="font-size:.95rem;color:#444;margin-bottom:.5rem">The most frequent reasons Google does not index a page:</p>
+            <ul style="font-size:.93rem;color:#444;margin-left:1.3rem;margin-bottom:.75rem;line-height:1.75">
+                <li><strong>noindex tag</strong> — a <code>&lt;meta name="robots" content="noindex"&gt;</code> tag on the page explicitly tells Google not to index it. Often added accidentally during development.</li>
+                <li><strong>Blocked in robots.txt</strong> — if the page URL matches a <code>Disallow</code> rule, Googlebot cannot crawl it at all and therefore cannot index it.</li>
+                <li><strong>Thin or duplicate content</strong> — Google may crawl the page but choose not to index it if it judges the content as low quality, largely duplicated from other pages, or not providing enough value to users.</li>
+                <li><strong>Canonical pointing elsewhere</strong> — if a page's canonical tag points to a different URL, Google treats the canonical as the "real" page and may exclude the current URL from the index.</li>
+                <li><strong>Slow crawl budget exhaustion</strong> — on large sites, Google may crawl some pages rarely. Pages with low internal link equity or poor internal linking are deprioritised.</li>
+            </ul>
+
+            <h2 style="font-size:1.15rem;margin:1.2rem 0 .6rem;color:#1a1a2e">How Long Does Indexing Take?</h2>
+            <p style="font-size:.95rem;color:#444;margin-bottom:.75rem">New pages on small or low-authority sites typically take <strong>1–4 weeks</strong> to be crawled and indexed without any manual intervention. Using the URL Inspection tool in Search Console and clicking "Request Indexing" can speed this up to <strong>1–3 days</strong> for most pages. However, requesting indexing does not guarantee the page will be indexed — Google still evaluates quality and relevance independently. Submitting a sitemap ensures all your pages are known to Google, but discovery and indexing are separate steps.</p>
         </section>
         <section class="grid">
             <a class="card" href="seo-page-not-indexed.html">
