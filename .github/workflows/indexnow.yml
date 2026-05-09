@@ -1,0 +1,91 @@
+name: IndexNow ping
+
+# Pings IndexNow (Bing, Yandex, DuckDuckGo, Seznam) with HTML pages that
+# changed in each push to main. Waits for GitHub Pages to deploy first so
+# search engines crawl the new content, not the old.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Build URL list from changed HTML files
+        id: changes
+        run: |
+          set -euo pipefail
+
+          # Diff against previous commit; if first commit, fall back to all HTML files
+          if git rev-parse HEAD^ >/dev/null 2>&1; then
+            CHANGED=$(git diff --name-only --diff-filter=ACMR HEAD^ HEAD -- '*.html' || true)
+          else
+            CHANGED=$(git ls-files '*.html')
+          fi
+
+          if [ -z "$CHANGED" ]; then
+            echo "No HTML changes in this push; nothing to ping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Map file paths to public URLs (root index.html -> https://host/)
+          URLS=$(echo "$CHANGED" | while IFS= read -r f; do
+            if [ "$f" = "index.html" ]; then
+              echo "https://www.fixthatapp.com/"
+            elif [ "$(basename "$f")" = "index.html" ]; then
+              # subdirectory index.html -> trailing slash URL
+              dir=$(dirname "$f")
+              echo "https://www.fixthatapp.com/${dir}/"
+            else
+              echo "https://www.fixthatapp.com/${f}"
+            fi
+          done)
+
+          # Build JSON array
+          URL_JSON=$(echo "$URLS" | jq -R . | jq -sc .)
+          echo "url_json=${URL_JSON}" >> "$GITHUB_OUTPUT"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+          echo "Will submit:"
+          echo "$URLS"
+
+      - name: Wait for GitHub Pages to deploy the change
+        if: steps.changes.outputs.skip != 'true'
+        run: sleep 90
+
+      - name: Submit changed URLs to IndexNow
+        if: steps.changes.outputs.skip != 'true'
+        env:
+          URL_JSON: ${{ steps.changes.outputs.url_json }}
+        run: |
+          set -euo pipefail
+          PAYLOAD=$(jq -nc \
+            --arg host "www.fixthatapp.com" \
+            --arg key "6bfa5b43c098b6cfe04c89824c23d796" \
+            --arg keyLoc "https://www.fixthatapp.com/6bfa5b43c098b6cfe04c89824c23d796.txt" \
+            --argjson urls "$URL_JSON" \
+            '{host:$host, key:$key, keyLocation:$keyLoc, urlList:$urls}')
+
+          RESPONSE=$(curl -sS -w "\nHTTP_STATUS:%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD")
+
+          STATUS=$(echo "$RESPONSE" | grep -oE 'HTTP_STATUS:[0-9]+' | cut -d: -f2)
+          BODY=$(echo "$RESPONSE" | sed '/HTTP_STATUS:/d')
+          echo "IndexNow response: HTTP $STATUS"
+          [ -n "$BODY" ] && echo "Body: $BODY"
+
+          case "$STATUS" in
+            200|202) echo "Success — URLs queued for indexing." ;;
+            *) echo "IndexNow rejected the submission." && exit 1 ;;
+          esac
