@@ -73,43 +73,13 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/tools/age-calculator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/age-in-days-calculator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/tools/ai-text-summarizer/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/tools/base64-encoder-decoder/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/bmi-calculator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/tools/color-code-converter/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/compound-interest-calculator/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -133,19 +103,7 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/tools/currency-converter/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/tools/date-difference-calculator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/discount-calculator/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -199,12 +157,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/tools/image-resizer/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/tools/js-minifier/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -230,18 +182,6 @@
   </url>
   <url>
     <loc>https://www.fixthatapp.com/tools/line-sorter/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/loan-emi-calculator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/loan-interest-calculator/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -277,12 +217,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/tools/online-calculator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/tools/password-generator/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -295,31 +229,7 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/tools/percentage-calculator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/tools/pomodoro-timer/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/profit-margin-calculator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/qr-code-generator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/random-number-picker/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -343,12 +253,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/tools/sip-calculator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/tools/sitemap-url-list-cleaner/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -356,12 +260,6 @@
   </url>
   <url>
     <loc>https://www.fixthatapp.com/tools/slug-generator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/tax-calculator/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -379,30 +277,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/tools/time-zone-converter/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/timezone-meeting-planner/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/tip-calculator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/unit-converter/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/tools/unix-timestamp-converter/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -415,46 +289,10 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/tools/username-generator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/uuid-generator/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/weather-checker/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/tools/whitespace-cleaner/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/word-counter/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/tools/word-frequency-counter/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/blog/age-in-days-calculator-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.fixthatapp.com/blog/app-cache-clear-helper-guide.html</loc>
@@ -464,12 +302,6 @@
   </url>
   <url>
     <loc>https://www.fixthatapp.com/blog/color-code-converter-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/blog/compound-interest-calculator-guide.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -494,12 +326,6 @@
   </url>
   <url>
     <loc>https://www.fixthatapp.com/blog/date-difference-calculator-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/blog/discount-calculator-guide.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -583,18 +409,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/blog/loan-emi-calculator-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/blog/loan-interest-calculator-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/blog/lorem-ipsum-generator-guide.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -643,19 +457,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/blog/percentage-calculator-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/blog/pomodoro-timer-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/blog/profit-margin-calculator-guide.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -679,12 +481,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/blog/sip-calculator-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/blog/sitemap-url-list-cleaner-guide.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -698,12 +494,6 @@
   </url>
   <url>
     <loc>https://www.fixthatapp.com/blog/streaming-buffering-fixer-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/blog/tax-calculator-guide.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -727,12 +517,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/blog/timezone-meeting-planner-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/blog/unix-timestamp-converter-guide.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -745,12 +529,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.fixthatapp.com/blog/username-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.fixthatapp.com/blog/whitespace-cleaner-guide.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -758,12 +536,6 @@
   </url>
   <url>
     <loc>https://www.fixthatapp.com/blog/wifi-troubleshooter-guide.html</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.fixthatapp.com/blog/word-frequency-counter-guide.html</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
