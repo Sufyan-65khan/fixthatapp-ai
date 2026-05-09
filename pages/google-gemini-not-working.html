@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Gemini Not Working: What's Breaking It in 2026 (and the Real Fixes)</title>
+    <meta name="description" content="Gemini stuck on 'Something went wrong', the app crashing on Xiaomi, or the web version returning 503 errors? Here's what's actually broken right now and how to get back to a working session.">
+    <meta name="keywords" content="google gemini not working, gemini something went wrong, gemini app crashing, gemini 503 error, gemini.google.com not loading, gemini app fix">
+    <link rel="canonical" href="https://www.fixthatapp.com/pages/google-gemini-not-working.html">
+    <meta property="og:title" content="Google Gemini Not Working: What's Breaking It in 2026 (and the Real Fixes)">
+    <meta property="og:description" content="Gemini stuck on 'Something went wrong', the app crashing on Xiaomi, or the web version returning 503 errors? Here's what's actually broken right now and how to get back to a working session.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.fixthatapp.com/pages/google-gemini-not-working.html">
+    <meta property="og:site_name" content="FixThatApp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Google Gemini Not Working: What's Breaking It in 2026 (and the Real Fixes)">
+    <meta name="twitter:description" content="Gemini stuck on 'Something went wrong', the app crashing on Xiaomi, or the web version returning 503 errors? Here's what's actually broken right now and how to get back to a working session.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <script>
+    (function() {
+      try {
+        var consent = localStorage.getItem('fta_cookie_consent');
+        if (consent === 'rejected') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      } catch (e) {}
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
+     crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Google Gemini Not Working: What's Breaking It in 2026 (and the Real Fixes)",
+      "description": "Gemini stuck on 'Something went wrong', the app crashing on Xiaomi, or the web version returning 503 errors? Here's what's actually broken right now and how to get back to a working session.",
+      "dateModified": "2026-05-09",
+      "author": {
+        "@type": "Organization",
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FixThatApp",
+        "url": "https://www.fixthatapp.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.fixthatapp.com/pages/google-gemini-not-working.html"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does 'Something went wrong (5)' mean in Gemini?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The numbered variants of this error (1, 2, 5) are internal Google codes — 5 specifically tends to appear on Android when the Gemini app and the underlying Google app are out of sync after an update. The fastest fix is to roll back the Google app: Settings > Apps > Google > three-dot menu > Uninstall updates. Gemini routes through the Google app on Android, so a buggy Google update silently breaks Gemini even when the Gemini app itself is fine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does Gemini work on the website but crash in the Android app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The web version (gemini.google.com) talks to Google's servers directly, while the Android app routes through the Google app's services layer. If a recent Google app update is buggy — which has happened repeatedly on Xiaomi, Realme, and some Samsung devices in 2026 — the app crashes while the web version stays fine. Use the web version short-term and roll back Google app updates for a longer fix."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Gemini down right now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check status.cloud.google.com for the official Google AI services status, or Downdetector for crowdsourced reports. Gemini has had several public outages in 2026, including a notable one on May 5 where 'something went wrong' was triggered for hours across both web and app. If reports are spiking, the only real fix is to wait — Google typically resolves these in 1–4 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does Gemini just stop typing mid-response?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two main causes. The first is a model-side timeout — long, complex prompts can exceed Gemini's per-response generation limit, and the response just halts without an error. Ask Gemini to 'continue from where you stopped' to resume. The second is your network: Gemini streams responses, so a brief connection blip cuts the stream off without showing an error. Try the same prompt with a stable connection or in incognito mode to confirm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I fix Gemini being slow, or is that always a server issue?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mostly server-side, but not always. Slow responses on Gemini Advanced (paid tier) usually mean the underlying model is under load — try switching from 2.5 Pro to 2.5 Flash for the next prompt. On the free tier, slowness can also come from the device: the Gemini Android app keeps a local context cache that bloats over time, and clearing the app cache (not data) often returns response speed to normal."
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; }
+        .header-search { position: relative; max-width: 260px; }
+        .header-search input {
+            width: 100%;
+            padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .header-search input::placeholder { color: rgba(255,255,255,0.7); }
+        .header-search input:focus { background: rgba(255,255,255,0.3); }
+        .header-search-icon {
+            position: absolute;
+            left: 0.7rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            pointer-events: none;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .article {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .article h1 { font-size: 1.8rem; color: #1a1a2e; margin-bottom: 0.5rem; }
+        .article .updated { font-size: 0.8rem; color: #999; margin-bottom: 1.5rem; }
+        .article h2 { font-size: 1.3rem; color: #1a1a2e; margin: 2rem 0 0.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid #f0f0f0; }
+        .article h3 { font-size: 1.1rem; color: #444; margin: 1.5rem 0 0.5rem; }
+        .article p { margin-bottom: 0.85rem; color: #444; }
+        .article ol, .article ul { margin: 0.5rem 0 1rem 1.5rem; color: #444; }
+        .article li { margin-bottom: 0.4rem; }
+        .article strong { color: #333; }
+        .article code { background: #f0f0f5; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+        .faq { background: #f8f9ff; border-radius: 8px; padding: 1.25rem; margin-bottom: 0.75rem; }
+        .faq p { margin-bottom: 0.25rem; }
+        .faq .q { font-weight: 600; color: #333; }
+        .faq .a { color: #555; }
+        .diagnosis-box { background: #fff8e1; border-left: 4px solid #ffc107; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 1rem; }
+        .diagnosis-box p { margin-bottom: 0.4rem; }
+        .still-stuck { background: #f0f7ff; border-radius: 8px; padding: 1.25rem; margin-top: 2rem; }
+        .still-stuck a { color: #667eea; }
+        footer { text-align: center; padding: 2rem 1rem; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; }
+        footer a { color: #667eea; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .cookie-banner {
+            position: fixed; left: 1rem; right: 1rem; bottom: 1rem;
+            background: #1a1a2e; color: #fff;
+            padding: 0.85rem 1rem; border-radius: 10px;
+            display: none; align-items: center; justify-content: space-between;
+            gap: 0.8rem; z-index: 2000;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            font-size: 0.85rem;
+        }
+        .cookie-banner a { color: #9ec2ff; }
+        .cookie-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+        .cookie-btn {
+            border: 1px solid #667eea; background: transparent; color: #fff;
+            padding: 0.35rem 0.65rem; border-radius: 6px; cursor: pointer; font-size: 0.8rem;
+        }
+        .cookie-btn.primary { background: #667eea; }
+        .byline { font-size: 0.82rem; color: #888; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .byline a { color: #667eea; text-decoration: none; }
+        .byline a:hover { text-decoration: underline; }
+        .dont-do { background: #fff5f5; border-left: 4px solid #e53935; padding: 1rem 1.3rem; border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+        .dont-do .dd-title { font-weight: 700; color: #b71c1c; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        @media (max-width: 600px) {
+            .article { padding: 1.5rem 1rem; }
+            .article h1 { font-size: 1.4rem; }
+            .header-search { display: none; }
+            .cookie-banner { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">FixThatApp</a>
+        <div class="header-search">
+            <span class="header-search-icon">&#128269;</span>
+            <input type="text" placeholder="Search guides..." onfocus="window.location='../index.html?q='+this.value">
+        </div>
+    </header>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; Google Gemini Not Working
+        </nav>
+        <div class="article">
+            <h1>Google Gemini Not Working: What's Breaking It in 2026 (and the Real Fixes)</h1>
+            <p class="updated">Last updated: May 9, 2026</p>
+            <p class="byline">By <a href="../about.html">Sufyan Khan</a> &mdash; Founder, FixThatApp &nbsp;|&nbsp; <a href="../about.html#editorial">Editorial standards</a></p>
+
+            <p>Gemini has had a rough few months. Between the May 5 outage that knocked the model offline for hours, the recurring "Something went wrong (5)" error on Android, and a Google app update that's been breaking the Gemini app specifically on Xiaomi and some Samsung devices, there's a lot more going on than the usual "clear your cache" advice covers.</p>
+
+            <p>This page focuses on the things that are actually breaking Gemini in 2026 &mdash; the real failure modes &mdash; and walks through what to do for each. If you only have two minutes, the single most useful thing to know is that the Android app and the web version (<strong>gemini.google.com</strong>) fail independently. When the app is broken, the web is often fine, and vice versa. Switching between them is the fastest workaround for almost any Gemini issue.</p>
+
+            <h2>Pin Down What's Actually Failing</h2>
+
+            <div class="diagnosis-box">
+                <p><strong>"Something went wrong" with no number</strong> &rarr; Likely a server-side issue. Try the web version first, then check status. See section below.</p>
+                <p><strong>"Something went wrong (5)"</strong> on Android &rarr; Google app/Gemini sync issue. Roll back the Google app.</p>
+                <p><strong>App opens then crashes within seconds</strong> &rarr; Almost certainly the buggy Google app update. Same fix as above.</p>
+                <p><strong>Web version returns 503</strong> &rarr; The model variant you're on is overloaded. Switch from 2.5 Pro to 2.5 Flash, or wait.</p>
+                <p><strong>Response generates partially then stops</strong> &rarr; Token limit or network drop, not an outage. Ask it to continue.</p>
+                <p><strong>Mic/voice input doesn't work</strong> &rarr; Permissions or browser issue. Check the address bar lock icon.</p>
+            </div>
+
+            <h2>The 2026 Pattern: Web vs. App Failures Are Different Problems</h2>
+            <p>Most older troubleshooting articles treat "Gemini not working" as one problem. It's not. The web version at gemini.google.com makes API calls directly to Google's AI infrastructure. The Android Gemini app, by contrast, routes through the regular Google app's services layer &mdash; the same one that powers Assistant. That's why a Google app update can crash Gemini while leaving the web version completely untouched.</p>
+            <p>Practical implication: <strong>before troubleshooting anything, open the other surface and see if it works.</strong> If the web works but the app doesn't, you have an Android-side problem and the fixes below apply. If the app works but the web doesn't, your problem is a browser/extension issue or a server-side incident affecting the web tier.</p>
+
+            <h2>Fix 1: When You See "Something Went Wrong" with No Number</h2>
+            <p>This is the generic error and it's the hardest to diagnose because it covers everything from a hiccup in your connection to a full-blown Google outage. Work through these in order &mdash; it takes about 90 seconds total.</p>
+            <ol>
+                <li>Hit the same prompt again with no changes. Roughly half the time it just works on retry &mdash; transient server errors are extremely common.</li>
+                <li>Open <strong>gemini.google.com</strong> in an incognito window. If it works there, your normal browser session (extensions, cached cookies) is the problem.</li>
+                <li>Check <strong>status.cloud.google.com</strong> and search "Vertex AI" or "Gemini API." Public-facing Gemini sits on top of these services, so an incident there will affect you even though the consumer site has no separate status page.</li>
+                <li>Try a much simpler prompt ("hello"). If a 4-word prompt works but your real prompt doesn't, the issue is something in your prompt content (a flagged term, an attached file too large, a URL Google can't reach) rather than a broader outage.</li>
+            </ol>
+
+            <h2>Fix 2: "Something Went Wrong (5)" on Android — Roll Back the Google App</h2>
+            <p>This is the one that sends most people to Google Search. The numbered variant of the error appears specifically on Android, and through 2026 it's been correlated with Google app updates that change how the Gemini integration handshake works. Affected users have reported it heavily on Xiaomi devices, then Realme, then progressively on Samsung Galaxy S24 and S25 lines after specific updates.</p>
+            <p>The fix is to roll back the Google app to its previous version:</p>
+            <ol>
+                <li>Open <strong>Settings &rarr; Apps</strong> (or Settings &rarr; Apps &rarr; Manage apps on Xiaomi/MIUI).</li>
+                <li>Find and tap the <strong>Google</strong> app (not the Gemini app &mdash; the Google app).</li>
+                <li>Tap the three-dot menu in the top right and select <strong>Uninstall updates</strong>. Confirm when prompted.</li>
+                <li>Force-stop the Gemini app and reopen it. The error should be gone.</li>
+                <li><strong>Important:</strong> in the Play Store, find the Google app and tap the three-dot menu &rarr; <em>Disable auto-update</em>. Otherwise the same buggy version reinstalls within a day or two.</li>
+            </ol>
+            <p>Re-enable auto-update only after Google has shipped a known-stable Google app version &mdash; usually you'll see this confirmed on the Gemini Apps Community forum.</p>
+
+            <h2>Fix 3: 503 Errors and "Model Unavailable"</h2>
+            <p>503 errors mean the Gemini model variant you requested is temporarily over capacity on Google's end. This happens most often during peak US business hours and around new model launches when traffic spikes.</p>
+            <ul>
+                <li>If you're on Gemini Advanced and 2.5 Pro is throwing 503s, switch to <strong>2.5 Flash</strong> from the model picker. Flash usually has more headroom because it's the cheaper variant Google can scale faster.</li>
+                <li>If you're using the Gemini API and seeing <code>503 UNAVAILABLE</code> on a specific model (e.g. <code>gemini-3.1-flash-lite-preview</code>), preview models have lower SLA priority &mdash; switch to the GA version of the same family for production work.</li>
+                <li>Wait 5&ndash;15 minutes if you need that specific model. 503s usually clear themselves quickly.</li>
+            </ul>
+
+            <h2>Fix 4: Gemini Cuts Off Mid-Response</h2>
+            <p>Different from "something went wrong." Here the response starts generating, gets a few paragraphs in, and just stops &mdash; no error, no spinning indicator, just an incomplete answer. Two real causes:</p>
+            <h3>You hit the per-response token limit</h3>
+            <p>Each Gemini response has a maximum length. For very long generations (long stories, big code dumps, deep research), the model runs out of room before it's finished its thought. The fix is simple: just type "continue from where you stopped" and Gemini will pick up from the last sentence. This isn't a bug &mdash; it's expected behavior.</p>
+            <h3>Your network dropped briefly</h3>
+            <p>Gemini streams responses token by token. A connection blip of even half a second can sever the stream and Gemini won't auto-resume. Re-issuing the same prompt usually works. If this happens repeatedly, switch from Wi-Fi to mobile data (or wired Ethernet on desktop) as a test &mdash; if cutoffs stop on the more stable connection, your network is the problem, not Gemini.</p>
+
+            <h2>Fix 5: Gemini Keeps Crashing on Specific Android Phones</h2>
+            <p>If the Gemini app launches and immediately closes, or crashes the moment you tap to send a message, the order of operations is:</p>
+            <ol>
+                <li><strong>Roll back the Google app</strong> (Fix 2 above) &mdash; this resolves the majority of crashes on Xiaomi, Samsung, and Realme devices.</li>
+                <li><strong>Clear the Gemini app cache, not data.</strong> Settings &rarr; Apps &rarr; Gemini &rarr; Storage &rarr; Clear cache. Clearing data signs you out and resets settings; cache is enough.</li>
+                <li><strong>Check Gemini's permissions.</strong> Settings &rarr; Apps &rarr; Gemini &rarr; Permissions. If "Microphone" or "Notifications" is denied, certain code paths in the app will crash on startup. Allow them all and try again.</li>
+                <li><strong>Last resort:</strong> reinstall Gemini. Uninstall, restart the phone, install fresh from Play Store. Your conversation history is server-side and will sync back when you sign in.</li>
+            </ol>
+
+            <h2>Fix 6: Voice Input or "Hey Google, ask Gemini" Not Working</h2>
+            <p>Voice input has its own failure surface because it depends on the Google app's speech recognition pipeline being healthy &mdash; the same pipeline Assistant uses. If voice input has stopped working after you switched from Assistant to Gemini as your default, this is almost always why.</p>
+            <ol>
+                <li>Confirm Gemini is actually set as your assistant: Settings &rarr; Apps &rarr; Default apps &rarr; Digital assistant app &rarr; Gemini.</li>
+                <li>In the Gemini app, tap your profile icon &rarr; Settings &rarr; Voice. Make sure the language matches what you actually speak; Gemini doesn't auto-detect language for hot-word triggers.</li>
+                <li>If the issue is that "Hey Google" stopped triggering Gemini entirely, retrain Voice Match: Google app &rarr; Settings &rarr; Voice &rarr; Voice Match &rarr; redo the training.</li>
+                <li>If you're seeing a microphone icon but no speech recognition: this is usually the Google app update issue again. See Fix 2.</li>
+            </ol>
+
+            <h2>What NOT to Do</h2>
+            <div class="dont-do">
+                <div class="dd-title">Mistakes that waste time or make things worse</div>
+                <ul>
+                    <li><strong>Don't reinstall the Gemini app first.</strong> Reinstalling does nothing for the most common 2026 issues, because the bug is in the Google app, not Gemini itself. Roll back the Google app before you touch Gemini.</li>
+                    <li><strong>Don't sign out of your Google account to "reset" Gemini.</strong> This logs you out of every Google service on the device &mdash; Drive, Photos, Gmail &mdash; and forces re-authentication. It almost never fixes Gemini and creates a lot of collateral damage.</li>
+                    <li><strong>Don't keep retrying a prompt that triggers a content filter.</strong> If Gemini returns a blocked-content notice or repeatedly refuses to answer the same prompt, retrying with the same wording will keep failing. Reword the prompt or split it into smaller pieces.</li>
+                    <li><strong>Don't assume slowness on Gemini Advanced means your subscription is broken.</strong> Slow responses on the paid tier are usually load on the underlying Pro model, not a billing or account issue. Switch to Flash from the model picker as a workaround.</li>
+                </ul>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <p class="q">Q: What does "Something went wrong (5)" mean in Gemini?</p>
+                <p class="a">A: The numbered variants of this error (1, 2, 5) are internal Google codes &mdash; 5 specifically tends to appear on Android when the Gemini app and the underlying Google app are out of sync after an update. The fastest fix is to roll back the Google app: Settings &gt; Apps &gt; Google &gt; three-dot menu &gt; Uninstall updates. Gemini routes through the Google app on Android, so a buggy Google update silently breaks Gemini even when the Gemini app itself is fine.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: Why does Gemini work on the website but crash in the Android app?</p>
+                <p class="a">A: The web version (gemini.google.com) talks to Google's servers directly, while the Android app routes through the Google app's services layer. If a recent Google app update is buggy &mdash; which has happened repeatedly on Xiaomi, Realme, and some Samsung devices in 2026 &mdash; the app crashes while the web version stays fine. Use the web version short-term and roll back Google app updates for a longer fix.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: Is Gemini down right now?</p>
+                <p class="a">A: Check status.cloud.google.com for the official Google AI services status, or Downdetector for crowdsourced reports. Gemini has had several public outages in 2026, including a notable one on May 5 where "something went wrong" was triggered for hours across both web and app. If reports are spiking, the only real fix is to wait &mdash; Google typically resolves these in 1&ndash;4 hours.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: Why does Gemini just stop typing mid-response?</p>
+                <p class="a">A: Two main causes. The first is a model-side timeout &mdash; long, complex prompts can exceed Gemini's per-response generation limit, and the response just halts without an error. Ask Gemini to "continue from where you stopped" to resume. The second is your network: Gemini streams responses, so a brief connection blip cuts the stream off without showing an error. Try the same prompt with a stable connection or in incognito mode to confirm.</p>
+            </div>
+
+            <div class="faq">
+                <p class="q">Q: Can I fix Gemini being slow, or is that always a server issue?</p>
+                <p class="a">A: Mostly server-side, but not always. Slow responses on Gemini Advanced (paid tier) usually mean the underlying model is under load &mdash; try switching from 2.5 Pro to 2.5 Flash for the next prompt. On the free tier, slowness can also come from the device: the Gemini Android app keeps a local context cache that bloats over time, and clearing the app cache (not data) often returns response speed to normal.</p>
+            </div>
+
+            <div class="still-stuck">
+                <h2>Still Stuck?</h2>
+                <p>If you've gone through the fixes above and Gemini still won't behave, the Gemini Apps Community at <a href="https://support.google.com/gemini/community" target="_blank" rel="noopener">support.google.com/gemini/community</a> is the most useful next stop &mdash; Google product team members reply to threads there directly, and you'll often see a fresh outage acknowledged within a few hours of it starting. Include your device model and the exact error string in any post.</p>
+            </div>
+
+            <h2>Related Guides</h2>
+            <ul>
+                <li><a href="chatgpt-not-working.html">ChatGPT Not Working: 8 Fixes for Every Error</a></li>
+                <li><a href="claude-ai-not-loading.html">Claude AI Not Loading or Not Working</a></li>
+                <li><a href="google-assistant-not-working.html">Google Assistant Not Working</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        &copy; 2026 FixThatApp. All rights reserved.
+        | <a href="../about.html">About</a>
+        | <a href="../privacy-policy.html">Privacy Policy</a>
+        | <a href="../cookie-policy.html">Cookie Policy</a>
+        | <a href="../terms.html">Terms</a>
+        | <a href="../contact.html">Contact</a>
+        | <a href="../seo-troubleshooting-guides.html">SEO Guides</a>
+        | <a href="../index.html">All Guides</a>
+    </footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <div class="cookie-actions">
+            <button class="cookie-btn" id="cookieReject">Reject</button>
+            <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+    <script>
+    (function() {
+      var key = 'fta_cookie_consent';
+      var banner = document.getElementById('cookieBanner');
+      var acceptBtn = document.getElementById('cookieAccept');
+      var rejectBtn = document.getElementById('cookieReject');
+      if (!banner || !acceptBtn || !rejectBtn) return;
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved) { banner.style.display = 'flex'; }
+      acceptBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        banner.style.display = 'none';
+      });
+      rejectBtn.addEventListener('click', function() {
+        try { localStorage.setItem(key, 'rejected'); } catch (e) {}
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.requestNonPersonalizedAds = 1;
+        banner.style.display = 'none';
+      });
+    })();
+    </script>
+</body>
+</html>
