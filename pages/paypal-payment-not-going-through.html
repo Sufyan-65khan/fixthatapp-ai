@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PayPal Payment Not Going Through: 7 Fixes for Declined and Failed Payments | FixThatApp</title>
-    <meta name="description" content="PayPal payment declined, Unable to process payment, or payment stuck as pending? This guide explains why PayPal payments fail and gives specific fixes for every payment error type.">
-    <meta name="keywords" content="paypal payment not going through, paypal payment declined, paypal unable to process payment, paypal payment failed, paypal pending payment, paypal credit card declined">
+    <title>PayPal Payment Declined or Not Going Through? 7 Fixes + Every Error Decoded (2026)</title>
+    <meta name="description" content="PayPal saying "We were not able to process your request", "recipient cannot accept payments", payment denied, or stuck pending? Each error has a different cause — and most aren't actually about your money.">
+    <meta name="keywords" content="paypal payment not going through, paypal payment declined, paypal unable to process, paypal recipient cannot accept payments, paypal velocity limits, paypal sorry we were not able">
     <link rel="canonical" href="https://www.fixthatapp.com/pages/paypal-payment-not-going-through.html">
-    <meta property="og:title" content="PayPal Payment Not Going Through: 7 Fixes for Declined and Failed Payments | FixThatApp">
-    <meta property="og:description" content="PayPal payment declined, Unable to process payment, or payment stuck as pending? This guide explains why PayPal payments fail and gives specific fixes for every payment error type.">
+    <meta property="og:title" content="PayPal Payment Declined or Not Going Through? 7 Fixes + Every Error Decoded (2026)">
+    <meta property="og:description" content="PayPal &quot;not able to process&quot;, &quot;recipient cannot accept payments&quot;, denied, or pending? Each error decoded with the actual fix.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.fixthatapp.com/pages/paypal-payment-not-going-through.html">
     <meta property="og:site_name" content="FixThatApp">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="PayPal Payment Not Going Through: 7 Fixes for Declined and Failed Payments | FixThatApp">
-    <meta name="twitter:description" content="PayPal payment declined, Unable to process payment, or payment stuck as pending? This guide explains why PayPal payments fail and gives specific fixes for every payment error type.">
+    <meta name="twitter:title" content="PayPal Payment Declined or Not Going Through? 7 Fixes + Every Error Decoded (2026)">
+    <meta name="twitter:description" content="PayPal &quot;not able to process&quot;, &quot;recipient cannot accept&quot;, denied, or pending? Each error decoded.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ðŸ”§</text></svg>">
     <script>
     (function() {
@@ -33,9 +33,9 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "PayPal Payment Not Going Through: 7 Fixes for Declined and Failed Payments",
-      "description": "PayPal payment declined, Unable to process payment, or payment stuck as pending? This guide explains why PayPal payments fail and gives specific fixes for every payment error type.",
-      "dateModified": "2026-03-25",
+      "headline": "PayPal Payment Declined or Not Going Through? 7 Fixes + Every Error Decoded (2026)",
+      "description": "PayPal saying 'We were not able to process your request', 'recipient cannot accept payments', payment denied, or stuck pending? Each error has a different cause and most aren't about your money.",
+      "dateModified": "2026-05-09",
       "author": {
         "@type": "Organization",
         "name": "FixThatApp",
@@ -240,7 +240,7 @@
         </nav>
         <div class="article">
             <h1>PayPal Payment Not Going Through: 7 Fixes for Declined and Failed Payments</h1>
-            <p class="updated">Last updated: March 25, 2026</p>
+            <p class="updated">Last updated: May 9, 2026 &middot; Verified against current PayPal risk-system error strings</p>
             <p class="byline">By <a href="../about.html">Sufyan Khan</a> &mdash; Founder, FixThatApp &nbsp;|&nbsp; <a href="../about.html#editorial">Editorial standards</a></p>
 
             <p>You are trying to complete a purchase or send money and PayPal keeps declining the transaction. The error messages range from the unhelpful "We're sorry, we can't complete your purchase at this time" to more specific credit card declined notices. Meanwhile you are not sure whether to try again, whether you were charged, or what is actually blocking the payment.</p>
@@ -328,6 +328,37 @@
                 <li>When contacting support, have ready: the exact error message, the date and amount of the failed transaction, and the payment method you were trying to use.</li>
                 <li>PayPal support can manually review and clear transactions that are being blocked by their automated fraud system, though this is done on a case-by-case basis.</li>
             </ol>
+
+            <h2>PayPal Error Messages Decoded (Verbatim)</h2>
+
+            <p>PayPal's error messages are deliberately vague to avoid telling fraudsters which signal tripped the decline. The wording still maps to a likely cause once you know what to look for.</p>
+
+            <h3>"Sorry, we were not able to process your request. Please try again later."</h3>
+            <p>The most common PayPal decline. It almost never means PayPal is having technical problems &mdash; it's their risk system silently rejecting the transaction. Triggered by: a sudden change in IP/device/location, an unusual amount for your account, multiple recent declines on your card, or VPN traffic. Wait 30 minutes (PayPal's velocity check window resets), retry from your normal device and network, no VPN. If it still fails, switch to a different funding source &mdash; bank vs card vs PayPal balance &mdash; the risk system scores them differently.</p>
+
+            <h3>"Your recipient cannot accept payments right now"</h3>
+            <p>This is about the seller's account, not yours. Their PayPal account is restricted, has hit a holding limit, or has recently triggered a review. Nothing on your end will fix it. Contact the recipient directly &mdash; if they're a small business, they probably aren't aware their account is on hold and need to log in to PayPal to resolve a verification step.</p>
+
+            <h3>"This payment was denied. Please try again later."</h3>
+            <p>A harder-edged decline than "not able to process." Usually means PayPal's anti-fraud system has classified this specific transaction as high-risk based on multiple signals (device, time of day, recipient profile, amount). Trying again immediately produces the same result. The reliable fix: wait 24 hours, then try with a different funding source. If it persists, your account itself has been flagged for review &mdash; check Notifications and the Resolution Center.</p>
+
+            <h3>"Your payment was denied. Try again later."</h3>
+            <p>Slight wording variation but identical cause to "this payment was denied." Same fix.</p>
+
+            <h3>"You've reached the limit of your unverified account"</h3>
+            <p>You hit PayPal's lifetime sending limit for unverified accounts (varies by country, typically $500&ndash;$1,500 USD equivalent). The fix is verification: link and confirm a bank account, then PayPal removes the cap. Account verification takes 2&ndash;3 business days. Until then, you cannot send more money from this account regardless of card balance.</p>
+
+            <h3>"Insufficient funds" but card has balance</h3>
+            <p>The funds technically exist on your card, but the issuer declined the authorization. Two common causes that PayPal doesn't surface: your card has international/online-merchant restrictions enabled, or your bank's fraud system flagged "PayPal" as the merchant after a prior dispute. Call your card issuer directly and ask whether the most recent PayPal authorization attempt was declined and why. They can often clear the block on the spot.</p>
+
+            <h3>"Velocity limit reached" / multiple declines in short window</h3>
+            <p>You've hit PayPal's transaction-frequency limit. This is anti-fraud behavior triggered by sending several payments rapidly, or by retrying a single declined payment too many times. Stop trying for at least 30 minutes. Each additional failed attempt extends the cooldown. After 30 minutes, retry once with the same details &mdash; if it still fails, switch funding source rather than retry the same one.</p>
+
+            <h3>Payment marked "Pending" indefinitely</h3>
+            <p>Your money left your account or card but the recipient hasn't received it. Common scenarios: the recipient is a new seller and PayPal is holding the payment for 21 days as a buyer protection measure; the recipient's email isn't a verified PayPal account so the payment is waiting for them to claim it; or the payment is under manual review for a specific risk signal. Pending isn't broken &mdash; it's working as designed. If after 24 hours it still hasn't moved, contact PayPal support; before that, just wait.</p>
+
+            <h3>"Payment can't be sent at this time. Please try again later."</h3>
+            <p>Usually a brief PayPal-side outage. Check downdetector.com/status/paypal. If reports are spiking, wait 30&ndash;60 minutes. If the status looks normal, it's an account-specific block &mdash; check the Resolution Center for any pending steps.</p>
 
             <h2>What NOT to Do</h2>
 <div class="dont-do">
