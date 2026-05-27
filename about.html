@@ -7,17 +7,30 @@
     <meta name="description" content="FixThatApp publishes free online tools, step-by-step troubleshooting guides, and practical calculators. No login, no paywalls — built by Sufyan Khan.">
     <link rel="canonical" href="https://www.fixthatapp.com/about.html">
     <script>
-    (function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage':'denied','ad_user_data':'denied',
+      'ad_personalization':'denied','analytics_storage':'denied',
+      'wait_for_update': 500
+    });
+    (function(){
       try {
-        var consent = localStorage.getItem('fta_cookie_consent');
-        if (consent === 'rejected') {
-          window.adsbygoogle = window.adsbygoogle || [];
-          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        var c = localStorage.getItem('fta_cookie_consent');
+        if (c === 'accepted') {
+          gtag('consent','update',{
+            'ad_storage':'granted','ad_user_data':'granted',
+            'ad_personalization':'granted','analytics_storage':'granted'
+          });
+          var s = document.createElement('script');
+          s.async = true;
+          s.crossOrigin = 'anonymous';
+          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954';
+          document.head.appendChild(s);
         }
       } catch (e) {}
     })();
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -61,7 +74,7 @@
         .links-row a{color:#667eea;text-decoration:none;margin-right:.8rem;font-size:.95rem}
         footer{text-align:center;padding:2rem 1rem;color:#999;font-size:.85rem;border-top:1px solid #eee;margin-top:1rem}
         footer a{color:#667eea;text-decoration:none}
-        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem}
+        .cookie-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;background:#1a1a2e;color:#fff;padding:.85rem 1rem;border-radius:10px;display:none;align-items:center;justify-content:space-between;gap:.8rem;z-index:2000;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:.85rem;min-height:64px;contain:layout style}@media(max-width:600px){.cookie-banner{min-height:88px}}
         .cookie-banner a{color:#9ec2ff}
         .cookie-actions{display:flex;gap:.5rem;flex-shrink:0}
         .cookie-btn{border:1px solid #667eea;background:transparent;color:#fff;padding:.35rem .65rem;border-radius:6px;cursor:pointer;font-size:.8rem}
@@ -86,16 +99,16 @@
 
             <p>So I started writing guides the way I wanted to find them: diagnostic first, then targeted fixes in order of likelihood, with an explanation of what's actually causing each failure. No filler. No padding. No "this is a common issue" preamble that wastes three paragraphs before saying anything useful.</p>
 
-            <p>That became FixThatApp — which has since grown to cover 48 in-depth troubleshooting guides across apps, devices, and services, plus 60+ free browser-based tools and a technical blog.</p>
+            <p>That became FixThatApp — 50 in-depth troubleshooting guides across apps, devices, and services. Each one focuses on a single failure mode and is written from hands-on reproduction, not summarised from forum threads.</p>
 
             <div class="stat-grid">
                 <div class="stat">
-                    <div class="stat-num">48</div>
+                    <div class="stat-num">50</div>
                     <div class="stat-label">In-depth troubleshooting guides</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-num">60+</div>
-                    <div class="stat-label">Free browser-based tools</div>
+                    <div class="stat-num">1</div>
+                    <div class="stat-label">Author (no AI ghostwriting)</div>
                 </div>
                 <div class="stat">
                     <div class="stat-num">0</div>
@@ -126,9 +139,8 @@
 
             <h2>What the Site Covers</h2>
             <ul>
-                <li><strong>Troubleshooting guides</strong> — step-by-step diagnostic guides for apps like WhatsApp, Discord, Instagram, Spotify, Gmail, Chrome, and more. Each guide identifies the likely cause first, then gives targeted fixes for each cause. Not a list of things to try.</li>
-                <li><strong>Free browser-based tools</strong> — calculators (GST, SIP, compound interest, loan EMI, tax, profit margin), developer tools (JWT decoder, hash generator, JSON formatter, regex tester), and text utilities (diff checker, duplicate remover, whitespace cleaner). Everything runs in your browser — nothing is sent to a server.</li>
-                <li><strong>Technical blog</strong> — in-depth explainers on the topics behind the tools and guides: how EMI formulas work, what makes a password actually secure, why CSS minification works, how DNS propagation happens. Written for people who want to understand, not just copy-paste.</li>
+                <li><strong>Troubleshooting guides</strong> — diagnostic walkthroughs for apps like WhatsApp, Discord, Instagram, Spotify, Gmail, Chrome, ChatGPT, and more. Each guide identifies the likely cause first, then gives targeted fixes for each cause. Not a list of generic steps to try in order.</li>
+                <li><strong>A small set of in-browser utilities</strong> — JWT decoder, regex tester, JSON formatter, password and hash generator, colour and gradient helpers, and an error-message explainer. Everything runs locally in your browser — no input is sent to a server.</li>
             </ul>
 
             <h2 id="standards">Editorial Standards</h2>
@@ -152,14 +164,14 @@
     </div>
     <footer>&copy; 2026 FixThatApp. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="cookie-policy.html">Cookie Policy</a> | <a href="terms.html">Terms</a> | <a href="contact.html">Contact</a></footer>
     <div class="cookie-banner" id="cookieBanner">
-        <span>We use cookies for ads and core site functions. <a href="cookie-policy.html">Cookie Policy</a></span>
+        <span>We use cookies for site functions and, if you accept, personalized ads. <a href="cookie-policy.html">Cookie Policy</a></span>
         <div class="cookie-actions">
             <button class="cookie-btn" id="cookieReject">Reject</button>
             <button class="cookie-btn primary" id="cookieAccept">Accept</button>
         </div>
     </div>
     <script>
-    (function() {
+    (function(){
       var key = 'fta_cookie_consent';
       var banner = document.getElementById('cookieBanner');
       var acceptBtn = document.getElementById('cookieAccept');
@@ -168,14 +180,28 @@
       var saved = null;
       try { saved = localStorage.getItem(key); } catch (e) {}
       if (!saved) banner.style.display = 'flex';
-      acceptBtn.addEventListener('click', function() {
+      function loadAds(){
+        if (window.__ftaAdsLoaded) return;
+        window.__ftaAdsLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.crossOrigin = 'anonymous';
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954';
+        document.head.appendChild(s);
+      }
+      acceptBtn.addEventListener('click', function(){
         try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('consent','update',{
+            'ad_storage':'granted','ad_user_data':'granted',
+            'ad_personalization':'granted','analytics_storage':'granted'
+          });
+        }
+        loadAds();
         banner.style.display = 'none';
       });
-      rejectBtn.addEventListener('click', function() {
+      rejectBtn.addEventListener('click', function(){
         try { localStorage.setItem(key, 'rejected'); } catch (e) {}
-        window.adsbygoogle = window.adsbygoogle || [];
-        window.adsbygoogle.requestNonPersonalizedAds = 1;
         banner.style.display = 'none';
       });
     })();

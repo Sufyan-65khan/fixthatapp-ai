@@ -17,18 +17,30 @@
     <meta name="twitter:description" content="Max stuck loading, black screen, or error 1k-0000, 1400500, 1400899, ERR_AUTH? 8 fixes + every error code decoded.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ðŸ”§</text></svg>">
     <script>
-    (function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage':'denied','ad_user_data':'denied',
+      'ad_personalization':'denied','analytics_storage':'denied',
+      'wait_for_update': 500
+    });
+    (function(){
       try {
-        var consent = localStorage.getItem('fta_cookie_consent');
-        if (consent === 'rejected') {
-          window.adsbygoogle = window.adsbygoogle || [];
-          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        var c = localStorage.getItem('fta_cookie_consent');
+        if (c === 'accepted') {
+          gtag('consent','update',{
+            'ad_storage':'granted','ad_user_data':'granted',
+            'ad_personalization':'granted','analytics_storage':'granted'
+          });
+          var s = document.createElement('script');
+          s.async = true;
+          s.crossOrigin = 'anonymous';
+          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954';
+          document.head.appendChild(s);
         }
       } catch (e) {}
     })();
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954"
-     crossorigin="anonymous"></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -429,14 +441,14 @@
         | <a href="../index.html">All Guides</a>
     </footer>
     <div class="cookie-banner" id="cookieBanner">
-        <span>We use cookies for ads and core site functions. <a href="../cookie-policy.html">Cookie Policy</a></span>
+        <span>We use cookies for site functions and, if you accept, personalized ads. <a href="../cookie-policy.html">Cookie Policy</a></span>
         <div class="cookie-actions">
             <button class="cookie-btn" id="cookieReject">Reject</button>
             <button class="cookie-btn primary" id="cookieAccept">Accept</button>
         </div>
     </div>
     <script>
-    (function() {
+    (function(){
       var key = 'fta_cookie_consent';
       var banner = document.getElementById('cookieBanner');
       var acceptBtn = document.getElementById('cookieAccept');
@@ -444,17 +456,29 @@
       if (!banner || !acceptBtn || !rejectBtn) return;
       var saved = null;
       try { saved = localStorage.getItem(key); } catch (e) {}
-      if (!saved) {
-        banner.style.display = 'flex';
+      if (!saved) banner.style.display = 'flex';
+      function loadAds(){
+        if (window.__ftaAdsLoaded) return;
+        window.__ftaAdsLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.crossOrigin = 'anonymous';
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954';
+        document.head.appendChild(s);
       }
-      acceptBtn.addEventListener('click', function() {
+      acceptBtn.addEventListener('click', function(){
         try { localStorage.setItem(key, 'accepted'); } catch (e) {}
+        if (typeof gtag === 'function') {
+          gtag('consent','update',{
+            'ad_storage':'granted','ad_user_data':'granted',
+            'ad_personalization':'granted','analytics_storage':'granted'
+          });
+        }
+        loadAds();
         banner.style.display = 'none';
       });
-      rejectBtn.addEventListener('click', function() {
+      rejectBtn.addEventListener('click', function(){
         try { localStorage.setItem(key, 'rejected'); } catch (e) {}
-        window.adsbygoogle = window.adsbygoogle || [];
-        window.adsbygoogle.requestNonPersonalizedAds = 1;
         banner.style.display = 'none';
       });
     })();
