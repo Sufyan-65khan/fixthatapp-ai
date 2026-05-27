@@ -1,94 +1,66 @@
-"""Generate sitemap.xml from all HTML pages, tools, and blog posts."""
+"""Generate sitemap.xml from indexable HTML pages.
+
+Skips any HTML containing a `noindex` meta tag. Uses each file's mtime for
+`<lastmod>` so the sitemap reflects real edit history, not a build timestamp.
+"""
 import os
-from datetime import date
+from datetime import datetime, timezone
 
 DOMAIN = "https://www.fixthatapp.com"
-TODAY = date.today().isoformat()
+ROOT = os.path.dirname(os.path.abspath(__file__))
 
-urls = []
 
-# Homepage
-urls.append(f"""  <url>
-    <loc>{DOMAIN}/</loc>
-    <lastmod>{TODAY}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>""")
+def is_noindex(path: str) -> bool:
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return 'content="noindex' in f.read()
+    except OSError:
+        return True
 
-# Core compliance and SEO pages
-for path, changefreq, priority in [
-    ("about.html", "monthly", "0.4"),
-    ("all-guides.html", "daily", "0.9"),
-    ("privacy-policy.html", "monthly", "0.3"),
-    ("cookie-policy.html", "monthly", "0.3"),
-    ("terms.html", "monthly", "0.3"),
-    ("contact.html", "monthly", "0.4"),
-    ("seo-troubleshooting-guides.html", "weekly", "0.7"),
-    ("seo-page-not-indexed.html", "monthly", "0.6"),
-    ("seo-crawled-not-indexed.html", "monthly", "0.6"),
-    ("seo-ranking-dropped.html", "monthly", "0.6"),
-]:
-    urls.append(f"""  <url>
-    <loc>{DOMAIN}/{path}</loc>
-    <lastmod>{TODAY}</lastmod>
+
+def lastmod(path: str) -> str:
+    ts = os.path.getmtime(path)
+    return datetime.fromtimestamp(ts, tz=timezone.utc).date().isoformat()
+
+
+def add(urls: list, loc: str, path: str, changefreq: str, priority: str) -> None:
+    if not os.path.exists(path) or is_noindex(path):
+        return
+    urls.append(
+        f"""  <url>
+    <loc>{loc}</loc>
+    <lastmod>{lastmod(path)}</lastmod>
     <changefreq>{changefreq}</changefreq>
     <priority>{priority}</priority>
-  </url>""")
+  </url>"""
+    )
 
-# Tools index
-urls.append(f"""  <url>
-    <loc>{DOMAIN}/tools/</loc>
-    <lastmod>{TODAY}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>""")
 
-# Individual tools
-tools_dir = "tools"
-for tool_name in sorted(os.listdir(tools_dir)):
-    tool_path = os.path.join(tools_dir, tool_name)
-    if os.path.isdir(tool_path) and os.path.exists(os.path.join(tool_path, "index.html")):
-        urls.append(f"""  <url>
-    <loc>{DOMAIN}/tools/{tool_name}/</loc>
-    <lastmod>{TODAY}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>""")
+urls: list[str] = []
 
-# Blog index
-urls.append(f"""  <url>
-    <loc>{DOMAIN}/blog/</loc>
-    <lastmod>{TODAY}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>""")
+# Homepage
+home = os.path.join(ROOT, "index.html")
+urls.append(
+    f"""  <url>
+    <loc>{DOMAIN}/</loc>
+    <lastmod>{lastmod(home)}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>"""
+)
 
-# Blog posts
-blog_dir = "blog"
-for filename in sorted(os.listdir(blog_dir)):
-    if filename.endswith('.html') and filename != 'index.html':
-        urls.append(f"""  <url>
-    <loc>{DOMAIN}/blog/{filename}</loc>
-    <lastmod>{TODAY}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>""")
+# Trust / EEAT pages (indexable only)
+add(urls, f"{DOMAIN}/about.html", os.path.join(ROOT, "about.html"), "monthly", "0.6")
+add(urls, f"{DOMAIN}/contact.html", os.path.join(ROOT, "contact.html"), "monthly", "0.4")
 
-# All article pages — skip noindexed (thin) pages
-pages_dir = "pages"
-for filename in sorted(os.listdir(pages_dir)):
-    if not filename.endswith('.html'):
-        continue
-    with open(os.path.join(pages_dir, filename), encoding='utf-8') as _f:
-        _html = _f.read()
-    if 'content="noindex' in _html:
-        continue
-    urls.append(f"""  <url>
-    <loc>{DOMAIN}/pages/{filename}</loc>
-    <lastmod>{TODAY}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>""")
+# Troubleshooting pages
+pages_dir = os.path.join(ROOT, "pages")
+if os.path.isdir(pages_dir):
+    for filename in sorted(os.listdir(pages_dir)):
+        if not filename.endswith(".html"):
+            continue
+        path = os.path.join(pages_dir, filename)
+        add(urls, f"{DOMAIN}/pages/{filename}", path, "weekly", "0.8")
 
 sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -96,7 +68,7 @@ sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
 </urlset>
 """
 
-with open("sitemap.xml", "w", encoding="utf-8") as f:
+with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
     f.write(sitemap)
 
 print(f"Sitemap generated with {len(urls)} URLs.")

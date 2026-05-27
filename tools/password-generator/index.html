@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,follow">
     <title>Password Generator - Free Strong Password Tool | FixThatApp</title>
     <meta name="description" content="Generate strong, secure passwords instantly. Customize length, characters, and complexity. Free online password generator tool.">
     <meta name="keywords" content="password generator, strong password, secure password, random password, free password tool">
@@ -11,17 +12,6 @@
     <meta property="og:description" content="Generate strong, secure passwords instantly. Customize length and complexity.">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ðŸ”§</text></svg>">
-        <script>
-    (function() {
-      try {
-        var consent = localStorage.getItem('fta_cookie_consent');
-        if (consent === 'rejected') {
-          window.adsbygoogle = window.adsbygoogle || [];
-          window.adsbygoogle.requestNonPersonalizedAds = 1;
-        }
-      } catch (e) {}
-    })();
-    </script>    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3140312947507954" crossorigin="anonymous"></script>
     <style>
         :root{--bg:#f5f7fa;--card:#fff;--text:#333;--muted:#777;--accent:#667eea;--accent2:#764ba2;--border:#e0e0e0;--input-bg:#f8f9ff;--code-bg:#f0f0f5}
         [data-theme=dark]{--bg:#1a1a2e;--card:#16213e;--text:#e0e0e0;--muted:#999;--border:#2a2a4a;--input-bg:#1a1a3e;--code-bg:#0f3460}
@@ -210,8 +200,6 @@
       });
       rejectBtn.addEventListener('click', function() {
         try { localStorage.setItem(key, 'rejected'); } catch (e) {}
-        window.adsbygoogle = window.adsbygoogle || [];
-        window.adsbygoogle.requestNonPersonalizedAds = 1;
         banner.style.display = 'none';
       });
     })();

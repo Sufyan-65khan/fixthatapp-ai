@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+
 User-agent: Mediapartners-Google
 Allow: /
+
 Sitemap: https://www.fixthatapp.com/sitemap.xml

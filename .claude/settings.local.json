@@ -30,7 +30,17 @@
       "Bash(curl:*)",
       "Bash(xargs -I{} git diff-tree --no-commit-id -r --name-only {})",
       "Bash(xargs -I {} basename {})",
-      "Bash(find /c/Users/sufya/fixthatapp-ai/pages -name \"*.html\" -exec grep -l \"noindex\" {} \\\\;)"
+      "Bash(find /c/Users/sufya/fixthatapp-ai/pages -name \"*.html\" -exec grep -l \"noindex\" {} \\\\;)",
+      "PowerShell(Select-String *)",
+      "PowerShell(git *)",
+      "WebSearch",
+      "Bash(openssl rand *)",
+      "Bash(bash *)",
+      "Bash(gh workflow *)",
+      "Bash(xargs -n1 basename)",
+      "Bash(sed 's/<[^>]*>//g')",
+      "PowerShell(Get-Content *)",
+      "PowerShell(Test-Path *)"
     ]
   }
 }
